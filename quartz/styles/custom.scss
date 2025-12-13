@@ -189,15 +189,32 @@ svg path {
   fill: var(--secondary) !important;
 }
 
-// Search icon secondary color (override default)
-.search button svg path {
-  fill: var(--secondary) !important;
+// Search icon secondary color (override default stroke)
+.search .search-button svg .search-path {
+  stroke: var(--secondary) !important;
 }
 
-// Align search icon vertically with toggle icon
-.search {
+// Search icon size to match toggle (21px)
+.search .search-button,
+.search .search-button svg {
+  width: 21px !important;
+  height: 21px !important;
+}
+
+// Align all icons (search, graph, toggle) vertically
+.search,
+.graph,
+.darkmode {
   display: flex !important;
   align-items: center !important;
+  justify-content: center !important;
+}
+
+// Graph icon size to match others (21px)
+.graph button,
+.graph button svg {
+  width: 21px !important;
+  height: 21px !important;
 }
 
 // Explorer vertically centered
