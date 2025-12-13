@@ -98,14 +98,14 @@ article {
   margin-top: 20px !important; // Move article body down 20px
 }
 
-// Page title: Google Sans Flex 300, 1.8rem, not bold
+// Page title: Google Sans Flex 300, 1.8rem, not bold, primary color
 .page-title,
 .page-title h1,
 .page-title a {
   font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
   font-weight: 300 !important;
   font-size: 1.8rem !important;
-  color: var(--secondary) !important;
+  color: var(--dark) !important;
 }
 
 // Font: Schibsted Grotesk for other fixed UI elements (not note content)
@@ -162,9 +162,19 @@ footer a,
 
 // Icons secondary color
 .darkmode svg path,
-.search svg path,
 svg path {
   fill: var(--secondary) !important;
+}
+
+// Search icon secondary color
+.search svg path {
+  fill: var(--secondary) !important;
+}
+
+// Explorer align top with page title
+.explorer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 // Signature secondary color and link to home
