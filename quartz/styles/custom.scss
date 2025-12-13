@@ -165,8 +165,10 @@ article hr:last-of-type {
   display: none !important;
 }
 
-// Internal links tertiary color
-a.internal {
+// Internal links in non-article contexts (like TOC) - tertiary color
+.toc a.internal,
+.backlinks a.internal,
+.explorer a.internal {
   color: var(--tertiary) !important;
 }
 
@@ -272,15 +274,20 @@ svg path {
   font-weight: 200 !important;
 }
 
-// Tags display vertically (each tag on separate line)
-.tags {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  gap: 0.5rem !important;
+// Article internal links - display as body text with underline and secondary color
+article a.internal {
+  font-size: inherit !important;
+  font-weight: 200 !important;
+  color: var(--secondary) !important;
+  text-decoration: underline !important;
 }
 
-.tags li {
-  display: block !important;
-  width: 100% !important;
+// Tags - match body font size and weight, underline, secondary color
+.tags,
+.tags li,
+.tags a {
+  font-size: inherit !important;
+  font-weight: 200 !important;
+  color: var(--secondary) !important;
+  text-decoration: underline !important;
 }
