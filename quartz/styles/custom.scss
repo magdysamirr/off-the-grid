@@ -98,13 +98,13 @@ article {
   margin-top: 20px !important; // Move article body down 20px
 }
 
-// Page title: Google Sans Flex 300, 1.8rem, not bold, primary color
+// Page title: Google Sans Flex 300, 1.4rem, not bold, primary color
 .page-title,
 .page-title h1,
 .page-title a {
   font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
   font-weight: 300 !important;
-  font-size: 1.8rem !important;
+  font-size: 1.4rem !important;
   color: var(--dark) !important;
 }
 
@@ -184,13 +184,20 @@ a.internal {
 
 // Icons secondary color
 .darkmode svg path,
+.graph svg path,
 svg path {
   fill: var(--secondary) !important;
 }
 
-// Search icon secondary color
-.search svg path {
+// Search icon secondary color (override default)
+.search button svg path {
   fill: var(--secondary) !important;
+}
+
+// Align search icon vertically with toggle icon
+.search {
+  display: flex !important;
+  align-items: center !important;
 }
 
 // Explorer vertically centered
