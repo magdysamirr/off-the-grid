@@ -2,6 +2,16 @@
 
 // put your custom CSS here!
 
+// Override body text color to use --dark instead of --darkgray
+body {
+  color: var(--dark) !important;
+}
+
+p, ul, text, a, tr, td, li, ol, .katex, .math, .typst-doc, g[class~="typst-text"] {
+  color: var(--dark) !important;
+  fill: var(--dark) !important;
+}
+
 // RTL support for Arabic content
 .rtl,
 article.rtl,
