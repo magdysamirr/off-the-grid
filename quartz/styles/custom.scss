@@ -12,6 +12,14 @@ p, ul, text, a, tr, td, li, ol, .katex, .math, .typst-doc, g[class~="typst-text"
   fill: var(--dark) !important;
 }
 
+// Body content extra light 200
+article p,
+article ul,
+article ol,
+article li {
+  font-weight: 200 !important;
+}
+
 // RTL support for Arabic content
 .rtl,
 article.rtl,
