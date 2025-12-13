@@ -17,31 +17,29 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
+    Component.Flex({
+      components: [
+        {
+          Component: Component.PageTitle(),
+          grow: true,
+          align: "start",
+        },
+        { Component: Component.Search(), align: "start" },
+        { Component: Component.Graph(), align: "start" },
+        { Component: Component.Darkmode(), align: "start" },
+      ],
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
   left: [
-    Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
+    Component.Explorer({
+      title: "Thoughts",
     }),
-    Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -49,7 +47,7 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
@@ -62,7 +60,9 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "Thoughts",
+    }),
   ],
   right: [],
 }

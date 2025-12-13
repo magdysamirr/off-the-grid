@@ -88,11 +88,12 @@ a {
   }
 
   &.internal {
-    text-decoration: none;
-    background-color: var(--highlight);
-    padding: 0 0.1rem;
-    border-radius: 5px;
+    text-decoration: underline;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
     line-height: 1.4rem;
+    color: var(--secondary);
 
     &.broken {
       color: var(--secondary);
@@ -107,6 +108,7 @@ a {
       background-color: transparent;
       border-radius: 0;
       padding: 0;
+      text-decoration: none;
     }
     &.tag-link {
       &::before {
@@ -357,12 +359,12 @@ h5,
 h6,
 thead {
   font-family: var(--headerFont);
-  color: var(--dark);
+  color: var(--secondary);
   font-weight: revert;
   margin-bottom: 0;
 
   article > & > a[role="anchor"] {
-    color: var(--dark);
+    color: var(--secondary);
     background-color: transparent;
   }
 }

@@ -1,3 +1,80 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// RTL support for Arabic content
+.rtl,
+article.rtl,
+.rtl h1,
+.rtl h2,
+.rtl h3,
+.rtl h4,
+.rtl h5,
+.rtl h6,
+.rtl p,
+.rtl li,
+.rtl ul,
+.rtl ol,
+.rtl .content-meta,
+.rtl .article-title,
+.rtl .page-title,
+.rtl .toc,
+.rtl .toc-content {
+  direction: rtl;
+  text-align: right;
+}
+
+// RTL for article title specifically
+article.rtl > h1,
+article.rtl > .article-title {
+  direction: rtl;
+  text-align: right;
+}
+
+// Also support lang="ar" attribute
+h1:lang(ar),
+h2:lang(ar),
+h3:lang(ar),
+h4:lang(ar),
+h5:lang(ar),
+h6:lang(ar),
+p:lang(ar),
+li:lang(ar),
+.content-meta:lang(ar),
+article:lang(ar),
+*[lang="ar"] {
+  direction: rtl;
+  text-align: right;
+}
+
+// Arabic numerals support - convert Western digits to Eastern Arabic
+.rtl .content-meta,
+.rtl .content-meta time,
+.rtl .content-meta span,
+*[lang="ar"] .content-meta,
+*[lang="ar"] time,
+*[lang="ar"] span {
+  font-variant-numeric: tabular-nums;
+}
+
+// Use CSS counter to display Arabic/Hindi numerals
+@supports (font-variant-numeric: tabular-nums) {
+  .rtl .content-meta {
+    font-feature-settings: "ss02"; /* Some fonts support Arabic numerals via stylistic sets */
+  }
+}
+
+// External link styling
+a.external {
+  text-decoration: underline;
+
+  .external-icon {
+    display: inline-block;
+    margin-left: 0.2em;
+    vertical-align: middle;
+
+    path {
+      fill: var(--secondary);
+    }
+  }
+}

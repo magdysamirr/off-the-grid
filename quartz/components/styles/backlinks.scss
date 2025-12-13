@@ -5,6 +5,7 @@
 
   & > h3 {
     font-size: 1rem;
+    font-weight: 300;
     margin: 0;
   }
 
@@ -16,8 +17,11 @@
     overscroll-behavior: contain;
 
     & > li {
+      font-weight: 300;
+
       & > a {
         background-color: transparent;
+        font-weight: 300;
       }
     }
   }
