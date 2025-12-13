@@ -1,6 +1,6 @@
 ---
 dg-publish: true
-title: The Paradox
+title: Off the Grid
 dg-home: true
 ---
 # It is alive.!
