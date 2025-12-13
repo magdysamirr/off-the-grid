@@ -178,9 +178,9 @@ svg path {
   filter: grayscale(100%) brightness(0.3) sepia(100%) hue-rotate(180deg) saturate(500%) !important;
 }
 
-// Dark mode signature color
+// Dark mode signature color - #fddb99
 :root[saved-theme="dark"] .footer-signature {
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(5deg) brightness(1.2) !important;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(12%) saturate(1029%) hue-rotate(343deg) brightness(103%) contrast(98%) !important;
 }
 
 // Explorer notes names: primary color (dark), extra light 200
