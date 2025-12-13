@@ -144,6 +144,24 @@ footer a,
   color: var(--dark) !important;
 }
 
+// Backlinks vertically centered (like Thoughts)
+.backlinks {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+// Remove horizontal line at the end of content (keep footer line)
+article hr:last-of-type {
+  display: none !important;
+}
+
+// Internal links tertiary color
+a.internal {
+  color: var(--tertiary) !important;
+}
+
 // TOC font weight light 300
 .toc,
 .toc .depth-1,
