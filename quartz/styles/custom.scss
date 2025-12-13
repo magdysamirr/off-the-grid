@@ -163,12 +163,19 @@ footer a,
 
 // Icons secondary color
 .darkmode svg path,
+.search svg path,
 svg path {
   fill: var(--secondary) !important;
 }
 
 // Signature secondary color and link to home
 .footer-signature {
-  filter: brightness(0) saturate(100%) !important;
+  filter: grayscale(100%) brightness(0.3) sepia(100%) hue-rotate(180deg) saturate(500%) !important;
   cursor: pointer;
+}
+
+// Explorer notes names: primary color (dark), extra light 200
+.explorer .folder-outer ul li a {
+  color: var(--dark) !important;
+  font-weight: 200 !important;
 }
