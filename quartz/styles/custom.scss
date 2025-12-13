@@ -170,8 +170,17 @@ svg path {
 
 // Signature secondary color and link to home
 .footer-signature {
-  filter: grayscale(100%) brightness(0.3) sepia(100%) hue-rotate(180deg) saturate(500%) !important;
   cursor: pointer;
+}
+
+// Light mode signature color
+:root:not([saved-theme="dark"]) .footer-signature {
+  filter: grayscale(100%) brightness(0.3) sepia(100%) hue-rotate(180deg) saturate(500%) !important;
+}
+
+// Dark mode signature color
+:root[saved-theme="dark"] .footer-signature {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(5deg) brightness(1.2) !important;
 }
 
 // Explorer notes names: primary color (dark), extra light 200
