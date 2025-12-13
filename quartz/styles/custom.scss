@@ -280,6 +280,8 @@ article a.internal {
   font-weight: 200 !important;
   color: var(--secondary) !important;
   text-decoration: underline !important;
+  display: block !important;
+  margin-bottom: 0.5rem !important;
 }
 
 // Tags - match body font size and weight, underline, secondary color
