@@ -91,19 +91,17 @@ a.external {
 
 // Spacing adjustments
 .content-meta {
-  margin-top: -8px !important; // Move metadata closer to title
+  margin-top: 10px !important; // Move metadata down 10px, align with title
 }
 
 article {
-  margin-top: 12px !important; // Move article body down
+  margin-top: 20px !important; // Move article body down 20px
 }
 
-// Font: Schibsted Grotesk for page title, explorer, footer, and backlinks
+// Font: Schibsted Grotesk ONLY for fixed UI elements (not note content)
+// This preserves Arabic font support for note titles and headlines
 .page-title,
 .explorer,
-.explorer h1,
-.explorer h2,
-.explorer h3,
 .explorer .folder-outer,
 .explorer .folder-container,
 .explorer .folder-button,
@@ -121,4 +119,17 @@ footer .footer-right,
 .backlinks a {
   font-family: "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
   font-weight: 400 !important;
+}
+
+// Apply secondary color to fixed UI elements
+.page-title,
+.page-title a,
+.explorer,
+.explorer a,
+footer,
+footer a,
+.backlinks,
+.backlinks h3,
+.backlinks a {
+  color: var(--secondary) !important;
 }
