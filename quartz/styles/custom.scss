@@ -258,8 +258,8 @@ svg path {
   filter: brightness(0) saturate(100%) invert(87%) sepia(12%) saturate(1029%) hue-rotate(343deg) brightness(103%) contrast(98%) !important;
 }
 
-// Explorer notes names: primary color (dark), extra light 200
+// Explorer notes names: tertiary color, extra light 200
 .explorer .folder-outer ul li a {
-  color: var(--dark) !important;
+  color: var(--tertiary) !important;
   font-weight: 200 !important;
 }
