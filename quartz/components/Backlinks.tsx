@@ -25,12 +25,9 @@ export default ((opts?: Partial<BacklinksOptions>) => {
   }: QuartzComponentProps) => {
     const slug = simplifySlug(fileData.slug!)
     const backlinkFiles = allFiles.filter((file) => file.links?.includes(slug))
-    if (options.hideWhenEmpty && backlinkFiles.length == 0) {
-      return null
-    }
     return (
       <div class={classNames(displayClass, "backlinks")}>
-        <h3>{i18n(cfg.locale).components.backlinks.title}</h3>
+        <h3>Connected thoughts</h3>
         <OverflowList>
           {backlinkFiles.length > 0 ? (
             backlinkFiles.map((f) => (
@@ -41,7 +38,7 @@ export default ((opts?: Partial<BacklinksOptions>) => {
               </li>
             ))
           ) : (
-            <li>{i18n(cfg.locale).components.backlinks.noBacklinksFound}</li>
+            <li>no connections so far</li>
           )}
         </OverflowList>
       </div>

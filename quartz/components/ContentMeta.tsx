@@ -29,21 +29,25 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     if (text) {
       const segments: (string | JSX.Element)[] = []
 
+      // Check if the page has RTL class in frontmatter
+      const isRTL = fileData.frontmatter?.cssclasses?.includes("rtl")
+      const locale = isRTL ? "ar-SA" : cfg.locale
+
       if (fileData.dates) {
-        segments.push(<Date date={getDate(cfg, fileData)!} locale={cfg.locale} />)
+        segments.push(<Date date={getDate(cfg, fileData)!} locale={locale} />)
       }
 
       // Display reading time if enabled
       if (options.showReadingTime) {
         const { minutes, words: _words } = readingTime(text)
-        const displayedTime = i18n(cfg.locale).components.contentMeta.readingTime({
+        const displayedTime = i18n(locale).components.contentMeta.readingTime({
           minutes: Math.ceil(minutes),
         })
         segments.push(<span>{displayedTime}</span>)
       }
 
       return (
-        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
+        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta", isRTL ? "rtl" : "")}>
           {segments}
         </p>
       )
