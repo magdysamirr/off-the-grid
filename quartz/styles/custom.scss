@@ -98,9 +98,18 @@ article {
   margin-top: 20px !important; // Move article body down 20px
 }
 
-// Font: Schibsted Grotesk ONLY for fixed UI elements (not note content)
-// This preserves Arabic font support for note titles and headlines
+// Page title: Google Sans Flex 300, 1.8rem, not bold
 .page-title,
+.page-title h1,
+.page-title a {
+  font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 1.8rem !important;
+  color: var(--secondary) !important;
+}
+
+// Font: Schibsted Grotesk for other fixed UI elements (not note content)
+// This preserves Arabic font support for note titles and headlines
 .explorer,
 .explorer .folder-outer,
 .explorer .folder-container,
@@ -122,8 +131,6 @@ footer .footer-right,
 }
 
 // Apply secondary color to fixed UI elements
-.page-title,
-.page-title a,
 .explorer,
 .explorer a,
 footer,
@@ -132,4 +139,36 @@ footer a,
 .backlinks h3,
 .backlinks a {
   color: var(--secondary) !important;
+}
+
+// TOC font weight light 300
+.toc,
+.toc .depth-1,
+.toc .depth-2,
+.toc .depth-3,
+.toc a {
+  font-weight: 300 !important;
+}
+
+// Dark mode toggle icon size
+.darkmode {
+  width: 21px !important;
+  height: 21px !important;
+
+  svg {
+    width: 21px !important;
+    height: 21px !important;
+  }
+}
+
+// Icons secondary color
+.darkmode svg path,
+svg path {
+  fill: var(--secondary) !important;
+}
+
+// Signature secondary color and link to home
+.footer-signature {
+  filter: brightness(0) saturate(100%) !important;
+  cursor: pointer;
 }

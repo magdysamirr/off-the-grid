@@ -12,7 +12,9 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <div class="footer-left">
-          <img src="/static/signature.png" alt="Signature" class="footer-signature" />
+          <a href="/">
+            <img src="/static/signature.png" alt="Signature" class="footer-signature" />
+          </a>
         </div>
         <div class="footer-right">
           <a href="https://www.wordreward.net" target="_blank" rel="noopener noreferrer">
