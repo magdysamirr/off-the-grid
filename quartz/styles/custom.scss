@@ -271,3 +271,16 @@ svg path {
   color: var(--tertiary) !important;
   font-weight: 200 !important;
 }
+
+// Tags display vertically (each tag on separate line)
+.tags {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.5rem !important;
+}
+
+.tags li {
+  display: block !important;
+  width: 100% !important;
+}
