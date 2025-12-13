@@ -175,8 +175,12 @@ svg path {
   fill: var(--secondary) !important;
 }
 
-// Explorer align title with page title and icons
+// Explorer vertically centered
 .explorer {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  height: 100% !important;
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
@@ -190,6 +194,11 @@ svg path {
   line-height: 1.8rem !important;
   display: flex !important;
   align-items: center !important;
+}
+
+// Limit explorer to show maximum 8 notes
+.explorer .folder-outer ul li:nth-child(n+9) {
+  display: none !important;
 }
 
 // Signature secondary color and link to home
