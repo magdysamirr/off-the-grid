@@ -130,9 +130,8 @@ footer .footer-right,
   font-weight: 400 !important;
 }
 
-// Apply secondary color to fixed UI elements
+// Apply secondary color to fixed UI elements (but not note links)
 .explorer,
-.explorer a,
 footer,
 footer a,
 .backlinks,
