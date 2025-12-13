@@ -1,8 +1,8 @@
 .content-meta {
   margin-top: 0;
-  color: var(--darkgray);
+  color: var(--tertiary);
   font-weight: 100 !important;
-  text-decoration: underline;
+  text-decoration: none;
 
   &[show-comma="true"] {
     > *:not(:last-child) {
