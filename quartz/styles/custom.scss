@@ -88,3 +88,37 @@ a.external {
     }
   }
 }
+
+// Spacing adjustments
+.content-meta {
+  margin-top: -8px !important; // Move metadata closer to title
+}
+
+article {
+  margin-top: 12px !important; // Move article body down
+}
+
+// Font: Schibsted Grotesk for page title, explorer, footer, and backlinks
+.page-title,
+.explorer,
+.explorer h1,
+.explorer h2,
+.explorer h3,
+.explorer .folder-outer,
+.explorer .folder-container,
+.explorer .folder-button,
+.explorer ul,
+.explorer li,
+.explorer a,
+footer,
+footer a,
+footer .footer-left,
+footer .footer-right,
+.backlinks,
+.backlinks h3,
+.backlinks ul,
+.backlinks li,
+.backlinks a {
+  font-family: "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+}
