@@ -107,7 +107,7 @@ article li {
   font-weight: 200 !important;
 }
 
-// Page title font
+// Page title font - moved up to align with icons
 .page-title,
 .page-title h1,
 .page-title a {
@@ -115,9 +115,10 @@ article li {
   font-weight: 300 !important;
   font-size: 1.4rem !important;
   color: var(--dark) !important;
+  margin-top: -0.5rem !important; // Move up to align with icons
 }
 
-// UI elements font (JetBrains Mono)
+// UI elements font (Google Sans Flex)
 .explorer,
 .explorer .folder-outer,
 .explorer .folder-container,
@@ -133,8 +134,14 @@ footer .footer-right,
 .backlinks h3,
 .backlinks ul,
 .backlinks li,
-.backlinks a {
-  font-family: "JetBrains Mono", monospace !important;
+.backlinks a,
+.toc,
+.toc button.toc-header,
+.toc button.toc-header h3,
+.toc ul,
+.toc li,
+.toc a {
+  font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
   font-weight: 400 !important;
 }
 
@@ -316,40 +323,51 @@ footer a {
 }
 
 // Backlinks (Connected thoughts)
+// When TOC is present, align to flex-start; when absent, center vertically
+.sidebar.right:has(.toc) .backlinks {
+  justify-content: flex-start !important;
+}
+
+.sidebar.right:not(:has(.toc)) .backlinks {
+  justify-content: center !important;
+}
+
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: flex-start !important; // Changed from center to flex-start
-  align-items: flex-start !important; // Align to start
-  height: auto !important; // Changed from 100% to auto
-  min-height: fit-content !important; // Use fit-content
-  position: relative !important;
+  height: 100% !important; // Full height for proper centering
+  position: static !important; // Static positioning
+  overflow: visible !important; // Prevent text cutoff
 }
 
 .backlinks h3 {
   color: var(--dark) !important; // Title: primary color
   font-weight: 400 !important; // Regular weight, not bold
-  margin: 0 !important; // Fix title position when toggled
+  margin: 0 !important;
+  margin-bottom: 0.5rem !important; // Space below title
   padding: 0 !important;
-  line-height: 1.5rem !important;
-  height: 1.5rem !important; // Fixed height instead of min-height
-  flex-shrink: 0 !important; // Prevent title from shrinking
-  display: block !important; // Block display
-  position: relative !important; // Prevent any positioning shifts
+  font-size: 1rem !important;
+  line-height: 1.5 !important; // Relative line-height prevents cutoff
+  flex-shrink: 0 !important;
+  display: block !important;
+  width: 100% !important; // Full width prevents cutoff
+  overflow: visible !important; // Prevent text cutoff
 }
 
 .backlinks > ul.overflow {
-  margin-top: 0.5rem !important; // Consistent spacing from title
-  flex-grow: 0 !important; // Don't grow
-  flex-shrink: 0 !important; // Don't shrink
+  flex-shrink: 0 !important;
+  overflow: visible !important; // Prevent text cutoff
+  width: 100% !important;
 }
 
 .backlinks ul li {
-  color: var(--tertiary) !important; // Notes list and "no connection so far": tertiary color
+  color: var(--tertiary) !important;
+  overflow: visible !important; // Prevent text cutoff
 }
 
 .backlinks a {
-  color: var(--tertiary) !important; // Note links: tertiary color
+  color: var(--tertiary) !important;
+  overflow: visible !important; // Prevent text cutoff
 }
 
 // Table of Contents
@@ -376,6 +394,13 @@ footer a {
 // Remove TOC fade effect
 .toc ul.overflow.gradient-active {
   mask-image: none !important;
+}
+
+// Popover positioning - upper left corner, above thoughts area
+.popover {
+  .popover-inner {
+    max-height: 15rem !important; // Limit height to not overlap with content
+  }
 }
 
 // Icons - consistent 21px size, primary color, aligned with page title

@@ -25,7 +25,7 @@ const config: QuartzConfig = {
       typography: {
         header: "Google Sans Flex",
         body: "IBM Plex Sans Arabic",
-        code: "JetBrains Mono",
+        code: "Google Sans Flex",
       },
       colors: {
         lightMode: {
