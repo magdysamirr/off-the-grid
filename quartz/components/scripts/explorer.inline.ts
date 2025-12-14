@@ -20,21 +20,10 @@ type FolderState = {
 }
 
 let currentExplorerState: Array<FolderState>
+// Toggle functionality disabled - explorer always visible
 function toggleExplorer(this: HTMLElement) {
-  const nearestExplorer = this.closest(".explorer") as HTMLElement
-  if (!nearestExplorer) return
-  const explorerCollapsed = nearestExplorer.classList.toggle("collapsed")
-  nearestExplorer.setAttribute(
-    "aria-expanded",
-    nearestExplorer.getAttribute("aria-expanded") === "true" ? "false" : "true",
-  )
-
-  if (!explorerCollapsed) {
-    // Stop <html> from being scrollable when mobile explorer is open
-    document.documentElement.classList.add("mobile-no-scroll")
-  } else {
-    document.documentElement.classList.remove("mobile-no-scroll")
-  }
+  // Explorer toggle disabled - always keep visible
+  return
 }
 
 function toggleFolder(evt: MouseEvent) {
