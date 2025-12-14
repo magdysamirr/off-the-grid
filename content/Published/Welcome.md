@@ -1,5 +1,7 @@
 ---
 dg-publish: true
+tags:
+  - show
 ---
 This is your new *vault*.
 

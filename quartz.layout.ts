@@ -40,25 +40,21 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       title: "Thoughts",
       folderDefaultState: "open",
-      // Only show files from "Published" folder, not the folder itself
+      // Only show files with "show" tag in frontmatter
       filterFn: (node) => {
         // Exclude tags folder
         if (node.slugSegment === "tags") return false
 
-        // If it's the Published folder itself, hide it
-        if ((node.name === "Published" || node.displayName === "Published") && node.isFolder) {
-          return false
-        }
-
-        // Show files that contain "Published" in their path
-        const inPublished = node.fullPath?.includes("Published") || false
+        // Hide folders - only show files
+        if (node.isFolder) return false
 
         // Hide README files
         if (node.name === "README" || node.displayName === "README") {
           return false
         }
 
-        return inPublished
+        // Show only files that have "show" in their tags
+        return node.data?.tags?.includes("show") || false
       },
     }),
   ],
@@ -85,25 +81,21 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       title: "Thoughts",
       folderDefaultState: "open",
-      // Only show files from "Published" folder, not the folder itself
+      // Only show files with "show" tag in frontmatter
       filterFn: (node) => {
         // Exclude tags folder
         if (node.slugSegment === "tags") return false
 
-        // If it's the Published folder itself, hide it
-        if ((node.name === "Published" || node.displayName === "Published") && node.isFolder) {
-          return false
-        }
-
-        // Show files that contain "Published" in their path
-        const inPublished = node.fullPath?.includes("Published") || false
+        // Hide folders - only show files
+        if (node.isFolder) return false
 
         // Hide README files
         if (node.name === "README" || node.displayName === "README") {
           return false
         }
 
-        return inPublished
+        // Show only files that have "show" in their tags
+        return node.data?.tags?.includes("show") || false
       },
     }),
   ],

@@ -652,21 +652,21 @@ footer a {
   & > .popover-inner {
     width: 30rem !important;
     max-height: 20rem !important;
-    padding: 0 1rem 1rem 1rem !important;
+    padding: 1rem 1rem 1rem 1rem !important;
     font-size: initial !important;
     line-height: normal !important;
+    box-sizing: border-box !important;
   }
 
   h1 {
     font-size: 1.5rem !important;
-    margin: initial !important;
-    padding: initial !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+    padding-top: 0 !important;
   }
 
   h2, h3, h4, h5, h6, p, li, ul, ol {
     font-size: initial !important;
-    margin: initial !important;
-    padding: initial !important;
     line-height: initial !important;
   }
 }
