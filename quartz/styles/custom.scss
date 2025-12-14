@@ -366,29 +366,38 @@ footer a {
 .sidebar.right {
   position: sticky !important; // Keep sidebars floating with scroll
   top: 0 !important;
+  height: 100vh !important; // Full viewport height
+  overflow: hidden !important; // Prevent overflow
 }
 
-// Right sidebar - stack TOC and backlinks
+// Right sidebar - dynamic layout for TOC and Connected Thoughts
 .sidebar.right {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: flex-start !important; // Start from top
+  justify-content: center !important; // Default: center everything
+  gap: 1.5rem !important; // Space between TOC and thoughts
+  align-items: stretch !important;
+  padding-bottom: 2rem !important; // Bottom padding to ensure thoughts stay visible
+}
+
+// When TOC is present, change to flex-start
+.sidebar.right:has(.toc) {
+  justify-content: flex-start !important;
 }
 
 // Backlinks (Connected thoughts)
-// Always vertical center alignment across entire viewport height
+// Positioned in flex flow, centered by default
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important; // Always center vertically
-  position: absolute !important; // Position absolutely to center in viewport
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  z-index: 1 !important; // Below TOC
-  pointer-events: none !important; // Don't block TOC interaction
+  flex-shrink: 0 !important; // Don't shrink
+  position: relative !important; // Normal flow positioning
   overflow: visible !important; // Prevent text cutoff
+}
+
+// When TOC is present and long, push thoughts to bottom but keep visible
+.sidebar.right:has(.toc) .backlinks {
+  margin-top: auto !important; // Push to bottom if TOC takes too much space
 }
 
 // Make backlinks content interactive
@@ -430,17 +439,19 @@ footer a {
 }
 
 // Table of Contents
-// Calculate position to stop 20px above connected thoughts title
+// Allow TOC to grow but not push thoughts off screen
 .toc {
-  flex: 1 1 auto !important; // Extend to full height until backlinks margin
+  flex: 0 1 auto !important; // Shrink if needed to keep thoughts visible
+  max-height: calc(100vh - 8rem) !important; // Maximum height within viewport
   position: relative !important;
-  z-index: 2 !important; // Above backlinks
   overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
-// Limit TOC content height to stop 20px above connected thoughts
+// TOC content can scroll if too long
 .toc .toc-content {
-  max-height: calc(50vh - 3rem - 20px) !important; // Center minus spacing minus 20px buffer
+  flex: 1 1 auto !important;
   overflow-y: auto !important;
   overflow-x: visible !important;
 }
