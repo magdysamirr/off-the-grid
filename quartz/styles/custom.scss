@@ -227,26 +227,38 @@ article:lang(ar),
   margin-bottom: 1rem !important;
 }
 
-// RTL metadata alignment for Arabic content - ensure parent supports float
-.rtl,
+// RTL metadata alignment for Arabic content - CRITICAL: must be right-aligned
+// Force article container to support float
 article.rtl,
-*[lang="ar"] {
-  &::after {
-    content: "" !important;
-    display: table !important;
-    clear: both !important;
-  }
+article[lang="ar"] {
+  display: block !important;
+  width: 100% !important;
+  overflow: auto !important; // Enable clearfix
 }
 
+// Clearfix for RTL containers
+.rtl::after,
+article.rtl::after,
+*[lang="ar"]::after {
+  content: "" !important;
+  display: table !important;
+  clear: both !important;
+}
+
+// RTL metadata with absolute right positioning fallback
 .rtl .content-meta,
 article.rtl .content-meta,
 *[lang="ar"] .content-meta {
   direction: rtl !important;
   text-align: right !important;
-  float: right !important; // Float to right side of container
-  display: inline-block !important; // Maintain inline-block for border
-  margin-left: auto !important; // Push to right if float doesn't work
+  float: right !important; // Primary method: float to right
+  display: block !important; // Change to block for better float behavior
+  width: auto !important; // Auto width for content size
+  margin-left: auto !important; // Fallback: push to right
   margin-right: 0 !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 1px solid var(--gray) !important;
+  clear: right !important; // Ensure it clears other floated elements
 }
 
 // Article spacing
@@ -394,20 +406,16 @@ footer a {
 .sidebar.right {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important; // Center thoughts by default
+  justify-content: flex-start !important; // Always start from top for predictable layout
   align-items: stretch !important;
   padding: 2rem !important;
   gap: 1.5rem !important; // Space between TOC and thoughts
   box-sizing: border-box !important;
 }
 
-// When TOC is present, keep flex-start but TOC height limited
-.sidebar.right:has(.toc) {
-  justify-content: flex-start !important;
-}
-
 // Backlinks (Connected thoughts)
-// Centered by default, pushed down by TOC, but NEVER below vertical center
+// CRITICAL: NEVER go above vertical center - minimum position is 50vh from top
+// Pushed down by TOC length, always floating with scroll
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
@@ -416,12 +424,18 @@ footer a {
   overflow: visible !important; // Prevent text cutoff
   position: relative !important; // Normal flow positioning
   max-height: 50vh !important; // Maximum height to ensure visibility
+  margin-top: auto !important; // Push down by default
+  min-height: 0 !important; // Allow flexbox to shrink if needed
 }
 
-// When TOC present, limit how far thoughts can be pushed
+// When NO TOC: ensure thoughts stay at vertical center (50vh from top)
+.sidebar.right:not(:has(.toc)) .backlinks {
+  margin-top: calc(50vh - 2rem - 4rem) !important; // 50vh minus padding and thought height estimate
+}
+
+// When TOC present: thoughts pushed down by TOC but never above 50vh
 .sidebar.right:has(.toc) .backlinks {
-  // Use margin-top: auto to push to available space, but limited by flexbox
-  margin-top: 0 !important;
+  margin-top: auto !important; // Pushed by TOC length
 }
 
 // Backlinks content is fully interactive (no pointer-events blocking)
@@ -457,7 +471,8 @@ footer a {
 }
 
 // Table of Contents
-// Grows naturally but limited to 50vh to keep thoughts at or above center
+// CRITICAL: Grows naturally up to calc(50vh - gap) to ensure thoughts never go above vertical center
+// When TOC + gap reaches 50vh, thoughts will be exactly at vertical center
 .toc {
   position: relative !important;
   display: flex !important;
@@ -465,13 +480,13 @@ footer a {
   flex-shrink: 0 !important; // Don't shrink
   flex-grow: 0 !important; // Only grow to content size
   overflow: visible !important;
-  max-height: calc(50vh - 4rem) !important; // Max 50vh minus padding/gap to keep thoughts centered or above
+  max-height: calc(50vh - 1.5rem - 2rem) !important; // Max: 50vh minus gap (1.5rem) and padding (2rem) to position thoughts at center
 }
 
 // TOC content with scrolling when exceeds max-height
 .toc .toc-content {
   flex: 1 1 auto !important;
-  overflow-y: auto !important; // Scroll when TOC is too long
+  overflow-y: auto !important; // Scroll when TOC is too long (prevents pushing thoughts below center)
   overflow-x: visible !important;
 }
 
