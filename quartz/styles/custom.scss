@@ -7,9 +7,19 @@
 // TYPOGRAPHY & SPACING
 // ============================================================================
 
-// Base font size reduction
+// Base font size - responsive for different devices
 html {
-  font-size: 14px !important; // Default is usually 16px, reducing by 2px
+  font-size: 14px !important; // Mobile base size
+
+  // Tablet (iPad) - increase by 1 step (~14%)
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 16px !important;
+  }
+
+  // Desktop - increase by 1 step from original 14px
+  @media (min-width: 1025px) {
+    font-size: 16px !important; // One step increase
+  }
 }
 
 // Tighter line spacing for content (reduce from 1.6rem to 1.4rem)
@@ -390,29 +400,45 @@ footer a {
   filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%) !important;
 }
 
-// Sidebars - CRITICAL: ensure sticky positioning for floating behavior
-// Must override base.scss completely
-.sidebar.left,
-.sidebar.right {
-  position: -webkit-sticky !important;
-  position: sticky !important; // Keep sidebars floating with scroll
-  top: 0 !important;
-  height: 100vh !important; // Full viewport height
-  min-height: 100vh !important;
-  max-height: 100vh !important;
-  overflow-y: auto !important; // Allow scrolling for long content
-  overflow-x: hidden !important;
-  will-change: transform !important; // Performance hint for stickiness
+// Sidebars - DESKTOP ONLY: sticky positioning for floating behavior
+// Only apply on desktop to avoid breaking mobile/tablet
+@media (min-width: 1025px) {
+  .sidebar.left,
+  .sidebar.right {
+    position: -webkit-sticky !important;
+    position: sticky !important; // Keep sidebars floating with scroll
+    top: 0 !important;
+    height: 100vh !important; // Full viewport height
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    overflow-y: auto !important; // Allow scrolling for long content
+    overflow-x: hidden !important;
+    will-change: transform !important; // Performance hint for stickiness
+  }
+
+  // Right sidebar - only for TOC now
+  .sidebar.right {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    padding: 2rem !important;
+    box-sizing: border-box !important;
+  }
 }
 
-// Right sidebar - only for TOC now
-.sidebar.right {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;
-  align-items: stretch !important;
-  padding: 2rem !important;
-  box-sizing: border-box !important;
+// Tablet (iPad) - hide sidebars completely, content takes full width
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar.left,
+  .sidebar.right {
+    display: none !important; // Hide both sidebars on tablet
+  }
+
+  // Hide TOC and Explorer on tablet
+  .toc,
+  .explorer {
+    display: none !important;
+  }
 }
 
 // Backlinks (Connected thoughts) - now below content body
