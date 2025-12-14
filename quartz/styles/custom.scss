@@ -9,11 +9,11 @@
 
 // Base font size - responsive for different devices
 html {
-  font-size: 14px !important; // Mobile base size
+  font-size: 16px !important; // Mobile base size (increased)
 
-  // Tablet (iPad) - increase by 1 step (~14%)
+  // Tablet (iPad) - larger for readability
   @media (min-width: 768px) and (max-width: 1024px) {
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
 
   // Desktop - increase by 1 step from original 14px
@@ -438,6 +438,21 @@ footer a {
   .toc,
   .explorer {
     display: none !important;
+  }
+
+  // Make content full width on tablet
+  .center,
+  article {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  // Ensure page content spans full width
+  .page {
+    max-width: 100% !important;
+    width: 100% !important;
   }
 }
 
