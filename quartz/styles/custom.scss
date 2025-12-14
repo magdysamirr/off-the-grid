@@ -245,20 +245,18 @@ article.rtl::after,
   clear: both !important;
 }
 
-// RTL metadata with absolute right positioning fallback
+// RTL metadata - FORCE right alignment
 .rtl .content-meta,
 article.rtl .content-meta,
 *[lang="ar"] .content-meta {
   direction: rtl !important;
   text-align: right !important;
   float: right !important; // Primary method: float to right
-  display: block !important; // Change to block for better float behavior
-  width: auto !important; // Auto width for content size
-  margin-left: auto !important; // Fallback: push to right
+  display: inline-block !important; // Keep inline-block but with float
+  margin-left: 0 !important;
   margin-right: 0 !important;
   padding-bottom: 0.5rem !important;
   border-bottom: 1px solid var(--gray) !important;
-  clear: right !important; // Ensure it clears other floated elements
 }
 
 // Article spacing
