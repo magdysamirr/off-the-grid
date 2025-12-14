@@ -349,6 +349,20 @@ article a.internal {
   z-index: 1 !important; // Lower than popover (1000) so link previews appear above
 }
 
+// Remove burger menu on mobile
+#explorer-content {
+  display: block !important; // Always show content
+  max-height: none !important; // No height restriction
+}
+
+button#explorer-ul {
+  display: none !important; // Hide burger menu button
+}
+
+.explorer .lucide-menu {
+  display: none !important; // Hide menu icon
+}
+
 // Remove explorer toggle arrow and disable toggle functionality
 .explorer .title-button svg.fold,
 .explorer .desktop-explorer svg {
@@ -489,6 +503,21 @@ footer a {
     width: 100% !important;
     padding: 0 2rem !important; // Add some padding for readability
     box-sizing: border-box !important; // Include padding in width
+  }
+}
+
+// Tablet Landscape Mode - constrain width like portrait with side gaps
+@media (min-width: 800px) and (max-width: 1200px) and (orientation: landscape) {
+  .page {
+    max-width: 800px !important; // Match typical portrait width
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 3rem !important; // Generous side padding
+  }
+
+  .center,
+  article {
+    max-width: 100% !important;
   }
 
   .center,
