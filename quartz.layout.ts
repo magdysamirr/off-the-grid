@@ -39,11 +39,15 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
       title: "Thoughts",
-      // Option 2: Only show files from "Published" folder
+      folderDefaultState: "open",
+      // Only show files from "Published" folder
       filterFn: (node) => {
-        // Only show files inside the "Published" folder
-        const allowedFolders = ["Published"]
-        return allowedFolders.some(folder => node.fullPath?.includes(folder))
+        // Show the Published folder itself and all its contents
+        if (node.name === "Published" || node.displayName === "Published") {
+          return true
+        }
+        // Show all files inside the Published folder
+        return node.fullPath?.includes("Published") || false
       },
     }),
   ],
@@ -69,6 +73,16 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer({
       title: "Thoughts",
+      folderDefaultState: "open",
+      // Only show files from "Published" folder
+      filterFn: (node) => {
+        // Show the Published folder itself and all its contents
+        if (node.name === "Published" || node.displayName === "Published") {
+          return true
+        }
+        // Show all files inside the Published folder
+        return node.fullPath?.includes("Published") || false
+      },
     }),
   ],
   right: [],
