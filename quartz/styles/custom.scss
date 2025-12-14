@@ -218,24 +218,13 @@ article:lang(ar),
 // LAYOUT & SPACING
 // ============================================================================
 
-// Content metadata spacing with short line below
+// Content metadata spacing with short line below (same length as text)
 .content-meta {
   margin-top: 10px !important;
-  position: relative;
-  padding-bottom: 1rem !important;
-}
-
-.content-meta::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-width: fit-content;
-  height: 1px;
-  background-color: var(--gray);
-  margin-top: 0.5rem;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 1px solid var(--gray);
+  display: inline-block !important; // Make border only as wide as content
+  margin-bottom: 1rem !important;
 }
 
 // Article spacing
@@ -243,19 +232,9 @@ article {
   margin-top: 20px !important;
 }
 
-// Remove all horizontal lines in article body except the one above footer
+// Remove all horizontal lines in article
 article hr {
   display: none !important;
-}
-
-// Keep only the line above the footer (if there's a specific hr before footer, show it)
-footer::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: var(--gray);
-  margin-bottom: 1rem;
 }
 
 // External link styling
@@ -350,13 +329,20 @@ footer a {
   filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%) !important;
 }
 
+// Right sidebar - ensure proper centering for backlinks
+.sidebar.right {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important; // Center all content vertically
+}
+
 // Backlinks (Connected thoughts)
 // Always vertical center alignment with content
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important; // Always center vertically
-  height: 100% !important; // Full height for proper centering
+  flex-shrink: 0 !important; // Don't shrink
   position: static !important; // Static positioning
   overflow: visible !important; // Prevent text cutoff
 }
