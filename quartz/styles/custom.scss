@@ -132,8 +132,9 @@ article li {
   align-items: center !important;
   height: 21px !important;
 
-  // Mobile fix - prevent top clipping
-  @media (max-width: 767px) {
+  // Mobile fix - smaller font to fit in one line
+  @media (max-width: 799px) {
+    font-size: 1rem !important; // Smaller on mobile for single line
     margin-top: 0.5rem !important; // Add top margin to prevent clipping
     padding-top: 0.2rem !important; // Additional padding
     overflow: visible !important;
@@ -460,16 +461,19 @@ footer a {
     display: none !important;
   }
 
-  // FORCE full-width layout on tablet
+  // FORCE full-width layout on tablet - prevent horizontal overflow
+  html,
   body {
-    max-width: 100% !important;
-    width: 100% !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    overflow-x: hidden !important; // Prevent horizontal scroll
   }
 
   .page {
-    max-width: 100% !important;
+    max-width: 100vw !important;
     width: 100% !important;
     padding: 0 2rem !important; // Add some padding for readability
+    box-sizing: border-box !important; // Include padding in width
   }
 
   .center,
@@ -479,18 +483,21 @@ footer a {
     margin-left: 0 !important;
     margin-right: 0 !important;
     grid-area: grid-center !important; // Use grid area instead of column
+    box-sizing: border-box !important;
   }
 
   header {
     max-width: 100% !important;
     width: 100% !important;
     grid-area: grid-header !important;
+    box-sizing: border-box !important;
   }
 
   footer {
     max-width: 100% !important;
     width: 100% !important;
     grid-area: grid-footer !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -541,6 +548,12 @@ footer a {
   flex-shrink: 0 !important;
   flex-grow: 0 !important;
   overflow: visible !important;
+
+  // Desktop only - align TOC with page title/icons
+  @media (min-width: 1025px) {
+    margin-top: -0.5rem !important; // Move down to align with page title
+    padding-top: 0 !important;
+  }
 }
 
 // TOC content - no scrolling needed, can show all content
