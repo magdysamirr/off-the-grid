@@ -361,12 +361,18 @@ footer a {
   filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%) !important;
 }
 
+// Sidebars - ensure sticky positioning is maintained
+.sidebar.left,
+.sidebar.right {
+  position: sticky !important; // Keep sidebars floating with scroll
+  top: 0 !important;
+}
+
 // Right sidebar - stack TOC and backlinks
 .sidebar.right {
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important; // Start from top
-  position: relative !important;
 }
 
 // Backlinks (Connected thoughts)
@@ -424,11 +430,19 @@ footer a {
 }
 
 // Table of Contents
+// Calculate position to stop 20px above connected thoughts title
 .toc {
   flex: 1 1 auto !important; // Extend to full height until backlinks margin
-  max-height: calc(100vh - 8rem) !important; // Leave room for header and padding
   position: relative !important;
   z-index: 2 !important; // Above backlinks
+  overflow: hidden !important;
+}
+
+// Limit TOC content height to stop 20px above connected thoughts
+.toc .toc-content {
+  max-height: calc(50vh - 3rem - 20px) !important; // Center minus spacing minus 20px buffer
+  overflow-y: auto !important;
+  overflow-x: visible !important;
 }
 
 // Remove toggle functionality - make header non-interactive
@@ -450,7 +464,6 @@ footer a {
 // Always show TOC content (remove collapsed state)
 .toc .toc-content {
   display: block !important;
-  max-height: none !important;
   opacity: 1 !important;
 }
 
