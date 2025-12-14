@@ -512,6 +512,7 @@ footer a {
 // Popover (link preview) - position in upper left area of left sidebar
 .popover {
   z-index: 1000 !important; // Higher than explorer to appear on top
+  position: fixed !important;
 
   // Override floating-ui positioning to force upper left corner
   &.active-popover {
@@ -520,9 +521,16 @@ footer a {
     transform: none !important; // Override floating-ui transform
   }
 
+  // Hide duplicate popovers - only show the active one
+  &:not(.active-popover) {
+    display: none !important;
+  }
+
   .popover-inner {
-    max-height: 20rem !important; // Allow reasonable height for preview
-    width: 25rem !important; // Slightly narrower for left sidebar
+    max-height: calc(100vh - 8rem) !important; // Fit within viewport with margins
+    width: calc(var(--sidePanelWidth) - 4rem) !important; // Fit within left sidebar width minus padding
+    padding: 1rem 1.5rem !important; // Internal padding so content doesn't touch borders
+    box-sizing: border-box !important;
   }
 }
 
