@@ -7,6 +7,24 @@ html {
   font-size: 14px !important; // Default is usually 16px, reducing by 2px
 }
 
+// Tighter line spacing for content (reduce from 1.6rem to 1.4rem)
+tbody,
+li,
+p {
+  line-height: 1.4rem !important;
+}
+
+// Better text selection contrast
+::selection {
+  background-color: var(--secondary) !important;
+  color: var(--light) !important;
+}
+
+// Remove TOC fade effect
+.toc ul.overflow.gradient-active {
+  mask-image: none !important;
+}
+
 // Kawkab Mono font from GitHub (for testing)
 @font-face {
   font-family: 'Kawkab Mono';
@@ -146,12 +164,12 @@ article {
   margin-top: 20px !important; // Move article body down 20px
 }
 
-// Page title: JetBrains Mono 400, 1.4rem, primary color
+// Page title: Google Sans Flex 300, 1.4rem, primary color
 .page-title,
 .page-title h1,
 .page-title a {
-  font-family: "JetBrains Mono", monospace !important;
-  font-weight: 400 !important;
+  font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
   font-size: 1.4rem !important;
   color: var(--dark) !important;
 }
@@ -334,8 +352,20 @@ article a.internal {
   text-decoration: underline !important;
 }
 
-// Kawkab Mono test class
-.kawkab-test,
-.kawkab-test * {
+// Kawkab Mono test class - override all other font rules
+article.kawkab-test,
+article.kawkab-test *,
+article.kawkab-test h1,
+article.kawkab-test h2,
+article.kawkab-test h3,
+article.kawkab-test h4,
+article.kawkab-test h5,
+article.kawkab-test h6,
+article.kawkab-test p,
+article.kawkab-test li,
+article.kawkab-test ul,
+article.kawkab-test ol,
+article.kawkab-test strong,
+article.kawkab-test em {
   font-family: "Kawkab Mono", monospace !important;
 }
