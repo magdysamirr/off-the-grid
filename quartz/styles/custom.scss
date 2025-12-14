@@ -2,6 +2,11 @@
 
 // put your custom CSS here!
 
+// Reduce all font sizes by 2 units across the website
+html {
+  font-size: 14px !important; // Default is usually 16px, reducing by 2px
+}
+
 // Kawkab Mono font from GitHub (for testing)
 @font-face {
   font-family: 'Kawkab Mono';
@@ -32,9 +37,19 @@ body {
   color: var(--dark) !important;
 }
 
-p, ul, text, a, tr, td, li, ol, .katex, .math, .typst-doc, g[class~="typst-text"] {
+p, ul, text, tr, td, li, ol, .katex, .math, .typst-doc, g[class~="typst-text"] {
   color: var(--dark) !important;
   fill: var(--dark) !important;
+}
+
+// All links use tertiary color
+a {
+  color: var(--tertiary) !important;
+}
+
+a:hover {
+  color: var(--tertiary) !important;
+  opacity: 0.8;
 }
 
 // Body content extra light 200
@@ -117,7 +132,7 @@ a.external {
     vertical-align: middle;
 
     path {
-      fill: var(--secondary);
+      fill: var(--tertiary);
     }
   }
 }
@@ -131,17 +146,17 @@ article {
   margin-top: 20px !important; // Move article body down 20px
 }
 
-// Page title: Google Sans Flex 300, 1.4rem, not bold, primary color
+// Page title: JetBrains Mono 400, 1.4rem, primary color
 .page-title,
 .page-title h1,
 .page-title a {
-  font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
-  font-weight: 300 !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-weight: 400 !important;
   font-size: 1.4rem !important;
   color: var(--dark) !important;
 }
 
-// Font: Schibsted Grotesk for other fixed UI elements (not note content)
+// Font: JetBrains Mono for UI elements (not note content)
 // This preserves Arabic font support for note titles and headlines
 .explorer,
 .explorer .folder-outer,
@@ -159,17 +174,17 @@ footer .footer-right,
 .backlinks ul,
 .backlinks li,
 .backlinks a {
-  font-family: "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-family: "JetBrains Mono", monospace !important;
   font-weight: 400 !important;
 }
 
-// Apply secondary color to fixed UI elements (but not note links)
+// Apply tertiary color to fixed UI elements (but not note links)
 .explorer,
 footer,
 footer a,
 .backlinks,
 .backlinks h3 {
-  color: var(--secondary) !important;
+  color: var(--tertiary) !important;
 }
 
 // Backlink note names: primary color
@@ -278,19 +293,19 @@ svg path {
   display: none !important;
 }
 
-// Signature secondary color and link to home
+// Signature tertiary color and link to home
 .footer-signature {
   cursor: pointer;
 }
 
-// Light mode signature color - #3fa2a0
+// Light mode signature color - #717689 (tertiary)
 :root:not([saved-theme="dark"]) .footer-signature {
-  filter: brightness(0) saturate(100%) invert(52%) sepia(35%) saturate(600%) hue-rotate(128deg) brightness(91%) contrast(85%) !important;
+  filter: brightness(0) saturate(100%) invert(47%) sepia(7%) saturate(878%) hue-rotate(192deg) brightness(92%) contrast(88%) !important;
 }
 
-// Dark mode signature color - #fddb99
+// Dark mode signature color - #FAE2C8 (tertiary)
 :root[saved-theme="dark"] .footer-signature {
-  filter: brightness(0) saturate(100%) invert(87%) sepia(12%) saturate(1029%) hue-rotate(343deg) brightness(103%) contrast(98%) !important;
+  filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%) !important;
 }
 
 // Explorer notes names: tertiary color, extra light 200
@@ -299,23 +314,23 @@ svg path {
   font-weight: 200 !important;
 }
 
-// Article internal links - display as body text with underline and secondary color
+// Article internal links - display as body text with underline and tertiary color
 article a.internal {
   font-size: inherit !important;
   font-weight: 200 !important;
-  color: var(--secondary) !important;
+  color: var(--tertiary) !important;
   text-decoration: underline !important;
   display: block !important;
   margin-bottom: 0.5rem !important;
 }
 
-// Tags - match body font size and weight, underline, secondary color
+// Tags - match body font size and weight, underline, tertiary color
 .tags,
 .tags li,
 .tags a {
   font-size: inherit !important;
   font-weight: 200 !important;
-  color: var(--secondary) !important;
+  color: var(--tertiary) !important;
   text-decoration: underline !important;
 }
 
