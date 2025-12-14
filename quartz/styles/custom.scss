@@ -246,8 +246,11 @@ article.rtl::after,
 }
 
 // RTL metadata - FORCE right alignment
+// Target both .rtl class on content-meta itself AND within RTL articles
+.content-meta.rtl,
 .rtl .content-meta,
 article.rtl .content-meta,
+article[lang="ar"] .content-meta,
 *[lang="ar"] .content-meta {
   direction: rtl !important;
   text-align: right !important;
