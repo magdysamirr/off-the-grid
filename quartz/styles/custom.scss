@@ -319,9 +319,11 @@ footer a {
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important;
-  height: 100% !important;
-  min-height: 3rem !important; // Prevent collapse that causes jumping
+  justify-content: flex-start !important; // Changed from center to flex-start
+  align-items: flex-start !important; // Align to start
+  height: auto !important; // Changed from 100% to auto
+  min-height: fit-content !important; // Use fit-content
+  position: relative !important;
 }
 
 .backlinks h3 {
@@ -330,8 +332,16 @@ footer a {
   margin: 0 !important; // Fix title position when toggled
   padding: 0 !important;
   line-height: 1.5rem !important;
-  min-height: 1.5rem !important; // Maintain consistent height
+  height: 1.5rem !important; // Fixed height instead of min-height
   flex-shrink: 0 !important; // Prevent title from shrinking
+  display: block !important; // Block display
+  position: relative !important; // Prevent any positioning shifts
+}
+
+.backlinks > ul.overflow {
+  margin-top: 0.5rem !important; // Consistent spacing from title
+  flex-grow: 0 !important; // Don't grow
+  flex-shrink: 0 !important; // Don't shrink
 }
 
 .backlinks ul li {
@@ -369,13 +379,21 @@ footer a {
 }
 
 // Icons - consistent 21px size, primary color, aligned with page title
+// Target icons in left sidebar specifically
+.sidebar.left {
+  align-items: flex-start !important; // Align items to top
+  gap: 0 !important;
+}
+
+// Icons container alignment
 .darkmode,
 .search,
 .graph {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-top: 0.3rem !important; // Align with page title baseline
+  align-self: flex-start !important; // Each icon aligns to top
+  margin-top: 0.5rem !important; // Push down to align with page title baseline (h2 with 1.75rem font-size)
 }
 
 .darkmode {
