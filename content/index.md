@@ -1,9 +1,8 @@
 ---
 dg-publish: true
-title: Off the Grid
+title: It is alive !
 dg-home: true
 ---
-# It is alive !
 Always thought I'll never make a blog or record my thoughts, let alone publishing them.
 Im never a developer, understand tech and have some idea, despite all this, I made it with the least convenient method, quartz 4 on obsidian, github and vercel using AI.
 
