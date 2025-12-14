@@ -107,7 +107,7 @@ article li {
   font-weight: 200 !important;
 }
 
-// Page title font - moved up to align with icons
+// Page title font - aligned with icons (central alignment)
 .page-title,
 .page-title h1,
 .page-title a {
@@ -115,7 +115,10 @@ article li {
   font-weight: 300 !important;
   font-size: 1.4rem !important;
   color: var(--dark) !important;
-  margin-top: -0.5rem !important; // Move up to align with icons
+  margin-top: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 21px !important; // Match icon height for perfect alignment
 }
 
 // UI elements font (Google Sans Flex)
@@ -215,9 +218,24 @@ article:lang(ar),
 // LAYOUT & SPACING
 // ============================================================================
 
-// Content metadata spacing
+// Content metadata spacing with short line below
 .content-meta {
   margin-top: 10px !important;
+  position: relative;
+  padding-bottom: 1rem !important;
+}
+
+.content-meta::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: fit-content;
+  height: 1px;
+  background-color: var(--gray);
+  margin-top: 0.5rem;
 }
 
 // Article spacing
@@ -225,9 +243,19 @@ article {
   margin-top: 20px !important;
 }
 
-// Remove horizontal line at end of content
-article hr:last-of-type {
+// Remove all horizontal lines in article body except the one above footer
+article hr {
   display: none !important;
+}
+
+// Keep only the line above the footer (if there's a specific hr before footer, show it)
+footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray);
+  margin-bottom: 1rem;
 }
 
 // External link styling
@@ -323,18 +351,11 @@ footer a {
 }
 
 // Backlinks (Connected thoughts)
-// When TOC is present, align to flex-start; when absent, center vertically
-.sidebar.right:has(.toc) .backlinks {
-  justify-content: flex-start !important;
-}
-
-.sidebar.right:not(:has(.toc)) .backlinks {
-  justify-content: center !important;
-}
-
+// Always vertical center alignment with content
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
+  justify-content: center !important; // Always center vertically
   height: 100% !important; // Full height for proper centering
   position: static !important; // Static positioning
   overflow: visible !important; // Prevent text cutoff
@@ -376,8 +397,27 @@ footer a {
   max-height: calc(100vh - 8rem) !important; // Leave room for header and padding
 }
 
-.toc button.toc-header h3 {
+// Remove toggle functionality - make header non-interactive
+.toc .toc-header {
+  cursor: default !important;
+  pointer-events: none !important;
+}
+
+.toc .toc-header h3 {
   font-weight: 400 !important; // Title regular weight (not bold)
+}
+
+// Hide toggle arrow
+.toc .fold,
+.toc button.toc-header svg {
+  display: none !important;
+}
+
+// Always show TOC content (remove collapsed state)
+.toc .toc-content {
+  display: block !important;
+  max-height: none !important;
+  opacity: 1 !important;
 }
 
 .toc .depth-1,
@@ -403,22 +443,22 @@ footer a {
   }
 }
 
-// Icons - consistent 21px size, primary color, aligned with page title
+// Icons - consistent 21px size, primary color, perfectly aligned with page title
 // Target icons in left sidebar specifically
 .sidebar.left {
-  align-items: flex-start !important; // Align items to top
+  align-items: center !important; // Center alignment
   gap: 0 !important;
 }
 
-// Icons container alignment
+// Icons container alignment - perfectly centered with page title
 .darkmode,
 .search,
 .graph {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  align-self: flex-start !important; // Each icon aligns to top
-  margin-top: 0.5rem !important; // Push down to align with page title baseline (h2 with 1.75rem font-size)
+  align-self: center !important; // Center align with page title
+  margin-top: 0 !important; // No margin for perfect alignment
 }
 
 .darkmode {
