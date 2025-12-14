@@ -538,22 +538,30 @@ footer a {
     box-sizing: border-box !important;
     overflow-y: auto !important; // Scroll if content exceeds square dimensions
     overflow-x: hidden !important; // No horizontal scroll
-    font-size: 0.4rem !important; // Scale content to 40% of normal size
+    font-size: 0.48rem !important; // Scale content to 48% (40% + 20% increase)
     line-height: 1.3 !important; // Tighter line height for smaller text
   }
 
   // Scale all content inside popover proportionally
   .popover-inner * {
-    font-size: inherit !important; // Inherit the 40% scaling
+    font-size: inherit !important; // Inherit the 48% scaling
   }
 
   .popover-inner h1 {
-    font-size: 0.6rem !important; // Headings slightly larger but still small
+    font-size: 0.72rem !important; // Headings scaled proportionally (0.6 * 1.2)
   }
 
   .popover-inner h2,
   .popover-inner h3 {
-    font-size: 0.5rem !important;
+    font-size: 0.6rem !important; // 0.5 * 1.2 = 0.6rem
+  }
+
+  // Reduce icon sizes by 20% inside popover
+  .popover-inner svg,
+  .popover-inner img.icon {
+    width: 80% !important;
+    height: 80% !important;
+    transform: scale(0.8) !important;
   }
 }
 
