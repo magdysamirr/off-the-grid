@@ -2,6 +2,31 @@
 
 // put your custom CSS here!
 
+// Kawkab Mono font from GitHub (for testing)
+@font-face {
+  font-family: 'Kawkab Mono';
+  src: url('https://github.com/aiaf/kawkab-mono/releases/download/v0.501/KawkabMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kawkab Mono';
+  src: url('https://github.com/aiaf/kawkab-mono/releases/download/v0.501/KawkabMono-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kawkab Mono';
+  src: url('https://github.com/aiaf/kawkab-mono/releases/download/v0.501/KawkabMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 // Override body text color to use --dark instead of --darkgray
 body {
   color: var(--dark) !important;
@@ -192,16 +217,16 @@ article hr:last-of-type {
   }
 }
 
-// Icons secondary color
+// Icons primary color
 .darkmode svg path,
 .graph svg path,
 svg path {
-  fill: var(--secondary) !important;
+  fill: var(--dark) !important;
 }
 
-// Search icon secondary color (override default stroke)
+// Search icon primary color (override default stroke)
 .search .search-button svg .search-path {
-  stroke: var(--secondary) !important;
+  stroke: var(--dark) !important;
 }
 
 // Search icon size to match toggle (21px)
@@ -292,4 +317,10 @@ article a.internal {
   font-weight: 200 !important;
   color: var(--secondary) !important;
   text-decoration: underline !important;
+}
+
+// Kawkab Mono test class
+.kawkab-test,
+.kawkab-test * {
+  font-family: "Kawkab Mono", monospace !important;
 }

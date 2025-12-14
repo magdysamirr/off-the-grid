@@ -24,7 +24,7 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Google Sans Flex",
-        body: "Noto Sans Arabic",
+        body: "IBM Plex Sans Arabic",
         code: "IBM Plex Mono",
       },
       colors: {
@@ -43,8 +43,8 @@ const config: QuartzConfig = {
           light: "#252627",
           lightgray: "#393639",
           gray: "#646464",
-          darkgray: "#C3A9AF",
-          dark: "#C3A9AF",
+          darkgray: "#E8DABD",
+          dark: "#E8DABD",
           secondary: "#FDDB99",
           tertiary: "#FAE2C8",
           highlight: "rgba(143, 159, 169, 0.15)",
