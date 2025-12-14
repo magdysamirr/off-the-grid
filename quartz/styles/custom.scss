@@ -437,7 +437,18 @@ footer a {
 }
 
 // Tablet (iPad) - hide sidebars completely, content takes full width
-@media (min-width: 768px) and (max-width: 1024px) {
+// Tablet breakpoint in Quartz is 800px-1200px
+@media (min-width: 800px) and (max-width: 1200px) {
+  // CRITICAL: Override the base.scss tablet grid (320px auto) with single column
+  .page > #quartz-body {
+    grid-template-columns: 1fr !important; // Override "320px auto" from base.scss
+    grid-template-rows: auto auto auto !important;
+    grid-template-areas:
+      "grid-header"
+      "grid-center"
+      "grid-footer" !important;
+  }
+
   .sidebar.left,
   .sidebar.right {
     display: none !important; // Hide both sidebars on tablet
@@ -449,7 +460,7 @@ footer a {
     display: none !important;
   }
 
-  // FORCE full-width layout on tablet - override grid system
+  // FORCE full-width layout on tablet
   body {
     max-width: 100% !important;
     width: 100% !important;
@@ -459,7 +470,6 @@ footer a {
     max-width: 100% !important;
     width: 100% !important;
     padding: 0 2rem !important; // Add some padding for readability
-    grid-template-columns: 1fr !important; // Single column layout
   }
 
   .center,
@@ -468,19 +478,19 @@ footer a {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    grid-column: 1 !important; // Force to first column
+    grid-area: grid-center !important; // Use grid area instead of column
   }
 
   header {
     max-width: 100% !important;
     width: 100% !important;
-    grid-column: 1 !important;
+    grid-area: grid-header !important;
   }
 
   footer {
     max-width: 100% !important;
     width: 100% !important;
-    grid-column: 1 !important;
+    grid-area: grid-footer !important;
   }
 }
 
