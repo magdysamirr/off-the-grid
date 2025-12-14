@@ -233,6 +233,8 @@ article.rtl .content-meta,
 *[lang="ar"] .content-meta {
   direction: rtl !important;
   text-align: right !important;
+  float: right !important; // Float to right side of container
+  display: inline-block !important; // Maintain inline-block for border
 }
 
 // Article spacing
@@ -367,39 +369,38 @@ footer a {
   position: sticky !important; // Keep sidebars floating with scroll
   top: 0 !important;
   height: 100vh !important; // Full viewport height
-  overflow: hidden !important; // Prevent overflow
+  overflow-y: auto !important; // Allow scrolling for long content
+  overflow-x: hidden !important;
 }
 
-// Right sidebar - flexbox with space-around to center thoughts unless pushed
+// Right sidebar - flexbox to center thoughts by default, let TOC push down
 .sidebar.right {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: space-around !important; // Center with spacing
+  justify-content: center !important; // Center thoughts by default
   align-items: stretch !important;
   position: relative !important;
   padding: 2rem !important;
+  gap: 1.5rem !important; // Space between TOC and thoughts
+}
+
+// When TOC is present, switch to flex-start so TOC starts at top
+.sidebar.right:has(.toc) {
+  justify-content: flex-start !important;
 }
 
 // Backlinks (Connected thoughts)
-// Flexes to center, but gets pushed down by TOC growth
+// Centered by default via parent justify-content, pushed down by TOC when present
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
   flex-shrink: 0 !important; // Never shrink - always full size
   flex-grow: 0 !important; // Don't grow
   overflow: visible !important; // Prevent text cutoff
-  z-index: 1 !important; // Below TOC
-  pointer-events: none !important; // Let clicks through to TOC
-  align-self: center !important; // Center horizontally
+  position: relative !important; // Normal flow positioning
 }
 
-// Make backlinks content interactive
-.backlinks h3,
-.backlinks ul,
-.backlinks li,
-.backlinks a {
-  pointer-events: auto !important; // Re-enable interaction for content
-}
+// Backlinks content is fully interactive (no pointer-events blocking)
 
 .backlinks h3 {
   color: var(--dark) !important; // Title: primary color
@@ -432,28 +433,20 @@ footer a {
 }
 
 // Table of Contents
-// Grows naturally to push thoughts, limited to leave room for thoughts at bottom
+// Grows naturally to push thoughts down in flex layout
 .toc {
   position: relative !important;
-  z-index: 2 !important; // Above thoughts
   display: flex !important;
   flex-direction: column !important;
-  flex-shrink: 1 !important; // Can shrink if needed
-  flex-grow: 0 !important; // Don't grow beyond content
-  overflow: hidden !important;
-  max-height: calc(100vh - 10rem) !important; // Max height leaving room for thoughts
+  flex-shrink: 0 !important; // Don't shrink
+  flex-grow: 0 !important; // Only grow to content size
+  overflow: visible !important;
 }
 
-// TOC content with scrolling and masking
+// TOC content displays naturally
 .toc .toc-content {
   flex: 1 1 auto !important;
-  overflow-y: auto !important;
-  overflow-x: visible !important;
-  position: relative !important;
-
-  // Gradient mask at bottom when scrollable
-  mask-image: linear-gradient(to bottom, black calc(100% - 2rem), transparent 100%) !important;
-  -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 2rem), transparent 100%) !important;
+  overflow: visible !important; // No scrolling needed - sidebar scrolls instead
 }
 
 // Remove toggle functionality - make header non-interactive
