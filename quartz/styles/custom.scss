@@ -227,7 +227,17 @@ article:lang(ar),
   margin-bottom: 1rem !important;
 }
 
-// RTL metadata alignment for Arabic content
+// RTL metadata alignment for Arabic content - ensure parent supports float
+.rtl,
+article.rtl,
+*[lang="ar"] {
+  &::after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
+  }
+}
+
 .rtl .content-meta,
 article.rtl .content-meta,
 *[lang="ar"] .content-meta {
@@ -235,6 +245,8 @@ article.rtl .content-meta,
   text-align: right !important;
   float: right !important; // Float to right side of container
   display: inline-block !important; // Maintain inline-block for border
+  margin-left: auto !important; // Push to right if float doesn't work
+  margin-right: 0 !important;
 }
 
 // Article spacing
@@ -363,34 +375,39 @@ footer a {
   filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%) !important;
 }
 
-// Sidebars - ensure sticky positioning is maintained
+// Sidebars - CRITICAL: ensure sticky positioning for floating behavior
+// Must override base.scss completely
 .sidebar.left,
 .sidebar.right {
+  position: -webkit-sticky !important;
   position: sticky !important; // Keep sidebars floating with scroll
   top: 0 !important;
   height: 100vh !important; // Full viewport height
+  min-height: 100vh !important;
+  max-height: 100vh !important;
   overflow-y: auto !important; // Allow scrolling for long content
   overflow-x: hidden !important;
+  will-change: transform !important; // Performance hint for stickiness
 }
 
-// Right sidebar - flexbox to center thoughts by default, let TOC push down
+// Right sidebar - constrain height to enable centering within viewport
 .sidebar.right {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important; // Center thoughts by default
   align-items: stretch !important;
-  position: relative !important;
   padding: 2rem !important;
   gap: 1.5rem !important; // Space between TOC and thoughts
+  box-sizing: border-box !important;
 }
 
-// When TOC is present, switch to flex-start so TOC starts at top
+// When TOC is present, keep flex-start but TOC height limited
 .sidebar.right:has(.toc) {
   justify-content: flex-start !important;
 }
 
 // Backlinks (Connected thoughts)
-// Centered by default via parent justify-content, pushed down by TOC when present
+// Centered by default, pushed down by TOC, but NEVER below vertical center
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
@@ -398,6 +415,13 @@ footer a {
   flex-grow: 0 !important; // Don't grow
   overflow: visible !important; // Prevent text cutoff
   position: relative !important; // Normal flow positioning
+  max-height: 50vh !important; // Maximum height to ensure visibility
+}
+
+// When TOC present, limit how far thoughts can be pushed
+.sidebar.right:has(.toc) .backlinks {
+  // Use margin-top: auto to push to available space, but limited by flexbox
+  margin-top: 0 !important;
 }
 
 // Backlinks content is fully interactive (no pointer-events blocking)
@@ -433,7 +457,7 @@ footer a {
 }
 
 // Table of Contents
-// Grows naturally to push thoughts down in flex layout
+// Grows naturally but limited to 50vh to keep thoughts at or above center
 .toc {
   position: relative !important;
   display: flex !important;
@@ -441,12 +465,14 @@ footer a {
   flex-shrink: 0 !important; // Don't shrink
   flex-grow: 0 !important; // Only grow to content size
   overflow: visible !important;
+  max-height: calc(50vh - 4rem) !important; // Max 50vh minus padding/gap to keep thoughts centered or above
 }
 
-// TOC content displays naturally
+// TOC content with scrolling when exceeds max-height
 .toc .toc-content {
   flex: 1 1 auto !important;
-  overflow: visible !important; // No scrolling needed - sidebar scrolls instead
+  overflow-y: auto !important; // Scroll when TOC is too long
+  overflow-x: visible !important;
 }
 
 // Remove toggle functionality - make header non-interactive
