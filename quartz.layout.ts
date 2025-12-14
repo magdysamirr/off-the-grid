@@ -42,15 +42,23 @@ export const defaultContentPageLayout: PageLayout = {
       folderDefaultState: "open",
       // Only show files from "Published" folder, not the folder itself
       filterFn: (node) => {
-        // Hide the Published folder itself
-        if (node.name === "Published" || node.displayName === "Published") {
+        // Exclude tags folder
+        if (node.slugSegment === "tags") return false
+
+        // If it's the Published folder itself, hide it
+        if ((node.name === "Published" || node.displayName === "Published") && node.isFolder) {
           return false
         }
-        // Show only files that are inside the Published folder
-        if (node.fullPath?.includes("Published/") && !node.isFolder) {
-          return true
+
+        // Show files that contain "Published" in their path
+        const inPublished = node.fullPath?.includes("Published") || false
+
+        // Hide README files
+        if (node.name === "README" || node.displayName === "README") {
+          return false
         }
-        return false
+
+        return inPublished
       },
     }),
   ],
@@ -79,15 +87,23 @@ export const defaultListPageLayout: PageLayout = {
       folderDefaultState: "open",
       // Only show files from "Published" folder, not the folder itself
       filterFn: (node) => {
-        // Hide the Published folder itself
-        if (node.name === "Published" || node.displayName === "Published") {
+        // Exclude tags folder
+        if (node.slugSegment === "tags") return false
+
+        // If it's the Published folder itself, hide it
+        if ((node.name === "Published" || node.displayName === "Published") && node.isFolder) {
           return false
         }
-        // Show only files that are inside the Published folder
-        if (node.fullPath?.includes("Published/") && !node.isFolder) {
-          return true
+
+        // Show files that contain "Published" in their path
+        const inPublished = node.fullPath?.includes("Published") || false
+
+        // Hide README files
+        if (node.name === "README" || node.displayName === "README") {
+          return false
         }
-        return false
+
+        return inPublished
       },
     }),
   ],
