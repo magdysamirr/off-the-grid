@@ -370,34 +370,27 @@ footer a {
   overflow: hidden !important; // Prevent overflow
 }
 
-// Right sidebar - dynamic layout for TOC and Connected Thoughts
+// Right sidebar - flexbox with space-around to center thoughts unless pushed
 .sidebar.right {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important; // Default: center everything
-  gap: 1.5rem !important; // Space between TOC and thoughts
+  justify-content: space-around !important; // Center with spacing
   align-items: stretch !important;
-  padding-bottom: 2rem !important; // Bottom padding to ensure thoughts stay visible
-}
-
-// When TOC is present, change to flex-start
-.sidebar.right:has(.toc) {
-  justify-content: flex-start !important;
+  position: relative !important;
+  padding: 2rem !important;
 }
 
 // Backlinks (Connected thoughts)
-// Positioned in flex flow, centered by default
+// Flexes to center, but gets pushed down by TOC growth
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
-  flex-shrink: 0 !important; // Don't shrink
-  position: relative !important; // Normal flow positioning
+  flex-shrink: 0 !important; // Never shrink - always full size
+  flex-grow: 0 !important; // Don't grow
   overflow: visible !important; // Prevent text cutoff
-}
-
-// When TOC is present and long, push thoughts to bottom but keep visible
-.sidebar.right:has(.toc) .backlinks {
-  margin-top: auto !important; // Push to bottom if TOC takes too much space
+  z-index: 1 !important; // Below TOC
+  pointer-events: none !important; // Let clicks through to TOC
+  align-self: center !important; // Center horizontally
 }
 
 // Make backlinks content interactive
@@ -439,21 +432,28 @@ footer a {
 }
 
 // Table of Contents
-// Allow TOC to grow but not push thoughts off screen
+// Grows naturally to push thoughts, limited to leave room for thoughts at bottom
 .toc {
-  flex: 0 1 auto !important; // Shrink if needed to keep thoughts visible
-  max-height: calc(100vh - 8rem) !important; // Maximum height within viewport
   position: relative !important;
-  overflow: hidden !important;
+  z-index: 2 !important; // Above thoughts
   display: flex !important;
   flex-direction: column !important;
+  flex-shrink: 1 !important; // Can shrink if needed
+  flex-grow: 0 !important; // Don't grow beyond content
+  overflow: hidden !important;
+  max-height: calc(100vh - 10rem) !important; // Max height leaving room for thoughts
 }
 
-// TOC content can scroll if too long
+// TOC content with scrolling and masking
 .toc .toc-content {
   flex: 1 1 auto !important;
   overflow-y: auto !important;
   overflow-x: visible !important;
+  position: relative !important;
+
+  // Gradient mask at bottom when scrollable
+  mask-image: linear-gradient(to bottom, black calc(100% - 2rem), transparent 100%) !important;
+  -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 2rem), transparent 100%) !important;
 }
 
 // Remove toggle functionality - make header non-interactive
