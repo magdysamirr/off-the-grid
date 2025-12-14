@@ -395,6 +395,7 @@ button#explorer-ul {
   line-height: 1.8rem !important;
   display: flex !important;
   align-items: center !important;
+  font-size: 0.9rem !important; // 4 steps smaller
 }
 
 .explorer .folder-outer ul li:nth-child(n+9) {
@@ -641,11 +642,32 @@ footer a {
   mask-image: none !important;
 }
 
-// Popover (link preview) - minimal styling, don't break mobile
+// Popover (link preview) - force default Quartz 4 settings
 .popover {
   // Only apply custom styles on desktop
   @media not all and (max-width: 768px) {
     z-index: 1000 !important;
+  }
+
+  & > .popover-inner {
+    width: 30rem !important;
+    max-height: 20rem !important;
+    padding: 0 1rem 1rem 1rem !important;
+    font-size: initial !important;
+    line-height: normal !important;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+    margin: initial !important;
+    padding: initial !important;
+  }
+
+  h2, h3, h4, h5, h6, p, li, ul, ol {
+    font-size: initial !important;
+    margin: initial !important;
+    padding: initial !important;
+    line-height: initial !important;
   }
 }
 
