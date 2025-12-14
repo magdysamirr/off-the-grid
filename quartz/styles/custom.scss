@@ -321,6 +321,7 @@ footer a {
   flex-direction: column !important;
   justify-content: center !important;
   height: 100% !important;
+  min-height: 3rem !important; // Prevent collapse that causes jumping
 }
 
 .backlinks h3 {
@@ -329,6 +330,8 @@ footer a {
   margin: 0 !important; // Fix title position when toggled
   padding: 0 !important;
   line-height: 1.5rem !important;
+  min-height: 1.5rem !important; // Maintain consistent height
+  flex-shrink: 0 !important; // Prevent title from shrinking
 }
 
 .backlinks ul li {
@@ -365,13 +368,14 @@ footer a {
   mask-image: none !important;
 }
 
-// Icons - consistent 21px size, primary color, vertical alignment
+// Icons - consistent 21px size, primary color, aligned with page title
 .darkmode,
 .search,
 .graph {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  margin-top: 0.3rem !important; // Align with page title baseline
 }
 
 .darkmode {
