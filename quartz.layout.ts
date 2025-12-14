@@ -39,6 +39,37 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
       title: "Thoughts",
+      // Option 1: Only show files with specific tag
+      // filterFn: (node) => {
+      //   return node.data?.tags?.includes("published") === true
+      // },
+
+      // Option 2: Only show files from specific folders
+      // filterFn: (node) => {
+      //   const allowedFolders = ["notes", "essays"]
+      //   return allowedFolders.some(folder => node.fullPath?.includes(folder))
+      // },
+
+      // Option 3: Exclude specific files/folders (current default + custom)
+      filterFn: (node) => {
+        // Default: exclude "tags" folder
+        if (node.slugSegment === "tags") return false
+
+        // Add your exclusions here:
+        // Exclude specific files by name
+        const excludedFiles = ["private", "draft", "temp"]
+        if (excludedFiles.some(name => node.displayName?.toLowerCase().includes(name))) {
+          return false
+        }
+
+        // Exclude specific folders
+        const excludedFolders = ["Archive", "Private"]
+        if (excludedFolders.includes(node.displayName)) {
+          return false
+        }
+
+        return true // Show everything else
+      },
     }),
   ],
   right: [
