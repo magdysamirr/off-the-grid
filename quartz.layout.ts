@@ -40,14 +40,17 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       title: "Thoughts",
       folderDefaultState: "open",
-      // Only show files from "Published" folder
+      // Only show files from "Published" folder, not the folder itself
       filterFn: (node) => {
-        // Show the Published folder itself and all its contents
+        // Hide the Published folder itself
         if (node.name === "Published" || node.displayName === "Published") {
+          return false
+        }
+        // Show only files that are inside the Published folder
+        if (node.fullPath?.includes("Published/") && !node.isFolder) {
           return true
         }
-        // Show all files inside the Published folder
-        return node.fullPath?.includes("Published") || false
+        return false
       },
     }),
   ],
@@ -74,14 +77,17 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       title: "Thoughts",
       folderDefaultState: "open",
-      // Only show files from "Published" folder
+      // Only show files from "Published" folder, not the folder itself
       filterFn: (node) => {
-        // Show the Published folder itself and all its contents
+        // Hide the Published folder itself
         if (node.name === "Published" || node.displayName === "Published") {
+          return false
+        }
+        // Show only files that are inside the Published folder
+        if (node.fullPath?.includes("Published/") && !node.isFolder) {
           return true
         }
-        // Show all files inside the Published folder
-        return node.fullPath?.includes("Published") || false
+        return false
       },
     }),
   ],

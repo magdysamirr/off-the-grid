@@ -403,11 +403,13 @@ button#explorer-ul {
 
 .explorer .folder-outer ul li a {
   color: var(--tertiary) !important;
-  font-weight: 200 !important;
+  font-weight: 300 !important; // Regular weight, not bold
 }
 
+.explorer a,
 .explorer a.internal {
   color: var(--tertiary) !important;
+  font-weight: 300 !important; // Regular weight for all explorer links
 }
 
 // Footer
