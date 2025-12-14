@@ -509,12 +509,20 @@ footer a {
   mask-image: none !important;
 }
 
-// Popover (link preview) - ensure it appears above Explorer (Thoughts) in left sidebar
+// Popover (link preview) - position in upper left area of left sidebar
 .popover {
   z-index: 1000 !important; // Higher than explorer to appear on top
 
+  // Override floating-ui positioning to force upper left corner
+  &.active-popover {
+    left: 2rem !important; // Align with left sidebar padding
+    top: 2rem !important; // Top of viewport with padding
+    transform: none !important; // Override floating-ui transform
+  }
+
   .popover-inner {
     max-height: 20rem !important; // Allow reasonable height for preview
+    width: 25rem !important; // Slightly narrower for left sidebar
   }
 }
 
