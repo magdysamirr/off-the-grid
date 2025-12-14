@@ -1,8 +1,13 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Custom Quartz Styling
+// Organized by: Typography → Colors → Layout → Components
 
-// Reduce all font sizes by 2 units across the website
+// ============================================================================
+// TYPOGRAPHY & SPACING
+// ============================================================================
+
+// Base font size reduction
 html {
   font-size: 14px !important; // Default is usually 16px, reducing by 2px
 }
@@ -14,16 +19,60 @@ p {
   line-height: 1.4rem !important;
 }
 
-// Better text selection contrast
+// Reduce space between headlines and body by 20%
+h1 {
+  margin-top: 1.8rem !important; // 2.25rem * 0.8 = 1.8rem
+  margin-bottom: 0.8rem !important; // 1rem * 0.8 = 0.8rem
+}
+
+h2 {
+  margin-top: 1.52rem !important; // 1.9rem * 0.8 = 1.52rem
+  margin-bottom: 0.8rem !important;
+}
+
+h3 {
+  margin-top: 1.3rem !important; // 1.62rem * 0.8 ≈ 1.3rem
+  margin-bottom: 0.8rem !important;
+}
+
+h4, h5, h6 {
+  margin-top: 1.2rem !important; // 1.5rem * 0.8 = 1.2rem
+  margin-bottom: 0.8rem !important;
+}
+
+// ============================================================================
+// COLORS & VISUAL EFFECTS
+// ============================================================================
+
+// Text selection contrast
 ::selection {
   background-color: var(--secondary) !important;
   color: var(--light) !important;
 }
 
-// Remove TOC fade effect
-.toc ul.overflow.gradient-active {
-  mask-image: none !important;
+// Body text uses primary color
+body {
+  color: var(--dark) !important;
 }
+
+p, ul, text, tr, td, li, ol, .katex, .math, .typst-doc, g[class~="typst-text"] {
+  color: var(--dark) !important;
+  fill: var(--dark) !important;
+}
+
+// All links use tertiary color
+a {
+  color: var(--tertiary) !important;
+}
+
+a:hover {
+  color: var(--tertiary) !important;
+  opacity: 0.8;
+}
+
+// ============================================================================
+// FONTS
+// ============================================================================
 
 // Kawkab Mono font from GitHub (for testing)
 @font-face {
@@ -50,33 +99,48 @@ p {
   font-display: swap;
 }
 
-// Override body text color to use --dark instead of --darkgray
-body {
-  color: var(--dark) !important;
-}
-
-p, ul, text, tr, td, li, ol, .katex, .math, .typst-doc, g[class~="typst-text"] {
-  color: var(--dark) !important;
-  fill: var(--dark) !important;
-}
-
-// All links use tertiary color
-a {
-  color: var(--tertiary) !important;
-}
-
-a:hover {
-  color: var(--tertiary) !important;
-  opacity: 0.8;
-}
-
-// Body content extra light 200
+// Body content extra light weight
 article p,
 article ul,
 article ol,
 article li {
   font-weight: 200 !important;
 }
+
+// Page title font
+.page-title,
+.page-title h1,
+.page-title a {
+  font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 1.4rem !important;
+  color: var(--dark) !important;
+}
+
+// UI elements font (JetBrains Mono)
+.explorer,
+.explorer .folder-outer,
+.explorer .folder-container,
+.explorer .folder-button,
+.explorer ul,
+.explorer li,
+.explorer a,
+footer,
+footer a,
+footer .footer-left,
+footer .footer-right,
+.backlinks,
+.backlinks h3,
+.backlinks ul,
+.backlinks li,
+.backlinks a {
+  font-family: "JetBrains Mono", monospace !important;
+  font-weight: 400 !important;
+}
+
+// ============================================================================
+// RTL & ARABIC SUPPORT
+// ============================================================================
 
 // RTL support for Arabic content
 .rtl,
@@ -140,6 +204,25 @@ article:lang(ar),
   }
 }
 
+// ============================================================================
+// LAYOUT & SPACING
+// ============================================================================
+
+// Content metadata spacing
+.content-meta {
+  margin-top: 10px !important;
+}
+
+// Article spacing
+article {
+  margin-top: 20px !important;
+}
+
+// Remove horizontal line at end of content
+article hr:last-of-type {
+  display: none !important;
+}
+
 // External link styling
 a.external {
   text-decoration: underline;
@@ -155,137 +238,31 @@ a.external {
   }
 }
 
-// Spacing adjustments
-.content-meta {
-  margin-top: 10px !important; // Move metadata down 10px, align with title
-}
-
-article {
-  margin-top: 20px !important; // Move article body down 20px
-}
-
-// Page title: Google Sans Flex 300, 1.4rem, primary color
-.page-title,
-.page-title h1,
-.page-title a {
-  font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
-  font-weight: 300 !important;
-  font-size: 1.4rem !important;
-  color: var(--dark) !important;
-}
-
-// Font: JetBrains Mono for UI elements (not note content)
-// This preserves Arabic font support for note titles and headlines
-.explorer,
-.explorer .folder-outer,
-.explorer .folder-container,
-.explorer .folder-button,
-.explorer ul,
-.explorer li,
-.explorer a,
-footer,
-footer a,
-footer .footer-left,
-footer .footer-right,
-.backlinks,
-.backlinks h3,
-.backlinks ul,
-.backlinks li,
-.backlinks a {
-  font-family: "JetBrains Mono", monospace !important;
-  font-weight: 400 !important;
-}
-
-// Apply tertiary color to fixed UI elements (but not note links)
-.explorer,
-footer,
-footer a,
-.backlinks,
-.backlinks h3 {
+// Article internal links - block display with underline
+article a.internal {
+  font-size: inherit !important;
+  font-weight: 200 !important;
   color: var(--tertiary) !important;
+  text-decoration: underline !important;
+  display: block !important;
+  margin-bottom: 0.5rem !important;
 }
 
-// Backlink note names: primary color
-.backlinks a {
-  color: var(--dark) !important;
-}
-
-// Backlinks vertically centered (like Thoughts)
-.backlinks {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  height: 100% !important;
-}
-
-// Remove horizontal line at the end of content (keep footer line)
-article hr:last-of-type {
-  display: none !important;
-}
-
-// Internal links in non-article contexts (like TOC) - tertiary color
-.toc a.internal,
-.backlinks a.internal,
-.explorer a.internal {
+// Tags styling
+.tags,
+.tags li,
+.tags a {
+  font-size: inherit !important;
+  font-weight: 200 !important;
   color: var(--tertiary) !important;
+  text-decoration: underline !important;
 }
 
-// TOC font weight light 300
-.toc,
-.toc .depth-1,
-.toc .depth-2,
-.toc .depth-3,
-.toc a {
-  font-weight: 300 !important;
-}
+// ============================================================================
+// COMPONENTS
+// ============================================================================
 
-// Dark mode toggle icon size
-.darkmode {
-  width: 21px !important;
-  height: 21px !important;
-
-  svg {
-    width: 21px !important;
-    height: 21px !important;
-  }
-}
-
-// Icons primary color
-.darkmode svg path,
-.graph svg path,
-svg path {
-  fill: var(--dark) !important;
-}
-
-// Search icon primary color (override default stroke)
-.search .search-button svg .search-path {
-  stroke: var(--dark) !important;
-}
-
-// Search icon size to match toggle (21px)
-.search .search-button,
-.search .search-button svg {
-  width: 21px !important;
-  height: 21px !important;
-}
-
-// Align all icons (search, graph, toggle) vertically
-.search,
-.graph,
-.darkmode {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-// Graph icon size to match others (21px)
-.graph button,
-.graph button svg {
-  width: 21px !important;
-  height: 21px !important;
-}
-
-// Explorer vertically centered
+// Explorer
 .explorer {
   display: flex !important;
   flex-direction: column !important;
@@ -293,9 +270,9 @@ svg path {
   height: 100% !important;
   margin-top: 0 !important;
   padding-top: 0 !important;
+  color: var(--tertiary) !important;
 }
 
-// Align explorer heading with page title level
 .explorer > h1,
 .explorer > h2,
 .explorer > h3 {
@@ -306,53 +283,131 @@ svg path {
   align-items: center !important;
 }
 
-// Limit explorer to show maximum 8 notes
 .explorer .folder-outer ul li:nth-child(n+9) {
-  display: none !important;
+  display: none !important; // Limit to 8 notes max
 }
 
-// Signature tertiary color and link to home
-.footer-signature {
-  cursor: pointer;
-}
-
-// Light mode signature color - #717689 (tertiary)
-:root:not([saved-theme="dark"]) .footer-signature {
-  filter: brightness(0) saturate(100%) invert(47%) sepia(7%) saturate(878%) hue-rotate(192deg) brightness(92%) contrast(88%) !important;
-}
-
-// Dark mode signature color - #FAE2C8 (tertiary)
-:root[saved-theme="dark"] .footer-signature {
-  filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%) !important;
-}
-
-// Explorer notes names: tertiary color, extra light 200
 .explorer .folder-outer ul li a {
   color: var(--tertiary) !important;
   font-weight: 200 !important;
 }
 
-// Article internal links - display as body text with underline and tertiary color
-article a.internal {
-  font-size: inherit !important;
-  font-weight: 200 !important;
+.explorer a.internal {
   color: var(--tertiary) !important;
-  text-decoration: underline !important;
-  display: block !important;
-  margin-bottom: 0.5rem !important;
 }
 
-// Tags - match body font size and weight, underline, tertiary color
-.tags,
-.tags li,
-.tags a {
-  font-size: inherit !important;
-  font-weight: 200 !important;
+// Footer
+footer,
+footer a {
   color: var(--tertiary) !important;
-  text-decoration: underline !important;
 }
 
-// Kawkab Mono test class - override all other font rules
+.footer-signature {
+  cursor: pointer;
+}
+
+// Signature color filters for tertiary color
+:root:not([saved-theme="dark"]) .footer-signature {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(7%) saturate(878%) hue-rotate(192deg) brightness(92%) contrast(88%) !important;
+}
+
+:root[saved-theme="dark"] .footer-signature {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%) !important;
+}
+
+// Backlinks (Connected thoughts)
+.backlinks {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+.backlinks h3 {
+  color: var(--dark) !important; // Title: primary color
+  font-weight: 400 !important; // Regular weight, not bold
+  margin: 0 !important; // Fix title position when toggled
+  padding: 0 !important;
+  line-height: 1.5rem !important;
+}
+
+.backlinks ul li {
+  color: var(--tertiary) !important; // Notes list and "no connection so far": tertiary color
+}
+
+.backlinks a {
+  color: var(--tertiary) !important; // Note links: tertiary color
+}
+
+// Table of Contents
+.toc {
+  flex: 1 1 auto !important; // Extend to full height until backlinks margin
+  max-height: calc(100vh - 8rem) !important; // Leave room for header and padding
+}
+
+.toc button.toc-header h3 {
+  font-weight: 400 !important; // Title regular weight (not bold)
+}
+
+.toc .depth-1,
+.toc .depth-2,
+.toc .depth-3,
+.toc a {
+  font-weight: 300 !important; // Links light weight
+}
+
+.toc a.internal {
+  color: var(--tertiary) !important; // Tertiary color for TOC links
+}
+
+// Remove TOC fade effect
+.toc ul.overflow.gradient-active {
+  mask-image: none !important;
+}
+
+// Icons - consistent 21px size, primary color, vertical alignment
+.darkmode,
+.search,
+.graph {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.darkmode {
+  width: 21px !important;
+  height: 21px !important;
+
+  svg {
+    width: 21px !important;
+    height: 21px !important;
+  }
+}
+
+.search .search-button,
+.search .search-button svg {
+  width: 21px !important;
+  height: 21px !important;
+}
+
+.graph button,
+.graph button svg {
+  width: 21px !important;
+  height: 21px !important;
+}
+
+// Icons use primary color
+.darkmode svg path,
+.graph svg path,
+svg path {
+  fill: var(--dark) !important;
+}
+
+.search .search-button svg .search-path {
+  stroke: var(--dark) !important;
+}
+
+// Kawkab Mono test - override all fonts
 article.kawkab-test,
 article.kawkab-test *,
 article.kawkab-test h1,
