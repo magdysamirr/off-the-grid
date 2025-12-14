@@ -509,7 +509,7 @@ footer a {
   mask-image: none !important;
 }
 
-// Popover (link preview) - square shape, contained within left sidebar
+// Popover (link preview) - perfect square, contained within left sidebar
 .popover {
   z-index: 1000 !important; // Higher than explorer to appear on top
   position: fixed !important;
@@ -527,14 +527,17 @@ footer a {
   }
 
   .popover-inner {
-    // Square dimensions based on left sidebar width
-    width: calc(var(--sidePanelWidth) - 4rem) !important; // Sidebar width minus padding
-    height: calc(var(--sidePanelWidth) - 4rem) !important; // Same as width for square
-    max-width: calc(var(--sidePanelWidth) - 4rem) !important; // Don't exceed sidebar
-    max-height: calc(var(--sidePanelWidth) - 4rem) !important; // Square constraint
+    // Perfect square: sidebar width (320px) minus left padding (2rem) minus right edge (2rem) = ~256px
+    width: 256px !important; // Fixed width to fit in left sidebar
+    height: 256px !important; // Same as width for perfect square
+    min-width: 256px !important; // Enforce square
+    min-height: 256px !important; // Enforce square
+    max-width: 256px !important; // Enforce square
+    max-height: 256px !important; // Enforce square
     padding: 1rem 1.5rem !important; // Internal padding so content doesn't touch borders
     box-sizing: border-box !important;
     overflow-y: auto !important; // Scroll if content exceeds square dimensions
+    overflow-x: hidden !important; // No horizontal scroll
   }
 }
 
