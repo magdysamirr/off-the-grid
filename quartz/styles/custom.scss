@@ -509,12 +509,12 @@ footer a {
   mask-image: none !important;
 }
 
-// Popover (link preview) - position in upper left area of left sidebar
+// Popover (link preview) - square shape, contained within left sidebar
 .popover {
   z-index: 1000 !important; // Higher than explorer to appear on top
   position: fixed !important;
 
-  // Override floating-ui positioning to force upper left corner
+  // Override floating-ui positioning to force upper left corner inside left sidebar
   &.active-popover {
     left: 2rem !important; // Align with left sidebar padding
     top: 2rem !important; // Top of viewport with padding
@@ -527,10 +527,14 @@ footer a {
   }
 
   .popover-inner {
-    max-height: calc(100vh - 8rem) !important; // Fit within viewport with margins
-    width: calc(var(--sidePanelWidth) - 4rem) !important; // Fit within left sidebar width minus padding
+    // Square dimensions based on left sidebar width
+    width: calc(var(--sidePanelWidth) - 4rem) !important; // Sidebar width minus padding
+    height: calc(var(--sidePanelWidth) - 4rem) !important; // Same as width for square
+    max-width: calc(var(--sidePanelWidth) - 4rem) !important; // Don't exceed sidebar
+    max-height: calc(var(--sidePanelWidth) - 4rem) !important; // Square constraint
     padding: 1rem 1.5rem !important; // Internal padding so content doesn't touch borders
     box-sizing: border-box !important;
+    overflow-y: auto !important; // Scroll if content exceeds square dimensions
   }
 }
 
