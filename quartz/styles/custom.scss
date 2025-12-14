@@ -227,6 +227,14 @@ article:lang(ar),
   margin-bottom: 1rem !important;
 }
 
+// RTL metadata alignment for Arabic content
+.rtl .content-meta,
+article.rtl .content-meta,
+*[lang="ar"] .content-meta {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
 // Article spacing
 article {
   margin-top: 20px !important;
@@ -287,6 +295,30 @@ article a.internal {
   color: var(--tertiary) !important;
 }
 
+// Remove explorer toggle arrow and disable toggle functionality
+.explorer .title-button svg.fold,
+.explorer .desktop-explorer svg {
+  display: none !important;
+}
+
+.explorer .title-button {
+  cursor: default !important;
+  pointer-events: none !important;
+}
+
+// Keep title text interactive
+.explorer .title-button h2 {
+  pointer-events: auto !important;
+  cursor: default !important;
+}
+
+// Always show explorer content
+.explorer .explorer-content {
+  display: block !important;
+  max-height: none !important;
+  opacity: 1 !important;
+}
+
 .explorer > h1,
 .explorer > h2,
 .explorer > h3 {
@@ -329,22 +361,36 @@ footer a {
   filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%) !important;
 }
 
-// Right sidebar - ensure proper centering for backlinks
+// Right sidebar - stack TOC and backlinks
 .sidebar.right {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important; // Center all content vertically
+  justify-content: flex-start !important; // Start from top
+  position: relative !important;
 }
 
 // Backlinks (Connected thoughts)
-// Always vertical center alignment with content
+// Always vertical center alignment across entire viewport height
 .backlinks {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important; // Always center vertically
-  flex-shrink: 0 !important; // Don't shrink
-  position: static !important; // Static positioning
+  position: absolute !important; // Position absolutely to center in viewport
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 1 !important; // Below TOC
+  pointer-events: none !important; // Don't block TOC interaction
   overflow: visible !important; // Prevent text cutoff
+}
+
+// Make backlinks content interactive
+.backlinks h3,
+.backlinks ul,
+.backlinks li,
+.backlinks a {
+  pointer-events: auto !important; // Re-enable interaction for content
 }
 
 .backlinks h3 {
@@ -381,6 +427,8 @@ footer a {
 .toc {
   flex: 1 1 auto !important; // Extend to full height until backlinks margin
   max-height: calc(100vh - 8rem) !important; // Leave room for header and padding
+  position: relative !important;
+  z-index: 2 !important; // Above backlinks
 }
 
 // Remove toggle functionality - make header non-interactive
