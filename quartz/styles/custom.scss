@@ -132,12 +132,13 @@ article li {
   align-items: center !important;
   height: 21px !important;
 
-  // Mobile fix - smaller font to fit in one line
+  // Mobile fix - smaller font to fit in one line, align with icons
   @media (max-width: 799px) {
     font-size: 1rem !important; // Smaller on mobile for single line
-    margin-top: 0.5rem !important; // Add top margin to prevent clipping
-    padding-top: 0.2rem !important; // Additional padding
+    margin-top: -0.3rem !important; // Move up to align with icons
+    padding-top: 0 !important;
     overflow: visible !important;
+    height: auto !important; // Allow natural height on mobile
   } // Match icon height for perfect alignment
 }
 
@@ -426,11 +427,11 @@ footer a {
     will-change: transform !important; // Performance hint for stickiness
   }
 
-  // Right sidebar - only for TOC now
+  // Right sidebar - only for TOC now, vertically centered like Explorer
   .sidebar.right {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-start !important;
+    justify-content: center !important; // Vertically center TOC like Explorer on left
     align-items: stretch !important;
     padding: 2rem !important;
     box-sizing: border-box !important;
@@ -540,7 +541,7 @@ footer a {
 }
 
 // Table of Contents - now alone in right sidebar
-// Can grow naturally without constraint
+// Desktop: vertically centered like Explorer on left side
 .toc {
   position: relative !important;
   display: flex !important;
@@ -548,12 +549,6 @@ footer a {
   flex-shrink: 0 !important;
   flex-grow: 0 !important;
   overflow: visible !important;
-
-  // Desktop only - align TOC with page title/icons
-  @media (min-width: 1025px) {
-    margin-top: -0.5rem !important; // Move down to align with page title
-    padding-top: 0 !important;
-  }
 }
 
 // TOC content - no scrolling needed, can show all content
