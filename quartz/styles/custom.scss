@@ -312,8 +312,9 @@ a.external {
   }
 }
 
-// Article internal links - natural display, no forced layout
+// Article internal links - display each link on its own line
 article a.internal {
+  display: block !important;
   font-size: inherit !important;
   font-weight: 200 !important;
   color: var(--tertiary) !important;
