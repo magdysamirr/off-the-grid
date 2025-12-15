@@ -38,33 +38,8 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
-      title: "",
+      title: "Thoughts",
       folderDefaultState: "open",
-      folderClickBehavior: "collapse",
-      useSavedState: false,
-      filterFn: (node) => {
-        // Exclude tags folder
-        if (node.slugSegment === "tags") return false
-
-        // Show the Published folder
-        if (node.name === "Published" || node.displayName === "Published") {
-          return true
-        }
-
-        // Show everything inside the Published folder (files and subfolders)
-        if (node.fullPath?.includes("Published/")) {
-          return true
-        }
-
-        // Hide everything else (root level files and other folders)
-        return false
-      },
-      mapFn: (node) => {
-        // Rename "Published" folder to "Thoughts"
-        if (node.name === "Published" || node.displayName === "Published") {
-          node.displayNameOverride = "Thoughts"
-        }
-      },
     }),
   ],
   right: [
@@ -88,33 +63,8 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      title: "",
+      title: "Thoughts",
       folderDefaultState: "open",
-      folderClickBehavior: "collapse",
-      useSavedState: false,
-      filterFn: (node) => {
-        // Exclude tags folder
-        if (node.slugSegment === "tags") return false
-
-        // Show the Published folder
-        if (node.name === "Published" || node.displayName === "Published") {
-          return true
-        }
-
-        // Show everything inside the Published folder (files and subfolders)
-        if (node.fullPath?.includes("Published/")) {
-          return true
-        }
-
-        // Hide everything else (root level files and other folders)
-        return false
-      },
-      mapFn: (node) => {
-        // Rename "Published" folder to "Thoughts"
-        if (node.name === "Published" || node.displayName === "Published") {
-          node.displayNameOverride = "Thoughts"
-        }
-      },
     }),
   ],
   right: [],
