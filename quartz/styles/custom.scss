@@ -389,13 +389,15 @@ button#explorer-ul {
 
 .explorer > h1,
 .explorer > h2,
-.explorer > h3 {
+.explorer > h3,
+.explorer .title-button h2 {
   margin-top: 0 !important;
   padding-top: 0 !important;
-  line-height: 1.8rem !important;
+  line-height: 1.2rem !important;
   display: flex !important;
   align-items: center !important;
-  font-size: 0.9rem !important; // 4 steps smaller
+  font-size: 0.75rem !important; // Much smaller
+  font-weight: 400 !important; // Regular weight
 }
 
 .explorer .folder-outer ul li:nth-child(n+9) {
