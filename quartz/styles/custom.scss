@@ -390,9 +390,14 @@ button#explorer-ul {
 .explorer > h1,
 .explorer > h2,
 .explorer > h3,
+.explorer .title-button,
 .explorer .title-button h2 {
-  font-size: 1rem !important;
-  font-weight: 400 !important;
+  display: none !important; // Hide completely
+}
+
+// Hide folder name/label and toggle
+.explorer .folder-container {
+  display: none !important;
 }
 
 // Force Published folder to be open and show children
@@ -729,6 +734,17 @@ svg path {
 
 .search .search-button svg .search-path {
   stroke: var(--dark) !important;
+}
+
+// Remove fill from heading anchor link icons
+h1[id] > a[href^="#"] svg,
+h2[id] > a[href^="#"] svg,
+h3[id] > a[href^="#"] svg,
+h4[id] > a[href^="#"] svg,
+h5[id] > a[href^="#"] svg,
+h6[id] > a[href^="#"] svg {
+  fill: none !important;
+  stroke: currentColor !important;
 }
 
 // Kawkab Mono test - override all fonts
