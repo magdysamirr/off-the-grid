@@ -11,9 +11,13 @@ But, here we are, you’re in my head, ADHD (or may be insane), but I’ll try t
 Stay for 5 minutes - not less, not more - then leave. You may come back frequently, or we never cross roads again.
 
 [[Strategic Thinking, From Real Life to Digital Marketing]]
+
 [[Welcome]]
+
 [[What about this quartz mess]]
+
 www.wordreward.net
+
 [[دعاء]]
 [[create a link]]
 [[Blog Style]]
