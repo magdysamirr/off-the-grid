@@ -757,20 +757,12 @@ h6[id] > a[href^="#"] svg * {
   fill-opacity: 0 !important;
 }
 
-// Kawkab Mono test - override all fonts
-article.kawkab-test,
-article.kawkab-test *,
-article.kawkab-test h1,
-article.kawkab-test h2,
-article.kawkab-test h3,
-article.kawkab-test h4,
-article.kawkab-test h5,
-article.kawkab-test h6,
-article.kawkab-test p,
-article.kawkab-test li,
-article.kawkab-test ul,
-article.kawkab-test ol,
-article.kawkab-test strong,
-article.kawkab-test em {
-  font-family: "Kawkab Mono", monospace !important;
+/* Indent the first line of every paragraph */
+p {
+  text-indent: 2em;
+}
+
+/* Optional: Remove indent from paragraphs inside callouts/blockquotes if desired */
+.callout-content p, blockquote p {
+  text-indent: 0;
 }
