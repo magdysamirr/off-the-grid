@@ -38,7 +38,7 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
-      title: "Thoughts",
+      title: "",
       folderDefaultState: "open",
       filterFn: (node) => {
         // Only show Published folder and its contents
@@ -70,7 +70,7 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      title: "Thoughts",
+      title: "",
       folderDefaultState: "open",
       filterFn: (node) => {
         // Only show Published folder and its contents
