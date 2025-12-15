@@ -40,21 +40,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       title: "Thoughts",
       folderDefaultState: "open",
-      // Show files from Published folder only
       filterFn: (node) => {
-        // Exclude tags folder
+        // Exclude tags folder only
         if (node.slugSegment === "tags") return false
-
-        // Hide README files
-        if (node.name === "README" || node.displayName === "README") {
-          return false
-        }
-
-        // Hide all folders
-        if (node.isFolder) return false
-
-        // Show files from Published folder
-        return node.fullPath?.includes("Published") ?? false
+        // Show everything else
+        return true
       },
     }),
   ],
@@ -81,21 +71,11 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       title: "Thoughts",
       folderDefaultState: "open",
-      // Show files from Published folder only
       filterFn: (node) => {
-        // Exclude tags folder
+        // Exclude tags folder only
         if (node.slugSegment === "tags") return false
-
-        // Hide README files
-        if (node.name === "README" || node.displayName === "README") {
-          return false
-        }
-
-        // Hide all folders
-        if (node.isFolder) return false
-
-        // Show files from Published folder
-        return node.fullPath?.includes("Published") ?? false
+        // Show everything else
+        return true
       },
     }),
   ],
