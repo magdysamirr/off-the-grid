@@ -312,9 +312,8 @@ a.external {
   }
 }
 
-// Article internal links - display each link on its own line
+// Article internal links - natural inline display
 article a.internal {
-  display: block !important;
   font-size: inherit !important;
   font-weight: 200 !important;
   color: var(--tertiary) !important;
