@@ -312,14 +312,13 @@ a.external {
   }
 }
 
-// Article internal links - block display with underline
+// Article internal links - inline display with underline
 article a.internal {
   font-size: inherit !important;
   font-weight: 200 !important;
   color: var(--tertiary) !important;
   text-decoration: underline !important;
-  display: block !important;
-  margin-bottom: 0.5rem !important;
+  display: inline !important;
 }
 
 // Tags styling
