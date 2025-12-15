@@ -395,69 +395,55 @@ button#explorer-ul {
   display: none !important; // Hide Explorer title completely
 }
 
-// SIMPLE APPROACH: Hide folder wrapper, show only files under "Thoughts" heading
-// Add a "Thoughts" heading before the explorer list
-.explorer::before {
+// NUCLEAR OPTION: Force everything to display
+.explorer * {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.explorer ul,
+.explorer ul li,
+.explorer-ul,
+.explorer-ul li,
+.overflow {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+.explorer ul li {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.explorer ul li a,
+.explorer a {
+  color: var(--tertiary) !important;
+  font-weight: 300 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Add Thoughts heading
+.explorer-ul::before,
+.explorer .overflow::before {
   content: "Thoughts";
   display: block;
   font-size: 1rem;
   font-weight: 400;
   color: var(--dark);
   margin-bottom: 0.5rem;
-  padding-left: 0;
 }
 
-// Hide the folder container (Published/Thoughts folder wrapper)
-.explorer .folder-container {
+// Hide folder wrappers
+.explorer .folder-container,
+.explorer .folder-icon,
+.explorer .folder-button {
   display: none !important;
-}
-
-// Show the folder children directly without the folder wrapper
-.explorer li:has(.folder-outer) {
-  list-style: none !important;
-}
-
-.explorer .folder-outer,
-.explorer li .folder-outer {
-  display: block !important;
-  max-height: none !important;
-  height: auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  overflow: visible !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-  margin-top: 0 !important;
-  position: relative !important;
-}
-
-.explorer .folder-outer ul,
-.explorer .folder-outer ul.content,
-.explorer .folder-outer > ul {
-  display: block !important;
-  max-height: none !important;
-  height: auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-  list-style: none !important;
-  margin-top: 0.5rem !important;
-}
-
-.explorer .folder-outer ul li,
-.explorer .folder-outer ul.content li {
-  display: list-item !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  padding-left: 0 !important;
-  margin-bottom: 0.3rem !important;
-}
-
-.explorer .folder-outer ul li a {
-  color: var(--tertiary) !important;
-  font-weight: 300 !important;
-  display: block !important;
 }
 
 .explorer .folder-outer ul li:nth-child(n+9) {
