@@ -14,10 +14,10 @@ Stay for 5 minutes - not less, not more - then leave. You may come back frequent
 
 [[Welcome]]
 
-[[What about this quartz mess]].
-www.wordreward.net.
-[[دعاء]].
-[[create a link]].
-[[Blog Style]]
+[[What about this quartz mess]]  
+www.wordreward.net  
+[[دعاء]]  
+[[create a link]]  
+[[Blog Style]]  
 [[WordReward Strategic “Reset”]]
 
