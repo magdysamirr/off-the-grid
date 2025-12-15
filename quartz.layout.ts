@@ -40,6 +40,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       title: "",
       folderDefaultState: "open",
+      folderClickBehavior: "collapse",
       filterFn: (node) => {
         // Exclude tags folder
         if (node.slugSegment === "tags") return false
@@ -88,6 +89,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       title: "",
       folderDefaultState: "open",
+      folderClickBehavior: "collapse",
       filterFn: (node) => {
         // Exclude tags folder
         if (node.slugSegment === "tags") return false

@@ -395,6 +395,25 @@ button#explorer-ul {
   display: none !important; // Hide Explorer title completely
 }
 
+// Force Thoughts folder to always show children (no toggle)
+.explorer .folder-container {
+  pointer-events: none !important; // Disable clicking on folder
+}
+
+.explorer .folder-container .folder-icon {
+  display: none !important; // Hide toggle arrow
+}
+
+.explorer .folder-outer {
+  display: block !important; // Always show children
+  max-height: none !important;
+}
+
+.explorer .folder-outer.open,
+.explorer .folder-outer:not(.open) {
+  display: block !important; // Force open regardless of state
+}
+
 .explorer .folder-outer ul li:nth-child(n+9) {
   display: none !important; // Limit to 8 notes max
 }
