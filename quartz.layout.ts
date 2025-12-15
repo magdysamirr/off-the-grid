@@ -44,15 +44,17 @@ export const defaultContentPageLayout: PageLayout = {
         // Exclude tags folder
         if (node.slugSegment === "tags") return false
 
-        // Only show Published folder and its contents
+        // Show the Published folder
         if (node.name === "Published" || node.displayName === "Published") {
           return true
         }
-        if (node.fullPath?.includes("Published")) {
+
+        // Show everything inside the Published folder (files and subfolders)
+        if (node.fullPath?.includes("Published/")) {
           return true
         }
 
-        // Hide everything else
+        // Hide everything else (root level files and other folders)
         return false
       },
       mapFn: (node) => {
@@ -90,15 +92,17 @@ export const defaultListPageLayout: PageLayout = {
         // Exclude tags folder
         if (node.slugSegment === "tags") return false
 
-        // Only show Published folder and its contents
+        // Show the Published folder
         if (node.name === "Published" || node.displayName === "Published") {
           return true
         }
-        if (node.fullPath?.includes("Published")) {
+
+        // Show everything inside the Published folder (files and subfolders)
+        if (node.fullPath?.includes("Published/")) {
           return true
         }
 
-        // Hide everything else
+        // Hide everything else (root level files and other folders)
         return false
       },
       mapFn: (node) => {
