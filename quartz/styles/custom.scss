@@ -413,7 +413,12 @@ button#explorer-ul {
 }
 
 // Show the folder children directly without the folder wrapper
-.explorer .folder-outer {
+.explorer li:has(.folder-outer) {
+  list-style: none !important;
+}
+
+.explorer .folder-outer,
+.explorer li .folder-outer {
   display: block !important;
   max-height: none !important;
   height: auto !important;
@@ -422,24 +427,37 @@ button#explorer-ul {
   overflow: visible !important;
   padding-left: 0 !important;
   margin-left: 0 !important;
+  margin-top: 0 !important;
+  position: relative !important;
 }
 
 .explorer .folder-outer ul,
-.explorer .folder-outer ul.content {
+.explorer .folder-outer ul.content,
+.explorer .folder-outer > ul {
   display: block !important;
   max-height: none !important;
+  height: auto !important;
   opacity: 1 !important;
   visibility: visible !important;
   padding-left: 0 !important;
   margin-left: 0 !important;
   list-style: none !important;
+  margin-top: 0.5rem !important;
 }
 
-.explorer .folder-outer ul li {
+.explorer .folder-outer ul li,
+.explorer .folder-outer ul.content li {
   display: list-item !important;
   opacity: 1 !important;
   visibility: visible !important;
   padding-left: 0 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.explorer .folder-outer ul li a {
+  color: var(--tertiary) !important;
+  font-weight: 300 !important;
+  display: block !important;
 }
 
 .explorer .folder-outer ul li:nth-child(n+9) {
