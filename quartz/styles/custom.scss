@@ -757,12 +757,24 @@ h6[id] > a[href^="#"] svg * {
   fill-opacity: 0 !important;
 }
 
-/* Indent the first line of every paragraph */
-p {
-  text-indent: 1em;
+/* 1. Target ONLY paragraphs that are direct children of the main article */
+/* This avoids sidebars, footers, and menus automatically */
+article.content > p {
+  text-indent: 2em;
 }
 
-/* Optional: Remove indent from paragraphs inside callouts/blockquotes if desired */
-.callout-content p, blockquote p {
-  text-indent: 0;
+/* 2. STRICTLY reset indentation for lists (bullets/numbers) */
+/* Even if a list item contains a paragraph, this forces it flat */
+li, li p {
+  text-indent: 0 !important;
+}
+
+/* 3. Safety Net: Ensure metadata and special components stay flat */
+/* (Just in case they are technically inside the article tag) */
+.content-meta p, 
+.callout-content p, 
+blockquote p,
+.table-of-contents p,
+.backlinks p {
+  text-indent: 0 !important;
 }
