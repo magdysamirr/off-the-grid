@@ -407,11 +407,23 @@ button#explorer-ul {
 .explorer .folder-outer {
   display: block !important; // Always show children
   max-height: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .explorer .folder-outer.open,
 .explorer .folder-outer:not(.open) {
   display: block !important; // Force open regardless of state
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.explorer .folder-outer ul,
+.explorer .folder-outer .content {
+  display: block !important;
+  max-height: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .explorer .folder-outer ul li:nth-child(n+9) {
