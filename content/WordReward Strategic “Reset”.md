@@ -13,11 +13,9 @@ To position WordReward as a creative, data-driven, and emotionally intelligent m
 ## Strategic Vision
 
 ### From Content Creation to Brand Creation
-
 WordReward’s new direction focuses on creating campaigns that move audiences emotionally and strategically  combining creativity with data, empathy with precision, and storytelling with measurable results.
 
 ### Overall Strategy
-
 - Stop acting like a service provider; start acting like a brand creator
 - Every piece of content must inspire, educate, or provoke thought  no fillers
 
