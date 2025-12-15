@@ -395,6 +395,21 @@ button#explorer-ul {
   font-weight: 400 !important;
 }
 
+// Force Published folder to be open and show children
+.explorer .folder-outer {
+  display: block !important;
+  max-height: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.explorer .folder-outer ul {
+  display: block !important;
+  max-height: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 .explorer a,
 .explorer a.internal {
   color: var(--tertiary) !important;
