@@ -744,7 +744,19 @@ h4[id] > a[href^="#"] svg,
 h5[id] > a[href^="#"] svg,
 h6[id] > a[href^="#"] svg {
   fill: none !important;
+  fill-opacity: 0 !important;
   stroke: currentColor !important;
+  stroke-width: 2 !important;
+}
+
+h1[id] > a[href^="#"] svg *,
+h2[id] > a[href^="#"] svg *,
+h3[id] > a[href^="#"] svg *,
+h4[id] > a[href^="#"] svg *,
+h5[id] > a[href^="#"] svg *,
+h6[id] > a[href^="#"] svg * {
+  fill: none !important;
+  fill-opacity: 0 !important;
 }
 
 // Kawkab Mono test - override all fonts
