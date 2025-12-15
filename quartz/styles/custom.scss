@@ -390,69 +390,9 @@ button#explorer-ul {
 .explorer > h1,
 .explorer > h2,
 .explorer > h3,
-.explorer .title-button,
 .explorer .title-button h2 {
-  display: none !important; // Hide Explorer title completely
-}
-
-// NUCLEAR OPTION: Force everything to display
-.explorer * {
-  max-height: none !important;
-  overflow: visible !important;
-}
-
-.explorer ul,
-.explorer ul li,
-.explorer-ul,
-.explorer-ul li,
-.overflow {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  max-height: none !important;
-  height: auto !important;
-}
-
-.explorer ul li {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-bottom: 0.3rem !important;
-}
-
-.explorer ul li a,
-.explorer a {
-  color: var(--tertiary) !important;
-  font-weight: 300 !important;
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-// Add Thoughts heading
-.explorer-ul::before,
-.explorer .overflow::before {
-  content: "Thoughts";
-  display: block;
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--dark);
-  margin-bottom: 0.5rem;
-}
-
-// Hide folder wrappers
-.explorer .folder-container,
-.explorer .folder-icon,
-.explorer .folder-button {
-  display: none !important;
-}
-
-.explorer .folder-outer ul li:nth-child(n+9) {
-  display: none !important; // Limit to 8 notes max
-}
-
-.explorer .folder-outer ul li a {
-  color: var(--tertiary) !important;
-  font-weight: 300 !important; // Regular weight, not bold
+  font-size: 1rem !important;
+  font-weight: 400 !important;
 }
 
 .explorer a,
