@@ -40,6 +40,13 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       title: "Thoughts",
       folderDefaultState: "open",
+      filterFn: (node) => {
+        // Only show Published folder and its contents
+        if (node.slugSegment === "tags") return false
+        if (node.name === "Published") return true
+        if (node.fullPath?.startsWith("Published/")) return true
+        return false
+      },
     }),
   ],
   right: [
@@ -65,6 +72,13 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       title: "Thoughts",
       folderDefaultState: "open",
+      filterFn: (node) => {
+        // Only show Published folder and its contents
+        if (node.slugSegment === "tags") return false
+        if (node.name === "Published") return true
+        if (node.fullPath?.startsWith("Published/")) return true
+        return false
+      },
     }),
   ],
   right: [],
