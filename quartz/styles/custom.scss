@@ -398,30 +398,46 @@ button#explorer-ul {
 // Force Thoughts folder to always show children (no toggle)
 .explorer .folder-container {
   pointer-events: none !important; // Disable clicking on folder
+  cursor: default !important;
 }
 
-.explorer .folder-container .folder-icon {
+.explorer .folder-container .folder-icon,
+.explorer .folder-icon {
   display: none !important; // Hide toggle arrow
 }
 
-.explorer .folder-outer {
-  display: block !important; // Always show children
-  max-height: none !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+.explorer .folder-button {
+  pointer-events: none !important;
+  cursor: default !important;
 }
 
+// CRITICAL: Force all folder content to be visible
+.explorer .folder-outer,
+.explorer li .folder-outer,
 .explorer .folder-outer.open,
-.explorer .folder-outer:not(.open) {
-  display: block !important; // Force open regardless of state
+.explorer .folder-outer.collapsed {
+  display: block !important; // Always show children
+  max-height: none !important;
+  height: auto !important;
   opacity: 1 !important;
   visibility: visible !important;
+  overflow: visible !important;
 }
 
 .explorer .folder-outer ul,
-.explorer .folder-outer .content {
+.explorer .folder-outer ul.content,
+.explorer .folder-outer > ul {
   display: block !important;
   max-height: none !important;
+  height: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  overflow: visible !important;
+  list-style: none !important;
+}
+
+.explorer .folder-outer ul li {
+  display: list-item !important;
   opacity: 1 !important;
   visibility: visible !important;
 }

@@ -41,6 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
       title: "",
       folderDefaultState: "open",
       folderClickBehavior: "collapse",
+      useSavedState: false,
       filterFn: (node) => {
         // Exclude tags folder
         if (node.slugSegment === "tags") return false
@@ -90,6 +91,7 @@ export const defaultListPageLayout: PageLayout = {
       title: "",
       folderDefaultState: "open",
       folderClickBehavior: "collapse",
+      useSavedState: false,
       filterFn: (node) => {
         // Exclude tags folder
         if (node.slugSegment === "tags") return false
