@@ -38,13 +38,28 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({
-      title: "Thoughts",
+      title: "",
       folderDefaultState: "open",
       filterFn: (node) => {
-        // Exclude tags folder only
+        // Exclude tags folder
         if (node.slugSegment === "tags") return false
-        // Show everything else
-        return true
+
+        // Only show Published folder and its contents
+        if (node.name === "Published" || node.displayName === "Published") {
+          return true
+        }
+        if (node.fullPath?.includes("Published")) {
+          return true
+        }
+
+        // Hide everything else
+        return false
+      },
+      mapFn: (node) => {
+        // Rename "Published" folder to "Thoughts"
+        if (node.name === "Published" || node.displayName === "Published") {
+          node.displayNameOverride = "Thoughts"
+        }
       },
     }),
   ],
@@ -69,13 +84,28 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      title: "Thoughts",
+      title: "",
       folderDefaultState: "open",
       filterFn: (node) => {
-        // Exclude tags folder only
+        // Exclude tags folder
         if (node.slugSegment === "tags") return false
-        // Show everything else
-        return true
+
+        // Only show Published folder and its contents
+        if (node.name === "Published" || node.displayName === "Published") {
+          return true
+        }
+        if (node.fullPath?.includes("Published")) {
+          return true
+        }
+
+        // Hide everything else
+        return false
+      },
+      mapFn: (node) => {
+        // Rename "Published" folder to "Thoughts"
+        if (node.name === "Published" || node.displayName === "Published") {
+          node.displayNameOverride = "Thoughts"
+        }
       },
     }),
   ],
