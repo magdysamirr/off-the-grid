@@ -395,44 +395,43 @@ button#explorer-ul {
   display: none !important; // Hide Explorer title completely
 }
 
-// Force Thoughts folder to always show children (no toggle)
+// SIMPLE APPROACH: Hide folder wrapper, show only files under "Thoughts" heading
+// Add a "Thoughts" heading before the explorer list
+.explorer::before {
+  content: "Thoughts";
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  padding-left: 0;
+}
+
+// Hide the folder container (Published/Thoughts folder wrapper)
 .explorer .folder-container {
-  pointer-events: none !important; // Disable clicking on folder
-  cursor: default !important;
+  display: none !important;
 }
 
-.explorer .folder-container .folder-icon,
-.explorer .folder-icon {
-  display: none !important; // Hide toggle arrow
-}
-
-.explorer .folder-button {
-  pointer-events: none !important;
-  cursor: default !important;
-}
-
-// CRITICAL: Force all folder content to be visible
-.explorer .folder-outer,
-.explorer li .folder-outer,
-.explorer .folder-outer.open,
-.explorer .folder-outer.collapsed {
-  display: block !important; // Always show children
-  max-height: none !important;
-  height: auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  overflow: visible !important;
-}
-
-.explorer .folder-outer ul,
-.explorer .folder-outer ul.content,
-.explorer .folder-outer > ul {
+// Show the folder children directly without the folder wrapper
+.explorer .folder-outer {
   display: block !important;
   max-height: none !important;
   height: auto !important;
   opacity: 1 !important;
   visibility: visible !important;
   overflow: visible !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.explorer .folder-outer ul,
+.explorer .folder-outer ul.content {
+  display: block !important;
+  max-height: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
   list-style: none !important;
 }
 
@@ -440,6 +439,7 @@ button#explorer-ul {
   display: list-item !important;
   opacity: 1 !important;
   visibility: visible !important;
+  padding-left: 0 !important;
 }
 
 .explorer .folder-outer ul li:nth-child(n+9) {
