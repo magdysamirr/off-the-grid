@@ -23,8 +23,8 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Google Sans Flex",
-        body: "IBM Plex Sans Arabic",
+        header: "Noto Naskh Arabic",
+        body: "Noto Naskh Arabic",
         code: "Google Sans Flex",
       },
       colors: {
@@ -43,8 +43,8 @@ const config: QuartzConfig = {
           light: "#171819",
           lightgray: "#393639",
           gray: "#646464",
-          darkgray: "#fff8f2",
-          dark: "#fff8f2",
+          darkgray: "#EBE0C6",
+          dark: "#EBE0C6",
           secondary: "#d8c193",
           tertiary: "#FAE2C8",
           highlight: "rgba(143, 159, 169, 0.15)",
