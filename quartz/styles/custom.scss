@@ -110,12 +110,14 @@ a:hover {
   font-display: swap;
 }
 
-// Body content extra light weight
+// Body content lightest weight possible
 article p,
 article ul,
 article ol,
-article li {
-  font-weight: 200 !important;
+article li,
+body,
+p {
+  font-weight: 100 !important; // Lightest font weight
 }
 
 // Page title font - aligned with icons (central alignment)
@@ -311,11 +313,11 @@ a.external {
   }
 }
 
-// Article internal links - natural inline display
+// Article internal links - use primary color (dark)
 article a.internal {
   font-size: inherit !important;
   font-weight: 200 !important;
-  color: var(--tertiary) !important;
+  color: var(--dark) !important; // Primary color in both modes
   text-decoration: underline !important;
 }
 
@@ -794,33 +796,31 @@ blockquote p,
   text-indent: 0 !important;
 }
 
-// Signature at the end of each article
-article.content::after {
-  content: "";
+// Signature component styling
+.signature-wrapper {
   display: block;
+  margin: 3rem 0 2rem 0;
+  text-align: left;
+}
+
+.signature-image {
   width: 250px;
   height: 70px;
-  margin: 3rem 0 2rem 0;
-  background-image: url('/static/signature.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
+  object-fit: contain;
   opacity: 0.8;
 
   // Apply color mask filter based on theme
-  // Light mode: use tertiary color
-  filter: brightness(0) saturate(100%) invert(47%) sepia(7%) saturate(878%) hue-rotate(192deg) brightness(92%) contrast(88%);
+  // Light mode: use primary/dark color
+  filter: brightness(0) saturate(100%) invert(27%) sepia(10%) saturate(878%) hue-rotate(192deg) brightness(92%) contrast(88%);
 }
 
-// Dark mode signature color
-:root[saved-theme="dark"] article.content::after {
+// Dark mode signature color - use primary color
+:root[saved-theme="dark"] .signature-image {
   filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%);
 }
 
 // RTL articles - align signature to the right
-article.rtl::after,
-article[lang="ar"]::after {
-  background-position: right center;
-  margin-left: auto;
-  margin-right: 0;
+.rtl .signature-wrapper,
+*[lang="ar"] .signature-wrapper {
+  text-align: right;
 }
