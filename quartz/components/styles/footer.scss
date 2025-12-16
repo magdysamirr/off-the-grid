@@ -1,22 +1,12 @@
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
   padding-top: 2rem;
   border-top: 1px solid var(--lightgray);
 
-  .footer-left {
-    display: flex;
-    align-items: center;
-  }
-
-  .footer-signature {
-    height: 56px;
-    width: auto;
-  }
-
-  .footer-right {
+  .footer-center {
     display: flex;
     align-items: center;
 
@@ -29,9 +19,13 @@ footer {
       gap: 0.3em;
 
       .external-icon {
-        width: 0.8em;
-        height: 0.8em;
-        fill: var(--secondary);
+        width: 0.8em !important;
+        height: 0.8em !important;
+        fill: currentColor !important;
+      }
+
+      &:hover {
+        color: #48A9A6 !important;
       }
     }
   }
