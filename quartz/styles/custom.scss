@@ -110,14 +110,35 @@ a:hover {
   font-display: swap;
 }
 
-// Body content lightest weight possible
+// Body content extra light weight
 article p,
 article ul,
 article ol,
 article li,
 body,
 p {
-  font-weight: 100 !important; // Lightest font weight
+  font-weight: 200 !important; // Extra light font weight
+}
+
+// RTL content uses Noto Naskh Arabic
+.rtl,
+.rtl *,
+article.rtl,
+article.rtl *,
+article[lang="ar"],
+article[lang="ar"] *,
+*[lang="ar"],
+*[lang="ar"] * {
+  font-family: "Noto Naskh Arabic", serif !important;
+  font-weight: 200 !important;
+}
+
+// RTL headings
+.rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6,
+article.rtl h1, article.rtl h2, article.rtl h3, article.rtl h4, article.rtl h5, article.rtl h6,
+article[lang="ar"] h1, article[lang="ar"] h2, article[lang="ar"] h3, article[lang="ar"] h4, article[lang="ar"] h5, article[lang="ar"] h6 {
+  font-family: "Noto Naskh Arabic", serif !important;
+  font-weight: 400 !important;
 }
 
 // Page title font - aligned with icons (central alignment)
@@ -313,11 +334,11 @@ a.external {
   }
 }
 
-// Article internal links - use primary color (dark)
+// Article internal links - use tertiary color
 article a.internal {
   font-size: inherit !important;
   font-weight: 200 !important;
-  color: var(--dark) !important; // Primary color in both modes
+  color: var(--tertiary) !important;
   text-decoration: underline !important;
 }
 
