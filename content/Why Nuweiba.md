@@ -38,31 +38,7 @@ Slow living isn't about doing less. It's about doing things at the speed your br
 
 ---
 
-**Related notes:**  
+**Related thoughts:**  
 [[index|It is alive]]· [[Systems Over Willpower]] · [[The Cost of Context-Switching]] · [[Building Remote While Off-Grid]] · [[ADHD and Environment Design]]
 
 **Tags:** #nuweiba #ADHD #off-the-grid #slow-living
-
----
-
-**Word count:** ~480  
-**Read time:** 2 minutes
-
----
-
-**Structure notes:**
-
-- Opens with the plan vs. reality tension
-- The three-day call is the pivot moment
-- "What Happened in 72 Hours" unpacks the environmental shift concretely (sea, silence, Bedouins, no traffic)
-- Explicitly connects ADHD/depression to environment, not just personal failure
-- Aftermath ties it forward to WordReward without making WR the hero
-- Ends on "slow living = brain speed, not laziness"
-
-**Tone check:**
-
-- Concrete details: ✓ (sea 200m away, generators, stars, Bedouins speaking slowly)
-- No romanticizing: ✓ (calls it "efficient dismantling," not "magical healing")
-- Lands the insight: ✓ ("ADHD wasn't the problem. The environment was.")
-
-Ready when you confirm the angle holds.
