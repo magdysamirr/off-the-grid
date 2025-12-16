@@ -820,8 +820,18 @@ blockquote p,
 // Signature component styling
 .signature-wrapper {
   display: block;
-  margin: 3rem 0 2rem 0;
+  margin: 3rem 0 2rem -20px; // Move 20px to the left
   text-align: left;
+
+  a {
+    display: inline-block;
+    transition: opacity 0.2s ease;
+
+    &:hover .signature-image {
+      opacity: 1;
+      filter: brightness(0) saturate(100%) invert(48%) sepia(51%) saturate(459%) hue-rotate(128deg) brightness(93%) contrast(89%) !important;
+    }
+  }
 }
 
 .signature-image {
@@ -829,6 +839,7 @@ blockquote p,
   height: 70px;
   object-fit: contain;
   opacity: 0.8;
+  transition: all 0.2s ease;
 
   // Apply color mask filter based on theme
   // Light mode: use primary/dark color
@@ -840,8 +851,14 @@ blockquote p,
   filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%);
 }
 
+// Hover effect for both light and dark mode - #48A9A6
+:root[saved-theme="dark"] .signature-wrapper a:hover .signature-image {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(51%) saturate(459%) hue-rotate(128deg) brightness(93%) contrast(89%) !important;
+}
+
 // RTL articles - align signature to the right
 .rtl .signature-wrapper,
 *[lang="ar"] .signature-wrapper {
   text-align: right;
+  margin: 3rem -20px 2rem 0; // Move 20px to the right for RTL
 }
