@@ -19,7 +19,7 @@ I looked at that empty, scorched earth and said it out loud: "I want to camp her
 
 I didn't mean for a night. I detailed it: A small hut. Basic water and food. A dog and a goat. No network. No electricity. No communication with people. Just one week of absolute silence.
 
-My friends thought it was a random comment. I knew it was serious. That valley showed me the noise wasn't just annoying me—it was breaking me. That isolation wasn't a fantasy; it was the only exit door I could see.
+My friends thought it was a random comment. I knew it was serious. That valley showed me the noise wasn't just annoying me, it was breaking me. That isolation was the only exit door I could see.
 
 ## The Shift
 
@@ -33,7 +33,7 @@ Moving off-grid was a necessary decision for my life. I had to physically remove
 
 This isn't a polished magazine. It's a digital garden. Some entries will be messy. Some will be unfinished. I'll talk about rural life, remote business operations, ADHD mechanics, faith, psychology, the internal software updates required to run the new hardware.
 
-Welcome to the experiment. Timer starts now.
+Welcome to off the grid. Timer starts now.
 
 [[Strategic Thinking, From Real Life to Digital Marketing]]  
 [[Welcome]]  
