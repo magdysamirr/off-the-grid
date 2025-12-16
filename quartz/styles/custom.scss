@@ -74,11 +74,14 @@ p, ul, text, tr, td, li, ol, .katex, .math, .typst-doc, g[class~="typst-text"] {
 // All links use tertiary color
 a {
   color: var(--tertiary) !important;
+  transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--tertiary) !important;
-  opacity: 0.8;
+// Hover effect for all links and clickable elements - #48A9A6
+a:hover,
+button:hover,
+.clickable:hover {
+  color: #48A9A6 !important;
 }
 
 // ============================================================================
@@ -350,6 +353,11 @@ article a.internal {
   font-weight: 200 !important;
   color: var(--tertiary) !important;
   text-decoration: underline !important;
+  transition: color 0.2s ease;
+}
+
+.tags a:hover {
+  color: #48A9A6 !important;
 }
 
 // ============================================================================
@@ -439,6 +447,11 @@ button#explorer-ul {
 .explorer a.internal {
   color: var(--tertiary) !important;
   font-weight: 300 !important; // Regular weight for all explorer links
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #48A9A6 !important;
+  }
 }
 
 // Footer
@@ -628,6 +641,11 @@ footer a {
 .backlinks a {
   color: var(--tertiary) !important;
   overflow: visible !important; // Prevent text cutoff
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #48A9A6 !important;
+  }
 }
 
 // Table of Contents - now alone in right sidebar
@@ -679,6 +697,11 @@ footer a {
 
 .toc a.internal {
   color: var(--tertiary) !important; // Tertiary color for TOC links
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #48A9A6 !important;
+  }
 }
 
 // Remove TOC fade effect
