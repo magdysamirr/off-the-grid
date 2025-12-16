@@ -325,14 +325,25 @@ article hr {
 // External link styling
 a.external {
   text-decoration: underline;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #48A9A6 !important;
+
+    .external-icon path {
+      fill: #48A9A6 !important;
+    }
+  }
 
   .external-icon {
     display: inline-block;
     margin-left: 0.2em;
     vertical-align: middle;
+    transition: fill 0.2s ease;
 
     path {
       fill: var(--tertiary);
+      transition: fill 0.2s ease;
     }
   }
 }
@@ -343,6 +354,11 @@ article a.internal {
   font-weight: 200 !important;
   color: var(--tertiary) !important;
   text-decoration: underline !important;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #48A9A6 !important;
+  }
 }
 
 // Tags styling
