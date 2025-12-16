@@ -2,6 +2,8 @@
 dg-publish: true
 title: It is alive !
 dg-home: true
+aliases:
+  - It is alive
 ---
 If you are reading this, I finally managed to connect [[Obsidian]] to GitHub to Vercel via Quartz.
 
