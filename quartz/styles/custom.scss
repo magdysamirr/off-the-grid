@@ -1,4 +1,5 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
 // Custom Quartz Styling
 // Organized by: Typography → Colors → Layout → Components
@@ -468,10 +469,19 @@ footer a {
   }
 }
 
-// Mobile - hide TOC completely
-@media (max-width: 799px) {
-  .toc {
+// Mobile - hide TOC completely (using Quartz mobile breakpoint)
+@media all and ($mobile) {
+  .toc,
+  .sidebar.right .toc,
+  .right .toc {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
   }
 }
 
