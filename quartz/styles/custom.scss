@@ -222,21 +222,18 @@ article:lang(ar),
   text-align: right;
 }
 
-// Arabic numerals support - convert Western digits to Eastern Arabic
+// Arabic numerals support - display Arabic-Indic digits in RTL content
+// This will be handled by JavaScript to convert Western digits (0-9) to Arabic-Indic (٠-٩)
 .rtl .content-meta,
 .rtl .content-meta time,
 .rtl .content-meta span,
 *[lang="ar"] .content-meta,
 *[lang="ar"] time,
 *[lang="ar"] span {
+  // Force Arabic-Indic numerals (٠١٢٣٤٥٦٧٨٩) instead of Western (0123456789)
   font-variant-numeric: tabular-nums;
-}
-
-// Use CSS counter to display Arabic/Hindi numerals
-@supports (font-variant-numeric: tabular-nums) {
-  .rtl .content-meta {
-    font-feature-settings: "ss02"; /* Some fonts support Arabic numerals via stylistic sets */
-  }
+  direction: rtl;
+  unicode-bidi: embed;
 }
 
 // ============================================================================
@@ -246,10 +243,11 @@ article:lang(ar),
 // Content metadata spacing with short line below (same length as text)
 .content-meta {
   margin-top: 10px !important;
-  padding-bottom: 0.5rem !important;
+  padding-bottom: 0.1rem !important; // Move line closer (was 0.5rem, reduced by 0.4rem)
   border-bottom: 1px solid var(--gray);
   display: inline-block !important; // Make border only as wide as content
   margin-bottom: 1rem !important;
+  opacity: 0.7 !important; // 30% more translucent (was 1, now 0.7)
 }
 
 // RTL metadata alignment for Arabic content - CRITICAL: must be right-aligned
@@ -467,6 +465,13 @@ footer a {
     align-items: stretch !important;
     padding: 2rem !important;
     box-sizing: border-box !important;
+  }
+}
+
+// Mobile - hide TOC completely
+@media (max-width: 799px) {
+  .toc {
+    display: none !important;
   }
 }
 

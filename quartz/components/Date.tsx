@@ -18,12 +18,25 @@ export function getDate(cfg: GlobalConfiguration, data: QuartzPluginData): Date 
   return data.dates?.[cfg.defaultDateType]
 }
 
+// Convert Western digits to Arabic-Indic digits
+function toArabicNumerals(str: string): string {
+  const arabicDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩']
+  return str.replace(/\d/g, (digit) => arabicDigits[parseInt(digit)])
+}
+
 export function formatDate(d: Date, locale: ValidLocale = "en-US"): string {
-  return d.toLocaleDateString(locale, {
+  const formatted = d.toLocaleDateString(locale, {
     year: "numeric",
     month: "short",
     day: "2-digit",
   })
+
+  // Force Arabic-Indic numerals for Arabic locale
+  if (locale === "ar-SA" || locale.startsWith("ar")) {
+    return toArabicNumerals(formatted)
+  }
+
+  return formatted
 }
 
 export function Date({ date, locale }: Props) {

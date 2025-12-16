@@ -33,6 +33,12 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       const isRTL = fileData.frontmatter?.cssclasses?.includes("rtl")
       const locale = isRTL ? "ar-SA" : cfg.locale
 
+      // Function to convert Western digits to Arabic-Indic digits
+      const toArabicNumerals = (str: string): string => {
+        const arabicDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩']
+        return str.replace(/\d/g, (digit) => arabicDigits[parseInt(digit)])
+      }
+
       if (fileData.dates) {
         segments.push(<Date date={getDate(cfg, fileData)!} locale={locale} />)
       }
@@ -40,9 +46,15 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       // Display reading time if enabled
       if (options.showReadingTime) {
         const { minutes, words: _words } = readingTime(text)
-        const displayedTime = i18n(locale).components.contentMeta.readingTime({
+        let displayedTime = i18n(locale).components.contentMeta.readingTime({
           minutes: Math.ceil(minutes),
         })
+
+        // Convert to Arabic numerals if RTL
+        if (isRTL) {
+          displayedTime = toArabicNumerals(displayedTime)
+        }
+
         segments.push(<span>{displayedTime}</span>)
       }
 
