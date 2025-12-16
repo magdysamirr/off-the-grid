@@ -3,8 +3,6 @@ dg-publish: true
 title: It is alive !
 dg-home: true
 ---
-# It Is Alive
-
 If you are reading this, I finally managed to connect Obsidian to GitHub to Vercel via Quartz.  
 I could have just opened a Substack. I could have used WordPress. Instead, I chose the least convenient method possible because I needed to know how the engine works before I could drive the car. That is the entire ethos of what you are about to read.  
 
