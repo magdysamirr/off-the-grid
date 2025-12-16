@@ -11,12 +11,7 @@ export default ((opts?: Options) => {
   const Footer: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <div class="footer-left">
-          <a href="/">
-            <img src="/static/signature.png" alt="Signature" class="footer-signature" />
-          </a>
-        </div>
-        <div class="footer-right">
+        <div class="footer-center">
           <a href="https://www.wordreward.net" target="_blank" rel="noopener noreferrer">
             WordReward 2026
             <svg class="external-icon" viewBox="0 0 512 512">
