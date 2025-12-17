@@ -23,9 +23,21 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "JetBrains Mono",
-        body: "JetBrains Mono",
-        code: "JetBrains Mono",
+        header: {
+          name: "JetBrains Mono",
+          weights: [100, 200, 300, 400],
+          includeItalic: false,
+        },
+        body: {
+          name: "JetBrains Mono",
+          weights: [100, 200, 300, 400],
+          includeItalic: true,
+        },
+        code: {
+          name: "JetBrains Mono",
+          weights: [100, 200, 300, 400],
+          includeItalic: false,
+        },
       },
       colors: {
         lightMode: {
