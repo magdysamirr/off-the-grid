@@ -10,16 +10,16 @@ The test: If your competitor can do exactly what you're doing, that's not strate
 ## Six Strategic Patterns That Actually Work
 
 **Flanking: Attack Where They're Weak.**.   
-Dollar Shave Club didn't fight Gillette on TV ads or retail shelves. They made a $4,500 YouTube video, used humor instead of athlete endorsements, sold subscriptions online.   
+Dollar Shave Club didn't fight Gillette on TV ads or retail shelves. They made a $ 4,500 YouTube video, used humor instead of athlete endorsements, sold subscriptions online.   
 >Trade-off: gave up prestige positioning and retail distribution entirely.  
-Result: 12,000 orders in 48 hours, sold to Unilever for $1 billion in 2016. They attacked where Gillette was weak—price, accessibility, tone.
+Result: 12,000 orders in 48 hours, sold to Unilever for $ 1 billion in 2016. They attacked where Gillette was weak—price, accessibility, tone.
 
 [Watch the original video](https://www.youtube.com/watch?v=ZUG9qYTJMsI) | [Read the case study](https://bretwaters.medium.com/case-study-dollar-shave-club-a9503fc83ea0)
  
 **New Territory: Create Category You Own.**  
 Red Bull stopped competing on "our drink gives you energy." They funded Felix Baumgartner to jump from the edge of space, live-streamed it on YouTube, created actual entertainment instead of drink advertising.  
 >Trade-off: spent $ 50M+ on single event, didn't mention drink features at all.  
-Result: 8 million concurrent viewers, $100M+ earned media. Created new category as media company producing extreme content.
+Result: 8 million concurrent viewers, $ 100M+ earned media. Created new category as media company producing extreme content.
 
 [Watch the space jump](https://www.youtube.com/watch?v=FHtvDA0W34I) | [Read the analysis](https://thebrandhopper.com/2024/02/05/a-case-study-on-red-bull-stratos-campaign/)
 
@@ -42,7 +42,7 @@ Result: BK app jumped from 686th to #1 downloaded, 1.5 million downloads in 9 da
 Glossier faced beauty giants with billions in ads and retail presence. They started with blog "Into The Gloss" (owned audience before selling anything), asked readers what products they wanted, created products from community feedback, sold directly through website only.  
 Customer journey they control: blog reader becomes community member becomes product co-creator becomes customer becomes advocate becomes content creator recruits new readers.  
 >Trade-off: no retail presence, slower initial growth, had to build audience from zero.  
-Result: $100M revenue in 4 years with minimal paid ads, valued at $1.2 billion by 2019.
+Result: $ 100M revenue in 4 years with minimal paid ads, valued at $ 1.2 billion by 2019.
 
 [Visit Glossier](https://www.glossier.com/) | [Read the Harvard case](https://www.hbs.edu/faculty/Pages/item.aspx?num=54905)
 
@@ -50,7 +50,7 @@ Result: $100M revenue in 4 years with minimal paid ads, valued at $1.2 billion b
 Music streaming is commoditized. Spotify created personalized year-end summaries (Wrapped), made them shareable social graphics, released before holidays, made it feel like personal achievement.   
 Users don't feel like advertisers—they feel like they're sharing about themselves. But every share is a Spotify ad with personal endorsement. Each share recruits friends who want their own Wrapped.   
 >Trade-off: only works once a year, requires significant data infrastructure.  
-Result: 156M+ users engaged with Wrapped 2023, dominated social media entire week in December, billions of impressions—all organic.  
+Result: 156M+ users engaged with Wrapped 2023, dominated social media entire week in December, billions of impressions, all organic.  
 
 [See Wrapped](https://www.spotify.com/wrapped/) | [Read the analysis](https://thebrandhopper.com/2025/06/10/a-case-study-on-spotify-wrapped-the-storytelling-phenomenon/)
 
