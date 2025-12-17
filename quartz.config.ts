@@ -25,12 +25,12 @@ const config: QuartzConfig = {
       typography: {
         header: {
           name: "Google Sans Flex",
-          weights: [200, 500, 600],
+          weights: [300],
           includeItalic: false,
         },
         body: {
           name: "Google Sans Flex",
-          weights: [200, 500, 600],
+          weights: [300],
           includeItalic: false,
         },
         code: {
