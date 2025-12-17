@@ -31,7 +31,7 @@ If your request doesn't serve your strategic position, we tell you. Not to be di
 Trade-off: We lose some projects. Gain: Every project we take strengthens both client position and our reputation.
 
 **2. We combine systems thinking with creative execution**  
-Most agencies are either:
+Most agencies are either:  
 - Creative but chaotic (great ideas, terrible follow-through)
 - Systematic but soulless (perfect schedules, forgettable content)
 
