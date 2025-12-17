@@ -26,7 +26,7 @@ The noise takes one of them, *[[think or act]]*. I had to physically remove the 
 [[Nuweiba]], the silence here forces you to look at what you've been avoiding. Most people can't handle that. They fill the quiet with distractions. I don't recommend this path, but if you're considering it, conventional advice stopped working for you a while ago.
 
 #### What This Is
-This is where I document remote operations, [[ADHD]] mechanics, business [[Systems|systems]], and the reality of running things from the [[off-grid|edge of the map]].
+This is where I document remote operations, [[ADHD]] mechanics, business [[Systems|systems]], and the reality of running things from [[off-grid|off the grid]]
 
 Not polished. Not finished. Just building in public and seeing if the patterns are useful to anyone else whose brain makes everything harder than it needs to be.
 
