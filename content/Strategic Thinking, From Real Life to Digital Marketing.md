@@ -176,7 +176,7 @@ Everyone has tactics. Few have strategy.
 We don't market. We mark.
 
 Common thread: All had CLEAR strategy before execution. None were "let's post and see what happens."
-<center>•••</center>
+<center>• • •</center>
 
  #strategy #marketing #positioning #business #internal #client #WordReward 
 
