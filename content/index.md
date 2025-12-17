@@ -11,7 +11,7 @@ I could have just opened a Substack. I could have used WordPress. Instead, I cho
 
 Stay for five minutes. *Not less, not more.* Then leave.
 
-#### [[The Problem]]
+#### [[The Problem]] ![[Untitled design.png]]
 I lived in a brain that wouldn't shut up. [[Nuweiba Dental Clinic|Clinic]], operations, team messages, family, ideas, guilt. Everything at the same time. I was efficient at being busy. I was starving for clarity.
 
 #### The Valley
@@ -35,5 +35,7 @@ Not polished. Not finished. Just building in public and seeing if the patterns a
 ---
 
 **Related:** [[The Cost of Context Switching]] • [[Remote Operations Without Losing Control]] • [[All Systems Will Fail ADHD Brains.]] • [[Structural Decisions vs Motivational Ones]] • [[Why Nuweiba]] 
+
+5 minutes read: [[Strategic Thinking, From Real Life to Digital Marketing]]
 
 **Tags:** #ADHD #remote-operations #systems
