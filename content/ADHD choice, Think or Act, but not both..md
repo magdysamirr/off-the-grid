@@ -1,7 +1,6 @@
 ---
 aliases:
   - Think or act
-title: "ADHD choice: Think or Act, but not both."
 ---
 [[ADHD]] forces a binary choice: think or act. You cannot do both simultaneously.  
 The "Grid": cities, noise, notifications and constant availability, makes that choice for you. It forces you into permanent reactive mode: firefighting, context-switching, and responding to whatever is loudest. You stop building. You stop thinking strategically.
