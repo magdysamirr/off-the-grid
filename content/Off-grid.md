@@ -1,6 +1,5 @@
 ---
 title: Off the Grid
-dg-publish: true
 ---
 ### The Core Axiom: Autonomy via Decoupling
 
