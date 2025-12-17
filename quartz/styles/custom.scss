@@ -9,25 +9,26 @@
 // ============================================================================
 
 // Base font size - responsive for different devices
+// JetBrains Mono optimized: one step larger than jetbrains.com
 html {
-  font-size: 16px !important; // Mobile base size (increased)
+  font-size: 15px !important; // Mobile base - readable on small screens
 
-  // Tablet (iPad) - larger for readability
+  // Tablet (iPad) - comfortable reading size
   @media (min-width: 768px) and (max-width: 1024px) {
-    font-size: 18px !important;
+    font-size: 17px !important;
   }
 
-  // Desktop - increase by 1 step from original 14px
+  // Desktop - one step larger than JetBrains.com (they use ~16px, we use 18px)
   @media (min-width: 1025px) {
-    font-size: 16px !important; // One step increase
+    font-size: 18px !important;
   }
 }
 
-// Tighter line spacing for content (reduce from 1.6rem to 1.4rem)
+// Line spacing optimized for JetBrains Mono readability
 tbody,
 li,
 p {
-  line-height: 1.4rem !important;
+  line-height: 1.6rem !important; // Slightly more space for monospace font
 }
 
 // Reduce space between headlines and body by 20%
@@ -113,14 +114,14 @@ button:hover,
   font-display: swap;
 }
 
-// Body content extra light weight
+// Body content weight for JetBrains Mono
 article p,
 article ul,
 article ol,
 article li,
 body,
 p {
-  font-weight: 200 !important; // Extra light font weight
+  font-weight: 400 !important; // Regular weight for monospace readability
 }
 
 // RTL content uses Noto Naskh Arabic
@@ -351,7 +352,7 @@ a.external {
 // Article internal links - use tertiary color
 article a.internal {
   font-size: inherit !important;
-  font-weight: 200 !important;
+  font-weight: 400 !important; // Regular weight for JetBrains Mono
   color: var(--tertiary) !important;
   text-decoration: underline !important;
   transition: color 0.2s ease;
@@ -366,7 +367,7 @@ article a.internal {
 .tags li,
 .tags a {
   font-size: inherit !important;
-  font-weight: 200 !important;
+  font-weight: 400 !important; // Regular weight for JetBrains Mono
   color: var(--tertiary) !important;
   text-decoration: underline !important;
   transition: color 0.2s ease;
