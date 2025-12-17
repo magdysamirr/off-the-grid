@@ -80,20 +80,21 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
             const tags = coerceToArray(coalesceAliases(data, ["tags", "tag"]))
             if (tags) data.tags = [...new Set(tags.map((tag: string) => slugTag(tag)))]
 
-            const aliases = coerceToArray(coalesceAliases(data, ["aliases", "alias"]))
-            if (aliases) {
-              data.aliases = aliases // frontmatter
-              file.data.aliases = getAliasSlugs(aliases)
-              allSlugs.push(...file.data.aliases)
-            }
+            // Alias processing disabled
+            // const aliases = coerceToArray(coalesceAliases(data, ["aliases", "alias"]))
+            // if (aliases) {
+            //   data.aliases = aliases // frontmatter
+            //   file.data.aliases = getAliasSlugs(aliases)
+            //   allSlugs.push(...file.data.aliases)
+            // }
 
-            if (data.permalink != null && data.permalink.toString() !== "") {
-              data.permalink = data.permalink.toString() as FullSlug
-              const aliases = file.data.aliases ?? []
-              aliases.push(data.permalink)
-              file.data.aliases = aliases
-              allSlugs.push(data.permalink)
-            }
+            // if (data.permalink != null && data.permalink.toString() !== "") {
+            //   data.permalink = data.permalink.toString() as FullSlug
+            //   const aliases = file.data.aliases ?? []
+            //   aliases.push(data.permalink)
+            //   file.data.aliases = aliases
+            //   allSlugs.push(data.permalink)
+            // }
 
             const cssclasses = coerceToArray(coalesceAliases(data, ["cssclasses", "cssclass"]))
             if (cssclasses) data.cssclasses = cssclasses
