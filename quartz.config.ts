@@ -24,18 +24,18 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: {
-          name: "JetBrains Mono",
-          weights: [100, 200, 300, 400],
+          name: "Google Sans Flex",
+          weights: [200, 500, 600],
           includeItalic: false,
         },
         body: {
-          name: "JetBrains Mono",
-          weights: [100, 200, 300, 400],
-          includeItalic: true,
+          name: "Google Sans Flex",
+          weights: [200, 500, 600],
+          includeItalic: false,
         },
         code: {
           name: "JetBrains Mono",
-          weights: [100, 200, 300, 400],
+          weights: [300, 400],
           includeItalic: false,
         },
       },
