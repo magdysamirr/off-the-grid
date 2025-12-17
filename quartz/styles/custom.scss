@@ -34,7 +34,7 @@ p {
 // Reduce space between headlines and body by 20%
 h1 {
   margin-top: 1.8rem !important; // 2.25rem * 0.8 = 1.8rem
-  margin-bottom: 0.8rem !important; // 1rem * 0.8 = 0.8rem
+  margin-bottom: 0.2rem !important; // Very small margin for metadata proximity
 }
 
 h2 {
@@ -302,7 +302,7 @@ article:lang(ar),
 
 // Content metadata spacing with short line below (same length as text)
 .content-meta {
-  margin-top: -1.5rem !important; // Much closer to title (large negative margin)
+  margin-top: 0.2rem !important; // Very close to title
   padding-bottom: 0.1rem !important; // Move line closer (was 0.5rem, reduced by 0.4rem)
   border-bottom: 1px solid var(--gray);
   display: inline-block !important; // Make border only as wide as content
@@ -941,4 +941,77 @@ blockquote p,
 *[lang="ar"] .signature-wrapper {
   text-align: right;
   margin: 3rem -20px 2rem 0; // Move 20px to the right for RTL
+}
+
+// ============================================================================
+// POPOVER CUSTOMIZATION - SQUARE LEFT SIDEBAR PREVIEW
+// ============================================================================
+
+// Desktop only - hide on mobile and tablet
+@media (max-width: 1024px) {
+  .popover {
+    display: none !important;
+  }
+}
+
+// Desktop popover - square, confined to left sidebar
+@media (min-width: 1025px) {
+  .popover {
+    // Position in left sidebar area
+    position: fixed !important;
+    left: 20px !important; // Sidebar left padding
+    max-width: 280px !important; // Confined to sidebar width (320px - padding)
+    z-index: 999 !important;
+
+    & > .popover-inner {
+      // Square aspect ratio
+      width: 280px !important;
+      height: 280px !important;
+      max-height: 280px !important;
+      aspect-ratio: 1 !important; // Force square
+
+      // Clean square styling
+      border-radius: 8px !important;
+      padding: 1rem !important;
+      overflow: auto !important;
+
+      // Box shadow for depth
+      box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+
+      // Smooth transitions
+      transition: all 0.3s ease !important;
+
+      // Ensure content doesn't overflow
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+
+      h1 {
+        font-size: 1.2rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.5rem !important;
+      }
+
+      h2, h3 {
+        font-size: 1rem !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.3rem !important;
+      }
+
+      p {
+        font-size: 0.9rem !important;
+        margin: 0.3rem 0 !important;
+        line-height: 1.4 !important;
+      }
+    }
+  }
+
+  // Animation on hover/active
+  .active-popover,
+  .popover:hover {
+    animation: dropin 0.3s ease !important;
+    animation-fill-mode: forwards !important;
+    animation-delay: 0.2s !important;
+  }
 }
