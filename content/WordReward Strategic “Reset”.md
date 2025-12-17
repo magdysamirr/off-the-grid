@@ -44,7 +44,7 @@ Campaigns end. Positioning lasts. We create assets that appreciate: content libr
 
 ### Type 1: Businesses That Understand Differentiation
 
-**Profile:** Small to mid-sized businesses, startup [[founders]], brand managers who know "more content" isn't the answer, better positioning is.
+**Profile:** Small to mid-sized businesses, startup [[Founders]], brand managers who know "more content" isn't the answer, better positioning is.
 
 **What they struggle with:**  
 - Generic content that looks like everyone else's
