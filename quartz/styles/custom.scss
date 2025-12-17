@@ -433,7 +433,8 @@ article a.internal {
 .explorer {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important;
+  justify-content: center !important; // Vertical center
+  align-items: center !important; // Horizontal center
   height: 100% !important;
   margin-top: 0 !important;
   padding-top: 0 !important;
@@ -478,6 +479,8 @@ button#explorer-ul {
   display: block !important;
   max-height: none !important;
   opacity: 1 !important;
+  width: 100% !important; // Full width for proper centering
+  text-align: center !important; // Center text horizontally
 }
 
 .explorer > h1,
@@ -499,6 +502,7 @@ button#explorer-ul {
   max-height: none !important;
   opacity: 1 !important;
   visibility: visible !important;
+  width: 100% !important; // Full width for centering
 }
 
 .explorer .folder-outer ul {
@@ -506,6 +510,11 @@ button#explorer-ul {
   max-height: none !important;
   opacity: 1 !important;
   visibility: visible !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 auto !important; // Center the list
+  width: fit-content !important; // Only as wide as content
+  text-align: center !important; // Center list items
 }
 
 .explorer a,
