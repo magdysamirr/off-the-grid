@@ -18,7 +18,7 @@ Result: 12,000 orders in 48 hours, sold to Unilever for $1 billion in 2016. They
  
 **New Territory: Create Category You Own.**  
 Red Bull stopped competing on "our drink gives you energy." They funded Felix Baumgartner to jump from the edge of space, live-streamed it on YouTube, created actual entertainment instead of drink advertising.  
->Trade-off: spent $50M+ on single event, didn't mention drink features at all.  
+>Trade-off: spent $ 50M+ on single event, didn't mention drink features at all.  
 Result: 8 million concurrent viewers, $100M+ earned media. Created new category as media company producing extreme content.
 
 [Watch the space jump](https://www.youtube.com/watch?v=FHtvDA0W34I) | [Read the analysis](https://thebrandhopper.com/2024/02/05/a-case-study-on-red-bull-stratos-campaign/)
