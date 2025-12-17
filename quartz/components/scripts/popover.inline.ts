@@ -19,13 +19,32 @@ async function mouseEnterHandler(
     const isDesktop = window.innerWidth >= 1025
 
     if (isDesktop) {
-      // Desktop: Fixed position in left sidebar, no transform
-      Object.assign(popoverElement.style, {
-        position: "fixed",
-        left: "2rem",
-        top: "8rem",
-        transform: "none",
-      })
+      // Desktop: Center in left sidebar
+      // Get the content area to calculate left sidebar width
+      const centerColumn = document.querySelector(".center")
+      if (centerColumn) {
+        const centerRect = centerColumn.getBoundingClientRect()
+        // Left sidebar spans from 0 to start of center column
+        const leftSidebarWidth = centerRect.left
+        // Center the 280px popover in the left sidebar
+        const popoverWidth = 280
+        const centeredLeft = (leftSidebarWidth - popoverWidth) / 2
+        // Vertical center: 50vh - half of popover height (140px)
+        Object.assign(popoverElement.style, {
+          position: "fixed",
+          left: `${centeredLeft}px`,
+          top: "calc(50vh - 140px)",
+          transform: "none",
+        })
+      } else {
+        // Fallback positioning
+        Object.assign(popoverElement.style, {
+          position: "fixed",
+          left: "2rem",
+          top: "calc(50vh - 140px)",
+          transform: "none",
+        })
+      }
     } else {
       // Mobile/Tablet: Use default Floating UI positioning
       const { x, y } = await computePosition(link, popoverElement, {
