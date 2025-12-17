@@ -300,12 +300,9 @@ article:lang(ar),
 // LAYOUT & SPACING
 // ============================================================================
 
-// Content metadata spacing with short line below (same length as text)
+// Content metadata spacing
 .content-meta {
   margin-top: 0.2rem !important; // Very close to title
-  padding-bottom: 0.1rem !important; // Move line closer (was 0.5rem, reduced by 0.4rem)
-  border-bottom: 1px solid var(--gray);
-  display: inline-block !important; // Make border only as wide as content
   margin-bottom: 1rem !important;
   opacity: 0.7 !important; // 30% more translucent (was 1, now 0.7)
 
