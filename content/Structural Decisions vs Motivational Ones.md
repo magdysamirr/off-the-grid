@@ -4,9 +4,9 @@ A **structural decision** removes future decision points entirely. I build the s
 
 Example: I want to exercise consistently. Motivational approach says I'll go to the gym when I wake up feeling energized. Structural approach says I walk to the coffee shop every morning at 7am, getting coffee requires movement. One depends on my mood. The other depends on my need for caffeine. Which wins over six months?
 
-We've applied this at [[WordReward]] without calling it that. When clients kept requesting last-minute changes, we didn't resolve to be firmer or set better boundaries. We restructured the contract terms to include revision limits and timeline buffers. The decision was made once, in the contract. The client can't erode the boundary because the boundary is baked into the system, not my mood on Tuesday.
+>We've applied this at [[WordReward]] without calling it that. When clients kept requesting last-minute changes, we didn't resolve to be firmer or set better boundaries. We restructured the contract terms to include revision limits and timeline buffers. The decision was made once, in the contract. The client can't erode the boundary because the boundary is baked into the system, not my mood on Tuesday.
 
-At [[Nuweiba Dental Clinic|NDC]], hiring the junior dentist wasn't a motivational decision to delegate more. It was structural, routine cases physically go to someone else now, because that person exists and is paid to handle them. I can't take them back without firing someone. The system enforces the behavior.
+>At [[Nuweiba Dental Clinic|NDC]], hiring the junior dentist wasn't a motivational decision to delegate more. It was structural, routine cases physically go to someone else now, because that person exists and is paid to handle them. I can't take them back without firing someone. The system enforces the behavior.
 
 #### Why Motivational Decisions Fail (Especially with ADHD)
 
@@ -27,7 +27,7 @@ ADHD has a favorite trick: it reframes structural failures as motivational probl
 
 I ask myself: If I'm having a terrible ADHD day, does this still happen? If the answer is no, it's motivational. Time to redesign.
 
-At WordReward, we can't structurally prevent every client crisis. But I can structure _how_ crises get handled: escalation protocols, response templates, decision trees. The system absorbs the chaos. I execute the protocol. Motivation becomes optional, not essential.
+>At WordReward, we can't structurally prevent every client crisis. But I can structure _how_ crises get handled: escalation protocols, response templates, decision trees. The system absorbs the chaos. I execute the protocol. Motivation becomes optional, not essential.
 
 Personal example: I wanted to read more consistently. I'll read 30 minutes before bed = motivational. I keep one book on the nightstand and my phone charges in another room = structural. The friction to scroll is higher than the friction to read. The behavior follows the path of least resistance.
 
