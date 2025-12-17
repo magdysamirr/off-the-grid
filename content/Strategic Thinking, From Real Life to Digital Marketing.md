@@ -77,13 +77,12 @@ Is it defensible through first-mover advantage, network effects, or content moat
 
 Tactics are what you do. Strategy is WHY you do it THERE, THAT WAY, and not somewhere else. Everyone has tactics. Few have strategy.
 
-We don't market. We mark.
+We don't market. We mark.  
 [WordReward](www.wordreward.net)
 
+<center>• • •</center>
 
 **Tags:** #strategy #marketing #positioning #business #internal #client #WordReward
 
-**Word count:** ~850 words  
-**Read time:** ~5 minutes
 
-**Related:** [[The Cost of Context Switching]] • [[Remote Operations Without Losing Control]] • [[All Systems Will Fail ADHD Brains]] • [[Structural Decisions vs Motivational Ones]] • [[Why Nuweiba]] • [[WordReward Strategic "Ethics"]] • [[Building Unfair Advantages]] • [[Why Most Marketing Isn't Strategic]] • [[Trade-offs and Strategic Choices]]
+**Related:** [[WordReward Strategic “Ethics”|WordReward Strategic “Reset”]] • [[Remote Operations Without Losing Control]] • [[Structural Decisions vs Motivational Ones]] • [[Building Unfair Advantages]] • [[Why Most Marketing Isn't Strategic]] • [[Trade-offs and Strategic Choices]]
