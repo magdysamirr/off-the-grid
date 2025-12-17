@@ -6,7 +6,7 @@ aliases:
   - It is alive
 ---
 If you are reading [[this/digital garden|this]], I finally managed to connect [[Obsidian]] to GitHub to Vercel via Quartz.
-I could have just opened a Substack. I could have used WordPress. Instead, I chose the least convenient method possible because I needed to know how the engine works before I could drive the car. That's what you're getting here.
+I could have just asked a developer. I could have used WordPress. Instead, I chose the least convenient method possible because I needed to know how the engine works before I could drive the car. That's what you're getting here.
 
 Stay for five minutes. *Not less, not more.* Then leave.
 
@@ -15,7 +15,7 @@ Six years ago, I looked at a desert valley near [[Dahab]] and said it out loud: 
 The noise was breaking me.
 
 Moving off-grid was both spiritual and structural.   
-[[ADHD choice, Think or Act, but not both.]]The noise takes one, so I had to physically remove the noise to think and act.
+[[ADHD choice, Think or Act, but not both.]]The noise only allows one, so I had to physically remove the noise to think and act.
 [[Nuweiba]], the silence here forces you to look at what you've been avoiding. Most people can't handle that. They fill the quiet with distractions. I don't recommend this path, but if you're considering it, conventional advice stopped working for you a while ago.
 
 Here is where I document remote operations, [[ADHD]] mechanics, business [[Systems|systems]], and the reality of running things from [[off-the-grid]]
