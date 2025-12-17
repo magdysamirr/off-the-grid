@@ -957,11 +957,14 @@ blockquote p,
 // Desktop popover - square, confined to left sidebar
 @media (min-width: 1025px) {
   .popover {
-    // Position in left sidebar area
+    // Force fixed positioning in left sidebar area
     position: fixed !important;
-    left: 20px !important; // Sidebar left padding
-    max-width: 280px !important; // Confined to sidebar width (320px - padding)
-    z-index: 999 !important;
+    left: 2rem !important; // Inside left sidebar
+    top: 8rem !important; // Below header
+    transform: none !important; // Remove JavaScript transform
+    max-width: 280px !important;
+    z-index: 1000 !important;
+    will-change: opacity, visibility !important; // Only animate these, not position
 
     & > .popover-inner {
       // Square aspect ratio
@@ -980,17 +983,28 @@ blockquote p,
         0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 
-      // Smooth transitions
-      transition: all 0.3s ease !important;
+      // Smooth transitions for fade in/out only
+      transition: opacity 0.3s ease, visibility 0.3s ease !important;
 
       // Ensure content doesn't overflow
       word-wrap: break-word !important;
       overflow-wrap: break-word !important;
 
+      // Title in preview - align with icons
+      .popover-hint {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+
       h1 {
         font-size: 1.2rem !important;
         margin-top: 0 !important;
         margin-bottom: 0.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important; // Space between title and icons
       }
 
       h2, h3 {
@@ -1005,6 +1019,14 @@ blockquote p,
         line-height: 1.4 !important;
       }
     }
+  }
+
+  // Force popover to stay in left sidebar column
+  .sidebar.left .popover,
+  .left .popover {
+    position: absolute !important;
+    left: 2rem !important;
+    right: auto !important;
   }
 
   // Animation on hover/active

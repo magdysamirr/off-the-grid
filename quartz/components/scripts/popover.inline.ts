@@ -15,13 +15,27 @@ async function mouseEnterHandler(
   }
 
   async function setPosition(popoverElement: HTMLElement) {
-    const { x, y } = await computePosition(link, popoverElement, {
-      strategy: "fixed",
-      middleware: [inline({ x: clientX, y: clientY }), shift(), flip()],
-    })
-    Object.assign(popoverElement.style, {
-      transform: `translate(${x.toFixed()}px, ${y.toFixed()}px)`,
-    })
+    // Check if we're on desktop (> 1025px)
+    const isDesktop = window.innerWidth >= 1025
+
+    if (isDesktop) {
+      // Desktop: Fixed position in left sidebar, no transform
+      Object.assign(popoverElement.style, {
+        position: "fixed",
+        left: "2rem",
+        top: "8rem",
+        transform: "none",
+      })
+    } else {
+      // Mobile/Tablet: Use default Floating UI positioning
+      const { x, y } = await computePosition(link, popoverElement, {
+        strategy: "fixed",
+        middleware: [inline({ x: clientX, y: clientY }), shift(), flip()],
+      })
+      Object.assign(popoverElement.style, {
+        transform: `translate(${x.toFixed()}px, ${y.toFixed()}px)`,
+      })
+    }
   }
 
   function showPopover(popoverElement: HTMLElement) {
