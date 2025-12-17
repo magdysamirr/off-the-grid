@@ -9,18 +9,18 @@
 // ============================================================================
 
 // Base font size - responsive for different devices
-// JetBrains Mono: one step smaller than before
+// JetBrains Mono: 2 more steps smaller
 html {
-  font-size: 14px !important; // Mobile base - one step smaller
+  font-size: 12px !important; // Mobile base - 2 steps smaller (was 14px)
 
   // Tablet (iPad) - comfortable reading size
   @media (min-width: 768px) and (max-width: 1024px) {
-    font-size: 16px !important;
+    font-size: 14px !important; // 2 steps smaller (was 16px)
   }
 
-  // Desktop - one step smaller (was 18px, now 17px)
+  // Desktop - 2 steps smaller
   @media (min-width: 1025px) {
-    font-size: 17px !important;
+    font-size: 15px !important; // 2 steps smaller (was 17px)
   }
 }
 
@@ -114,23 +114,23 @@ button:hover,
   font-display: swap;
 }
 
-// Body content weight for JetBrains Mono - lightest available
+// Body content weight for JetBrains Mono - extra light
 article p,
 article ul,
 article ol,
 article li,
 body,
 p {
-  font-weight: 100 !important; // Thin weight (lightest)
+  font-weight: 200 !important; // Extra light weight
 }
 
 // Headlines use JetBrains Mono with lighter weights
 h1, h2, h3 {
-  font-weight: 200 !important; // Extra light for large headlines
+  font-weight: 300 !important; // Light for large headlines
 }
 
 h4, h5, h6 {
-  font-weight: 300 !important; // Light for smaller headlines
+  font-weight: 400 !important; // Regular for smaller headlines
 }
 
 // RTL content uses Noto Naskh Arabic
@@ -361,7 +361,7 @@ a.external {
 // Article internal links - use tertiary color
 article a.internal {
   font-size: inherit !important;
-  font-weight: 100 !important; // Thin weight (lightest)
+  font-weight: 200 !important; // Extra light weight
   color: var(--tertiary) !important;
   text-decoration: underline !important;
   transition: color 0.2s ease;
@@ -376,7 +376,7 @@ article a.internal {
 .tags li,
 .tags a {
   font-size: inherit !important;
-  font-weight: 100 !important; // Thin weight (lightest)
+  font-weight: 200 !important; // Extra light weight
   color: var(--tertiary) !important;
   text-decoration: underline !important;
   transition: color 0.2s ease;
