@@ -1,1 +1,1 @@
-[[think or act]]
+[[Think or act]]
