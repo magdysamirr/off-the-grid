@@ -34,7 +34,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.TagList(),
+    // Component.TagList(), // Removed - tags appear at bottom of notes only
   ],
   left: [
     Component.MobileOnly(Component.Spacer()),
