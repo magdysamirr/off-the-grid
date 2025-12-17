@@ -31,9 +31,7 @@ If your request doesn't serve your strategic position, we tell you. Not to be di
 Trade-off: We lose some projects. Gain: Every project we take strengthens both client position and our reputation.
 
 **2. We combine systems thinking with creative execution**  
-Most agencies are either:  
-- Creative but chaotic (great ideas, terrible follow-through)
-- Systematic but soulless (perfect schedules, forgettable content)
+Most agencies are either: Creative but chaotic (great ideas, terrible follow-through), or Systematic but soulless (perfect schedules, forgettable content)
 
 We're both. Creative strategy + operational systems. Emotion + data. Story + measurement.
 
@@ -165,11 +163,7 @@ Most agencies can't say no to revenue. That's why they all look the same.
 
 *We can say no. That's why we don't.*
 
----
-
-
-
-**Tags:** #wordreward #positioning #strategy #differentiation #marketing
+**Tags:** #wordreward #positioning #strategy #internal #marketing
 
 
 - [[Strategy Is Winning Before You Start]] • [[Strategic Thinking, From Real Life to Digital Marketing]]
