@@ -975,7 +975,7 @@ blockquote p,
 
       // Clean square styling
       border-radius: 8px !important;
-      padding: 1rem !important;
+      padding: 0.75rem !important;
       overflow: auto !important;
 
       // Box shadow for depth
@@ -990,33 +990,90 @@ blockquote p,
       word-wrap: break-word !important;
       overflow-wrap: break-word !important;
 
-      // Title in preview - align with icons
+      // Scale all content to fit miniature view
+      font-size: 0.75rem !important; // 12px base for popover
+
+      // Popover hint container (title + metadata area)
       .popover-hint {
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.5rem !important;
+        display: block !important; // Stack vertically like original
         margin-bottom: 0.5rem !important;
+
+        // Article title in popover
+        h1 {
+          font-size: 1rem !important; // 12px scaled up
+          font-weight: 600 !important;
+          margin: 0 0 0.3rem 0 !important;
+          line-height: 1.3 !important;
+        }
+
+        // Metadata in popover
+        p {
+          font-size: 0.7rem !important; // 8.4px - tiny metadata
+          margin: 0.2rem 0 0.4rem 0 !important;
+          opacity: 0.7 !important;
+          line-height: 1.2 !important;
+        }
       }
 
-      h1 {
-        font-size: 1.2rem !important;
-        margin-top: 0 !important;
-        margin-bottom: 0.5rem !important;
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.5rem !important; // Space between title and icons
-      }
-
-      h2, h3 {
-        font-size: 1rem !important;
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.3rem !important;
-      }
-
-      p {
+      // Content headings (h2, h3, etc. in article body)
+      h2 {
         font-size: 0.9rem !important;
-        margin: 0.3rem 0 !important;
+        font-weight: 600 !important;
+        margin: 0.5rem 0 0.3rem 0 !important;
+        line-height: 1.3 !important;
+      }
+
+      h3 {
+        font-size: 0.85rem !important;
+        font-weight: 600 !important;
+        margin: 0.4rem 0 0.25rem 0 !important;
+        line-height: 1.3 !important;
+      }
+
+      h4, h5, h6 {
+        font-size: 0.8rem !important;
+        font-weight: 500 !important;
+        margin: 0.3rem 0 0.2rem 0 !important;
+        line-height: 1.3 !important;
+      }
+
+      // Body paragraphs and lists
+      p {
+        font-size: 0.75rem !important; // 9px
+        margin: 0.25rem 0 !important;
         line-height: 1.4 !important;
+      }
+
+      ul, ol {
+        font-size: 0.75rem !important;
+        margin: 0.25rem 0 !important;
+        padding-left: 1.2rem !important;
+        line-height: 1.4 !important;
+      }
+
+      li {
+        font-size: 0.75rem !important;
+        margin: 0.15rem 0 !important;
+        line-height: 1.4 !important;
+      }
+
+      // Links in popover
+      a {
+        font-size: inherit !important;
+        text-decoration: underline !important;
+      }
+
+      // Code blocks
+      code {
+        font-size: 0.7rem !important;
+        padding: 0.1rem 0.25rem !important;
+      }
+
+      pre {
+        font-size: 0.7rem !important;
+        padding: 0.4rem !important;
+        margin: 0.3rem 0 !important;
+        border-radius: 4px !important;
       }
     }
   }
