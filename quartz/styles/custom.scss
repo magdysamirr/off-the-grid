@@ -302,7 +302,7 @@ article:lang(ar),
 
 // Content metadata spacing with short line below (same length as text)
 .content-meta {
-  margin-top: 0.6rem !important; // Closer to title (less than 1rem)
+  margin-top: -0.9rem !important; // Much closer to title (moved up 1.5rem from 0.6rem)
   padding-bottom: 0.1rem !important; // Move line closer (was 0.5rem, reduced by 0.4rem)
   border-bottom: 1px solid var(--gray);
   display: inline-block !important; // Make border only as wide as content

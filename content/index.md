@@ -11,11 +11,11 @@ I could have just opened a Substack. I could have used WordPress. Instead, I cho
 
 Stay for five minutes. *Not less, not more.* Then leave.
 
-#### [[The Problem]] ![[Untitled design.png]]
+#### The Problem ![[Untitled design.png]]
 I lived in a brain that wouldn't shut up. [[Nuweiba Dental Clinic|Clinic]], operations, team messages, family, ideas, guilt. Everything at the same time. I was efficient at being busy. I was starving for clarity.
 
 #### The Valley
-Six years ago, I looked at a desert valley near [[Dahab]] and said it out loud: "I want to camp here." A small hut. Water, food, a dog, a goat. No network. No electricity. No people. One week.
+	Six years ago, I looked at a desert valley near [[Dahab]] and said it out loud: "I want to camp here." A small hut. Water, food, a dog, a goat. No network. No electricity. No people. One week.`
 
 The noise was breaking me.
 

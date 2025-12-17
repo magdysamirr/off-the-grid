@@ -21,7 +21,6 @@ The Grid is designed to make you a *Consumer*. A node that receives input and p
 To go off-grid is to reclaim the role of *Steward*. It is the transition from _accessing_ resources to _generating_ them.
 
 **A. The Principle of Sovereignty (Ownership)**
-
 - Abstract: You cannot be free if your life support (physical or digital) can be turned off by a third party.
 - Application:  
     - Physical: You generate your own watts (Solar). You source your own water.  
@@ -29,18 +28,14 @@ To go off-grid is to reclaim the role of *Steward*. It is the transition from 
     - Result: You move from "Tenant" of the system to "Architect" of your reality.  
 
 **B. The Principle of Friction (Resilience)**
-
 - Abstract: Convenience breeds fragility. Friction breeds competence. The Grid sells the removal of friction. Off-grid reintroduces it intentionally.
-    
 - Application:  
     - Physical: Managing batteries and water levels requires active engagement, not passive consumption.  
     - Cognitive: Reading a book or writing a blog post requires more friction than scrolling TikTok.  
-    - Result: You become antifragile. When the Grid fails (power cut, algorithm change), the Consumer panics; the Steward adapts.
+    - Result: You become anti-fragile. When the Grid fails (power cut, algorithm change), the Consumer panics; the Steward adapts.
 
 **C. The Principle of Silence (Signal)**
-
 - Abstract: In a noise economy, silence is the only luxury. The Social Grid demands constant broadcasting (posting, commenting) to maintain status.
-    
 - Application:
     - Metaphorical: You stop broadcasting. You become a "Receive-Only" station or a "Deep-Signal" transmitter (long-form text, infrequent updates).  
     - Result: You exit the "Attention Economy." Your value is no longer determined by visibility, but by substance.
@@ -48,7 +43,6 @@ To go off-grid is to reclaim the role of *Steward*. It is the transition from 
 ### Summary: The Unified Theory
 
 **Off-Grid is the practice of limiting external inputs to maximize internal output.**
-
 It is the realization that:  
 1. Dependency is debt. (Whether financial, energetic, or emotional).  
 2. Distance is a filter. (Living in Nuweiba or self-hosting filters out the non-essential).  
