@@ -302,12 +302,24 @@ article:lang(ar),
 
 // Content metadata spacing with short line below (same length as text)
 .content-meta {
-  margin-top: 10px !important;
+  margin-top: 0.6rem !important; // Closer to title (less than 1rem)
   padding-bottom: 0.1rem !important; // Move line closer (was 0.5rem, reduced by 0.4rem)
   border-bottom: 1px solid var(--gray);
   display: inline-block !important; // Make border only as wide as content
   margin-bottom: 1rem !important;
   opacity: 0.7 !important; // 30% more translucent (was 1, now 0.7)
+
+  // Mobile and tablet - 14px
+  font-size: 0.875rem !important; // 14px at 16px base
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 0.875rem !important; // 14px at 16px base
+  }
+
+  // Desktop - 13px
+  @media (min-width: 1025px) {
+    font-size: 0.8667rem !important; // 13px at 15px base
+  }
 }
 
 // RTL metadata alignment for Arabic content - CRITICAL: must be right-aligned
@@ -357,6 +369,7 @@ article hr {
 
 // External link styling
 a.external {
+  font-weight: 300 !important; // Regular light weight (not bold)
   text-decoration: underline;
   transition: color 0.2s ease;
 
