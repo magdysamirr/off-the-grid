@@ -431,16 +431,12 @@ article a.internal {
 
 // Explorer (Thoughts in left sidebar)
 .explorer {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important; // Vertical center
-  align-items: center !important; // Horizontal center
-  height: 100% !important;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
   color: var(--tertiary) !important;
   position: relative !important;
   z-index: 1 !important; // Lower than popover (1000) so link previews appear above
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important; // Take full width of sidebar for centering
 }
 
 // Remove burger menu on mobile
@@ -566,6 +562,14 @@ footer a {
     overflow-y: auto !important; // Allow scrolling for long content
     overflow-x: hidden !important;
     will-change: transform !important; // Performance hint for stickiness
+  }
+
+  // Center explorer in left sidebar
+  .sidebar.left {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; // Vertical center (top to bottom)
+    align-items: center !important; // Horizontal center (edge to border)
   }
 
   // Right sidebar - only for TOC now, vertically centered like Explorer
@@ -813,11 +817,7 @@ footer a {
 }
 
 // Icons - consistent 21px size, primary color, perfectly aligned with page title
-// Target icons in left sidebar specifically
-.sidebar.left {
-  align-items: center !important; // Center alignment
-  gap: 0 !important;
-}
+// Icons alignment handled by sidebar.left flexbox centering above
 
 // Icons container alignment - perfectly centered with page title
 .darkmode,
@@ -966,13 +966,13 @@ blockquote p,
   }
 }
 
-// Desktop popover - square, confined to left sidebar
+// Desktop popover - square, centered in left sidebar
 @media (min-width: 1025px) {
   .popover {
-    // Force fixed positioning in left sidebar area
+    // Positioning handled by JavaScript for proper centering
+    // JavaScript calculates: left = (leftSidebarWidth - 280px) / 2
+    //                       top = 50vh - 140px (half of 280px height)
     position: fixed !important;
-    left: 2rem !important; // Inside left sidebar
-    top: 8rem !important; // Below header
     transform: none !important; // Remove JavaScript transform
     max-width: 280px !important;
     z-index: 1000 !important;
