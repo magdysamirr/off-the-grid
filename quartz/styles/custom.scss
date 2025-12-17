@@ -114,14 +114,23 @@ button:hover,
   font-display: swap;
 }
 
-// Body content weight for JetBrains Mono
+// Body content weight for JetBrains Mono - extra light
 article p,
 article ul,
 article ol,
 article li,
 body,
 p {
-  font-weight: 400 !important; // Regular weight for monospace readability
+  font-weight: 200 !important; // Extra light weight
+}
+
+// Headlines use JetBrains Mono with appropriate weights
+h1, h2, h3 {
+  font-weight: 300 !important; // Light weight for large headlines
+}
+
+h4, h5, h6 {
+  font-weight: 400 !important; // Regular weight for smaller headlines
 }
 
 // RTL content uses Noto Naskh Arabic
@@ -352,7 +361,7 @@ a.external {
 // Article internal links - use tertiary color
 article a.internal {
   font-size: inherit !important;
-  font-weight: 400 !important; // Regular weight for JetBrains Mono
+  font-weight: 200 !important; // Extra light weight
   color: var(--tertiary) !important;
   text-decoration: underline !important;
   transition: color 0.2s ease;
@@ -367,7 +376,7 @@ article a.internal {
 .tags li,
 .tags a {
   font-size: inherit !important;
-  font-weight: 400 !important; // Regular weight for JetBrains Mono
+  font-weight: 200 !important; // Extra light weight
   color: var(--tertiary) !important;
   text-decoration: underline !important;
   transition: color 0.2s ease;
