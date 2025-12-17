@@ -72,7 +72,7 @@ Example: We don't help dental clinics "post more." We help them own "transparent
 - Don't know how to turn creativity into consistent income
 - Want growth without selling out
 
-**What we do for them:** We mentor brand voice development and strategic storytelling. Not "how to go viral"—how to build audience that stays, pays, and recruits.
+**What we do for them:** We mentor brand voice development and strategic storytelling. Not "how to go viral", how to build audience that stays, pays, and recruits.
 
 Tactical: "Creators Who Matter" series that showcases their work while building our network.
 
@@ -145,7 +145,7 @@ Short version of longer truth: We help brands create defensible territory where 
 
 Technology serves the strategy. Creativity serves the position. Data informs the direction.
 
-Not because it sounds good. Because it compounds.
+Because it sounds good. Because it compounds.
 
 ---
 

@@ -236,4 +236,4 @@ Common thread: All had CLEAR strategy before execution. None were "let's post an
 **Tags:** #strategy #marketing #positioning #business #internal #client #WordReward 
 
 
-- [[Building Unfair Advantages]] • [[Why Most Marketing Isn't Strategic]] • [[Trade-offs and Strategic Choices]]
+- [[WordReward Strategic “Reset”]] • [[Building Unfair Advantages]] • [[Why Most Marketing Isn't Strategic]] • [[Trade-offs and Strategic Choices]]
