@@ -15,7 +15,7 @@ Six years ago, I looked at a desert valley near [[Dahab]] and said it out loud: 
 The noise was breaking me.
 
 Moving off-grid was both spiritual and structural.   
-[[Think or act|Think or act]] The noise takes one, so I had to physically remove the noise to think and act.
+[[ADHD choice, Think or Act, but not both.|Think or act]] The noise takes one, so I had to physically remove the noise to think and act.
 [[Nuweiba]], the silence here forces you to look at what you've been avoiding. Most people can't handle that. They fill the quiet with distractions. I don't recommend this path, but if you're considering it, conventional advice stopped working for you a while ago.
 
 Here is where I document remote operations, [[ADHD]] mechanics, business [[Systems|systems]], and the reality of running things from [[off-the-grid]]
