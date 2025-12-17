@@ -1,6 +1,5 @@
 ---
 aliases:
-  - think or act
 title: "ADHD choice: Think or Act, but not both."
 ---
 [[ADHD]] forces a binary choice: think or act. You cannot do both simultaneously.  
