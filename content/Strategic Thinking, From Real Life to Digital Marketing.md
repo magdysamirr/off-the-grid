@@ -233,7 +233,7 @@ We don't market. We mark.
 
 Common thread: All had CLEAR strategy before execution. None were "let's post and see what happens."
 
-**Tags:** #strategy #marketing #positioning #differentiation #business #internal #client #WordReward 
+**Tags:** #strategy #marketing #positioning #business #internal #client #WordReward 
 
 
 - [[Building Unfair Advantages]] • [[Why Most Marketing Isn't Strategic]] • [[Trade-offs and Strategic Choices]]
