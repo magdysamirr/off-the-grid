@@ -114,27 +114,45 @@ button:hover,
   font-display: swap;
 }
 
-// Body content weight for JetBrains Mono - extra light
+// English content uses Google Sans Flex - extra light 200
 article p,
 article ul,
 article ol,
 article li,
 body,
 p {
+  font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
   font-weight: 200 !important; // Extra light weight
 }
 
-// Headlines use Google Sans Flex with semi-bold/bold weights
+// Headlines use Google Sans Flex with semi-bold/bold weights and adjusted sizes
 h1, h2, h3, h4, h5, h6 {
   font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
 }
 
-h1, h2, h3 {
-  font-weight: 600 !important; // Bold for large headlines
+h1 {
+  font-size: 1.8rem !important; // Proportional to 15px base
+  font-weight: 600 !important; // Bold
 }
 
-h4, h5, h6 {
-  font-weight: 500 !important; // Semi-bold for smaller headlines
+h2 {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important; // Bold
+}
+
+h3 {
+  font-size: 1.3rem !important;
+  font-weight: 600 !important; // Bold
+}
+
+h4 {
+  font-size: 1.15rem !important;
+  font-weight: 500 !important; // Semi-bold
+}
+
+h5, h6 {
+  font-size: 1.05rem !important;
+  font-weight: 500 !important; // Semi-bold
 }
 
 // RTL content uses Noto Naskh Arabic
