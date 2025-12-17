@@ -39,7 +39,7 @@ Engineer friction reduction where you can: remote work, delegation, or ruthless 
 **Tags:** #ADHD #slow-living #systems-thinking #friction #off-grid
 
 - [[Systems Over Willpower]]
-- [[WordReward Strategic “Reset”|WordReward Strategic “Reset”]]
+- [[WordReward Strategic “Ethics”|WordReward Strategic “Reset”]]
 - [[Why Nuweiba]]
 - [[The Cost of Context-Switching]]
 - 
