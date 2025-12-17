@@ -1,6 +1,6 @@
 
 
-[[WordReward Strategic “Reset”]]
+[[WordReward Strategic “Ethics”]]
 
 
 
