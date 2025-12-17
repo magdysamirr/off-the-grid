@@ -30,7 +30,7 @@ Result: 60M+ views, sales increased 125% in one year, became #1 body wash for me
 
 [Watch the original](https://www.youtube.com/watch?v=owGykVbfgUE) | [See response videos](https://www.youtube.com/playlist?list=PLB77114449B83E6F4)
 
-**Redirection: Use Their Strength Against Them.**
+**Redirection: Use Their Strength Against Them.**   
 Burger King has fewer locations than McDonald's. Instead of fighting that weakness, they weaponized it. Their app promotion: "Get Whopper for 1 cent... ONLY within 600 feet of McDonald's."  
 Forced customers to go to McDonald's, open BK app, then leave for BK. Made McDonald's locations trigger thinking about Burger King.   
 >Trade-off: complicated user journey, required going to competitor first.  
@@ -38,7 +38,7 @@ Result: BK app jumped from 686th to #1 downloaded, 1.5 million downloads in 9 da
 
 [Watch the campaign](https://www.youtube.com/watch?v=KfNJXLS-KeQ) | [Read the breakdown](https://thebrandhopper.com/2024/08/18/a-case-study-on-burger-kings-whopper-detour-campaign/)
  
-**Vertical Integration: Own the Entire Journey.**  
+**Vertical Integration: Own the Entire Journey.**   
 Glossier faced beauty giants with billions in ads and retail presence. They started with blog "Into The Gloss" (owned audience before selling anything), asked readers what products they wanted, created products from community feedback, sold directly through website only.  
 Customer journey they control: blog reader becomes community member becomes product co-creator becomes customer becomes advocate becomes content creator recruits new readers.  
 >Trade-off: no retail presence, slower initial growth, had to build audience from zero.  
@@ -54,7 +54,7 @@ Result: 156M+ users engaged with Wrapped 2023, dominated social media entire wee
 
 [See Wrapped](https://www.spotify.com/wrapped/) | [Read the analysis](https://thebrandhopper.com/2025/06/10/a-case-study-on-spotify-wrapped-the-storytelling-phenomenon/)
 
-## How to Apply This
+#### How to Apply This  
 Before every campaign, ask: Which strategic pattern are we using? What's our unfair advantage? first-mover, network effects, content moat, technology, community? If you don't have one, you're not being strategic.
 
 What are we choosing NOT to do? No trade-offs means no strategy. Must sacrifice 100 good options for 1 great one.  
@@ -77,8 +77,8 @@ Is it defensible through first-mover advantage, network effects, or content moat
 
 Tactics are what you do. Strategy is WHY you do it THERE, THAT WAY, and not somewhere else. Everyone has tactics. Few have strategy.
 
-We don't market. We mark.  
-[WordReward](www.wordreward.net)
+*We don't market. We mark.*  
+*[WordReward](www.wordreward.net)*
 
 <center>• • •</center>
 
