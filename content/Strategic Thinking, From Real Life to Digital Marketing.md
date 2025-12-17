@@ -2,20 +2,18 @@
 dg-publish: true
 title: Strategic Thinking
 ---
-## What Strategy Actually Is  
 [[Strategy]] is winning before you start. If you enter a fair fight, you've already failed strategically.
 
 Michael Porter said it clearly: "The essence of strategy is choosing what NOT to do." Strategy means creating unfair advantages, choosing your battlefield, and being different, not just better.
 
-Three questions expose whether you have strategy or just tactics:
-
+Three questions expose whether you have strategy or just tactics:  
 1. **Where will we play?** (Which battlefield?)
 2. **How will we win?** (What's our advantage?)
 3. **What will we NOT do?** (What will we sacrifice?)
 
 The test: If your competitor can do exactly what you're doing, that's not strategy. That's keeping up.
 
----
+<center>•••</center>
 
 ## Six Strategic Patterns That Actually Work
 
@@ -172,64 +170,10 @@ Music streaming is commoditized, everyone has same songs. Hard to differentiate.
 
 ---
 
-## Real-World Application Template
-
-### For Service Businesses (Dental, Design, Consulting, etc.)
-
-**Pattern 1 - Flanking (Transparency):** Most competitors hide pricing. You expose it completely on website. Create "Know Before You Go" content series. Differentiation through radical transparency.
-
-**Pattern 2 - New Territory (Education Authority):** Stop competing on "we're better at [[service]]." Own education space connecting your service to larger life impact. Blog targets SEO for questions competitors ignore.
-
-**Pattern 3 - Concentration (Platform Dominance):** Choose ONE platform. Post 3x per day for 2 years while competitors post 3x per week. Overwhelming presence on one platform beats moderate presence everywhere.
-
-**Pattern 4 - Redirection (Membership Model):** If industry standard has painful friction (insurance, contracts, booking), use that friction against itself. Create membership that eliminates the pain everyone complains about.
-
-**Pattern 5 - Integration (Full-Service Journey):** Competitors do design-only or consult-only. You do complete journey: consultation → design → sourcing → installation → maintenance. Own every step.
-
-**Pattern 6 - Trojan Horse (User Content):** Free quiz/assessment on website. Results are shareable. Every share recruits new quiz-takers. Make customers create your marketing by celebrating their results.
-
----
-
-## The Strategic Test
-
-**Is this a position or promotion?**  
-- Promotion: "20% off" (temporary, tactics)
-- Position: "Transparent pricing clinic" (lasting, strategy)
-
-**Can competitors copy easily?**  
-- Yes = not strategic, just keeping up
-- No = strategic, defensible
-
-**Does it compound?**  
-- Tactics deplete (discount ends, campaign stops)
-- Strategy compounds (reputation grows, content accumulates, network strengthens)
-
-**What are we NOT doing?**  
-- If you haven't eliminated options, you haven't chosen strategy
-- Strategy requires painful trade-offs
-
-**Is it defensible?**  
-- First-mover advantage?
-- Network effects (more users = more value)?
-- Content moat (years of accumulated content)?
-- If none, competitors will copy in 60 days
-
----
-
 ## Final Thought  
 Tactics are what you do. Strategy is WHY you do it THERE, THAT WAY, and not somewhere else.  
 Everyone has tactics. Few have strategy.  
 We don't market. We mark.
-
----
-
-**ROI Reference:**  
-- Dollar Shave Club: $4,500 → $1B acquisition (222,222x)
-- Red Bull Stratos: $50M → $100M+ earned media (2x+)
-- Old Spice: ~$1M → 125% sales increase (100x+)
-- Burger King: <$1M → 3B impressions (37:1)
-- Glossier: Minimal paid → $1.2B valuation
-- Spotify Wrapped: Internal cost → 156M+ engagements (infinite)
 
 Common thread: All had CLEAR strategy before execution. None were "let's post and see what happens."
 
