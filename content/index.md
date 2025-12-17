@@ -5,7 +5,7 @@ dg-home: true
 aliases:
   - It is alive
 ---
-If you are reading this, I finally managed to connect [[Obsidian]] to GitHub to Vercel via Quartz.
+If you are reading [[this/digital garden|this]], I finally managed to connect [[Obsidian]] to GitHub to Vercel via Quartz.
 
 I could have just opened a Substack. I could have used WordPress. Instead, I chose the least convenient method possible because I needed to know how the engine works before I could drive the car. That's what you're getting here.
 
