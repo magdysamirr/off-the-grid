@@ -27,6 +27,6 @@ Not polished. Not finished. Just building in public and seeing if the patterns a
 
 **Related:** [[The Cost of Context Switching]] • [[Remote Operations Without Losing Control]] • [[All Systems Will Fail ADHD Brains.]] • [[Structural Decisions vs Motivational Ones]] • [[Why Nuweiba]] 
 
-5 minutes read: [[Strategic Thinking, From Real Life to Digital Marketing]] • [[WordReward Strategic “Reset”]]
+**5 minutes read:** [[Strategic Thinking, From Real Life to Digital Marketing]] • [[WordReward Strategic “Reset”]]
 
 **Tags:** #ADHD #remote-operations #systems
