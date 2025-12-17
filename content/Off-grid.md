@@ -4,3 +4,4 @@ aliases:
   - off grid
   - off the grid
 ---
+everything off grid 
