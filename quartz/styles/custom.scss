@@ -391,14 +391,14 @@ a.external {
   }
 }
 
-// Article internal links - use tertiary color
+// Article internal links - use primary color (dark/darkgray) in all modes
 article a.internal {
   font-size: inherit !important;
   font-weight: 300 !important; // Light weight
-  color: var(--tertiary) !important;
+  color: var(--dark) !important; // Primary text color in both modes
   text-decoration: none !important; // Remove default underline
   text-underline-offset: 1px !important; // Move underline down 1px
-  border-bottom: 0.5px solid var(--tertiary) !important; // Thin underline
+  border-bottom: 0.5px solid var(--dark) !important; // Thin underline matching text
   transition: color 0.2s ease, border-bottom-color 0.2s ease;
 
   &:hover {
