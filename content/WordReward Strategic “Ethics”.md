@@ -9,7 +9,7 @@ aliases:
 
 Most marketing agencies are order-takers dressed up as strategists. Client says "post 3 times a week," agency delivers 3 posts a week. Client says "run ads," agency runs ads. Client says "be on TikTok," agency opens TikTok account.
 
-This is management, not marketing. Execution without [[strategy]]. Keeping busy without getting anywhere.
+This is management, not marketing. Execution without strategy. Keeping busy without getting anywhere.
 
 [[WordReward]] doesn't do that. Not because we're morally superior, but because it doesn't compound. Management services are commodities: easily replaced, always price-shopped, never remembered.
 

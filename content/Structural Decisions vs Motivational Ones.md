@@ -1,10 +1,10 @@
-I don't lack [[discipline]]. I lack structure. There's a difference, and mistaking one for the other will drain years of effort into a black hole of good intentions.
+I don't lack disciplin. I lack structure. There's a difference, and mistaking one for the other will drain years of effort into a black hole of good intentions.
 
 A **structural decision** removes future decision points entirely. I build the system once, and the behavior follows automatically. A **motivational decision** requires me to choose correctly every single time, relying on willpower, energy, or feeling like it to execute.
 
 Example: I want to exercise consistently. Motivational approach says I'll go to the gym when I wake up feeling energized. Structural approach says I walk to the coffee shop every morning at 7am, getting coffee requires movement. One depends on my mood. The other depends on my need for caffeine. Which wins over six months?
 
->We've applied this at [[WordReward]] without calling it that. When clients kept requesting last-minute changes, we didn't resolve to be firmer or set better boundaries. We restructured the contract terms to include revision limits and timeline buffers. The decision was made once, in the contract. The client can't erode the boundary because the boundary is baked into the system, not my mood on Tuesday.
+>We've applied this at WordReward without calling it that. When clients kept requesting last-minute changes, we didn't resolve to be firmer or set better boundaries. We restructured the contract terms to include revision limits and timeline buffers. The decision was made once, in the contract. The client can't erode the boundary because the boundary is baked into the system, not my mood on Tuesday.
 
 >At [[Nuweiba Dental Clinic|NDC]], hiring the junior dentist wasn't a motivational decision to delegate more. It was structural, routine cases physically go to someone else now, because that person exists and is paid to handle them. I can't take them back without firing someone. The system enforces the behavior.
 

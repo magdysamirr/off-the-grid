@@ -1,6 +1,0 @@
----
-aliases:
-  - system
-  - systems
-  - Systems
----
