@@ -141,6 +141,7 @@ export type SocialImageOptions = {
     options: ImageOptions & {
       userOpts: UserOpts
       iconBase64?: string
+      signatureBase64?: string
     },
   ) => JSXInternal.Element
 }
@@ -178,6 +179,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
   description,
   fileData,
   iconBase64,
+  signatureBase64,
 }) => {
   const { colorScheme } = userOpts
   const fontBreakPoint = 32
@@ -273,20 +275,31 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
         </p>
       </div>
 
-      {/* Footer with URL */}
+      {/* Footer with Signature */}
       <div
         style={{
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           marginTop: "auto",
           paddingTop: "2rem",
+          gap: "1rem",
         }}
       >
+        {signatureBase64 && (
+          <img
+            src={signatureBase64}
+            height={60}
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        )}
         <div
           style={{
             display: "flex",
-            fontSize: 32,
+            fontSize: 28,
             color: cfg.theme.colors[colorScheme].gray,
             fontFamily: bodyFont,
           }}

@@ -31,12 +31,22 @@ async function generateSocialImage(
 ): Promise<Readable> {
   const { width, height } = userOpts
   const iconPath = joinSegments(QUARTZ, "static", "icon.png")
+  const signaturePath = joinSegments(QUARTZ, "static", "signature.png")
   let iconBase64: string | undefined = undefined
+  let signatureBase64: string | undefined = undefined
+
   try {
     const iconData = await fs.readFile(iconPath)
     iconBase64 = `data:image/png;base64,${iconData.toString("base64")}`
   } catch (err) {
     console.warn(styleText("yellow", `Warning: Could not find icon at ${iconPath}`))
+  }
+
+  try {
+    const signatureData = await fs.readFile(signaturePath)
+    signatureBase64 = `data:image/png;base64,${signatureData.toString("base64")}`
+  } catch (err) {
+    console.warn(styleText("yellow", `Warning: Could not find signature at ${signaturePath}`))
   }
 
   const imageComponent = userOpts.imageStructure({
@@ -47,6 +57,7 @@ async function generateSocialImage(
     fonts,
     fileData,
     iconBase64,
+    signatureBase64,
   })
 
   const svg = await satori(imageComponent, {
