@@ -1,6 +1,0 @@
-
-
-[[WordReward Strategic “Ethics”]]
-
-
-

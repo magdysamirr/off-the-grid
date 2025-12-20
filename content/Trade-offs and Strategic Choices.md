@@ -1,3 +1,7 @@
+---
+aliases:
+  - hyperfocus means I disappear
+---
 
 Everyone nods when you say we can't have everything. Then they immediately try to have everything.
 
