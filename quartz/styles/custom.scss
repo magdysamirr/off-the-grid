@@ -909,7 +909,7 @@ blockquote p,
 // Signature component styling
 .signature-wrapper {
   display: block;
-  margin: 3rem 0 2rem -20px; // Move 20px to the left
+  margin: 0.5rem 0 2rem -20px; // Closer to content body (was 3rem, now 0.5rem)
   text-align: left;
 
   a {
@@ -949,7 +949,7 @@ blockquote p,
 .rtl .signature-wrapper,
 *[lang="ar"] .signature-wrapper {
   text-align: right;
-  margin: 3rem -20px 2rem 0; // Move 20px to the right for RTL
+  margin: 0.5rem -20px 2rem 0; // Closer to content body, move 20px to the right for RTL
 }
 
 // ============================================================================
