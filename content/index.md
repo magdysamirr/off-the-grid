@@ -9,9 +9,7 @@ I could have just asked a developer. I could have used WordPress. Instead, I cho
 
 I'm Magdy Samir. Dentist by training. Co-founder and operations manager of [WordReward](https://wordreward.net) by choice. Living off-grid in Nuweiba because cities are too loud for my ADHD brain.
 
-**This blog exists for one reason:** turn scattered operational insights into reusable strategic assets. No motivation. No theory. Just what actually works when running remote businesses while managing ADHD in a place with unreliable electricity.
-
-<center>• • •</center>
+Business strategy, tough choices, and building a life that works with your brain, not against it. From the desert.
 
 ## Start here:
 
@@ -27,11 +25,8 @@ I'm Magdy Samir. Dentist by training. Co-founder and operations manager of [Word
 **Marketing**  
 [[Strategic Thinking, From Real Life to Digital Marketing]]
 
-<center>• • •</center>
 
-Pick one. Read it. Decide if this is for you.
-
-If not, leave. If yes, there's more.
+**Start with one. It either fits or it doesn't. No refunds.**
 
 <center>• • •</center>
 
