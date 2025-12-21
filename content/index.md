@@ -11,7 +11,7 @@ I'm a Dentist by training. Co-founder and operations manager of [WordReward](htt
 
 Business strategy, tough choices, and building a life that works with your brain, not against it. From the desert.
 
-Start here:
+Start here:  
 **Off-Grid**     [[Why I Moved to the Desert to Save My Brain]]  
 **ADHD**         [[Running a Business with ADHD]]  
 **Strategy**    [[Structural Decisions vs Motivational Ones]]  
