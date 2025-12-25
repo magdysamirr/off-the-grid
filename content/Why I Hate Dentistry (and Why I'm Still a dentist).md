@@ -1,5 +1,3 @@
-# Why I Hate Dentistry (and Why I'm Still a Dentist)
-
 Imagine spending 25 years trying to escape a single decision you made at 17, and no matter how hard you try, it keeps pulling you back.
 
 It's 2000, one year before graduation, entering the clinical section of removable prosthesis. That's the moment I knew: this isn't for me. The realization hit hard, but I was already four years deep into a five-year program. So what do you do with that knowledge? You finish. You graduate. You become a dentist because that's what you're supposed to do with a dental degree.
@@ -28,7 +26,7 @@ Maybe I'm finally building something that transforms the constraint into somethi
 
 <center> • • • </center>
 
-**Coming next:** What I actually hate about dentistry, the specific mechanics, not just the general feeling, and the framework I built to survive patient interactions without losing my mind.
+**Coming next:** [[What I actually hate about dentistry]], the specific mechanics, not just the general feeling, and the framework I built to survive patient interactions without losing my mind.
 
 **Tags:** #dentistry #remote-business #honest-practice #delegation
 
