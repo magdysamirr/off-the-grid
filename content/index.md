@@ -3,6 +3,7 @@ dg-publish: true
 title: It is alive !
 dg-home: true
 ---
+
 If you are reading this, I finally managed to connect Obsidian to GitHub to Vercel via Quartz.
 
 I could have just asked a developer. I could have used WordPress. Instead, I chose the least convenient method possible because I needed to control every aspect of the blog. That's me. All or none.
@@ -11,14 +12,26 @@ I'm a Dentist by training. Co-founder and operations manager of [WordReward](htt
 
 Business strategy, tough choices, and building a life that works with your brain, not against it. From the desert.
 
-Start here:  
-**Off-Grid**     [[Why I Moved to the Desert to Save My Brain]]  
-**ADHD**         [[Running a Business with ADHD]]  
-**Strategy**    [[Structural Decisions vs Motivational Ones]]  
-**Marketing**  [[Strategic Thinking, From Real Life to Digital Marketing]]  
+---
+
+## The Origin
+
+[[Why I Moved to the Desert to Save My Brain]] • [[Off-Grid Reality and Professional Obligation]]
+
+## ADHD & How I Work
+
+[[Running a Business with ADHD]] • [[ADHD choice, Think or Act, but not both.]] • [[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains]] • [[Knowledge vs Operations.. Why I Need Both Obsidian and Tana]] • [[Obsidian Isn't a Notes App, It's Life Support]]
+
+## Running Things
+
+[[Remote Operations Without Losing Control]] • [[The Accountability Filter]] • [[Managing in Egypt.. What the Business Books Don't Tell You]] • [[Error vs. Wrongdoing]] • [[Structural Decisions vs Motivational Ones]] • [[Strategy Is Winning Before You Start]] • [[Trade-offs and Strategic Choices]] • [[Building Unfair Advantages]] • [[Why I Choose Discipline Over Brilliance]] • [[Strategic Thinking, From Real Life to Digital Marketing]] • [[Why Most Marketing Isn't Strategic]] • [[Digital Marketing and Design Strategy]] • [[WordReward Strategic “Ethics”]]
+
+## Dentistry (The Paradox)
+
+[[Why I Hate Dentistry (and Why I'm Still a dentist)]] • [[What I actually hate about dentistry]]
+
+---
 
 **Start with one. It either fits or it doesn't. No refunds.**
-
-<center>• • •</center>
 
 **Tags:** #ADHD • #strategy • #systems • #marketing • #Nuweiba • #WordReward
