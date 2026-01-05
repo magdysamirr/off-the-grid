@@ -16,19 +16,37 @@ Business strategy, tough choices, and building a life that works with your brain
 
 ## The Origin
 
-[[Why I Moved to the Desert to Save My Brain]] • [[Off-Grid Reality and Professional Obligation]]
+[[Why I Moved to the Desert to Save My Brain]] 
+• [[Off-Grid Reality and Professional Obligation]]
 
 ## ADHD & How I Work
 
-[[Running a Business with ADHD]] • [[ADHD choice, Think or Act, but not both.]] • [[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains]] • [[Knowledge vs Operations.. Why I Need Both Obsidian and Tana]] • [[Obsidian Isn't a Notes App, It's Life Support]]
+[[Running a Business with ADHD]]  
+• [[ADHD choice, Think or Act, but not both.]]   
+• [[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains]]   
+• [[Knowledge vs Operations.. Why I Need Both Obsidian and Tana]]   
+• [[Obsidian Isn't a Notes App, It's Life Support]]  
 
 ## Running Things
 
-[[Remote Operations Without Losing Control]] • [[The Accountability Filter]] • [[Managing in Egypt.. What the Business Books Don't Tell You]] • [[Error vs. Wrongdoing]] • [[Structural Decisions vs Motivational Ones]] • [[Strategy Is Winning Before You Start]] • [[Trade-offs and Strategic Choices]] • [[Building Unfair Advantages]] • [[Why I Choose Discipline Over Brilliance]] • [[Strategic Thinking, From Real Life to Digital Marketing]] • [[Why Most Marketing Isn't Strategic]] • [[Digital Marketing and Design Strategy]] • [[WordReward Strategic “Ethics”]]
+[[Remote Operations Without Losing Control]]  
+• [[The Accountability Filter]]   
+• [[Managing in Egypt.. What the Business Books Don't Tell You]]   
+• [[Error vs. Wrongdoing]]   
+• [[Structural Decisions vs Motivational Ones]]   
+• [[Strategy Is Winning Before You Start]]   
+• [[Trade-offs and Strategic Choices]]   
+• [[Building Unfair Advantages]]   
+• [[Why I Choose Discipline Over Brilliance]]   
+• [[Strategic Thinking, From Real Life to Digital Marketing]]   
+• [[Why Most Marketing Isn't Strategic]]   
+• [[Digital Marketing and Design Strategy]]   
+• [[WordReward Strategic “Ethics”]]
 
 ## Dentistry (The Paradox)
 
-[[Why I Hate Dentistry (and Why I'm Still a dentist)]] • [[What I actually hate about dentistry]]
+[[Why I Hate Dentistry (and Why I'm Still a dentist)]]   
+• [[What I actually hate about dentistry]]
 
 ---
 
