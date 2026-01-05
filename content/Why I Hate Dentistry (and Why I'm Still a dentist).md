@@ -4,7 +4,7 @@ It's 2000, one year before graduation, entering the clinical section of removabl
 
 I worked as a dentist for a while, then tried escaping as a medical rep for two years, anything to get away from clinical work. Didn't take. Came back to dentistry for ten years because bills don't pay themselves. Then I tried the business route for three years. Failed again.
 
-Fast forward to 2025. I'm running a clinic in Nuweiba as a two-hour-per-day dentist while managing WordReward, a digital solutions and marketing company with twenty employees in Alexandria. I've built what looks like a successful dual-career model. Perfect balance, right?
+Fast forward to now. I'm running a clinic as a two-hour-per-day dentist while managing a marketing agency remotely. I've built what looks like a successful dual-career model. Perfect balance, right?
 
 Wrong. Because here's the paradox nobody talks about: I hate not having patients. Obviously. It's worrying, annoying, means no revenue. No patients, no payment. But the moment I hear a voice in the reception area, I genuinely hope they're not actually a patient.
 
