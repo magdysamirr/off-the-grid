@@ -24,13 +24,13 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: {
-          name: "Google Sans Flex",
-          weights: [300, 500, 600],
+          name: "Inter",
+          weights: [200, 300, 400, 600, 700],
           includeItalic: false,
         },
         body: {
-          name: "Google Sans Flex",
-          weights: [300, 500, 600],
+          name: "Inter",
+          weights: [200, 300, 400, 600, 700],
           includeItalic: false,
         },
         code: {
