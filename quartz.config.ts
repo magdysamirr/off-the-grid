@@ -23,6 +23,11 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
+        title: {
+          name: "IBM Plex Sans Arabic",
+          weights: [300, 400, 600, 700],
+          includeItalic: false,
+        },
         header: {
           name: "Inter",
           weights: [300, 400, 600, 700],
