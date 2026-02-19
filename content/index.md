@@ -9,14 +9,14 @@ I could have just asked a developer. I could have used WordPress. Instead, I cho
 
 I'm a Dentist by training. Co-founder and operations manager of [WordReward](https://wordreward.net) by choice. Living off-grid in Nuweiba because cities are too loud, too crowded.
 
-Business strategy, tough choices, and building a life that works with your brain, not against it. From the desert.
+Business strategy, tough choices, and building a life that works with my brain, not against it. From the desert.
 
 Start here:  
 **Off-Grid**     [[Why I Moved to the Desert to Save My Brain]]  
 **ADHD**         [[Running a Business with ADHD]]  
 **Strategy**    [[Structural Decisions vs Motivational Ones]]  
-**Marketing**  [[Strategic Thinking, From Real Life to Digital Marketing]]  
-
+**Marketing**  [[Strategic Thinking, From Real Life to Digital Marketing]]   
+**Religion      [[الصيام و الصوم]]   
 **Start with one. It either fits or it doesn't. No refunds.**
 
 <center>• • •</center>
