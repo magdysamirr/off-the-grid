@@ -134,7 +134,7 @@ article li,
 body,
 p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !important;
-  font-weight: 400; // Normal weight (400) to allow strong tags to shift to 700
+  font-weight: 300 !important; // Light weight as requested
 }
 
 // Specifically ensure strong/b tags are bold
@@ -187,7 +187,7 @@ article.rtl,
 article[lang="ar"],
 *[lang="ar"] {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-  font-weight: 400;
+  font-weight: 300 !important; // Light weight as requested
 }
 
 // RTL headings
