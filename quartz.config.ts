@@ -25,12 +25,12 @@ const config: QuartzConfig = {
       typography: {
         header: {
           name: "Inter",
-          weights: [200, 300, 400, 600, 700],
+          weights: [300, 400, 600, 700],
           includeItalic: false,
         },
         body: {
           name: "Inter",
-          weights: [200, 300, 400, 600, 700],
+          weights: [300, 400, 600, 700],
           includeItalic: false,
         },
         code: {
