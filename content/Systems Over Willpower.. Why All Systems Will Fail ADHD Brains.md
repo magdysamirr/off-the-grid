@@ -18,9 +18,9 @@ This is why GTD fails, why bullet journals fail, why beautifully organized Notio
 
 **The alternative isn't finding the perfect system, it's designing systems that expect failure and route around it.**
 
-I can't rely on remembering client priorities when making staffing decisions in real-time. So the system surfaces that information automatically when I'm in the decision context. I don't trust myself to review project status regularly, so status becomes visible passively through dashboards I see while doing other work.
+At WordReward, I can't rely on remembering client priorities when making staffing decisions in real-time. So the system surfaces that information automatically when I'm in the decision context. I don't trust myself to review project status regularly, so status becomes visible passively through dashboards I see while doing other work.
 
-When you can't depend on stable internet for cloud tools, critical information lives locally and syncs opportunistically. The system assumes connection will fail and works anyway.
+For off-grid in Nuweiba operations, I can't depend on stable internet for cloud tools. So critical information lives locally and syncs opportunistically. The system assumes connection will fail and works anyway.
 
 For personal task management, I stopped using [[Obsidian Isn't a Notes App, It's Life Support|linear task lists]] entirely. Instead, tasks live in context, client notes contain next actions for that client, project pages contain project tasks. When I'm in the context, the action is there. I don't have to remember to check a separate list.
 

@@ -1,4 +1,6 @@
 
+# Your Conscience Doesn't Judge Outcomes
+
 Most people torture themselves over decisions that went wrong. They replay the moment, dissect their thinking, and carry guilt for years. But here's what they miss: **your conscience doesn't actually care if you got it wrong.**
 
 Your conscience measures something else entirely. It distinguishes between **error** and **wrongdoing**.
