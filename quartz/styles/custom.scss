@@ -133,8 +133,8 @@ article ol,
 article li,
 body,
 p {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-weight: 300 !important; // 300 is more stable cross-browser than 200
+  font-family: 'Inter', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 300 !important;
 }
 
 // Specifically ensure strong/b tags are bold
