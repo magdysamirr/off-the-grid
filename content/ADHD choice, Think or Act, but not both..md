@@ -36,7 +36,7 @@ Sunday morning isn't "client work time", it's "thinking time for client strategy
 
 This seems rigid until you realize the alternative is losing entire days to mode-switching overhead. Three focused hours in one mode produces more than eight scattered hours bouncing between modes.
 
-When connectivity is unreliable, trying to force both modes in one session guarantees neither works. Think when connectivity doesn't matter. Execute when connectivity enables it.
+For off-grid operations, this means accepting that some days are thinking days and some days are doing days. When internet is unreliable, trying to force both modes in one session guarantees neither works. Think when connectivity doesn't matter. Execute when connectivity enables it.
 
 The hardest part is trusting your thinking enough to execute without questioning it. ADHD brains are good at catastrophizing that the plan is wrong mid-execution. But the plan isn't wrong, you're just in the wrong mode to evaluate it. Finish execution first, then return to thinking mode for evaluation.
 

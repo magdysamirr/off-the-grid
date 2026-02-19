@@ -1,10 +1,12 @@
+# Why I Hate Dentistry (and Why I'm Still a Dentist)
+
 Imagine spending 25 years trying to escape a single decision you made at 17, and no matter how hard you try, it keeps pulling you back.
 
 It's 2000, one year before graduation, entering the clinical section of removable prosthesis. That's the moment I knew: this isn't for me. The realization hit hard, but I was already four years deep into a five-year program. So what do you do with that knowledge? You finish. You graduate. You become a dentist because that's what you're supposed to do with a dental degree.
 
 I worked as a dentist for a while, then tried escaping as a medical rep for two years, anything to get away from clinical work. Didn't take. Came back to dentistry for ten years because bills don't pay themselves. Then I tried the business route for three years. Failed again.
 
-Fast forward to now. I'm running a clinic as a two-hour-per-day dentist while managing a marketing agency remotely. I've built what looks like a successful dual-career model. Perfect balance, right?
+Fast forward to 2025. I'm running a clinic in Nuweiba as a two-hour-per-day dentist while managing WordReward, a digital solutions and marketing company with twenty employees in Alexandria. I've built what looks like a successful dual-career model. Perfect balance, right?
 
 Wrong. Because here's the paradox nobody talks about: I hate not having patients. Obviously. It's worrying, annoying, means no revenue. No patients, no payment. But the moment I hear a voice in the reception area, I genuinely hope they're not actually a patient.
 
@@ -26,7 +28,7 @@ Maybe I'm finally building something that transforms the constraint into somethi
 
 <center> • • • </center>
 
-**Coming next:** [[What I actually hate about dentistry]], the specific mechanics, not just the general feeling, and the framework I built to survive patient interactions without losing my mind.
+**Coming next:** What I actually hate about dentistry, the specific mechanics, not just the general feeling, and the framework I built to survive patient interactions without losing my mind.
 
 **Tags:** #dentistry #remote-business #honest-practice #delegation
 
