@@ -47,7 +47,9 @@ h3 {
   margin-bottom: 0.8rem !important;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   margin-top: 1.2rem !important; // 1.5rem * 0.8 = 1.2rem
   margin-bottom: 0.8rem !important;
 }
@@ -67,7 +69,17 @@ body {
   color: var(--dark) !important;
 }
 
-p, ul, text, tr, td, li, ol, .katex, .math, .typst-doc, g[class~="typst-text"] {
+p,
+ul,
+text,
+tr,
+td,
+li,
+ol,
+.katex,
+.math,
+.typst-doc,
+g[class~="typst-text"] {
   color: var(--dark) !important;
   fill: var(--dark) !important;
 }
@@ -114,20 +126,33 @@ button:hover,
   font-display: swap;
 }
 
-// English content uses Google Sans Flex - light 300
+// English content uses System Font (Obsidian default)
 article p,
 article ul,
 article ol,
 article li,
 body,
 p {
-  font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
-  font-weight: 300 !important; // Light weight
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !important;
+  font-weight: 400; // Normal weight (400) to allow strong tags to shift to 700
 }
 
-// Headlines use Google Sans Flex with semi-bold/bold weights
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+// Specifically ensure strong/b tags are bold
+article strong,
+article b,
+p strong,
+p b {
+  font-weight: 700 !important;
+}
+
+// Headlines use System Font (Obsidian default)
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
 }
 
 h1 {
@@ -150,30 +175,46 @@ h4 {
   font-weight: 500 !important; // Semi-bold
 }
 
-h5, h6 {
+h5,
+h6 {
   font-size: 1.05rem !important;
   font-weight: 500 !important; // Semi-bold
 }
 
-// RTL content uses Noto Naskh Arabic
+// RTL content uses System Font (Obsidian default)
 .rtl,
-.rtl *,
 article.rtl,
-article.rtl *,
 article[lang="ar"],
-article[lang="ar"] *,
-*[lang="ar"],
-*[lang="ar"] * {
-  font-family: "Noto Naskh Arabic", serif !important;
-  font-weight: 200 !important;
+*[lang="ar"] {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-weight: 400;
 }
 
 // RTL headings
-.rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6,
-article.rtl h1, article.rtl h2, article.rtl h3, article.rtl h4, article.rtl h5, article.rtl h6,
-article[lang="ar"] h1, article[lang="ar"] h2, article[lang="ar"] h3, article[lang="ar"] h4, article[lang="ar"] h5, article[lang="ar"] h6 {
-  font-family: "Noto Naskh Arabic", serif !important;
-  font-weight: 400 !important;
+.rtl h1,
+.rtl h2,
+.rtl h3,
+.rtl h4,
+.rtl h5,
+.rtl h6,
+article.rtl h1,
+article.rtl h2,
+article.rtl h3,
+article.rtl h4,
+article.rtl h5,
+article.rtl h6 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-weight: 600 !important;
+}
+
+// Fix Bold for RTL
+.rtl strong,
+.rtl b,
+article.rtl strong,
+article.rtl b,
+*[lang="ar"] strong,
+*[lang="ar"] b {
+  font-weight: 700 !important;
 }
 
 // Page title font - aligned with icons (central alignment)
@@ -260,8 +301,8 @@ article.rtl,
 }
 
 // RTL for article title specifically
-article.rtl > h1,
-article.rtl > .article-title {
+article.rtl>h1,
+article.rtl>.article-title {
   direction: rtl;
   text-align: right;
 }
@@ -347,7 +388,6 @@ article[lang="ar"] .content-meta,
   direction: rtl !important;
   text-align: right !important;
   float: right !important; // Primary method: float to right
-  display: inline-block !important; // Keep inline-block but with float
   margin-left: 0 !important;
   margin-right: 0 !important;
   padding-bottom: 0.5rem !important;
@@ -476,9 +516,9 @@ button#explorer-ul {
   text-align: center !important; // Center text horizontally
 }
 
-.explorer > h1,
-.explorer > h2,
-.explorer > h3,
+.explorer>h1,
+.explorer>h2,
+.explorer>h3,
 .explorer .title-button,
 .explorer .title-button h2 {
   display: none !important; // Hide completely
@@ -543,6 +583,7 @@ footer a {
 // Sidebars - DESKTOP ONLY: sticky positioning for floating behavior
 // Only apply on desktop to avoid breaking mobile/tablet
 @media (min-width: 1025px) {
+
   // Move entire page higher on desktop
   .page {
     margin-top: -1rem !important;
@@ -582,6 +623,7 @@ footer a {
 
 // Mobile - hide TOC completely (using Quartz mobile breakpoint)
 @media all and ($mobile) {
+
   .toc,
   .sidebar.right .toc,
   .right .toc {
@@ -599,13 +641,14 @@ footer a {
 // Tablet (iPad) - hide sidebars completely, content takes full width
 // Tablet breakpoint in Quartz is 800px-1200px
 @media (min-width: 800px) and (max-width: 1200px) {
+
   // Move entire page higher on iPad
   .page {
     margin-top: -1rem !important;
   }
 
   // CRITICAL: Override the base.scss tablet grid (320px auto) with single column
-  .page > #quartz-body {
+  .page>#quartz-body {
     grid-template-columns: 1fr !important; // Override "320px auto" from base.scss
     grid-template-rows: auto auto auto !important;
     grid-template-areas:
@@ -702,7 +745,7 @@ footer a {
   overflow: visible !important; // Prevent text cutoff
 }
 
-.backlinks > ul.overflow {
+.backlinks>ul.overflow {
   flex-shrink: 0 !important;
   overflow: visible !important; // Prevent text cutoff
   width: 100% !important;
@@ -786,12 +829,13 @@ footer a {
 
 // Popover (link preview) - force default Quartz 4 settings
 .popover {
+
   // Only apply custom styles on desktop
   @media not all and (max-width: 768px) {
     z-index: 1000 !important;
   }
 
-  & > .popover-inner {
+  &>.popover-inner {
     width: 30rem !important;
     max-height: 20rem !important;
     padding: 1rem 1rem 1rem 1rem !important;
@@ -807,7 +851,15 @@ footer a {
     padding-top: 0 !important;
   }
 
-  h2, h3, h4, h5, h6, p, li, ul, ol {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  ul,
+  ol {
     font-size: initial !important;
     line-height: initial !important;
   }
@@ -862,37 +914,38 @@ svg path {
 }
 
 // Remove fill from heading anchor link icons
-h1[id] > a[href^="#"] svg,
-h2[id] > a[href^="#"] svg,
-h3[id] > a[href^="#"] svg,
-h4[id] > a[href^="#"] svg,
-h5[id] > a[href^="#"] svg,
-h6[id] > a[href^="#"] svg {
+h1[id]>a[href^="#"] svg,
+h2[id]>a[href^="#"] svg,
+h3[id]>a[href^="#"] svg,
+h4[id]>a[href^="#"] svg,
+h5[id]>a[href^="#"] svg,
+h6[id]>a[href^="#"] svg {
   fill: none !important;
   fill-opacity: 0 !important;
   stroke: currentColor !important;
   stroke-width: 2 !important;
 }
 
-h1[id] > a[href^="#"] svg *,
-h2[id] > a[href^="#"] svg *,
-h3[id] > a[href^="#"] svg *,
-h4[id] > a[href^="#"] svg *,
-h5[id] > a[href^="#"] svg *,
-h6[id] > a[href^="#"] svg * {
+h1[id]>a[href^="#"] svg *,
+h2[id]>a[href^="#"] svg *,
+h3[id]>a[href^="#"] svg *,
+h4[id]>a[href^="#"] svg *,
+h5[id]>a[href^="#"] svg *,
+h6[id]>a[href^="#"] svg * {
   fill: none !important;
   fill-opacity: 0 !important;
 }
 
 /* 1. Target ONLY paragraphs that are direct children of the main article */
 /* This avoids sidebars, footers, and menus automatically */
-article.content > p {
+article.content>p {
   text-indent: 2em;
 }
 
 /* 2. STRICTLY reset indentation for lists (bullets/numbers) */
 /* Even if a list item contains a paragraph, this forces it flat */
-li, li p {
+li,
+li p {
   text-indent: 0 !important;
 }
 
@@ -975,7 +1028,7 @@ blockquote p,
     z-index: 1000 !important;
     will-change: opacity, visibility !important; // Only animate these, not position
 
-    & > .popover-inner {
+    &>.popover-inner {
       // Square aspect ratio
       width: 280px !important;
       height: 280px !important;
@@ -1039,7 +1092,9 @@ blockquote p,
         line-height: 1.3 !important;
       }
 
-      h4, h5, h6 {
+      h4,
+      h5,
+      h6 {
         font-size: 0.8rem !important;
         font-weight: 500 !important;
         margin: 0.3rem 0 0.2rem 0 !important;
@@ -1053,7 +1108,8 @@ blockquote p,
         line-height: 1.4 !important;
       }
 
-      ul, ol {
+      ul,
+      ol {
         font-size: 0.75rem !important;
         margin: 0.25rem 0 !important;
         padding-left: 1.2rem !important;
