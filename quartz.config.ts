@@ -29,7 +29,7 @@ const config: QuartzConfig = {
           includeItalic: false,
         },
         body: {
-          name: "Inter",
+          name: "IBM Plex Sans Arabic",
           weights: [300, 400, 600, 700],
           includeItalic: false,
         },

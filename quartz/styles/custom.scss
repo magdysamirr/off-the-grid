@@ -133,7 +133,7 @@ article ol,
 article li,
 body,
 p {
-  font-family: 'Inter', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: var(--bodyFont) !important;
   font-weight: 300 !important;
 }
 
