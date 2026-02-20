@@ -64,6 +64,10 @@ h6 {
   color: var(--light) !important;
 }
 
+:root[saved-theme="dark"] ::selection {
+  color: var(--dark) !important;
+}
+
 // Body text uses primary color
 body {
   color: var(--dark) !important;
