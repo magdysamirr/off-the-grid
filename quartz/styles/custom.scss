@@ -963,6 +963,41 @@ blockquote p,
   text-indent: 0 !important;
 }
 
+// ============================================================================
+// ABOUT PAGE - SEA HEADER
+// ============================================================================
+
+.about-header {
+  text-align: center;
+  margin: 2.5rem 0 3rem;
+}
+
+.about-title-big {
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+  margin: 1.5rem 0 0 !important;
+  text-indent: 0 !important;
+  color: var(--dark) !important;
+}
+
+.about-title-small {
+  font-size: 0.8rem !important;
+  font-weight: 300 !important;
+  opacity: 0.45 !important;
+  letter-spacing: 0.3em !important;
+  margin: 0.5rem 0 0 !important;
+  text-transform: lowercase !important;
+  text-indent: 0 !important;
+}
+
+.sea-waves {
+  display: block;
+  margin: 0 auto;
+  color: var(--dark);
+}
+
 // Signature component styling
 .signature-wrapper {
   display: block;
