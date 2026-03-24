@@ -3,9 +3,9 @@ dg-publish: true
 title: All or None
 dg-home: true
 ---
-If you are reading this, I finally managed to connect Obsidian to GitHub to Vercel via Quartz.
+If you are reading this, I finally managed to connect Obsidian to GitHub to Vercel via Quartz.   
 
-I could have just asked a developer. I could have used WordPress. Instead, I chose the least convenient method possible because I needed to control every aspect of the blog. That's me. All or none.
+I could have just asked a developer. I could have used WordPress. Instead, I chose the least convenient method possible because I needed to control every aspect of the blog. That's me. All or none.   
 
 I'm a Dentist by training. Co-founder and operations manager of [WordReward](https://wordreward.net) by choice. Living off-grid in Nuweiba because cities are too loud, too crowded.   
 
