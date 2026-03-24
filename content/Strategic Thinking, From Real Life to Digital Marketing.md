@@ -47,7 +47,7 @@ Result: $ 100M revenue in 4 years with minimal paid ads, valued at $ 1.2 billion
 [Visit Glossier](https://www.glossier.com/) | [Read the Harvard case](https://www.hbs.edu/faculty/Pages/item.aspx?num=54905)
 
 **Trojan Horse: Make Customers Do the Marketing.**  
-Music streaming is commoditized. Spotify created personalized year-end summaries (Wrapped), made them shareable social graphics, released before holidays, made it feel like personal achievement.   
+Music streaming is commoditized.  Spotify created personalized year-end summaries (Wrapped), made them shareable social graphics, released before holidays, made it feel like personal achievement.   
 Users don't feel like advertisers—they feel like they're sharing about themselves. But every share is a Spotify ad with personal endorsement. Each share recruits friends who want their own Wrapped.   
 >Trade-off: only works once a year, requires significant data infrastructure.  
 Result: 156M+ users engaged with Wrapped 2023, dominated social media entire week in December, billions of impressions, all organic.  
@@ -80,6 +80,9 @@ Tactics are what you do. Strategy is WHY you do it THERE, THAT WAY, and not some
 *We don't market. We mark.*  
 *[WordReward](www.wordreward.net)*
 
+https://obsidian.md
+
+[Obsidian](https://obsidian.md)
 <center>• • •</center>
 
 **Tags:** #strategy #marketing #positioning #business #internal #client #WordReward
