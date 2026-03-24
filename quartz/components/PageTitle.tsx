@@ -7,18 +7,43 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
   const baseDir = pathToRoot(fileData.slug!)
   return (
-    <h2 class={classNames(displayClass, "page-title")}>
-      <a href={baseDir}>{title}</a>
-    </h2>
+    <div class={classNames(displayClass, "page-title")}>
+      <a href={baseDir}>
+        <span class="page-title-main">{title}</span>
+        <span class="page-title-sub">from the sea</span>
+      </a>
+    </div>
   )
 }
 
 PageTitle.css = `
 .page-title {
-  font-size: 1.75rem;
   margin: 0;
-  font-family: var(--titleFont);
+  line-height: 1;
+}
+
+.page-title a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.page-title-main {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.page-title-sub {
+  font-size: 0.65rem;
   font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: lowercase;
+  opacity: 0.45;
+  line-height: 1;
 }
 `
 
