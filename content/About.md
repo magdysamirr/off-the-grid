@@ -1,0 +1,33 @@
+---
+title: About
+---
+
+<div style="text-align:center; margin: 2.5rem 0 3rem;">
+
+<svg width="220" height="40" viewBox="0 0 220 40" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="12" x2="220" y2="12" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+  <path d="M20,22 C35,18 50,26 65,22" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.3"/>
+  <path d="M80,22 C95,18 110,26 125,22" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.3"/>
+  <path d="M140,22 C155,18 170,26 185,22" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.3"/>
+  <path d="M50,30 C65,27 80,33 95,30" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.2"/>
+  <path d="M115,30 C130,27 145,33 160,30" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.2"/>
+</svg>
+
+<p style="font-size:2.8rem; font-weight:700; margin:1rem 0 0; line-height:1;">200 Meters</p>
+<p style="font-size:0.85rem; font-weight:300; opacity:0.45; letter-spacing:0.25em; margin:0.4rem 0 0; text-transform:lowercase;">from the sea</p>
+
+</div>
+
+I don't separate thinking from doing. Every system I've built, every decision I write about, came from a real constraint with real consequences — not a thought experiment.
+
+I'm skeptical of frameworks that work perfectly in theory. I'm interested in what holds when conditions are bad, resources are limited, and you can't rely on consistency.
+
+Strategy, systems design, and what actually happens when you apply both to a business that has to function in the real world.
+
+**What to expect:**
+Long gaps between posts. No filler. When something appears here it's because I couldn't not write it.
+
+**Where to start:**
+[[Why I Moved to the Desert to Save My Brain]]
+[[Structural Decisions vs Motivational Ones]]
+[[Why I Hate Dentistry (and Why I'm Still a dentist)]]
