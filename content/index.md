@@ -15,6 +15,7 @@ Start here:
 **ADHD**         [[Running a Business with ADHD]]   
 **Strategy**    [[Structural Decisions vs Motivational Ones]]   
 **Marketing**  [[Strategic Thinking, From Real Life to Digital Marketing]]   
+
 **Start with one. It either fits or it doesn't. No refunds.**   
 
 <center>• • •</center>
