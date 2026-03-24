@@ -39,7 +39,7 @@ PageTitle.css = `
 
 .page-title-sub {
   font-size: 0.65rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.25em;
   text-transform: lowercase;
   opacity: 0.45;
