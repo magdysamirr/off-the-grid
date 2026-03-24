@@ -12,7 +12,7 @@ title: About
   <path d="M125 35 C143 30 161 38 179 35" stroke="currentColor" stroke-width="1" stroke-opacity="0.4"/>
 </svg>
 <p class="about-title-big">200 Meters</p>
-<p class="about-title-medium">f r o m    t h e    s e a</p>
+<p class="about-title-medium">from the sea</p>
 </div>
 
 I don't separate thinking from doing.   
