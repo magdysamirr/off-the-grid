@@ -25,7 +25,10 @@ export default (() => {
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
-    const iconPath = joinSegments(baseDir, "static/icon.png")
+    const iconFallbackPath = joinSegments(baseDir, "static/icon.png")
+    const iconLightPath = joinSegments(baseDir, "static/icon-light.png")
+    const iconDarkPath = joinSegments(baseDir, "static/icon-dark.png")
+    const icoPath = joinSegments(baseDir, "favicon.ico")
 
     // Url of current page
     const socialUrl =
@@ -84,8 +87,12 @@ export default (() => {
           </>
         )}
 
-        <link rel="icon" href={iconPath} />
+        <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href={iconLightPath} />
+        <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href={iconDarkPath} />
+        <link rel="icon" type="image/png" href={iconFallbackPath} />
+        <link rel="shortcut icon" href={icoPath} />
         <meta name="description" content={description} />
+        <meta name="generator" content="Quartz" />
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
