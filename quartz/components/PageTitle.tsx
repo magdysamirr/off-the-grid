@@ -32,8 +32,9 @@ PageTitle.css = `
 
 .page-title a {
   display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
   text-decoration: none !important;
   border-bottom: none !important;
 }
@@ -41,7 +42,7 @@ PageTitle.css = `
 .page-title-copy {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.18rem;
 }
 
 .page-title-mark {
@@ -52,8 +53,8 @@ PageTitle.css = `
 
 .page-title-mark img {
   display: block;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3rem;
+  height: 3rem;
   object-fit: contain;
 }
 
