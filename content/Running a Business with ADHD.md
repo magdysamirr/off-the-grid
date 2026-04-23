@@ -1,6 +1,9 @@
 ---
 title: Running a Business with ADHD
-tags: [ADHD, systems, remote-operations, productivity]
+tags:
+- personal
+- place
+- systems
 ---
 
 ADHD isn't a productivity problem, it's an operating system that requires different architecture. You can't run typical business workflows on ADHD neurology and expect them to work. You have to design systems that route around attention inconsistency, working memory limitations, and reward delay sensitivity.

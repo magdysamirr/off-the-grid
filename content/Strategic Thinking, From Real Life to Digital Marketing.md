@@ -1,6 +1,10 @@
 ---
 dg-publish: true
 title: Strategic Thinking
+tags:
+- business
+- marketing
+- systems
 ---
 [[Strategy]] is winning before you start. If you enter a fair fight, you've already failed strategically.
 Michael Porter said it clearly: "The essence of strategy is choosing what NOT to do." Strategy means creating unfair advantages, choosing your battlefield, and being different, not just better.

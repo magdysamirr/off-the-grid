@@ -3,6 +3,8 @@ title: HANDOFF - Continue Blog Development Session
 date: 2025-12-21
 type: session-handoff
 status: active
+tags:
+- reference
 ---
 
 # Session Handoff for New Claude Instance

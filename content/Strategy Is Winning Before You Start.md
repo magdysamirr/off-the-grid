@@ -1,6 +1,8 @@
 ---
 title: Strategy Is Winning Before You Start
-tags: [strategy, marketing, WordReward]
+tags:
+- business
+- marketing
 ---
 
 Most people mistake tactics for strategy. They think strategy means having a plan. It doesn't. Strategy means arranging conditions so you win regardless of tactics.

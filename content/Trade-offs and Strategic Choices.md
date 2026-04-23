@@ -1,6 +1,8 @@
 ---
 aliases:
-  - hyperfocus means I disappear
+- hyperfocus means I disappear
+tags:
+- personal
 ---
 
 Everyone nods when you say we can't have everything. Then they immediately try to have everything.

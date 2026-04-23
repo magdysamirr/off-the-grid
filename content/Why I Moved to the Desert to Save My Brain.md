@@ -1,3 +1,8 @@
+---
+tags:
+- personal
+- place
+---
 The plan was simple: stay for two weeks in Nuweiba, analyze the clinic setup, find a junior dentist willing to live here, then go back to Alexandria.
 
 I lasted three days before the plan collapsed.

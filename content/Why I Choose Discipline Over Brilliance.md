@@ -1,16 +1,13 @@
 ---
 title: Why I Choose Discipline Over Brilliance
 tags:
-  - team-dynamics
-  - accountability
-  - operations
-  - WordReward
-  - leadership
+- business
+- personal
 date: 2025-12-20
 status: draft
 type: Operational principle
 ---
-# Why I Choose Discipline Over Brilliance
+
 
 I don't hire mediocre people. Mediocrity creates surplus—dead weight that drags down workflow and kills team spirit. But if you force me to choose between a disciplined mid-level specialist and a brilliant flake, I'll take discipline every single time.
 

@@ -1,6 +1,9 @@
 ---
 aliases:
-  - systems that expect mode-switching fail
+- systems that expect mode-switching fail
+tags:
+- personal
+- systems
 ---
 
 

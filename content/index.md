@@ -2,6 +2,8 @@
 dg-publish: true
 title: All or None
 dg-home: true
+tags:
+- systems
 ---
 If you are reading this, I finally managed to connect Obsidian to GitHub to Vercel via Quartz.   
 
@@ -14,8 +16,8 @@ Start here:
 **Off-Grid**     [[Why I Moved to the Desert to Save My Brain]]   
 **ADHD**         [[Running a Business with ADHD]]   
 **Strategy**    [[Structural Decisions vs Motivational Ones]]   
-**Marketing**  [[Strategic Thinking, From Real Life to Digital Marketing]]   
-
+**Marketing**  [[Strategic Thinking, From Real Life to Digital Marketing]]    
+**Dentistry**    [[Off-Grid/Why I Hate Dentistry (and Why I'm Still a dentist)|Why I Hate Dentistry (and Why I'm Still a dentist)]]   
 **Start with one. It either fits or it doesn't. No refunds.**   
 
 <center>• • •</center>
