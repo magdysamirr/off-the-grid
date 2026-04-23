@@ -26,10 +26,16 @@ That's why hiring the junior dentist wasn't just delegation, it was the strategi
 
 Maybe I'm finally building something that transforms the constraint into something else entirely.
 
+If you want to see where this tension goes in practice, these are the three public notes most connected to it:
+
+- [[The 7 Self-Deceptions That Shape a Dentist's Career]]
+- [[Why I Built an 11 PM Report]]
+- [[Administrative Friction Is Clinical Friction]]
+
 <center> • • • </center>
 
 **Coming next:** What I actually hate about dentistry, the specific mechanics, not just the general feeling, and the framework I built to survive patient interactions without losing my mind.
 
 **Tags:** #dentistry #remote-business #honest-practice #delegation
 
-**Internal links:** [[Junior Dentist Strategy]], [[Remote Management]], [[ADHD and Career Design]]
+**Internal links:** [[Junior Dentist Strategy]], [[Remote Management]], [[ADHD and Career Design]], [[The 7 Self-Deceptions That Shape a Dentist's Career]], [[Why I Built an 11 PM Report]], [[Administrative Friction Is Clinical Friction]]
