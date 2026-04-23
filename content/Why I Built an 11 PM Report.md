@@ -44,4 +44,8 @@ In my case, that means I wake up choosing instead of chasing.
 
 That is the only reason I care about this category of tooling.
 
+One public example of that reporting style:
+
+- [[Operational Snapshot — WR, KAF, and NDC]]
+
 Related: [[Remote Operations Without Losing Control.. Building While Off-Grid]] • [[Administrative Friction Is Clinical Friction]] • [[The 7 Self-Deceptions That Shape a Dentist's Career]]
