@@ -1,3 +1,7 @@
+---
+tags:
+- business
+---
 
 A Q&A blog built from running a dental clinic and marketing agency while managing ADHD off-grid in Nuweiba, Egypt.
 
@@ -56,3 +60,5 @@ Example: I "knew" crowns were most profitable until numbers showed scaling print
 **By theme:** Data & Decisions | ADHD & Operations | Marketing Reality
 
 **About:** I run NDC (dental clinic) and WordReward (marketing agency) from off-grid Nuweiba. This blog demonstrates how we think strategically about operations, data, and small business reality.
+
+**Related:** [[Off the Grid]]

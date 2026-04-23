@@ -1,3 +1,7 @@
+---
+tags:
+- business
+---
 
 # Your Conscience Doesn't Judge Outcomes
 

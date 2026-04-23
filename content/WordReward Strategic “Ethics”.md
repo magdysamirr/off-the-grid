@@ -1,9 +1,11 @@
 ---
 Desciption: This is a test description to show in backlink box
 dg-publish: true
-title: "WordReward Positioning: Stop Managing Brands, Start Marking Them"
+title: 'WordReward Positioning: Stop Managing Brands, Start Marking Them'
 aliases:
-  - WordReward Strategic “Reset”
+- WordReward Strategic “Reset”
+tags:
+- business
 ---
 ## The Problem With Marketing Agencies
 
@@ -164,7 +166,6 @@ Most agencies can't say no to revenue. That's why they all look the same.
 *We can say no. That's why we don't.*
 
 **Tags:** #wordreward #positioning #strategy #internal #marketing
-
 
 - [[Strategy Is Winning Before You Start]] • [[Strategic Thinking, From Real Life to Digital Marketing]]
 - [[Why Most Marketing Isn't Strategic]]

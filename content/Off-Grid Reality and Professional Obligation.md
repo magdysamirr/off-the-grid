@@ -1,6 +1,9 @@
 ---
 title: Off-Grid Reality and Professional Obligation
-tags: [Nuweiba, off-grid, remote-business, slow-living]
+tags:
+- business
+- place
+- project
 ---
 
 Living off-grid in Nuweiba isn't lifestyle optimization or digital nomad aesthetics. It's structural necessity—my ADHD brain needs environmental silence to function strategically. But geographic freedom creates economic constraints. Running two businesses from a place with unreliable electricity means designing operations that work despite infrastructure limitations.

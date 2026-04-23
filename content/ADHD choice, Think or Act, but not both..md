@@ -1,6 +1,8 @@
 ---
 aliases:
-  - Think or act
+- Think or act
+tags:
+- personal
 ---
 ADHD brains have two modes: thinking mode and doing mode. You cannot be in both simultaneously. Trying to switch between them mid-task destroys both.
 

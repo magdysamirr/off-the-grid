@@ -1,6 +1,8 @@
 ---
 title: Psychology, Behavior, and Systems Thinking
-tags: [psychology, systems-thinking, behavior, decision-making]
+tags:
+- personal
+- systems
 ---
 
 Understanding why we do things matters more than knowing how to do them. Most behavior change fails because it targets symptoms instead of underlying mechanics. You can't fix execution problems with motivation when the real issue is structural design.

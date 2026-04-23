@@ -1,5 +1,7 @@
 ---
 title: About
+tags:
+- systems
 ---
 
 <div class="about-header">
@@ -16,7 +18,7 @@ title: About
 </div>
 
 I don't separate thinking from doing.   
-Every system I've built, every decision I write about, came from a real constraint with real consequences — not a thought experiment.
+Every system I've built, every decision I write about, came from a real constraint with real consequences, not a thought experiment.
 
 I'm skeptical of frameworks that work perfectly in theory.   
 I'm interested in what holds when conditions are bad, resources are limited, and you can't rely on consistency.

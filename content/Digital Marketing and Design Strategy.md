@@ -1,6 +1,9 @@
 ---
 title: Digital Marketing and Design Strategy
-tags: [marketing, strategy, WordReward, positioning]
+tags:
+- business
+- marketing
+- systems
 ---
 
 Marketing without strategy is noise generation. Most agencies execute tactics—run ads, post content, send emails—without building durable competitive position. At WordReward, we start with strategic questions: What position are we building? What trade-offs create unfair advantages? How does each execution compound previous work?

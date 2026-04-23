@@ -1,5 +1,7 @@
 ---
 title: Off the Grid
+tags:
+- systems
 ---
 ### The Core Axiom: Autonomy via Decoupling
 
@@ -46,4 +48,6 @@ To go off-grid is to reclaim the role of *Steward*. It is the transition from 
 It is the realization that:  
 1. Dependency is debt. (Whether financial, energetic, or emotional).  
 2. Distance is a filter. (Living in Nuweiba or self-hosting filters out the non-essential).  
-3. Quiet is power. (The ability to exist without being perceived).  
+3. Quiet is power. (The ability to exist without being perceived).
+
+**Related:** [[Off the Grid]]

@@ -1,3 +1,8 @@
+---
+tags:
+- business
+- personal
+---
 # Building Unfair Advantages
 
 An unfair advantage is something your competitor can't easily copy even if they see exactly what you're doing. Not a clever tagline. Not a good design. Something structural: expertise that took 10+ years to build, integrity in an industry known for lying, a unique process that compounds over time.

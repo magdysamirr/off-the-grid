@@ -1,6 +1,8 @@
 ---
 title: Why Most Marketing Isn't Strategic
-tags: [marketing, strategy, WordReward]
+tags:
+- business
+- marketing
 ---
 
 Most marketing is tactical execution disguised as strategy. Someone runs ads, posts content, sends emails, and calls it a marketing strategy. It's not. It's a list of tactics without strategic foundation.
