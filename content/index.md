@@ -17,7 +17,7 @@ Start here:
 **ADHD**         [[Running a Business with ADHD]]   
 **Strategy**    [[Structural Decisions vs Motivational Ones]]   
 **Marketing**  [[Strategic Thinking, From Real Life to Digital Marketing]]    
-**Dentistry**    [[Off-Grid/Why I Hate Dentistry (and Why I'm Still a dentist)|Why I Hate Dentistry (and Why I'm Still a dentist)]]   
+**Dentistry**    [[Why I Hate Dentistry (and Why I'm Still a dentist)|Why I Hate Dentistry (and Why I'm Still a dentist)]]   
 **Start with one. It either fits or it doesn't. No refunds.**   
 
 <center>• • •</center>
