@@ -6,6 +6,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
+    Component.PageTransition(),
     Component.Signature(), // Signature above backlinks
     Component.Backlinks(), // Moved from right sidebar to below content
   ],
