@@ -1,8 +1,8 @@
 ---
-title: HANDOFF - Continue Blog Development Session
-date: 2025-12-21
 type: session-handoff
 status: active
+date: 2025-12-21
+title: HANDOFF - Continue Blog Development Session
 tags:
 - reference
 ---

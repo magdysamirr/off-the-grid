@@ -1,7 +1,6 @@
 ---
 title: Digital Marketing and Design Strategy
 tags:
-- business
 - marketing
 - systems
 ---

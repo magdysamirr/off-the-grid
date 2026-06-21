@@ -1,7 +1,6 @@
 ---
 title: Why Most Marketing Isn't Strategic
 tags:
-- business
 - marketing
 ---
 

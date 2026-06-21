@@ -1,6 +1,5 @@
 ---
-tags:
-- business
+{}
 ---
 
 A Q&A blog built from running a dental clinic and marketing agency while managing ADHD off-grid in Nuweiba, Egypt.

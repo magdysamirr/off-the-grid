@@ -1,9 +1,9 @@
 ---
-dg-publish: true
 title: All or None
-dg-home: true
 tags:
 - systems
+dg-publish: true
+dg-home: true
 ---
 If you are reading this, I finally managed to connect Obsidian to GitHub to Vercel via Quartz.   
 
@@ -22,4 +22,4 @@ Start here:
 
 <center>• • •</center>
 
-**Tags:** #ADHD • #strategy • #systems • #marketing • #Nuweiba • #WordReward
+**Tags:** #adhd • #strategy • #systems • #marketing • Nuweiba • #wr

@@ -1,13 +1,10 @@
 ---
 title: Administrative Friction Is Clinical Friction
-dg-publish: true
 tags:
-  - NDC
-  - dentistry
-  - systems
-  - operations
-  - AI
-  - clinic-management
+- ndc
+- systems
+- operations
+dg-publish: true
 ---
 
 In a clinic, people like to separate administration from clinical work as if they are two different worlds.

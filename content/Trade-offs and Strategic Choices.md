@@ -44,5 +44,5 @@ Strategy isn't choosing what you want. It's choosing what you're willing to lose
 
 <center>• • •</center>
 
-**Tags:** #strategy  #decision-making  #ADHD  #perfectionism  #WordReward  #trade-offs  
+**Tags:** #strategy  decision-making  #adhd  perfectionism  #wr  trade-offs  
 **Internal links:** [[Structural Decisions vs Motivational Ones]] • [[Strategy Over Tactics]] • [[ADHD and Systems]]

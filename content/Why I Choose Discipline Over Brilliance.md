@@ -1,11 +1,10 @@
 ---
+type: Operational principle
+status: draft
+date: 2025-12-20
 title: Why I Choose Discipline Over Brilliance
 tags:
-- business
 - personal
-date: 2025-12-20
-status: draft
-type: Operational principle
 ---
 
 

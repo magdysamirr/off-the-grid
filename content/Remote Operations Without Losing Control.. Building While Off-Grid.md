@@ -1,10 +1,7 @@
 ---
 title: Remote Operations Without Losing Control.. Building While Off-Grid
-tags:
-- business
-- place
 ---
-Running #WordReward from #off-grid in Nuweiba creates a specific constraint: I can't rely on real-time presence to maintain operational control. The internet is unstable. I'm 700km from the Alexandria office. The team can't just walk into my office with a question.
+Running #wr from #off-grid in Nuweiba creates a specific constraint: I can't rely on real-time presence to maintain operational control. The internet is unstable. I'm 700km from the Alexandria office. The team can't just walk into my office with a question.
 
 Most remote work advice assumes reliable connectivity and working time overlap. That's not the reality here. The question isn't "how do I work remotely", it's "how do I maintain strategic oversight when I can't depend on being reachable?"
 
