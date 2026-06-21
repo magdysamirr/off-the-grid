@@ -28,6 +28,7 @@ Strategy, systems design, and what actually happens when you apply both to a bus
 **What to expect:**   
 Long gaps between posts. No filler.   
 When something appears here it's because I couldn't not write it.
+Otherwise things are good to go 
 
 **Where to start:**   
 [[Why I Moved to the Desert to Save My Brain]]   
