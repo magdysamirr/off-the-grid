@@ -40,5 +40,5 @@ Personal example: I wanted to read more consistently. I'll read 30 minutes befor
 <center>• • •</center>
 
 
-**Tags:** #ADHD #systems-thinking #decision-making #productivity #structural-design  
+**Tags:** #adhd systems-thinking decision-making productivity structural-design  
 **Internal links:** [[ADHD and Systems]], [[WordReward Operations]], [[Delegation at Scale]]

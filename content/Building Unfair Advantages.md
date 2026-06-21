@@ -1,6 +1,5 @@
 ---
 tags:
-- business
 - personal
 ---
 # Building Unfair Advantages
@@ -61,7 +60,7 @@ The advantage already exists. Our job is finding it, defining it, making it obvi
 
 <center> • • • </center>  
 
-**Tags:** #strategy #unfair-advantage #belief #marketing #WordReward #client-selection
+**Tags:** #strategy unfair-advantage belief #marketing #wr client-selection
 
 **Suggested links:** [[Strategic Thinking, From Real Life to Digital Marketing]] • [[Strategy Is Winning Before You Start]] • [[Why Most Marketing Isn't Strategic]]
 

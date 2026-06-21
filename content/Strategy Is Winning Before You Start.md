@@ -1,17 +1,16 @@
 ---
 title: Strategy Is Winning Before You Start
 tags:
-- business
 - marketing
 ---
 
 Most people mistake tactics for strategy. They think strategy means having a plan. It doesn't. Strategy means arranging conditions so you win regardless of tactics.
 
-In #chess, strategy is controlling the center and developing pieces so you have more options than your opponent. Tactics are the specific move sequences. You can execute brilliant tactics and still lose if your strategic position is weak. You can execute mediocre tactics and win if your strategic position is strong.
+In chess, strategy is controlling the center and developing pieces so you have more options than your opponent. Tactics are the specific move sequences. You can execute brilliant tactics and still lose if your strategic position is weak. You can execute mediocre tactics and win if your strategic position is strong.
 
 In [[Digital Marketing and Design Strategy]], the same principle applies. Tactics are the campaigns, the content, the ad creative. Strategy is positioning yourself so those tactics have asymmetric impact—more result per unit of effort than your competitors get from the same effort.
 
-At #WordReward, our strategic advantage isn't that we're better at running Facebook ads or designing websites than other agencies. It's that we've structured client relationships and service delivery so we capture compounding value that one-off project shops don't.
+At #wr, our strategic advantage isn't that we're better at running Facebook ads or designing websites than other agencies. It's that we've structured client relationships and service delivery so we capture compounding value that one-off project shops don't.
 
 When we build a loyalty program for a client, we're not just delivering a project. We're embedding ourselves into their customer retention mechanics, which means recurring revenue and strategic dependency. When we create brand systems instead of individual designs, we're making ourselves necessary for maintaining consistency across all future materials.
 

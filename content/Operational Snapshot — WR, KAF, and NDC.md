@@ -1,13 +1,13 @@
 ---
 title: Operational Snapshot — WR, KAF, and NDC
-dg-publish: true
 tags:
-  - operations
-  - WordReward
-  - KAF
-  - NDC
-  - reports
-  - systems
+- operations
+- wr
+- kaf
+- ndc
+- report
+- systems
+dg-publish: true
 ---
 
 This is not a polished investor report.

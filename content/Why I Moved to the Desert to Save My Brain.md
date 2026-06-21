@@ -1,7 +1,6 @@
 ---
 tags:
 - personal
-- place
 ---
 The plan was simple: stay for two weeks in Nuweiba, analyze the clinic setup, find a junior dentist willing to live here, then go back to Alexandria.
 
@@ -40,4 +39,4 @@ Slow living isn't about doing less. It's about doing things at the speed your br
 
 [[index|It is alive]] • [[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains]] • [[Remote Operations Without Losing Control.. Building While Off-Grid]] 
 
-**Tags:** #nuweiba #ADHD #off-the-grid #slow-living
+**Tags:** nuweiba #adhd #off-grid slow-living

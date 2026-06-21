@@ -1,18 +1,15 @@
 ---
 title: Why I Built an 11 PM Report
-dg-publish: true
 tags:
-  - WordReward
-  - systems
-  - AI
-  - operations
-  - remote-business
-  - dashboards
+- wr
+- systems
+- operations
+dg-publish: true
 ---
 
-I did not build a nightly report because I love dashboards.
+I hate dashboards.
 
-I built it because administrative fog is expensive.
+But I built nightly report because administrative fog is expensive.
 
 Running WordReward from Nuweiba means I cannot depend on real-time presence. I am far from the office. Internet is not always stable. Team context gets fragmented. Deadlines move. Decisions hide inside different tools. If I need to manually reconstruct reality every morning, I start the day already behind.
 
@@ -26,7 +23,7 @@ At a high level, the system reads from the places where work actually leaves tra
 - delivery notes
 - the context layer I use to keep AI state aligned across projects
 
-That context layer matters. I use a workspace graph as a memory system, not as a gimmick. It helps preserve what changed, what is active, and what matters next so the reporting layer is not operating on amnesia.
+That context layer is essential. I use a workspace graph as a memory system. It helps preserve what changed, what is active, and what matters next so the reporting layer is not operating on amnesia.
 
 Then the report turns that into a short decision surface:
 

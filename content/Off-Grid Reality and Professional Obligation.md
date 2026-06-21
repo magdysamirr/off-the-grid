@@ -1,8 +1,6 @@
 ---
 title: Off-Grid Reality and Professional Obligation
 tags:
-- business
-- place
 - project
 ---
 

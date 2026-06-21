@@ -2,7 +2,6 @@
 title: Running a Business with ADHD
 tags:
 - personal
-- place
 - systems
 ---
 

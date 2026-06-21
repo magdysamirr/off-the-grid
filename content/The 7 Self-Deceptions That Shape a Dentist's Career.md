@@ -1,13 +1,9 @@
 ---
 title: The 7 Self-Deceptions That Shape a Dentist's Career
-dg-publish: true
 tags:
-  - dentistry
-  - strategy
-  - decision-making
-  - career
-  - systems
-  - AI
+- strategy
+- systems
+dg-publish: true
 ---
 
 This started as a live lecture for a small clinical day in Dahab. The audience was junior dentists. The real subject was not dentistry alone. It was the set of beliefs that quietly distort how a dentist builds a career.

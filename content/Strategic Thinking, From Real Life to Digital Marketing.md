@@ -1,10 +1,9 @@
 ---
-dg-publish: true
 title: Strategic Thinking
 tags:
-- business
 - marketing
 - systems
+dg-publish: true
 ---
 [[Strategy]] is winning before you start. If you enter a fair fight, you've already failed strategically.
 Michael Porter said it clearly: "The essence of strategy is choosing what NOT to do." Strategy means creating unfair advantages, choosing your battlefield, and being different, not just better.
@@ -89,7 +88,7 @@ https://obsidian.md
 [Obsidian](https://obsidian.md)
 <center>• • •</center>
 
-**Tags:** #strategy #marketing #positioning #business #internal #client #WordReward
+**Tags:** #strategy #marketing positioning business internal #client #wr
 
 
 **Related:** [[WordReward Strategic “Ethics”|WordReward Strategic “Reset”]] • [[Remote Operations Without Losing Control]] • [[Structural Decisions vs Motivational Ones]] • [[Building Unfair Advantages]] • [[Why Most Marketing Isn't Strategic]] • [[Trade-offs and Strategic Choices]]
