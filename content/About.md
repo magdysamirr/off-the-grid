@@ -1,6 +1,6 @@
 ---
 title: About
-type: map
+type: snapshot
 status: evergreen
 topics:
 - off-grid
@@ -35,7 +35,13 @@ Long gaps between posts. No filler.
 When something appears here it's because I couldn't not write it.
 Otherwise things are good to go 
 
-**Where to start:**   
-[[Why I Moved to the Desert to Save My Brain]]   
-[[Structural Decisions vs Motivational Ones]]   
-[[Why I Hate Dentistry (and Why I'm Still a Dentist)]]
+## How the garden is arranged
+
+[[index|The front door]] gives the entry paths. From there, the domain maps lead to the evergreen notes:
+
+- [[Off-Grid Reality and Professional Obligation|Off-grid]] — life and operations under constraint
+- [[Running a Business with ADHD|ADHD]] — designing around attention and execution
+- [[Strategy|Strategy]] — choices, positioning, and trade-offs
+- [[Dentistry|Dentistry]] — clinical work, career, and professional obligation
+
+The garden is intentionally small, personal, and unfinished.

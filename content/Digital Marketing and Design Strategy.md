@@ -1,5 +1,5 @@
 ---
-title: Digital Marketing and Design Strategy
+title: Marketing Branch — Digital Marketing and Design Strategy
 type: map
 status: growing
 topics:
@@ -15,15 +15,16 @@ This section documents strategic frameworks from running WordReward and working 
 
 **Core insights:**
 
-[[Strategic Thinking]]  
-Six strategic patterns with real examples and ROI validation.
+- **Core framework** — [[Strategic Thinking]] — six strategic patterns with real examples and ROI validation.
 
-[[Why Most Marketing Isn't Strategic]]  
-The difference between tactical activity and strategic positioning.
+- **Counterpoint** — [[Why Most Marketing Isn't Strategic]] — the difference between tactical activity and strategic positioning.
 
-[[Trade-offs and Strategic Choices]]  
-Why real strategy requires sacrificing good options for great ones.
+- **Trade-off** — [[Trade-offs and Strategic Choices]] — why real strategy requires sacrificing good options for great ones.
 
 ---
 
-**Related:** [[Running a Business with ADHD]] • [[Off-Grid Reality and Professional Obligation]]
+## Continue from here
+
+- **Parent map** — [[Strategy]]
+- **Operating constraint** — [[Running a Business with ADHD]]
+- **Context** — [[Off-Grid Reality and Professional Obligation]]

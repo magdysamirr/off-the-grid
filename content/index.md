@@ -1,5 +1,5 @@
 ---
-title: All or None
+title: 200 Meters
 type: map
 status: evergreen
 topics:
@@ -17,14 +17,20 @@ I could have just asked a developer. I could have used WordPress. Instead, I cho
 
 I'm a Dentist by training. Co-founder and operations manager of [WordReward](https://wordreward.net) by choice. Living off-grid in Nuweiba because cities are too loud, too crowded.   
 
-Business strategy, tough choices, and building a life that works with my brain, not against it. From the desert.   
-Start here:   
-**Off-Grid**     [[Why I Moved to the Desert to Save My Brain]]   
-**ADHD**         [[Running a Business with ADHD]]   
-**Strategy**    [[Structural Decisions vs Motivational Ones]]   
-**Marketing**  [[Strategic Thinking]]    
-**Dentistry**    [[Why I Hate Dentistry (and Why I'm Still a Dentist)]]   
-**Start with one. It either fits or it doesn't. No refunds.**   
+Business strategy, tough choices, and building a life that works with my brain, not against it. From the desert.
+
+## Explore the garden
+
+Start with one domain map. Each map leads to the evergreen notes beneath it.
+
+- **Off-grid** — [[Off-Grid Reality and Professional Obligation|the operating map]]
+- **ADHD** — [[Running a Business with ADHD|the operating-system map]]
+- **Strategy** — [[Strategy|the decision and positioning map]]
+- **Dentistry** — [[Dentistry|the clinical and career map]]
+
+For the person behind the notes, see [[About]].
+
+**Start with one. It either fits or it doesn't. No refunds.**
 
 <center>• • •</center>
 

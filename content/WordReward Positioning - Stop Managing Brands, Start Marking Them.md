@@ -171,6 +171,7 @@ Most agencies can't say no to revenue. That's why they all look the same.
 
 **Tags:** #wr positioning #strategy internal #marketing
 
-- [[Strategy Is Winning Before You Start]] • [[Strategic Thinking]]
-- [[Why Most Marketing Isn't Strategic]]
-- [[Building Unfair Advantages]]
+- **Prerequisite** — [[Strategy Is Winning Before You Start]]
+- **Core framework** — [[Strategic Thinking]]
+- **Counterpoint** — [[Why Most Marketing Isn't Strategic]]
+- **Compounding application** — [[Building Unfair Advantages]]

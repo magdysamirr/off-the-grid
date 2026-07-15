@@ -43,8 +43,8 @@ That last one matters because I am not interested in AI as performance or brandi
 
 That is the bridge between the lecture and the systems:
 
-- [[Why I Built an 11 PM Report]]
-- [[Administrative Friction Is Clinical Friction]]
+- **Operational response** — [[Why I Built an 11 PM Report]]
+- **Clinical systems** — [[Administrative Friction Is Clinical Friction]]
 
 ## Continue from here
 

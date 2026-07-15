@@ -14,17 +14,15 @@ This section documents the actual mechanics of operating WordReward (20-person a
 
 ---
 
-**Core insights:**
+## Start here
 
-[[Why I Moved to the Desert to Save My Brain]]  
-The 72-hour decision that changed everything.
+- **Origin** — [[Why I Moved to the Desert to Save My Brain]] — the 72-hour decision that changed everything.
 
-[[Remote Operations Without Losing Control]]  
-Passive information systems for when connectivity is unreliable.
+- **Application** — [[Remote Operations Without Losing Control]] — passive information systems for unreliable connectivity.
 
-[[Why I Hate Dentistry (and Why I'm Still a Dentist)]]  
-The paradox of hating both having and not having patients.
+- **Counterpoint** — [[Why I Hate Dentistry (and Why I'm Still a Dentist)]] — the paradox of hating both having and not having patients.
 
----
+## Continue from here
 
-**Related:** [[Running a Business with ADHD]] • [[Psychology, Behavior, and Systems Thinking]]
+- **Neurological constraint** — [[Running a Business with ADHD]]
+- **Systems lens** — [[Psychology, Behavior, and Systems Thinking]]

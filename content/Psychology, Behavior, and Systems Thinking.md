@@ -1,6 +1,6 @@
 ---
 title: Psychology, Behavior, and Systems Thinking
-type: map
+type: evergreen
 status: growing
 topics:
 - adhd
@@ -14,17 +14,15 @@ This section explores the intersection of behavioral psychology, systems thinkin
 
 ---
 
-**Core insights:**
+## Start here
 
-[[Structural Decisions vs Motivational Ones]]  
-Why building systems that eliminate decisions beats relying on discipline.
+- **Structural decision** — [[Structural Decisions vs Motivational Ones]] — eliminate decisions instead of relying on discipline.
 
-[[Think or Act, But Not Both]]  
-The two-mode cognitive limitation and how to work with it.
+- **Cognitive constraint** — [[Think or Act, But Not Both]] — work with the two-mode limitation.
 
-[[Systems Over Willpower]]  
-Designing workflows that expect failure and route around it.
+- **Systems response** — [[Systems Over Willpower]] — design workflows that expect failure.
 
----
+## Continue from here
 
-**Related:** [[Running a Business with ADHD]] • [[Off-Grid Reality and Professional Obligation]]
+- **Parent domain** — [[Running a Business with ADHD]]
+- **Environment** — [[Off-Grid Reality and Professional Obligation]]

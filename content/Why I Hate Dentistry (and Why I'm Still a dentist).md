@@ -45,9 +45,9 @@ Maybe I'm finally building something that transforms the constraint into somethi
 
 If you want to see where this tension goes in practice:
 
-- [[The 7 Self-Deceptions That Shape a Dentist's Career]]
-- [[Why I Built an 11 PM Report]]
-- [[Administrative Friction Is Clinical Friction]]
+- **Counterpoint** — [[The 7 Self-Deceptions That Shape a Dentist's Career]]
+- **Operational consequence** — [[Why I Built an 11 PM Report]]
+- **Clinical systems** — [[Administrative Friction Is Clinical Friction]]
 
 <center> • • • </center>
 

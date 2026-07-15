@@ -1,5 +1,5 @@
 ---
-type: map
+type: snapshot
 status: evergreen
 topics:
 - off-grid
@@ -64,4 +64,7 @@ Example: I "knew" crowns were most profitable until numbers showed scaling print
 
 **About:** I run NDC (dental clinic) and WordReward (marketing agency) from off-grid Nuweiba. This blog demonstrates how we think strategically about operations, data, and small business reality.
 
-**Related:** [[Off the Grid]]
+## Continue from here
+
+- **Front door** — [[index|200 Meters]]
+- **Domain map** — [[Off-Grid Reality and Professional Obligation]]

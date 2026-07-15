@@ -55,4 +55,7 @@ It is the realization that:
 2. Distance is a filter. (Living in Nuweiba or self-hosting filters out the non-essential).  
 3. Quiet is power. (The ability to exist without being perceived).
 
-**Related:** [[Off the Grid]]
+## Continue from here
+
+- **Domain map** — [[Off-Grid Reality and Professional Obligation]]
+- **Operating application** — [[Remote Operations Without Losing Control]]

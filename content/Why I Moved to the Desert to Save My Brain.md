@@ -40,6 +40,10 @@ Six months later, WordReward became a thing. and Nuweiba gave me the clarity to 
 Slow living isn't about doing less. It's about doing things at the speed your brain actually operates, not the speed other people expect. Nuweiba taught me that in 72 hours. Everything after that was just confirmation.
 <center>• • •</center>
 
-[[index|It is alive]] • [[Systems Over Willpower]] • [[Remote Operations Without Losing Control]] 
+## Continue from here
+
+- **Front door** — [[index|200 Meters]]
+- **Systems response** — [[Systems Over Willpower]]
+- **Operating application** — [[Remote Operations Without Losing Control]]
 
 **Tags:** nuweiba #adhd #off-grid slow-living

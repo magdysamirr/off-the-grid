@@ -14,20 +14,17 @@ This section documents what actually works when building businesses with ADHD co
 
 ---
 
-**Core insights:**
+## Start here
 
-[[Systems Over Willpower]]  
-Why conventional productivity systems fail ADHD brains and what to build instead.
+- **Prerequisite** — [[Systems Over Willpower]] — why conventional productivity systems fail ADHD brains.
 
-[[Think or Act, But Not Both]]  
-The two-mode limitation and how to structure work around it.
+- **Constraint** — [[Think or Act, But Not Both]] — the two-mode limitation.
 
-[[Structural Decisions vs Motivational Ones]]  
-Building systems that eliminate decision points instead of requiring discipline.
+- **Application** — [[Structural Decisions vs Motivational Ones]] — eliminate decision points instead of requiring discipline.
 
-[[Remote Operations Without Losing Control]]  
-Passive information architecture for when you can't depend on being reachable.
+- **Operating example** — [[Remote Operations Without Losing Control]] — passive information architecture when you can't depend on being reachable.
 
----
+## Continue from here
 
-**Related:** [[Off-Grid Reality and Professional Obligation]] • [[Psychology, Behavior, and Systems Thinking]]
+- **Environment** — [[Off-Grid Reality and Professional Obligation]]
+- **Behavioral lens** — [[Psychology, Behavior, and Systems Thinking]]
