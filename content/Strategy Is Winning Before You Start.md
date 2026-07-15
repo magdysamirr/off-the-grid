@@ -43,4 +43,8 @@ The hard part isn't understanding this intellectually. It's having the disciplin
 
 Most people never develop that confidence because they never articulate their strategy clearly enough to know whether a given opportunity strengthens or weakens it.
 
-Related: [[Trade-offs and Strategic Choices]], [[Why Most Marketing Isn't Strategic]], [[Structural Decisions vs Motivational Ones]]
+## Continue from here
+
+- **Trade-off**: [[Trade-offs and Strategic Choices]]
+- **Marketing application**: [[Why Most Marketing Isn't Strategic]]
+- **Operating application**: [[Structural Decisions vs Motivational Ones]]

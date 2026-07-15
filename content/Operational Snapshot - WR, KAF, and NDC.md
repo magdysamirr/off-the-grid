@@ -106,4 +106,7 @@ The value is that it lets me see, in one page, where friction is coming from:
 
 That is what a useful report should do. Not summarize everything. Clarify what deserves attention next.
 
-Related: [[Why I Built an 11 PM Report]] • [[Administrative Friction Is Clinical Friction]]
+## Continue from here
+
+- **Reporting system**: [[Why I Built an 11 PM Report]]
+- **Clinical consequence**: [[Administrative Friction Is Clinical Friction]]

@@ -11,6 +11,8 @@ topics:
 - systems
 - operations
 ---
+![Thinking mode and doing mode as two separate paths](./static/notes/thinking-doing.png)
+
 ADHD brains have two modes: thinking mode and doing mode. You cannot be in both simultaneously. Trying to switch between them mid-task destroys both.
 
 In thinking mode, you're working with abstract concepts, making strategic connections, seeing patterns. This is where insight happens, where you design systems and frameworks, where you solve complex problems. It's high-value cognitive work.

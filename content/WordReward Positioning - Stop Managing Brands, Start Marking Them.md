@@ -11,7 +11,6 @@ topics:
 - marketing
 - strategy
 dg-publish: true
-description: This is a test description to show in backlink box
 ---
 ## The Problem With Marketing Agencies
 

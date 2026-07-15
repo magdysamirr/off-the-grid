@@ -39,11 +39,6 @@ Otherwise things are good to go
 
 ## How the garden is arranged
 
-[[index|The front door]] gives the entry paths. From there, the domain maps lead to the evergreen notes:
-
-- [[Off-Grid Reality and Professional Obligation|Off-grid]]: life and operations under constraint
-- [[Running a Business with ADHD|ADHD]]: designing around attention and execution
-- [[Strategy|Strategy]]: choices, positioning, and trade-offs
-- [[Dentistry|Dentistry]]: clinical work, career, and professional obligation
+[[index|The front door]] gives the entry paths. The domain maps and evergreen notes live there; this page stays focused on the person and perspective behind them.
 
 The garden is intentionally small, personal, and unfinished.

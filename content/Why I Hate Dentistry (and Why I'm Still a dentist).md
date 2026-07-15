@@ -53,8 +53,6 @@ If you want to see where this tension goes in practice:
 
 <center> • • • </center>
 
-**Coming next:** What I actually hate about dentistry, the specific mechanics, not just the general feeling, and the framework I built to survive patient interactions without losing my mind.
-
 **Tags:** dentistry remote-business honest-practice delegation
 
 ## Continue from here
