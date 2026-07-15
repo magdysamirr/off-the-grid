@@ -1,4 +1,6 @@
 ---
+date: 2025-12-20
+lastmod: 2026-07-15
 aliases:
 - systems that expect mode-switching fail
 - Systems Over Willpower.. Why All Systems Will Fail ADHD Brains
@@ -40,4 +42,4 @@ Most productivity advice is willpower dressed up as methodology. The real soluti
 
 ## Continue from here
 
-- [[Think or Act, But Not Both]] — separate thinking from doing
+- [[Think or Act, But Not Both]]: separate thinking from doing

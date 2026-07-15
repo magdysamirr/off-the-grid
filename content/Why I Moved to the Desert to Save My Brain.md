@@ -1,4 +1,6 @@
 ---
+date: 2025-12-20
+lastmod: 2026-07-15
 type: essay
 status: growing
 topics:
@@ -42,8 +44,8 @@ Slow living isn't about doing less. It's about doing things at the speed your br
 
 ## Continue from here
 
-- **Front door** — [[index|200 Meters]]
-- **Systems response** — [[Systems Over Willpower]]
-- **Operating application** — [[Remote Operations Without Losing Control]]
+- **Front door**: [[index|200 Meters]]
+- **Systems response**: [[Systems Over Willpower]]
+- **Operating application**: [[Remote Operations Without Losing Control]]
 
 **Tags:** nuweiba #adhd #off-grid slow-living

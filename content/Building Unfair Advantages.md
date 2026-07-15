@@ -1,4 +1,6 @@
 ---
+date: 2025-12-16
+lastmod: 2026-07-15
 type: evergreen
 status: growing
 topics:
@@ -23,7 +25,7 @@ Here's where most agencies get it wrong: they think they're competing client-vs-
 
 That's not the game anymore.
 
-We're competing against the scroll. The algorithm. Cheap dopamine. Infinite content fatigue. Your audience isn't choosing between your client and their competitor—they're choosing between your content and everything else screaming for attention in that moment.
+We're competing against the scroll. The algorithm. Cheap dopamine. Infinite content fatigue. Your audience isn't choosing between your client and their competitor-they're choosing between your content and everything else screaming for attention in that moment.
 
 In that war, manufactured emotion loses in milliseconds. Tactical cleverness gets ignored. Fake authenticity gets filtered out by pattern-recognition systems (both algorithmic and human) that have seen it ten thousand times.
 
@@ -55,9 +57,9 @@ Every client we've retained past three months follows this pattern. We found the
 
 Before we take a client: **What do they have that competitors can't easily copy?** If the answer is "nothing yet" or "we'll create something in the campaign," we don't proceed. Not arrogance, but honesty. Because our advantage as an agency only activates when the client already has an advantage as a business.
 
-Most agencies take any client who pays, then try to make magic through tactics. They're fighting the wrong war—trying to beat other agencies' creative when they should be fighting for attention against the entire internet.
+Most agencies take any client who pays, then try to make magic through tactics. They're fighting the wrong war-trying to beat other agencies' creative when they should be fighting for attention against the entire internet.
 
-We filter for substance first. Because strategy without actual advantage isn't strategy—it's expensive hope. And hope doesn't win against infinite scroll.
+We filter for substance first. Because strategy without actual advantage isn't strategy-it's expensive hope. And hope doesn't win against infinite scroll.
 
 The advantage already exists. Our job is finding it, defining it, making it obvious, then presenting it through strategy and tactics competitors can't copy and won't risk trying.
 
@@ -67,9 +69,9 @@ The advantage already exists. Our job is finding it, defining it, making it obvi
 
 ## Continue from here
 
-- [[Strategic Thinking]] — the strategic patterns
-- [[Strategy Is Winning Before You Start]] — the core positioning principle
-- [[Why Most Marketing Isn't Strategic]] — the marketing application
+- [[Strategic Thinking]]: the strategic patterns
+- [[Strategy Is Winning Before You Start]]: the core positioning principle
+- [[Why Most Marketing Isn't Strategic]]: the marketing application
 
 **Word count:** ~745 words | **Read time:** ~3.5 minutes
 

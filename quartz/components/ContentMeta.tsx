@@ -1,4 +1,4 @@
-import { Date, getDate } from "./Date"
+import { Date } from "./Date"
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import readingTime from "reading-time"
 import { classNames } from "../util/lang"
@@ -40,7 +40,24 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       }
 
       if (fileData.dates) {
-        segments.push(<Date date={getDate(cfg, fileData)!} locale={locale} />)
+        const publishedDate = fileData.dates.published
+        const updatedDate = fileData.dates.modified
+
+        if (fileData.frontmatter?.published) {
+          segments.push(
+            <span class="content-meta__published">
+              Published <Date date={publishedDate} locale={locale} />
+            </span>,
+          )
+        }
+
+        if (fileData.frontmatter?.modified) {
+          segments.push(
+            <span class="content-meta__updated">
+              Updated <Date date={updatedDate} locale={locale} />
+            </span>,
+          )
+        }
       }
 
       // Display reading time if enabled
@@ -59,7 +76,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       }
 
       return (
-        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta", isRTL ? "rtl" : "")}>
+        <p show-comma={false} class={classNames(displayClass, "content-meta", isRTL ? "rtl" : "")}>
           {segments}
         </p>
       )

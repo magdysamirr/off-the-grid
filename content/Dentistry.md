@@ -1,4 +1,6 @@
 ---
+date: 2026-07-15
+lastmod: 2026-07-15
 title: Dentistry
 type: map
 status: growing
@@ -12,12 +14,12 @@ Dentistry is the domain map for the clinical work, career tensions, and professi
 
 ## Start here
 
-- **Career story** — [[Why I Hate Dentistry (and Why I'm Still a Dentist)]] — the personal tension at the center.
-- **Counterpoint** — [[The 7 Self-Deceptions That Shape a Dentist's Career]] — the beliefs that distort a dental career.
-- **Operating consequence** — [[Administrative Friction Is Clinical Friction]] — why clinic systems become clinical outcomes.
+- **Career story**: [[Why I Hate Dentistry (and Why I'm Still a Dentist)]]: the personal tension at the center.
+- **Counterpoint**: [[The 7 Self-Deceptions That Shape a Dentist's Career]]: the beliefs that distort a dental career.
+- **Operating consequence**: [[Administrative Friction Is Clinical Friction]]: why clinic systems become clinical outcomes.
 
 ## Continue from here
 
-- **Professional obligation** — [[Off-Grid Reality and Professional Obligation]]
-- **Operational evidence** — [[Why I Built an 11 PM Report]]
-- **Broader constraint** — [[Running a Business with ADHD]]
+- **Professional obligation**: [[Off-Grid Reality and Professional Obligation]]
+- **Operational evidence**: [[Why I Built an 11 PM Report]]
+- **Broader constraint**: [[Running a Business with ADHD]]

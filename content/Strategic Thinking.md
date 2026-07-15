@@ -1,4 +1,6 @@
 ---
+date: 2025-12-13
+lastmod: 2026-07-15
 title: Strategic Thinking
 aliases:
 - Strategic Thinking, From Real Life to Digital Marketing
@@ -19,7 +21,7 @@ The test: If your competitor can do exactly what you're doing, that's not strate
 **Flanking: Attack Where They're Weak.**.   
 Dollar Shave Club didn't fight Gillette on TV ads or retail shelves. They made a $ 4,500 YouTube video, used humor instead of athlete endorsements, sold subscriptions online.   
 >Trade-off: gave up prestige positioning and retail distribution entirely.  
-Result: 12,000 orders in 48 hours, sold to Unilever for $ 1 billion in 2016. They attacked where Gillette was weak—price, accessibility, tone.
+Result: 12,000 orders in 48 hours, sold to Unilever for $ 1 billion in 2016. They attacked where Gillette was weak-price, accessibility, tone.
 
 [Watch the original video](https://www.youtube.com/watch?v=ZUG9qYTJMsI) | [Read the case study](https://bretwaters.medium.com/case-study-dollar-shave-club-a9503fc83ea0)
  
@@ -55,7 +57,7 @@ Result: $ 100M revenue in 4 years with minimal paid ads, valued at $ 1.2 billion
 
 **Trojan Horse: Make Customers Do the Marketing.**  
 Music streaming is commoditized.  Spotify created personalized year-end summaries (Wrapped), made them shareable social graphics, released before holidays, made it feel like personal achievement.   
-Users don't feel like advertisers—they feel like they're sharing about themselves. But every share is a Spotify ad with personal endorsement. Each share recruits friends who want their own Wrapped.   
+Users don't feel like advertisers-they feel like they're sharing about themselves. But every share is a Spotify ad with personal endorsement. Each share recruits friends who want their own Wrapped.   
 >Trade-off: only works once a year, requires significant data infrastructure.  
 Result: 156M+ users engaged with Wrapped 2023, dominated social media entire week in December, billions of impressions, all organic.  
 
@@ -97,9 +99,9 @@ https://obsidian.md
 
 ## Continue from here
 
-- [[WordReward Positioning - Stop Managing Brands, Start Marking Them|WordReward positioning]] — the agency application
-- [[Remote Operations Without Losing Control]] — strategy under constraint
-- [[Structural Decisions vs Motivational Ones]] — make strategy structural
-- [[Building Unfair Advantages]] — build what compounds
-- [[Why Most Marketing Isn't Strategic]] — reject tactics without position
-- [[Trade-offs and Strategic Choices]] — choose what not to do
+- [[WordReward Positioning - Stop Managing Brands, Start Marking Them|WordReward positioning]]: the agency application
+- [[Remote Operations Without Losing Control]]: strategy under constraint
+- [[Structural Decisions vs Motivational Ones]]: make strategy structural
+- [[Building Unfair Advantages]]: build what compounds
+- [[Why Most Marketing Isn't Strategic]]: reject tactics without position
+- [[Trade-offs and Strategic Choices]]: choose what not to do

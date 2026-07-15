@@ -1,4 +1,6 @@
 ---
+date: 2025-12-16
+lastmod: 2026-07-15
 title: Why Most Marketing Isn't Strategic
 type: evergreen
 status: growing
@@ -35,9 +37,9 @@ For WordReward specifically, our strategic position is "the agency that builds s
 
 Each client engagement reinforces that positioning. Each piece of content adds evidence. Each case study demonstrates system-building capability. The cumulative effect is a market position that becomes stronger over time rather than depending on continuous promotional effort.
 
-This is what most marketing lacks—**a clear answer to "what are we building that gets stronger with each execution?"**
+This is what most marketing lacks-**a clear answer to "what are we building that gets stronger with each execution?"**
 
-If your marketing answer is "awareness" or "engagement," that's not strategic. Those are metrics, not positions. They don't compound. Awareness this month doesn't make awareness next month easier—you're always starting from zero with new audiences.
+If your marketing answer is "awareness" or "engagement," that's not strategic. Those are metrics, not positions. They don't compound. Awareness this month doesn't make awareness next month easier-you're always starting from zero with new audiences.
 
 But if your answer is "we're establishing that we're the definitive experts in X" or "we're building association between our brand and Y concept," then each execution adds to previous ones. The tenth article about X is more credible because you wrote nine before it. The fifth client who chose you because of Y positioning makes the sixth easier to close.
 
@@ -49,6 +51,6 @@ The test: if you stopped all marketing activity today, would anything persist? W
 
 ## Continue from here
 
-- [[Strategy Is Winning Before You Start]] — choose the position before the tactic
-- [[Building Unfair Advantages]] — build what compounds
-- [[WordReward Positioning - Stop Managing Brands, Start Marking Them]] — the agency application
+- [[Strategy Is Winning Before You Start]]: choose the position before the tactic
+- [[Building Unfair Advantages]]: build what compounds
+- [[WordReward Positioning - Stop Managing Brands, Start Marking Them]]: the agency application

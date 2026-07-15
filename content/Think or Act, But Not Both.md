@@ -1,4 +1,6 @@
 ---
+date: 2025-12-16
+lastmod: 2026-07-15
 aliases:
 - Think or act
 - ADHD choice, Think or Act, but not both.
@@ -13,7 +15,7 @@ ADHD brains have two modes: thinking mode and doing mode. You cannot be in both 
 
 In thinking mode, you're working with abstract concepts, making strategic connections, seeing patterns. This is where insight happens, where you design systems and frameworks, where you solve complex problems. It's high-value cognitive work.
 
-In doing mode, you're executing against a clear plan. Writing the email, building the spreadsheet, making the phone call. You're not questioning whether it's the right task—you're just completing it.
+In doing mode, you're executing against a clear plan. Writing the email, building the spreadsheet, making the phone call. You're not questioning whether it's the right task-you're just completing it.
 
 **The catastrophic mistake is trying to think while doing or do while thinking.**
 

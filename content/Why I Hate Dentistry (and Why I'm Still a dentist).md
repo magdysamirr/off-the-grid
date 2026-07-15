@@ -1,4 +1,6 @@
 ---
+date: 2025-12-20
+lastmod: 2026-07-15
 title: Why I Hate Dentistry (and Why I'm Still a Dentist)
 aliases:
 - Why I Hate Dentistry (and Why I'm Still a dentist)
@@ -45,9 +47,9 @@ Maybe I'm finally building something that transforms the constraint into somethi
 
 If you want to see where this tension goes in practice:
 
-- **Counterpoint** — [[The 7 Self-Deceptions That Shape a Dentist's Career]]
-- **Operational consequence** — [[Why I Built an 11 PM Report]]
-- **Clinical systems** — [[Administrative Friction Is Clinical Friction]]
+- **Counterpoint**: [[The 7 Self-Deceptions That Shape a Dentist's Career]]
+- **Operational consequence**: [[Why I Built an 11 PM Report]]
+- **Clinical systems**: [[Administrative Friction Is Clinical Friction]]
 
 <center> • • • </center>
 
@@ -57,6 +59,6 @@ If you want to see where this tension goes in practice:
 
 ## Continue from here
 
-- [[Why I Moved to the Desert to Save My Brain]] — the off-grid context
-- [[Running a Business with ADHD]] — the ADHD and career constraint
-- [[Administrative Friction Is Clinical Friction]] — the clinical operations consequence
+- [[Why I Moved to the Desert to Save My Brain]]: the off-grid context
+- [[Running a Business with ADHD]]: the ADHD and career constraint
+- [[Administrative Friction Is Clinical Friction]]: the clinical operations consequence

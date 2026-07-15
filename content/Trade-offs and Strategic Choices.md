@@ -1,4 +1,6 @@
 ---
+date: 2025-12-16
+lastmod: 2026-07-15
 aliases:
 - hyperfocus means I disappear
 type: evergreen
@@ -50,6 +52,6 @@ Strategy isn't choosing what you want. It's choosing what you're willing to lose
 **Tags:** #strategy  decision-making  #adhd  perfectionism  #wr  trade-offs  
 ## Continue from here
 
-- [[Structural Decisions vs Motivational Ones]] — make the trade-off structural
-- [[Strategy Is Winning Before You Start|strategy over tactics]] — choose the battlefield
-- [[Systems Over Willpower|ADHD and systems]] — design around cognitive limits
+- [[Structural Decisions vs Motivational Ones]]: make the trade-off structural
+- [[Strategy Is Winning Before You Start|strategy over tactics]]: choose the battlefield
+- [[Systems Over Willpower|ADHD and systems]]: design around cognitive limits

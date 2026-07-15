@@ -1,4 +1,6 @@
 ---
+date: 2025-12-21
+lastmod: 2026-07-15
 type: evergreen
 status: seedling
 topics:
@@ -58,8 +60,8 @@ My conscience knows the difference. I listen to what it's actually measuring.
 
 ## Continue from here
 
-- [[Why I Choose Discipline Over Brilliance]] — the operating standard
-- [[Systems Over Willpower]] — the systems perspective
+- [[Why I Choose Discipline Over Brilliance]]: the operating standard
+- [[Systems Over Willpower]]: the systems perspective
 
 **Word count:** ~480 words | **Read time:** ~2.5 minutes
 

@@ -1,4 +1,6 @@
 ---
+date: 2025-12-16
+lastmod: 2026-07-15
 type: evergreen
 status: growing
 topics:
@@ -47,6 +49,6 @@ Personal example: I wanted to read more consistently. I'll read 30 minutes befor
 **Tags:** #adhd systems-thinking decision-making productivity structural-design  
 ## Continue from here
 
-- [[Systems Over Willpower|ADHD and systems]] — the cognitive constraint
-- [[Operational Snapshot — WR, KAF, and NDC|WordReward operations]] — the operating evidence
-- [[Off-Grid Reality and Professional Obligation|delegation at scale]] — the structural application
+- [[Systems Over Willpower|ADHD and systems]]: the cognitive constraint
+- [[Operational Snapshot: WR, KAF, and NDC|WordReward operations]]: the operating evidence
+- [[Off-Grid Reality and Professional Obligation|delegation at scale]]: the structural application

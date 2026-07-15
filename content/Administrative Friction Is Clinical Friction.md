@@ -1,4 +1,6 @@
 ---
+date: 2026-04-23
+lastmod: 2026-07-15
 title: Administrative Friction Is Clinical Friction
 type: evergreen
 status: growing
@@ -47,6 +49,6 @@ The goal is a clearer mind for clinical excellence.
 
 ## Continue from here
 
-- [[Why I Hate Dentistry (and Why I'm Still a Dentist)]] — the personal career tension
-- [[Why I Built an 11 PM Report]] — the reporting response
-- [[The 7 Self-Deceptions That Shape a Dentist's Career]] — the clinical context
+- [[Why I Hate Dentistry (and Why I'm Still a Dentist)]]: the personal career tension
+- [[Why I Built an 11 PM Report]]: the reporting response
+- [[The 7 Self-Deceptions That Shape a Dentist's Career]]: the clinical context

@@ -4,6 +4,18 @@
   font-weight: 100 !important;
   text-decoration: none;
 
+  &__published,
+  &__updated {
+    display: inline-block;
+    margin-right: 0.75rem;
+  }
+
+  &__updated {
+    font-size: 0.82em;
+    font-style: italic;
+    opacity: 0.75;
+  }
+
   &[show-comma="true"] {
     > *:not(:last-child) {
       margin-right: 8px;

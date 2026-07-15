@@ -1,4 +1,6 @@
 ---
+date: 2025-12-20
+lastmod: 2026-07-15
 title: Remote Operations Without Losing Control
 aliases:
 - Remote Operations Without Losing Control.. Building While Off-Grid
@@ -25,9 +27,9 @@ This isn't about trust or delegation philosophy. It's about **physics**. When re
 
 The failure mode most remote operations hit is **context collapse**. Someone needs a decision, but the information to make that decision is scattered across tools, conversations, and institutional memory. By the time you reconstruct context, the moment has passed.
 
-Solving this means **information lives where decisions happen**. Client history, performance patterns, previous issues, budget status—all of this sits in the client workspace, not in someone's memory or a separate database. When a decision point arrives, the context is already present.
+Solving this means **information lives where decisions happen**. Client history, performance patterns, previous issues, budget status-all of this sits in the client workspace, not in someone's memory or a separate database. When a decision point arrives, the context is already present.
 
-For [[Running a Business with ADHD]], this solves two problems simultaneously. It removes my working memory limitations from the critical path—I don't have to remember client details to make good decisions. And it makes the business less dependent on my availability, which matters when [[Trade-offs and Strategic Choices|hyperfocus means I disappear]] for hours at a time.
+For [[Running a Business with ADHD]], this solves two problems simultaneously. It removes my working memory limitations from the critical path-I don't have to remember client details to make good decisions. And it makes the business less dependent on my availability, which matters when [[Trade-offs and Strategic Choices|hyperfocus means I disappear]] for hours at a time.
 
 **The trade-off:** This requires more upfront system design than typical startup operations. You can't just "move fast and figure it out" when moving fast means creating information debt that makes future decisions harder. But the alternative is staying tethered to real-time availability, which defeats the entire point of remote operations.
 
@@ -35,6 +37,6 @@ Building while off-grid isn't about lifestyle optimization. It's about designing
 
 ## Continue from here
 
-- [[Systems Over Willpower]] — the operating system constraint
-- [[Off-Grid Reality and Professional Obligation]] — the broader off-grid context
-- [[Trade-offs and Strategic Choices]] — the cost of disappearing into hyperfocus
+- [[Systems Over Willpower]]: the operating system constraint
+- [[Off-Grid Reality and Professional Obligation]]: the broader off-grid context
+- [[Trade-offs and Strategic Choices]]: the cost of disappearing into hyperfocus

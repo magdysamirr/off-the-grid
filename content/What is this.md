@@ -1,4 +1,6 @@
 ---
+date: 2025-12-20
+lastmod: 2026-07-15
 type: snapshot
 status: evergreen
 topics:
@@ -66,5 +68,5 @@ Example: I "knew" crowns were most profitable until numbers showed scaling print
 
 ## Continue from here
 
-- **Front door** — [[index|200 Meters]]
-- **Domain map** — [[Off-Grid Reality and Professional Obligation]]
+- **Front door**: [[index|200 Meters]]
+- **Domain map**: [[Off-Grid Reality and Professional Obligation]]

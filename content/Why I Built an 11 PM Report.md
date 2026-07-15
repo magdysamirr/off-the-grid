@@ -1,4 +1,6 @@
 ---
+date: 2026-04-23
+lastmod: 2026-07-15
 title: Why I Built an 11 PM Report
 type: essay
 status: growing
@@ -45,10 +47,10 @@ That is the only reason I care about this category of tooling.
 
 One public example of that reporting style:
 
-- **Evidence** — [[Operational Snapshot — WR, KAF, and NDC]]
+- **Evidence**: [[Operational Snapshot: WR, KAF, and NDC]]
 
 ## Continue from here
 
-- [[Remote Operations Without Losing Control]] — passive operational visibility
-- [[Administrative Friction Is Clinical Friction]] — why reporting affects care
-- [[The 7 Self-Deceptions That Shape a Dentist's Career]] — the professional context
+- [[Remote Operations Without Losing Control]]: passive operational visibility
+- [[Administrative Friction Is Clinical Friction]]: why reporting affects care
+- [[The 7 Self-Deceptions That Shape a Dentist's Career]]: the professional context

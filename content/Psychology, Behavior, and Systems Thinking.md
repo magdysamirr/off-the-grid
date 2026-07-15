@@ -1,4 +1,6 @@
 ---
+date: 2025-12-20
+lastmod: 2026-07-15
 title: Psychology, Behavior, and Systems Thinking
 type: evergreen
 status: growing
@@ -16,13 +18,13 @@ This section explores the intersection of behavioral psychology, systems thinkin
 
 ## Start here
 
-- **Structural decision** — [[Structural Decisions vs Motivational Ones]] — eliminate decisions instead of relying on discipline.
+- **Structural decision**: [[Structural Decisions vs Motivational Ones]]: eliminate decisions instead of relying on discipline.
 
-- **Cognitive constraint** — [[Think or Act, But Not Both]] — work with the two-mode limitation.
+- **Cognitive constraint**: [[Think or Act, But Not Both]]: work with the two-mode limitation.
 
-- **Systems response** — [[Systems Over Willpower]] — design workflows that expect failure.
+- **Systems response**: [[Systems Over Willpower]]: design workflows that expect failure.
 
 ## Continue from here
 
-- **Parent domain** — [[Running a Business with ADHD]]
-- **Environment** — [[Off-Grid Reality and Professional Obligation]]
+- **Parent domain**: [[Running a Business with ADHD]]
+- **Environment**: [[Off-Grid Reality and Professional Obligation]]

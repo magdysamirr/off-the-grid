@@ -1,4 +1,6 @@
 ---
+date: 2025-12-16
+lastmod: 2026-07-15
 title: Off the Grid
 aliases:
 - off-the-grid
@@ -57,5 +59,5 @@ It is the realization that:
 
 ## Continue from here
 
-- **Domain map** — [[Off-Grid Reality and Professional Obligation]]
-- **Operating application** — [[Remote Operations Without Losing Control]]
+- **Domain map**: [[Off-Grid Reality and Professional Obligation]]
+- **Operating application**: [[Remote Operations Without Losing Control]]

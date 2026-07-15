@@ -1,4 +1,6 @@
 ---
+date: 2026-04-23
+lastmod: 2026-07-15
 title: The 7 Self-Deceptions That Shape a Dentist's Career
 type: essay
 status: growing
@@ -43,10 +45,10 @@ That last one matters because I am not interested in AI as performance or brandi
 
 That is the bridge between the lecture and the systems:
 
-- **Operational response** — [[Why I Built an 11 PM Report]]
-- **Clinical systems** — [[Administrative Friction Is Clinical Friction]]
+- **Operational response**: [[Why I Built an 11 PM Report]]
+- **Clinical systems**: [[Administrative Friction Is Clinical Friction]]
 
 ## Continue from here
 
-- [[Why I Hate Dentistry (and Why I'm Still a Dentist)]] — the career story
-- [[Running a Business with ADHD]] — the operating constraint
+- [[Why I Hate Dentistry (and Why I'm Still a Dentist)]]: the career story
+- [[Running a Business with ADHD]]: the operating constraint

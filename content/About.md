@@ -1,4 +1,6 @@
 ---
+date: 2026-03-24
+lastmod: 2026-07-15
 title: About
 type: snapshot
 status: evergreen
@@ -39,9 +41,9 @@ Otherwise things are good to go
 
 [[index|The front door]] gives the entry paths. From there, the domain maps lead to the evergreen notes:
 
-- [[Off-Grid Reality and Professional Obligation|Off-grid]] — life and operations under constraint
-- [[Running a Business with ADHD|ADHD]] — designing around attention and execution
-- [[Strategy|Strategy]] — choices, positioning, and trade-offs
-- [[Dentistry|Dentistry]] — clinical work, career, and professional obligation
+- [[Off-Grid Reality and Professional Obligation|Off-grid]]: life and operations under constraint
+- [[Running a Business with ADHD|ADHD]]: designing around attention and execution
+- [[Strategy|Strategy]]: choices, positioning, and trade-offs
+- [[Dentistry|Dentistry]]: clinical work, career, and professional obligation
 
 The garden is intentionally small, personal, and unfinished.

@@ -1,4 +1,6 @@
 ---
+date: 2021-07-18
+lastmod: 2026-07-15
 title: 200 Meters
 type: map
 status: evergreen
@@ -23,10 +25,10 @@ Business strategy, tough choices, and building a life that works with my brain, 
 
 Start with one domain map. Each map leads to the evergreen notes beneath it.
 
-- **Off-grid** — [[Off-Grid Reality and Professional Obligation|the operating map]]
-- **ADHD** — [[Running a Business with ADHD|the operating-system map]]
-- **Strategy** — [[Strategy|the decision and positioning map]]
-- **Dentistry** — [[Dentistry|the clinical and career map]]
+- **Off-grid**: [[Off-Grid Reality and Professional Obligation|the operating map]]
+- **ADHD**: [[Running a Business with ADHD|the operating-system map]]
+- **Strategy**: [[Strategy|the decision and positioning map]]
+- **Dentistry**: [[Dentistry|the clinical and career map]]
 
 For the person behind the notes, see [[About]].
 

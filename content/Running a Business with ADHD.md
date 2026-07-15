@@ -1,4 +1,6 @@
 ---
+date: 2025-12-20
+lastmod: 2026-07-15
 title: Running a Business with ADHD
 type: map
 status: growing
@@ -16,15 +18,15 @@ This section documents what actually works when building businesses with ADHD co
 
 ## Start here
 
-- **Prerequisite** — [[Systems Over Willpower]] — why conventional productivity systems fail ADHD brains.
+- **Prerequisite**: [[Systems Over Willpower]]: why conventional productivity systems fail ADHD brains.
 
-- **Constraint** — [[Think or Act, But Not Both]] — the two-mode limitation.
+- **Constraint**: [[Think or Act, But Not Both]]: the two-mode limitation.
 
-- **Application** — [[Structural Decisions vs Motivational Ones]] — eliminate decision points instead of requiring discipline.
+- **Application**: [[Structural Decisions vs Motivational Ones]]: eliminate decision points instead of requiring discipline.
 
-- **Operating example** — [[Remote Operations Without Losing Control]] — passive information architecture when you can't depend on being reachable.
+- **Operating example**: [[Remote Operations Without Losing Control]]: passive information architecture when you can't depend on being reachable.
 
 ## Continue from here
 
-- **Environment** — [[Off-Grid Reality and Professional Obligation]]
-- **Behavioral lens** — [[Psychology, Behavior, and Systems Thinking]]
+- **Environment**: [[Off-Grid Reality and Professional Obligation]]
+- **Behavioral lens**: [[Psychology, Behavior, and Systems Thinking]]

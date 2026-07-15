@@ -1,5 +1,7 @@
 ---
-title: Operational Snapshot — WR, KAF, and NDC
+date: 2026-04-23
+lastmod: 2026-07-15
+title: "Operational Snapshot: WR, KAF, and NDC"
 type: snapshot
 status: growing
 topics:
@@ -44,15 +46,15 @@ As of **April 23, 2026**:
 
 ### In progress
 
-- **KAF-1** — social login
-- **KAF-5** — payment gateway
-- **KAF-4** — points logic fix
+- **KAF-1**: social login
+- **KAF-5**: payment gateway
+- **KAF-4**: points logic fix
 
 ### Still in todo
 
-- **KAF-10** — online store
-- **KAF-8** — auto registration for vendors
-- **KAF-9** — custom colors per vendor
+- **KAF-10**: online store
+- **KAF-8**: auto registration for vendors
+- **KAF-9**: custom colors per vendor
 
 ### Board condition
 
