@@ -9,6 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.PageTransition(),
     Component.Signature(), // Signature above backlinks
     Component.Backlinks(), // Moved from right sidebar to below content
+    Component.PrevNext(),
   ],
   footer: Component.Footer({
     links: {
@@ -21,6 +22,10 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
+    Component.Breadcrumbs({
+      rootName: "200 Meters",
+      spacerSymbol: "→",
+    }),
     Component.Flex({
       components: [
         {
@@ -43,11 +48,7 @@ export const defaultContentPageLayout: PageLayout = {
       title: "",
       folderDefaultState: "open",
       filterFn: (node) => {
-        // Only show Published folder and its contents
-        if (node.slugSegment === "tags") return false
-        if (node.name === "Published") return true
-        if (node.fullPath?.startsWith("Published/")) return true
-        return false
+        return node.slugSegment !== "tags"
       },
     }),
   ],

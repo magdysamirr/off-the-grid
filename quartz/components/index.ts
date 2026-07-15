@@ -25,6 +25,7 @@ import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import Signature from "./Signature"
 import PageTransition from "./PageTransition"
+import PrevNext from "./PrevNext"
 
 export {
   ArticleTitle,
@@ -54,4 +55,5 @@ export {
   ConditionalRender,
   Signature,
   PageTransition,
+  PrevNext,
 }

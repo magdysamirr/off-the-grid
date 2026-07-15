@@ -1,5 +1,5 @@
 ---
-date: 2021-07-18
+date: 2025-12-20
 lastmod: 2026-07-15
 title: 200 Meters
 type: map
@@ -23,12 +23,13 @@ Business strategy, tough choices, and building a life that works with my brain, 
 
 ## Explore the garden
 
-Start with one domain map. Each map leads to the evergreen notes beneath it.
+Start with one path. Each entry has one canonical starting note.
 
-- **Off-grid**: [[Off-Grid Reality and Professional Obligation|the operating map]]
-- **ADHD**: [[Running a Business with ADHD|the operating-system map]]
-- **Strategy**: [[Strategy|the decision and positioning map]]
-- **Dentistry**: [[Dentistry|the clinical and career map]]
+- **Off-grid**: life and operations under constraint. [[Off-Grid Reality and Professional Obligation|Start here]]
+- **ADHD**: systems for attention, memory, and execution. [[Running a Business with ADHD|Start here]]
+- **Strategy**: decisions, positioning, and trade-offs. [[Strategy|Start here]]
+- **Marketing**: strategy expressed through marketing work. [[Digital Marketing and Design Strategy|Start here]]
+- **Dentistry**: clinical work, career, and professional obligation. [[Dentistry|Start here]]
 
 For the person behind the notes, see [[About]].
 
