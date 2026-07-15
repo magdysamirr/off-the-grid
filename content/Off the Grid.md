@@ -1,5 +1,7 @@
 ---
 title: Off the Grid
+aliases:
+- off-the-grid
 type: evergreen
 status: seedling
 topics:

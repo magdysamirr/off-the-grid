@@ -1,6 +1,7 @@
 ---
 aliases:
 - Think or act
+- ADHD choice, Think or Act, but not both.
 type: evergreen
 status: growing
 topics:

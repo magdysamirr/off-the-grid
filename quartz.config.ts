@@ -90,6 +90,7 @@ const config: QuartzConfig = {
       // Plugin.AliasRedirects(), // Disabled - aliases removed
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
+      Plugin.AliasRedirects(),
       Plugin.FolderPage(),
       Plugin.TagPage(),
       Plugin.ContentIndex({

@@ -1,5 +1,7 @@
 ---
 title: Why I Hate Dentistry (and Why I'm Still a Dentist)
+aliases:
+- Why I Hate Dentistry (and Why I'm Still a dentist)
 type: essay
 status: growing
 topics:
