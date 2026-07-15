@@ -1,15 +1,18 @@
 ---
 aliases:
 - hyperfocus means I disappear
-tags:
-- personal
+type: evergreen
+status: growing
+topics:
+- strategy
+- adhd
 ---
 
 Everyone nods when you say we can't have everything. Then they immediately try to have everything.
 
 The problem isn't understanding trade-offs conceptually, but refusing to accept them operationally. People treat trade-offs like theoretical wisdom that applies to other people's decisions, not theirs.
 
-At [[WordReward]], clients want premium creative work, budget pricing, fast turnaround, and guaranteed outcome. When I explain that's four incompatible goals, they agree in principle. Then ask: "But can't we just work harder and make it happen?"
+At [WordReward](https://wordreward.net), clients want premium creative work, budget pricing, fast turnaround, and guaranteed outcome. When I explain that's four incompatible goals, they agree in principle. Then ask: "But can't we just work harder and make it happen?"
 
 We're treating the trade-off like a puzzle to solve rather than a choice to make. We think if we're clever enough or persistent enough, we can optimize our way around the sacrifice. We can't.
 
@@ -22,7 +25,7 @@ We'll focus on premium clients, sounds strategic. But if our pricing still allow
 
 I want deep strategic work on WordReward, responsive client communication, business development, and strict working supervision. I know intellectually I can't have all four. But I keep optimizing my calendar, refining systems, improving efficiency, as if the problem is execution, not mathematics.
 
-**Choosing feels like failure.** Picking Option A and sacrificing Option B feels like admitting I'm not good enough to have both. [[ADHD]] amplifies this, perfectionism disguises itself as high standards. I'm not being unrealistic. I just refuse to settle.
+**Choosing feels like failure.** Picking Option A and sacrificing Option B feels like admitting I'm not good enough to have both. [[Running a Business with ADHD|ADHD]] amplifies this, perfectionism disguises itself as high standards. I'm not being unrealistic. I just refuse to settle.
 
 But this isn't high standards. It's refusing to make the trade-off.
 
@@ -45,4 +48,8 @@ Strategy isn't choosing what you want. It's choosing what you're willing to lose
 <center>• • •</center>
 
 **Tags:** #strategy  decision-making  #adhd  perfectionism  #wr  trade-offs  
-**Internal links:** [[Structural Decisions vs Motivational Ones]] • [[Strategy Over Tactics]] • [[ADHD and Systems]]
+## Continue from here
+
+- [[Structural Decisions vs Motivational Ones]] — make the trade-off structural
+- [[Strategy Is Winning Before You Start|strategy over tactics]] — choose the battlefield
+- [[Systems Over Willpower|ADHD and systems]] — design around cognitive limits

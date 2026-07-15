@@ -1,11 +1,12 @@
 ---
 title: Operational Snapshot — WR, KAF, and NDC
-tags:
+type: snapshot
+status: growing
+topics:
 - operations
 - wr
 - kaf
 - ndc
-- report
 - systems
 dg-publish: true
 ---

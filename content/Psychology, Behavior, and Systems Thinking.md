@@ -1,8 +1,11 @@
 ---
 title: Psychology, Behavior, and Systems Thinking
-tags:
-- personal
+type: map
+status: growing
+topics:
+- adhd
 - systems
+- strategy
 ---
 
 Understanding why we do things matters more than knowing how to do them. Most behavior change fails because it targets symptoms instead of underlying mechanics. You can't fix execution problems with motivation when the real issue is structural design.
@@ -16,10 +19,10 @@ This section explores the intersection of behavioral psychology, systems thinkin
 [[Structural Decisions vs Motivational Ones]]  
 Why building systems that eliminate decisions beats relying on discipline.
 
-[[ADHD choice, Think or Act, but not both.]]  
+[[Think or Act, But Not Both]]  
 The two-mode cognitive limitation and how to work with it.
 
-[[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains]]  
+[[Systems Over Willpower]]  
 Designing workflows that expect failure and route around it.
 
 ---

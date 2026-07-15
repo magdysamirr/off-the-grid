@@ -1,7 +1,13 @@
 ---
 title: All or None
-tags:
-- systems
+type: map
+status: evergreen
+topics:
+- off-grid
+- adhd
+- strategy
+- marketing
+- dentistry
 dg-publish: true
 dg-home: true
 ---
@@ -16,8 +22,8 @@ Start here:
 **Off-Grid**     [[Why I Moved to the Desert to Save My Brain]]   
 **ADHD**         [[Running a Business with ADHD]]   
 **Strategy**    [[Structural Decisions vs Motivational Ones]]   
-**Marketing**  [[Strategic Thinking, From Real Life to Digital Marketing]]    
-**Dentistry**    [[Why I Hate Dentistry (and Why I'm Still a dentist)|Why I Hate Dentistry (and Why I'm Still a dentist)]]   
+**Marketing**  [[Strategic Thinking]]    
+**Dentistry**    [[Why I Hate Dentistry (and Why I'm Still a Dentist)]]   
 **Start with one. It either fits or it doesn't. No refunds.**   
 
 <center>• • •</center>

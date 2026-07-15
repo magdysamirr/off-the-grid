@@ -1,6 +1,9 @@
 ---
 title: Off the Grid
-tags:
+type: evergreen
+status: seedling
+topics:
+- off-grid
 - systems
 ---
 ### The Core Axiom: Autonomy via Decoupling

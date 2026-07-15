@@ -1,6 +1,9 @@
 ---
-tags:
-- personal
+type: evergreen
+status: growing
+topics:
+- strategy
+- marketing
 ---
 # Building Unfair Advantages
 
@@ -36,7 +39,7 @@ Most businesses can't see their own advantage. They think they compete on price 
 
 If we can't find that real advantage, we don't take the client. Because manufactured difference doesn't compound. You can fake enthusiasm for maybe 30 days. The algorithm figures it out. People scroll past. Performance drops. Client blames us for "creative not working."
 
-**Layer two: Use it strategically.** Once you know what they have that others don't, you need a deliberate way to show it. This is where strategic patterns matter: attack where competitors are weak, own new category territory, or concentrate everything at one point. [[Strategic Thinking, From Real Life to Digital Marketing|Check this article]]
+**Layer two: Use it strategically.** Once you know what they have that others don't, you need a deliberate way to show it. This is where strategic patterns matter: attack where competitors are weak, own new category territory, or concentrate everything at one point. [[Strategic Thinking|Check this article]]
 
 The client has the substance. We provide the strategy that makes it impossible to ignore.
 
@@ -62,7 +65,11 @@ The advantage already exists. Our job is finding it, defining it, making it obvi
 
 **Tags:** #strategy unfair-advantage belief #marketing #wr client-selection
 
-**Suggested links:** [[Strategic Thinking, From Real Life to Digital Marketing]] • [[Strategy Is Winning Before You Start]] • [[Why Most Marketing Isn't Strategic]]
+## Continue from here
+
+- [[Strategic Thinking]] — the strategic patterns
+- [[Strategy Is Winning Before You Start]] — the core positioning principle
+- [[Why Most Marketing Isn't Strategic]] — the marketing application
 
 **Word count:** ~745 words | **Read time:** ~3.5 minutes
 

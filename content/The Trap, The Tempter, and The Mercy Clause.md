@@ -1,9 +1,9 @@
 ---
 title: The Trap, The Tempter, and The Mercy Clause
-tags:
+type: essay
+status: seedling
+topics:
 - philosophy
-- religion
-- theodicy
 - personal
 ---
 
@@ -33,7 +33,10 @@ And that gives away the whole argument. If the only thing saving someone is merc
 
 <center>• • •</center>
 
-**Related:** [[Error vs. Wrongdoing]] • [[Religion Was Created By Humans, by Logic Over Faith]] • [[Trade-offs and Strategic Choices]]
+## Continue from here
+
+- [[Error vs. Wrongdoing]] — the moral distinction
+- [[Trade-offs and Strategic Choices]] — the decision tension
 
 **Tags:** #theodicy #free-will #problem-of-evil #philosophy #religion #mercy
 

@@ -1,6 +1,10 @@
 ---
-tags:
-- personal
+type: evergreen
+status: growing
+topics:
+- adhd
+- systems
+- operations
 ---
 I don't lack disciplin. I lack structure. There's a difference, and mistaking one for the other will drain years of effort into a black hole of good intentions.
 
@@ -10,11 +14,11 @@ Example: I want to exercise consistently. Motivational approach says I'll go to 
 
 >We've applied this at WordReward without calling it that. When clients kept requesting last-minute changes, we didn't resolve to be firmer or set better boundaries. We restructured the contract terms to include revision limits and timeline buffers. The decision was made once, in the contract. The client can't erode the boundary because the boundary is baked into the system, not my mood on Tuesday.
 
->At [[NDC - Nuweiba Dental Clinic|NDC]], hiring the junior dentist wasn't a motivational decision to delegate more. It was structural, routine cases physically go to someone else now, because that person exists and is paid to handle them. I can't take them back without firing someone. The system enforces the behavior.
+>At NDC, hiring the junior dentist wasn't a motivational decision to delegate more. It was structural, routine cases physically go to someone else now, because that person exists and is paid to handle them. I can't take them back without firing someone. The system enforces the behavior.
 
 #### Why Motivational Decisions Fail (Especially with ADHD)
 
-Motivational decisions work _once_. The problem is I need them to work 200 times. [[ADHD]] makes this worse, executive function isn't a battery that recharges overnight. It depletes, variably, unpredictably. On good days, I execute. On bad days, the system collapses.
+Motivational decisions work _once_. The problem is I need them to work 200 times. [[Running a Business with ADHD|ADHD]] makes this worse, executive function isn't a battery that recharges overnight. It depletes, variably, unpredictably. On good days, I execute. On bad days, the system collapses.
 
 The real trap: **motivational decisions disguised as structural ones**. This is where ADHD deceives itself brilliantly.
 
@@ -41,4 +45,8 @@ Personal example: I wanted to read more consistently. I'll read 30 minutes befor
 
 
 **Tags:** #adhd systems-thinking decision-making productivity structural-design  
-**Internal links:** [[ADHD and Systems]], [[WordReward Operations]], [[Delegation at Scale]]
+## Continue from here
+
+- [[Systems Over Willpower|ADHD and systems]] — the cognitive constraint
+- [[Operational Snapshot — WR, KAF, and NDC|WordReward operations]] — the operating evidence
+- [[Off-Grid Reality and Professional Obligation|delegation at scale]] — the structural application

@@ -1,10 +1,11 @@
 ---
-type: Operational principle
-status: draft
+type: evergreen
+status: seedling
 date: 2025-12-20
 title: Why I Choose Discipline Over Brilliance
-tags:
-- personal
+topics:
+- operations
+- strategy
 ---
 
 
@@ -46,6 +47,7 @@ That's why I choose discipline over brilliance. Because brilliance without relia
 
 <center>• • •</center>
 
-**Suggested links:** [[ADHD Tax in Operations]] [[Strategic Distance]] [[Data vs Knowledge in Decision Making]] [[Systems Over Willpower]]
+## Continue from here
 
-
+- [[Systems Over Willpower]] — design reliability into the system
+- [[Operational Snapshot — WR, KAF, and NDC|operational evidence]] — measure the standard in practice

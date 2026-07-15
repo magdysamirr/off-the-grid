@@ -1,7 +1,11 @@
 ---
 title: Off-Grid Reality and Professional Obligation
-tags:
-- project
+type: map
+status: growing
+topics:
+- off-grid
+- operations
+- dentistry
 ---
 
 Living off-grid in Nuweiba isn't lifestyle optimization or digital nomad aesthetics. It's structural necessity—my ADHD brain needs environmental silence to function strategically. But geographic freedom creates economic constraints. Running two businesses from a place with unreliable electricity means designing operations that work despite infrastructure limitations.
@@ -15,10 +19,10 @@ This section documents the actual mechanics of operating WordReward (20-person a
 [[Why I Moved to the Desert to Save My Brain]]  
 The 72-hour decision that changed everything.
 
-[[Remote Operations Without Losing Control.. Building While Off-Grid]]  
+[[Remote Operations Without Losing Control]]  
 Passive information systems for when connectivity is unreliable.
 
-[[Why I Hate Dentistry (and Why I'm Still a dentist)]]  
+[[Why I Hate Dentistry (and Why I'm Still a Dentist)]]  
 The paradox of hating both having and not having patients.
 
 ---

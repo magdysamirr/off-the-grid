@@ -1,6 +1,9 @@
 ---
 title: Strategy Is Winning Before You Start
-tags:
+type: evergreen
+status: growing
+topics:
+- strategy
 - marketing
 ---
 

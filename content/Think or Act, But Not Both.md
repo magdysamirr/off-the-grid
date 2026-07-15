@@ -1,8 +1,12 @@
 ---
 aliases:
 - Think or act
-tags:
-- personal
+type: evergreen
+status: growing
+topics:
+- adhd
+- systems
+- operations
 ---
 ADHD brains have two modes: thinking mode and doing mode. You cannot be in both simultaneously. Trying to switch between them mid-task destroys both.
 
@@ -18,7 +22,7 @@ This is why most productivity advice fails for ADHD brains. "Just start working 
 
 The solution is **batch by cognitive mode, not by task type**.
 
-At [[WordReward]], I don't mix client strategy work with client execution work in the same session. Strategy sessions are pure thinking, no execution allowed. Execution sessions are pure doing, no strategic questioning allowed. Trying to do both in one meeting means both suffer.
+At [WordReward](https://wordreward.net), I don't mix client strategy work with client execution work in the same session. Strategy sessions are pure thinking, no execution allowed. Execution sessions are pure doing, no strategic questioning allowed. Trying to do both in one meeting means both suffer.
 
 For [[Running a Business with ADHD]], this means protecting thinking time as sacred and separate. You can't do strategic planning between responding to emails and attending meetings. The context-switching cost makes real thinking impossible. You need dedicated blocks where doing is completely off the table.
 
@@ -30,7 +34,7 @@ Every switch between thinking and doing creates residue. Part of your attention 
 
 For neurotypical brains, this residue is manageable. For ADHD brains, it compounds until you're not effectively doing either mode. You're in a gray zone where you're too distracted to think clearly and too mentally cluttered to execute cleanly.
 
-This is why [[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains|systems that expect mode-switching fail]]. A task manager that interrupts deep work with notifications assumes you can switch freely between doing and reacting. You can't. A workflow that requires checking five tools to complete one task assumes context-switching is cheap. It's not.
+This is why [[Systems Over Willpower|systems that expect mode-switching fail]]. A task manager that interrupts deep work with notifications assumes you can switch freely between doing and reacting. You can't. A workflow that requires checking five tools to complete one task assumes context-switching is cheap. It's not.
 
 **Practical structure: time-block by cognitive mode, not by task.**
 
@@ -45,4 +49,3 @@ The hardest part is trusting your thinking enough to execute without questioning
 **The pattern: separate modes temporally, then execute each fully.**
 
 Most people leak between modes constantly, never fully committing to either. They think a little, do a little, think again, do again, and wonder why nothing feels finished. The cost of that approach for ADHD brains is paralysis disguised as productivity.
-

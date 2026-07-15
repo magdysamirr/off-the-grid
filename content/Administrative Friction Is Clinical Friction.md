@@ -1,9 +1,12 @@
 ---
 title: Administrative Friction Is Clinical Friction
-tags:
+type: evergreen
+status: growing
+topics:
 - ndc
 - systems
 - operations
+- dentistry
 dg-publish: true
 ---
 
@@ -42,4 +45,8 @@ This is the point many people miss when they hear me talk about systems.
 The goal is not technological sophistication.
 The goal is a clearer mind for clinical excellence.
 
-Related: [[Why I Hate Dentistry (and Why I'm Still a dentist)]] • [[Why I Built an 11 PM Report]] • [[The 7 Self-Deceptions That Shape a Dentist's Career]]
+## Continue from here
+
+- [[Why I Hate Dentistry (and Why I'm Still a Dentist)]] — the personal career tension
+- [[Why I Built an 11 PM Report]] — the reporting response
+- [[The 7 Self-Deceptions That Shape a Dentist's Career]] — the clinical context

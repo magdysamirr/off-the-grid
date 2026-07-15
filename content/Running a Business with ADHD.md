@@ -1,7 +1,10 @@
 ---
 title: Running a Business with ADHD
-tags:
-- personal
+type: map
+status: growing
+topics:
+- adhd
+- operations
 - systems
 ---
 
@@ -13,16 +16,16 @@ This section documents what actually works when building businesses with ADHD co
 
 **Core insights:**
 
-[[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains]]  
+[[Systems Over Willpower]]  
 Why conventional productivity systems fail ADHD brains and what to build instead.
 
-[[ADHD choice, Think or Act, but not both.]]  
+[[Think or Act, But Not Both]]  
 The two-mode limitation and how to structure work around it.
 
 [[Structural Decisions vs Motivational Ones]]  
 Building systems that eliminate decision points instead of requiring discipline.
 
-[[Remote Operations Without Losing Control.. Building While Off-Grid]]  
+[[Remote Operations Without Losing Control]]  
 Passive information architecture for when you can't depend on being reachable.
 
 ---

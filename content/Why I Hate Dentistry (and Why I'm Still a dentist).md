@@ -1,7 +1,10 @@
 ---
 title: Why I Hate Dentistry (and Why I'm Still a Dentist)
-tags:
-- personal
+type: essay
+status: growing
+topics:
+- dentistry
+- adhd
 dg-publish: true
 ---
 
@@ -50,4 +53,8 @@ If you want to see where this tension goes in practice:
 
 **Tags:** dentistry remote-business honest-practice delegation
 
-**Internal links:** [[Junior Dentist Strategy]], [[Remote Management]], [[ADHD and Career Design]], [[The 7 Self-Deceptions That Shape a Dentist's Career]], [[Why I Built an 11 PM Report]], [[Administrative Friction Is Clinical Friction]]
+## Continue from here
+
+- [[Why I Moved to the Desert to Save My Brain]] — the off-grid context
+- [[Running a Business with ADHD]] — the ADHD and career constraint
+- [[Administrative Friction Is Clinical Friction]] — the clinical operations consequence

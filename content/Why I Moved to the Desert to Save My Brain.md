@@ -1,6 +1,9 @@
 ---
-tags:
-- personal
+type: essay
+status: growing
+topics:
+- off-grid
+- adhd
 ---
 The plan was simple: stay for two weeks in Nuweiba, analyze the clinic setup, find a junior dentist willing to live here, then go back to Alexandria.
 
@@ -37,6 +40,6 @@ Six months later, WordReward became a thing. and Nuweiba gave me the clarity to 
 Slow living isn't about doing less. It's about doing things at the speed your brain actually operates, not the speed other people expect. Nuweiba taught me that in 72 hours. Everything after that was just confirmation.
 <center>• • •</center>
 
-[[index|It is alive]] • [[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains]] • [[Remote Operations Without Losing Control.. Building While Off-Grid]] 
+[[index|It is alive]] • [[Systems Over Willpower]] • [[Remote Operations Without Losing Control]] 
 
 **Tags:** nuweiba #adhd #off-grid slow-living

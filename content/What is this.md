@@ -1,5 +1,9 @@
 ---
-{}
+type: map
+status: evergreen
+topics:
+- off-grid
+- systems
 ---
 
 A Q&A blog built from running a dental clinic and marketing agency while managing ADHD off-grid in Nuweiba, Egypt.

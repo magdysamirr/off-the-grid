@@ -1,8 +1,11 @@
 ---
 aliases:
 - systems that expect mode-switching fail
-tags:
-- personal
+- Systems Over Willpower.. Why All Systems Will Fail ADHD Brains
+type: evergreen
+status: growing
+topics:
+- adhd
 - systems
 ---
 
@@ -25,7 +28,7 @@ At WordReward, I can't rely on remembering client priorities when making staffin
 
 For off-grid in Nuweiba operations, I can't depend on stable internet for cloud tools. So critical information lives locally and syncs opportunistically. The system assumes connection will fail and works anyway.
 
-For personal task management, I stopped using [[Obsidian Isn't a Notes App, It's Life Support|linear task lists]] entirely. Instead, tasks live in context, client notes contain next actions for that client, project pages contain project tasks. When I'm in the context, the action is there. I don't have to remember to check a separate list.
+For personal task management, I stopped using linear task lists entirely. Instead, tasks live in context, client notes contain next actions for that client, project pages contain project tasks. When I'm in the context, the action is there. I don't have to remember to check a separate list.
 
 **The pattern: reduce the gap between decision and action to zero.**
 
@@ -35,4 +38,6 @@ This applies to [[Running a Business with ADHD]] broadly. Don't fight your neuro
 
 Most productivity advice is willpower dressed up as methodology. The real solution is accepting that willpower is unreliable and building systems that work anyway.
 
-Related: [[ADHD choice, Think or Act, but not both.]]
+## Continue from here
+
+- [[Think or Act, But Not Both]] — separate thinking from doing

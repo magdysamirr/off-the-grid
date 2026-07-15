@@ -1,7 +1,12 @@
 ---
 title: About
-tags:
-- systems
+type: map
+status: evergreen
+topics:
+- off-grid
+- adhd
+- strategy
+- dentistry
 ---
 
 <div class="about-header">
@@ -33,4 +38,4 @@ Otherwise things are good to go
 **Where to start:**   
 [[Why I Moved to the Desert to Save My Brain]]   
 [[Structural Decisions vs Motivational Ones]]   
-[[Why I Hate Dentistry (and Why I'm Still a dentist)]]
+[[Why I Hate Dentistry (and Why I'm Still a Dentist)]]

@@ -1,5 +1,9 @@
 ---
-{}
+type: evergreen
+status: seedling
+topics:
+- philosophy
+- personal
 ---
 
 # Your Conscience Doesn't Judge Outcomes
@@ -52,7 +56,10 @@ My conscience knows the difference. I listen to what it's actually measuring.
 
 **Tags:** conscience decision-making accountability philosophy #adhd #wr #ndc
 
-**Suggested links:** [[Why I Choose Discipline Over Brilliance]]  • [[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains]] • [[ADHD Tax in Operations]]
+## Continue from here
+
+- [[Why I Choose Discipline Over Brilliance]] — the operating standard
+- [[Systems Over Willpower]] — the systems perspective
 
 **Word count:** ~480 words | **Read time:** ~2.5 minutes
 

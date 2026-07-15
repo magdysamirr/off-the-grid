@@ -1,5 +1,13 @@
 ---
-title: Remote Operations Without Losing Control.. Building While Off-Grid
+title: Remote Operations Without Losing Control
+aliases:
+- Remote Operations Without Losing Control.. Building While Off-Grid
+type: evergreen
+status: growing
+topics:
+- off-grid
+- operations
+- adhd
 ---
 Running #wr from #off-grid in Nuweiba creates a specific constraint: I can't rely on real-time presence to maintain operational control. The internet is unstable. I'm 700km from the Alexandria office. The team can't just walk into my office with a question.
 
@@ -25,4 +33,8 @@ For [[Running a Business with ADHD]], this solves two problems simultaneously. I
 
 Building while off-grid isn't about lifestyle optimization. It's about designing operations that work despite geographic and neurological constraints. The systems you build to handle unstable internet and timezone gaps are the same systems that make the business resilient to any kind of disruption.
 
-Related: [[Systems Over Willpower.. Why All Systems Will Fail ADHD Brains]] • [[Off-Grid Reality and Professional Obligation]] • [[Trade-offs and Strategic Choices]]
+## Continue from here
+
+- [[Systems Over Willpower]] — the operating system constraint
+- [[Off-Grid Reality and Professional Obligation]] — the broader off-grid context
+- [[Trade-offs and Strategic Choices]] — the cost of disappearing into hyperfocus

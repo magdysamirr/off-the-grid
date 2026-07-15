@@ -1,8 +1,10 @@
 ---
 title: The 7 Self-Deceptions That Shape a Dentist's Career
-tags:
+type: essay
+status: growing
+topics:
+- dentistry
 - strategy
-- systems
 dg-publish: true
 ---
 
@@ -44,4 +46,7 @@ That is the bridge between the lecture and the systems:
 - [[Why I Built an 11 PM Report]]
 - [[Administrative Friction Is Clinical Friction]]
 
-Related: [[Why I Hate Dentistry (and Why I'm Still a dentist)]] • [[Running a Business with ADHD]]
+## Continue from here
+
+- [[Why I Hate Dentistry (and Why I'm Still a Dentist)]] — the career story
+- [[Running a Business with ADHD]] — the operating constraint

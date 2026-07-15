@@ -2,6 +2,12 @@
 title: 'WordReward Positioning: Stop Managing Brands, Start Marking Them'
 aliases:
 - WordReward Strategic “Reset”
+- WordReward Strategic “Ethics”
+type: essay
+status: growing
+topics:
+- marketing
+- strategy
 dg-publish: true
 description: This is a test description to show in backlink box
 ---
@@ -11,7 +17,7 @@ Most marketing agencies are order-takers dressed up as strategists. Client says 
 
 This is management, not marketing. Execution without strategy. Keeping busy without getting anywhere.
 
-[[WordReward]] doesn't do that. Not because we're morally superior, but because it doesn't compound. Management services are commodities: easily replaced, always price-shopped, never remembered.
+[WordReward](https://wordreward.net) doesn't do that. Not because we're morally superior, but because it doesn't compound. Management services are commodities: easily replaced, always price-shopped, never remembered.
 
 ***Strategic positioning compounds. Management services don't.***
 
@@ -36,7 +42,7 @@ Most agencies are either: Creative but chaotic (great ideas, terrible follow-thr
 We're both. Creative strategy + operational systems. Emotion + data. Story + measurement.
 
 **3. We build for compounding, not campaigns**  
-Campaigns end. Positioning lasts. We create assets that appreciate: content libraries, [[Brand|brand]] voices, strategic frameworks, audience relationships, less disposable posts that get buried in 48 hours.
+Campaigns end. Positioning lasts. We create assets that appreciate: content libraries, brand voices, strategic frameworks, audience relationships, less disposable posts that get buried in 48 hours.
 
 ---
 
@@ -44,7 +50,7 @@ Campaigns end. Positioning lasts. We create assets that appreciate: content libr
 
 ### Type 1: Businesses That Understand Differentiation
 
-**Profile:** Small to mid-sized businesses, startup [[Founders]], brand managers who know "more content" isn't the answer, better positioning is.
+**Profile:** Small to mid-sized businesses, startup founders, brand managers who know "more content" isn't the answer, better positioning is.
 
 **What they struggle with:**  
 - Generic content that looks like everyone else's
@@ -98,7 +104,7 @@ We act as strategic partner, not vendor. That means pushing back when needed, no
 
 ## The Unified Thread
 
-All three types: businesses, creators, strategists, want the same thing in a digital world drowning in AI-generated noise: **[[human meaning]]**.
+All three types: businesses, creators, strategists, want the same thing in a digital world drowning in AI-generated noise: **human meaning**.
 
 That's the territory we mark.
 
@@ -115,11 +121,11 @@ We use technology to serve emotion, not replace it. We build systems that enable
 
 **Content approach:** Every piece must inspire, educate, or provoke thought. No fillers. We don't mind "posting for the algorithm." But if it doesn't advance strategic position, we don't publish it.
 
-**[[Tone of voice]]:** Confident without arrogance. Sophisticated without pretension. Slightly skeptical of conventional wisdom. Never motivational-speaker energy.
+**Tone of voice:** Confident without arrogance. Sophisticated without pretension. Slightly skeptical of conventional wisdom. Never motivational-speaker energy.
 
-**[[Visual direction]]:** Bold typography, minimal backgrounds, storytelling visuals, team faces, idea-driven motion graphics. No stock photos of people pointing at whiteboards.
+**Visual direction:** Bold typography, minimal backgrounds, storytelling visuals, team faces, idea-driven motion graphics. No stock photos of people pointing at whiteboards.
 
-**[[Client relationships]]:** We're peers who challenge assumptions, not vendors who nod along. If client wants something strategically stupid, we say so: with reasoning, and provide the alternatives.
+**Client relationships:** We're peers who challenge assumptions, not vendors who nod along. If client wants something strategically stupid, we say so: with reasoning, and provide the alternatives.
 
 ---
 
@@ -137,7 +143,7 @@ We use technology to serve emotion, not replace it. We build systems that enable
 
 ## The Positioning Statement
 
-**"[[We don't market. We mark]]."**
+**"We don't market. We mark."**
 
 Short version of longer truth: We help brands create defensible territory where they're the only logical choice: through strategic positioning + creative execution + systematic follow-through.
 
@@ -165,6 +171,6 @@ Most agencies can't say no to revenue. That's why they all look the same.
 
 **Tags:** #wr positioning #strategy internal #marketing
 
-- [[Strategy Is Winning Before You Start]] • [[Strategic Thinking, From Real Life to Digital Marketing]]
+- [[Strategy Is Winning Before You Start]] • [[Strategic Thinking]]
 - [[Why Most Marketing Isn't Strategic]]
 - [[Building Unfair Advantages]]

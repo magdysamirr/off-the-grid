@@ -1,11 +1,15 @@
 ---
 title: Strategic Thinking
-tags:
+aliases:
+- Strategic Thinking, From Real Life to Digital Marketing
+type: essay
+status: growing
+topics:
+- strategy
 - marketing
-- systems
 dg-publish: true
 ---
-[[Strategy]] is winning before you start. If you enter a fair fight, you've already failed strategically.
+[[Strategy Is Winning Before You Start|Strategy]] is winning before you start. If you enter a fair fight, you've already failed strategically.
 Michael Porter said it clearly: "The essence of strategy is choosing what NOT to do." Strategy means creating unfair advantages, choosing your battlefield, and being different, not just better.
 >Three questions expose whether you have strategy or just tactics: Where will we play? How will we win? What will we NOT do?
 The test: If your competitor can do exactly what you're doing, that's not strategy. That's keeping up.
@@ -91,4 +95,11 @@ https://obsidian.md
 **Tags:** #strategy #marketing positioning business internal #client #wr
 
 
-**Related:** [[WordReward Strategic “Ethics”|WordReward Strategic “Reset”]] • [[Remote Operations Without Losing Control]] • [[Structural Decisions vs Motivational Ones]] • [[Building Unfair Advantages]] • [[Why Most Marketing Isn't Strategic]] • [[Trade-offs and Strategic Choices]]
+## Continue from here
+
+- [[WordReward Positioning - Stop Managing Brands, Start Marking Them|WordReward positioning]] — the agency application
+- [[Remote Operations Without Losing Control]] — strategy under constraint
+- [[Structural Decisions vs Motivational Ones]] — make strategy structural
+- [[Building Unfair Advantages]] — build what compounds
+- [[Why Most Marketing Isn't Strategic]] — reject tactics without position
+- [[Trade-offs and Strategic Choices]] — choose what not to do

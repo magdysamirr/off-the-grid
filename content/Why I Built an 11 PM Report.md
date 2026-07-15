@@ -1,6 +1,8 @@
 ---
 title: Why I Built an 11 PM Report
-tags:
+type: essay
+status: growing
+topics:
 - wr
 - systems
 - operations
@@ -45,4 +47,8 @@ One public example of that reporting style:
 
 - [[Operational Snapshot — WR, KAF, and NDC]]
 
-Related: [[Remote Operations Without Losing Control.. Building While Off-Grid]] • [[Administrative Friction Is Clinical Friction]] • [[The 7 Self-Deceptions That Shape a Dentist's Career]]
+## Continue from here
+
+- [[Remote Operations Without Losing Control]] — passive operational visibility
+- [[Administrative Friction Is Clinical Friction]] — why reporting affects care
+- [[The 7 Self-Deceptions That Shape a Dentist's Career]] — the professional context
