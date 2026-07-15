@@ -44,13 +44,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.MobileOnly(Component.Spacer()),
-    Component.Explorer({
-      title: "",
-      folderDefaultState: "open",
-      filterFn: (node) => {
-        return node.slugSegment !== "tags"
-      },
-    }),
+    Component.DomainExplorer(),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
@@ -72,17 +66,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({
-      title: "",
-      folderDefaultState: "open",
-      filterFn: (node) => {
-        // Only show Published folder and its contents
-        if (node.slugSegment === "tags") return false
-        if (node.name === "Published") return true
-        if (node.fullPath?.startsWith("Published/")) return true
-        return false
-      },
-    }),
+    Component.DomainExplorer(),
   ],
   right: [],
 }

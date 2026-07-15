@@ -26,6 +26,7 @@ import ConditionalRender from "./ConditionalRender"
 import Signature from "./Signature"
 import PageTransition from "./PageTransition"
 import PrevNext from "./PrevNext"
+import DomainExplorer from "./DomainExplorer"
 
 export {
   ArticleTitle,
@@ -56,4 +57,5 @@ export {
   Signature,
   PageTransition,
   PrevNext,
+  DomainExplorer,
 }
