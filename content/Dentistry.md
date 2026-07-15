@@ -10,6 +10,8 @@ topics:
 - operations
 ---
 
+![The NDC clinic as a low-rise desert clinic under the Sinai mountains](./static/notes/ndc-exterior-line.png)
+
 Dentistry is the domain map for the clinical work, career tensions, and professional obligations behind this garden. It connects the personal reality of being a dentist with the systems required to keep care reliable.
 
 ## Start here

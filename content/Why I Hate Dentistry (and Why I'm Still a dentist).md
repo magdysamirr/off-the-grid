@@ -12,6 +12,7 @@ topics:
 dg-publish: true
 ---
 
+![The NDC dental room rendered as quiet duochrome line art](./static/notes/ndc-room-line.png)
 
 Imagine spending 25 years trying to escape a single decision you made at 17, and no matter how hard you try, it keeps pulling you back.
 
