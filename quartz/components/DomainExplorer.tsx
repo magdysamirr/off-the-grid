@@ -71,6 +71,7 @@ export default (() => {
         <a
           href={resolveRelative(fileData.slug!, file.slug)}
           class={`domain-explorer__link internal ${className} ${isCurrent(title) ? "is-current" : ""}`}
+          data-no-popover="true"
         >
           {title}
         </a>
