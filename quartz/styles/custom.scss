@@ -963,6 +963,38 @@ blockquote p,
   text-indent: 0 !important;
 }
 
+// Compact paired note images. Markdown renders each image as its own paragraph,
+// so adjacent image paragraphs become a two-column row on larger screens.
+@media (min-width: 700px) {
+  article.content > p:has(> img):has(+ p > img),
+  article.content > p:has(> img) + p:has(> img) {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 0.6rem);
+    margin: 0.75rem 0.9rem 1.25rem 0;
+    text-indent: 0;
+  }
+
+  article.content > p:has(> img) + p:has(> img) {
+    margin-right: 0;
+  }
+
+  article.content > p:has(> img) > img {
+    display: block;
+    width: 100%;
+    max-height: 28rem;
+    object-fit: cover;
+    margin: 0;
+  }
+}
+
+@media (max-width: 699px) {
+  article.content > p:has(> img) > img {
+    width: 100%;
+    margin: 0.75rem 0;
+  }
+}
+
 // ============================================================================
 // ABOUT PAGE - SEA HEADER
 // ============================================================================
