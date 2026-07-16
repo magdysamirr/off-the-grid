@@ -9,8 +9,6 @@ topics:
 ---
 ![A low-rise Nuweiba village opening into desert, mountains, and the Red Sea](./static/notes/desert-transition.png)
 
-![A small boat resting on the quiet Red Sea](./static/notes/red-sea-boat-line.png)
-
 The plan was simple: stay for two weeks in Nuweiba, analyze the clinic setup, find a junior dentist willing to live here, then go back to Alexandria.
 
 I lasted three days before the plan collapsed.
