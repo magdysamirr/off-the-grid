@@ -208,7 +208,8 @@ export default (() => {
 
     @media all and (max-width: 700px) {
       .domain-explorer.mobile-only {
-        display: block;
+        display: block !important;
+        width: 100% !important;
       }
 
       .domain-explorer {
