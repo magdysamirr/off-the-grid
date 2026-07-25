@@ -100,6 +100,15 @@ export default (() => {
         <div class="domain-explorer__groups">
           {domains.map((domain) => renderGroup(domain))}
         </div>
+        <details class="domain-explorer__mobile">
+          <summary>
+            <span class="domain-explorer__mobile-icon" aria-hidden="true">☰</span>
+            <span>Explore</span>
+          </summary>
+          <div class="domain-explorer__groups">
+            {domains.map((domain) => renderGroup(domain))}
+          </div>
+        </details>
       </nav>
     )
   }
@@ -118,6 +127,10 @@ export default (() => {
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+    }
+
+    .domain-explorer__mobile {
+      display: none;
     }
 
     .domain-explorer__group {
@@ -190,6 +203,56 @@ export default (() => {
     @media all and (max-width: 1100px) {
       .domain-explorer {
         max-width: 11rem;
+      }
+    }
+
+    @media all and (max-width: 700px) {
+      .domain-explorer {
+        max-width: none;
+        margin: 0.5rem 0 1rem;
+      }
+
+      .domain-explorer > .domain-explorer__title,
+      .domain-explorer > .domain-explorer__groups {
+        display: none;
+      }
+
+      .domain-explorer__mobile {
+        display: block;
+        width: 100%;
+        border: 1px solid var(--lightgray);
+        border-radius: 0.45rem;
+        background: var(--light);
+      }
+
+      .domain-explorer__mobile > summary {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.65rem 0.8rem;
+        cursor: pointer;
+        color: var(--darkgray);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        list-style: none;
+        text-transform: uppercase;
+      }
+
+      .domain-explorer__mobile > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .domain-explorer__mobile-icon {
+        color: var(--secondary);
+        font-size: 1rem;
+        line-height: 1;
+      }
+
+      .domain-explorer__mobile[open] > .domain-explorer__groups {
+        display: block;
+        padding: 0.4rem 0.8rem 0.75rem;
+        border-top: 1px solid var(--lightgray);
       }
     }
   `
