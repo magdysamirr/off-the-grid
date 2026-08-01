@@ -35,6 +35,8 @@ For the person behind the notes, see [[About]].
 
 **Start with one. It either fits or it doesn't. No refunds.**
 
+There is a practical measure behind the name. The sea is 200 meters from my door, close enough to reach when the day needs perspective, far enough to leave the city behind. The garden works the same way: a short distance from the noise, where ideas have room to become useful.
+
 <center>• • •</center>
 
 **Tags:** #adhd • #strategy • #systems • #marketing • Nuweiba • #wr

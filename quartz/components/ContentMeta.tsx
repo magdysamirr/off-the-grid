@@ -110,7 +110,10 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       const apply = (size) => {
         const value = valid.has(size) ? size : "default"
         document.documentElement.dataset.readingSize = value
-        const pixels = value === "large" ? "19px" : "15px"
+        const isMobile = window.matchMedia("(max-width: 799px)").matches
+        const pixels = isMobile
+          ? value === "large" ? "21px" : "19px"
+          : value === "large" ? "19px" : "15px"
         document.documentElement.style.setProperty("--reading-font-size", pixels)
         document.querySelectorAll("[data-reading-size]").forEach((button) => {
           button.setAttribute("aria-pressed", button.dataset.readingSize === value ? "true" : "false")

@@ -9,6 +9,16 @@
   --reading-font-size: 19px;
 }
 
+@media (max-width: 799px) {
+  :root {
+    --reading-font-size: 19px;
+  }
+
+  :root[data-reading-size="large"] {
+    --reading-font-size: 21px;
+  }
+}
+
 // Custom Quartz Styling
 // Organized by: Typography → Colors → Layout → Components
 
@@ -55,6 +65,15 @@ html {
 .domain-explorer:hover,
 .toc:hover {
   opacity: 1;
+}
+
+@media (max-width: 799px) {
+  .domain-explorer,
+  .toc,
+  .domain-explorer:hover,
+  .toc:hover {
+    opacity: 1;
+  }
 }
 
 // Align the top-rail controls with the "200 Meters" title line, below the mark.
