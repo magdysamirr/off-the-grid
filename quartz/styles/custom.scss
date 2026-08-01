@@ -878,12 +878,14 @@ footer a {
 }
 
 @media (min-width: 1025px) {
-  .backlinks {
+  .backlinks,
+  .global-graph-outer {
     opacity: 0.3;
     transition: opacity 0.2s ease;
   }
 
-  .backlinks:hover {
+  .backlinks:hover,
+  .global-graph-outer:hover {
     opacity: 1;
   }
 }
