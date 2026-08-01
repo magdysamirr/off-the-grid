@@ -44,6 +44,11 @@ html {
   font-size: var(--reading-font-size) !important;
 }
 
+/* Keep the metadata and its controls stable while the article scale changes. */
+.center > article > .content-meta {
+  font-size: 1rem !important;
+}
+
 // Keep discovery rails quiet until the reader reaches for them.
 .domain-explorer,
 .toc {
