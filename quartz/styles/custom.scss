@@ -497,10 +497,6 @@ article {
     margin-bottom: 0.85rem !important;
   }
 
-  /* Keep the ch-based column measured at the large-size baseline. */
-  .center > article {
-    font-size: 19px !important;
-  }
 }
 
 // Remove all horizontal lines in article
@@ -591,6 +587,13 @@ article a.internal {
 
   .center > article > h3 {
     font-size: 1.3em !important;
+  }
+
+  /* Keep the ch-based column measured at the large-size baseline. This must
+     come after the reading-scale rule so the active text size cannot change
+     the column width. */
+  .center > article {
+    font-size: 19px !important;
   }
 }
 

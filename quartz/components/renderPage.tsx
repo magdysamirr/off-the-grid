@@ -33,13 +33,13 @@ export function pageResources(
   const resources: StaticResources = {
     css: [
       {
-        content: joinSegments(baseDir, "index.css") + "?v=20260802-7",
+        content: joinSegments(baseDir, "index.css") + "?v=20260802-8",
       },
       ...staticResources.css,
     ],
     js: [
       {
-        src: joinSegments(baseDir, "prescript.js") + "?v=20260802-7",
+        src: joinSegments(baseDir, "prescript.js") + "?v=20260802-8",
         loadTime: "beforeDOMReady",
         contentType: "external",
       },
@@ -55,7 +55,7 @@ export function pageResources(
   }
 
   resources.js.push({
-    src: joinSegments(baseDir, "postscript.js") + "?v=20260802-7",
+    src: joinSegments(baseDir, "postscript.js") + "?v=20260802-8",
     loadTime: "afterDOMReady",
     moduleType: "module",
     contentType: "external",
