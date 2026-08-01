@@ -110,7 +110,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       const apply = (size) => {
         const value = valid.has(size) ? size : "default"
         document.documentElement.dataset.readingSize = value
-        const isMobile = window.matchMedia("(max-width: 799px)").matches
+        const isMobile = window.matchMedia("(max-width: 1200px)").matches
         const pixels = isMobile
           ? value === "large" ? "21px" : "19px"
           : value === "large" ? "19px" : "15px"

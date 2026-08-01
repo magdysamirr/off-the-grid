@@ -9,7 +9,7 @@
   --reading-font-size: 19px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1200px) {
   :root {
     --reading-font-size: 19px;
   }
@@ -83,7 +83,7 @@ html {
   opacity: 1;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 1200px) {
   .domain-explorer,
   .toc,
   .domain-explorer:hover,
