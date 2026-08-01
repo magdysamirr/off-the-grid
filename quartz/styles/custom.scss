@@ -5,10 +5,6 @@
   --reading-font-size: 15px;
 }
 
-:root[data-reading-size="small"] {
-  --reading-font-size: 13px;
-}
-
 :root[data-reading-size="large"] {
   --reading-font-size: 19px;
 }
@@ -450,6 +446,7 @@ article {
   .center > article {
     width: min(100%, 68ch) !important;
     max-width: 68ch !important;
+    font-size: 15px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }

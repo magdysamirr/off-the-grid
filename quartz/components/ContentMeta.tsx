@@ -79,7 +79,6 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
         <p show-comma={false} class={classNames(displayClass, "content-meta", isRTL ? "rtl" : "")}>
           {segments}
           <span class="text-size-controls" aria-label="Text size">
-            <button type="button" data-reading-size="small" aria-label="Smaller text" title="Smaller text">A−</button>
             <button type="button" data-reading-size="default" aria-label="Default text size" title="Default text size">A</button>
             <button type="button" data-reading-size="large" aria-label="Larger text" title="Larger text">A+</button>
           </span>
@@ -96,7 +95,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     (() => {
       try {
         const saved = localStorage.getItem("200-meters-reading-size")
-        if (saved === "small" || saved === "default" || saved === "large") {
+        if (saved === "default" || saved === "large") {
           document.documentElement.dataset.readingSize = saved
         }
       } catch (_) {}
@@ -107,11 +106,11 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     (() => {
       if (window.__readingSizeControlsReady) return
       window.__readingSizeControlsReady = true
-      const valid = new Set(["small", "default", "large"])
+      const valid = new Set(["default", "large"])
       const apply = (size) => {
         const value = valid.has(size) ? size : "default"
         document.documentElement.dataset.readingSize = value
-        const pixels = value === "small" ? "13px" : value === "large" ? "19px" : "15px"
+        const pixels = value === "large" ? "19px" : "15px"
         document.documentElement.style.setProperty("--reading-font-size", pixels)
         document.querySelectorAll("[data-reading-size]").forEach((button) => {
           button.setAttribute("aria-pressed", button.dataset.readingSize === value ? "true" : "false")
