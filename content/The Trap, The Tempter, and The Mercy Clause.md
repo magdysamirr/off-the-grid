@@ -2,6 +2,7 @@
 date: 2026-06-21
 lastmod: 2026-07-15
 title: The Trap, The Tempter, and The Mercy Clause
+draft: true
 type: essay
 status: seedling
 topics:

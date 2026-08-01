@@ -67,7 +67,7 @@ const domains: DomainGroup[] = [
   },
   {
     label: "Philosophy",
-    notes: ["Error vs. Wrongdoing", "The Trap, The Tempter, and The Mercy Clause"],
+    notes: ["Error vs. Wrongdoing"],
   },
 ]
 
