@@ -877,6 +877,17 @@ footer a {
   }
 }
 
+@media (min-width: 1025px) {
+  .backlinks {
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
+  }
+
+  .backlinks:hover {
+    opacity: 1;
+  }
+}
+
 // Table of Contents - now alone in right sidebar
 // Desktop: vertically centered like Explorer on left side
 .toc {
