@@ -20,7 +20,7 @@ html {
 
   // Desktop - smaller for cleaner look
   @media (min-width: 1025px) {
-    font-size: 15px !important;
+    font-size: 17px !important;
   }
 }
 
@@ -28,7 +28,7 @@ html {
 tbody,
 li,
 p {
-  line-height: 1.6rem !important; // Slightly more space for monospace font
+  line-height: 1.7rem !important;
 }
 
 // Reduce space between headlines and body by 20%
@@ -138,7 +138,7 @@ article li,
 body,
 p {
   font-family: var(--bodyFont) !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 
 // Specifically ensure strong/b tags are bold
@@ -403,6 +403,34 @@ article {
   margin-top: 20px !important;
 }
 
+// Desktop reading measure and rhythm
+@media (min-width: 1201px) {
+  .center > article,
+  article.content {
+    width: min(100%, 68ch) !important;
+    max-width: 68ch !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  article.content > p,
+  article.content > ul,
+  article.content > ol,
+  article.content > blockquote {
+    margin-bottom: 1.2rem !important;
+  }
+
+  article.content > h2 {
+    margin-top: 2.7rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  article.content > h3 {
+    margin-top: 2rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+}
+
 // Remove all horizontal lines in article
 article hr {
   display: none !important;
@@ -438,7 +466,7 @@ a.external {
 // Article internal links - use primary color (dark/darkgray) in all modes
 article a.internal {
   font-size: inherit !important;
-  font-weight: 300 !important; // Light weight
+  font-weight: 400 !important;
   color: var(--dark) !important; // Primary text color in both modes
   text-decoration: none !important; // Remove default underline
   text-underline-offset: 1px !important; // Move underline down 1px

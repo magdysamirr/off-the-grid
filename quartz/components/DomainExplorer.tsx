@@ -3,12 +3,17 @@ import { resolveRelative, simplifySlug } from "../util/path"
 
 type DomainGroup = {
   label: string
-  map: string
+  map?: string
   notes: string[]
   children?: DomainGroup[]
 }
 
 const domains: DomainGroup[] = [
+  {
+    label: "Start here",
+    map: "200 Meters",
+    notes: ["About", "What is this"],
+  },
   {
     label: "Off-grid",
     map: "Off-Grid Reality and Professional Obligation",
@@ -16,6 +21,8 @@ const domains: DomainGroup[] = [
       "Why I Moved to the Desert to Save My Brain",
       "Remote Operations Without Losing Control",
       "Off the Grid",
+      "Why I Built an 11 PM Report",
+      "Operational Snapshot: WR, KAF, and NDC",
     ],
   },
   {
@@ -25,6 +32,7 @@ const domains: DomainGroup[] = [
       "Systems Over Willpower",
       "Think or Act, But Not Both",
       "Structural Decisions vs Motivational Ones",
+      "Psychology, Behavior, and Systems Thinking",
     ],
   },
   {
@@ -35,14 +43,15 @@ const domains: DomainGroup[] = [
       "Strategic Thinking",
       "Trade-offs and Strategic Choices",
       "Building Unfair Advantages",
+      "Why I Choose Discipline Over Brilliance",
     ],
     children: [
       {
         label: "Marketing",
-        map: "Digital Marketing and Design Strategy",
+        map: "Marketing Branch: Digital Marketing and Design Strategy",
         notes: [
           "Why Most Marketing Isn't Strategic",
-          "WordReward Positioning - Stop Managing Brands, Start Marking Them",
+          "WordReward Positioning: Stop Managing Brands, Start Marking Them",
         ],
       },
     ],
@@ -56,12 +65,29 @@ const domains: DomainGroup[] = [
       "Administrative Friction Is Clinical Friction",
     ],
   },
+  {
+    label: "Philosophy",
+    notes: ["Error vs. Wrongdoing", "The Trap, The Tempter, and The Mercy Clause"],
+  },
 ]
 
 export default (() => {
   const DomainExplorer: QuartzComponent = ({ fileData, allFiles, displayClass }: QuartzComponentProps) => {
     const currentSlug = simplifySlug(fileData.slug!)
-    const findNote = (title: string) => allFiles.find((file) => file.frontmatter?.title === title)
+    const normalize = (value: string) =>
+      value.toLowerCase().replace(/[’']/g, "'").replace(/[^a-z0-9]+/g, " ").trim()
+    const findNote = (title: string) => {
+      const target = normalize(title)
+      return allFiles.find((file) => {
+        const aliases = file.frontmatter?.aliases
+        const candidates = [
+          file.frontmatter?.title,
+          ...(Array.isArray(aliases) ? aliases : aliases ? [aliases] : []),
+          file.slug?.split("/").pop()?.replace(/-/g, " "),
+        ].filter((value): value is string => typeof value === "string")
+        return candidates.some((value) => normalize(value) === target)
+      })
+    }
     const isCurrent = (title: string) => findNote(title)?.slug && simplifySlug(findNote(title)!.slug!) === currentSlug
 
     const renderLink = (title: string, className = "") => {
@@ -79,12 +105,17 @@ export default (() => {
     }
 
     const renderGroup = (group: DomainGroup, nested = false) => {
-      const active = isCurrent(group.map) || group.notes.some(isCurrent) || group.children?.some((child) => isCurrent(child.map) || child.notes.some(isCurrent))
+      const active =
+        (group.map ? isCurrent(group.map) : false) ||
+        group.notes.some(isCurrent) ||
+        group.children?.some(
+          (child) => (child.map ? isCurrent(child.map) : false) || child.notes.some(isCurrent),
+        )
       return (
         <details class={`domain-explorer__group ${nested ? "domain-explorer__group--nested" : ""}`} open={active}>
           <summary>
             <span class="domain-explorer__chevron" aria-hidden="true">›</span>
-            {renderLink(group.map, "domain-explorer__map")}
+            {group.map ? renderLink(group.map, "domain-explorer__map") : <span class="domain-explorer__map">{group.label}</span>}
           </summary>
           <div class="domain-explorer__notes">
             {group.notes.map((title) => renderLink(title))}
