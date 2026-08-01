@@ -24,6 +24,18 @@ html {
   }
 }
 
+// Keep discovery rails quiet until the reader reaches for them.
+.domain-explorer,
+.toc {
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+.domain-explorer:hover,
+.toc:hover {
+  opacity: 1;
+}
+
 // Line spacing optimized for JetBrains Mono readability
 tbody,
 li,
