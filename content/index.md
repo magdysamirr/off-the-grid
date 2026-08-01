@@ -21,6 +21,8 @@ I'm a Dentist by training. Co-founder and operations manager of [WordReward](htt
 
 Business strategy, tough choices, and building a life that works with my brain, not against it. From the desert.
 
+The distance matters because it is close enough to reach when the day needs perspective, yet far enough from the city to leave its noise behind. The garden lives in that same interval: a short distance from noise, where ideas have room to become useful.
+
 ## Explore the garden
 
 Start with one path. Each entry has one canonical starting note.
@@ -34,8 +36,6 @@ Start with one path. Each entry has one canonical starting note.
 For the person behind the notes, see [[About]].
 
 **Start with one. It either fits or it doesn't. No refunds.**
-
-There is a practical measure behind the name. The sea is 200 meters from my door, close enough to reach when the day needs perspective, far enough to leave the city behind. The garden works the same way: a short distance from the noise, where ideas have room to become useful.
 
 <center>• • •</center>
 

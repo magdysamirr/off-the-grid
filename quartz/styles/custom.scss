@@ -496,6 +496,11 @@ article {
     margin-top: 2rem !important;
     margin-bottom: 0.85rem !important;
   }
+
+  /* Keep the ch-based column measured at the large-size baseline. */
+  .center > article {
+    font-size: 19px !important;
+  }
 }
 
 // Remove all horizontal lines in article
