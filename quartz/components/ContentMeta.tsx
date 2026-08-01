@@ -94,9 +94,11 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
   ContentMetadata.beforeDOMLoaded = `
     (() => {
       try {
-        const saved = localStorage.getItem("200-meters-reading-size")
+        const saved = localStorage.getItem("200-meters-reading-size-v2")
         if (saved === "default" || saved === "large") {
           document.documentElement.dataset.readingSize = saved
+        } else if (window.matchMedia("(max-width: 1200px)").matches) {
+          document.documentElement.dataset.readingSize = "large"
         }
       } catch (_) {}
     })()
@@ -112,13 +114,13 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
         document.documentElement.dataset.readingSize = value
         const isMobile = window.matchMedia("(max-width: 1200px)").matches
         const pixels = isMobile
-          ? value === "large" ? "21px" : "19px"
+          ? value === "large" ? "19px" : "15px"
           : value === "large" ? "19px" : "15px"
         document.documentElement.style.setProperty("--reading-font-size", pixels)
         document.querySelectorAll("[data-reading-size]").forEach((button) => {
           button.setAttribute("aria-pressed", button.dataset.readingSize === value ? "true" : "false")
         })
-        try { localStorage.setItem("200-meters-reading-size", value) } catch (_) {}
+        try { localStorage.setItem("200-meters-reading-size-v2", value) } catch (_) {}
       }
       document.addEventListener("click", (event) => {
         const target = event.target
@@ -127,7 +129,9 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
         if (!(button instanceof HTMLElement)) return
         apply(button.dataset.readingSize)
       })
-      apply(document.documentElement.dataset.readingSize || "default")
+      const initialSize = document.documentElement.dataset.readingSize ||
+        (window.matchMedia("(max-width: 1200px)").matches ? "large" : "default")
+      apply(initialSize)
     })()
   `
 

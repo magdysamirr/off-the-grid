@@ -14,8 +14,12 @@
     --reading-font-size: 19px;
   }
 
+  :root[data-reading-size="default"] {
+    --reading-font-size: 15px;
+  }
+
   :root[data-reading-size="large"] {
-    --reading-font-size: 21px;
+    --reading-font-size: 19px;
   }
 }
 
