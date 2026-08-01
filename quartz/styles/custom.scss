@@ -470,6 +470,16 @@ article {
     margin-right: auto !important;
   }
 
+  .center > article > p:not(.content-meta),
+  .center > article > ul,
+  .center > article > ol,
+  .center > article > blockquote {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .center > article > p,
   .center > article > ul,
   .center > article > ol,
