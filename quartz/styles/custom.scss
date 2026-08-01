@@ -2,15 +2,15 @@
 @use "./variables.scss" as *;
 
 :root {
-  --reading-scale: 1;
+  --reading-font-size: 15px;
 }
 
 :root[data-reading-size="small"] {
-  --reading-scale: 0.9;
+  --reading-font-size: 13px;
 }
 
 :root[data-reading-size="large"] {
-  --reading-scale: 1.1;
+  --reading-font-size: 19px;
 }
 
 // Custom Quartz Styling
@@ -37,22 +37,11 @@ html {
 }
 
 // Reader scale applies to article prose while leaving metadata and navigation stable.
-@media (max-width: 1200px) {
-  .center > article,
-  .center > article p,
-  .center > article li,
-  .center > article blockquote {
-    font-size: calc(1rem * var(--reading-scale)) !important;
-  }
-}
-
-@media (min-width: 1201px) {
-  .center > article,
-  .center > article p,
-  .center > article li,
-  .center > article blockquote {
-    font-size: calc(19px * var(--reading-scale)) !important;
-  }
+.center > article,
+.center > article p,
+.center > article li,
+.center > article blockquote {
+  font-size: var(--reading-font-size) !important;
 }
 
 // Keep discovery rails quiet until the reader reaches for them.
