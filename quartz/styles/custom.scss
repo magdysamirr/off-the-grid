@@ -405,27 +405,26 @@ article {
 
 // Desktop reading measure and rhythm
 @media (min-width: 1201px) {
-  .center > article,
-  article.content {
+  .center > article {
     width: min(100%, 68ch) !important;
     max-width: 68ch !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  article.content > p,
-  article.content > ul,
-  article.content > ol,
-  article.content > blockquote {
+  .center > article > p,
+  .center > article > ul,
+  .center > article > ol,
+  .center > article > blockquote {
     margin-bottom: 1.2rem !important;
   }
 
-  article.content > h2 {
+  .center > article > h2 {
     margin-top: 2.7rem !important;
     margin-bottom: 1rem !important;
   }
 
-  article.content > h3 {
+  .center > article > h3 {
     margin-top: 2rem !important;
     margin-bottom: 0.85rem !important;
   }
@@ -482,41 +481,41 @@ article a.internal {
 // Match cv.magdysamir.online on desktop only. Mobile keeps the garden's current type.
 @media (min-width: 1201px) {
   body,
-  article.content,
-  article.content p,
-  article.content li {
+  .center > article,
+  .center > article p,
+  .center > article li {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
     font-size: 19px !important;
     font-weight: 300 !important;
     line-height: 1.75 !important;
   }
 
-  article.content > p,
-  article.content > ul,
-  article.content > ol,
-  article.content > blockquote {
+  .center > article > p,
+  .center > article > ul,
+  .center > article > ol,
+  .center > article > blockquote {
     margin-bottom: 1.5rem !important;
   }
 
-  article.content > h1,
-  article.content > h2,
-  article.content > h3,
-  article.content > h4,
-  article.content > h5,
-  article.content > h6 {
+  .center > article > h1,
+  .center > article > h2,
+  .center > article > h3,
+  .center > article > h4,
+  .center > article > h5,
+  .center > article > h6 {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
     font-weight: 600 !important;
   }
 
-  article.content > h1 {
+  .center > article > h1 {
     font-size: 1.8em !important;
   }
 
-  article.content > h2 {
+  .center > article > h2 {
     font-size: 1.5em !important;
   }
 
-  article.content > h3 {
+  .center > article > h3 {
     font-size: 1.3em !important;
   }
 }
