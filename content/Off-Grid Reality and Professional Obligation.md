@@ -10,8 +10,6 @@ topics:
 - dentistry
 ---
 
-![A Nuweiba garden path leading toward desert, sea, and mountains](./static/notes/nuweiba-garden-line.png)
-
 Living off-grid in Nuweiba isn't lifestyle optimization or digital nomad aesthetics. It's structural necessity-my ADHD brain needs environmental silence to function strategically. But geographic freedom creates economic constraints. Running two businesses from a place with unreliable electricity means designing operations that work despite infrastructure limitations.
 
 The question is how to operate WordReward in Alexandria and NDC in Nuweiba from 700km away with intermittent connectivity. The answer has to hold both sides of the tension: escape the urban noise without abandoning professional obligation.
