@@ -33,7 +33,7 @@ export function pageResources(
   const resources: StaticResources = {
     css: [
       {
-        content: joinSegments(baseDir, "index.css") + "?v=20260802-8",
+        content: joinSegments(baseDir, "index.css") + "?v=20260802-9",
       },
       ...staticResources.css,
     ],

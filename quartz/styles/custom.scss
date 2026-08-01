@@ -55,6 +55,22 @@ html {
   font-size: 1rem !important;
 }
 
+.center > article,
+.center > article p:not(.content-meta),
+.center > article li,
+.center > article blockquote {
+  transition: font-size 0.25s ease-in-out, line-height 0.25s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .center > article,
+  .center > article p,
+  .center > article li,
+  .center > article blockquote {
+    transition: none;
+  }
+}
+
 // Keep discovery rails quiet until the reader reaches for them.
 .domain-explorer,
 .toc {
