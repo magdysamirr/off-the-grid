@@ -44,6 +44,7 @@ const domains: DomainGroup[] = [
       "Trade-offs and Strategic Choices",
       "Building Unfair Advantages",
       "Why I Choose Discipline Over Brilliance",
+      "The First Mistake Is an Error. The Third Becomes Culture.",
     ],
     children: [
       {
