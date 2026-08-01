@@ -26,3 +26,30 @@
     }
   }
 }
+
+.text-size-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin-left: 0.45rem;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
+.text-size-controls button {
+  min-width: 1.45rem;
+  padding: 0.05rem 0.18rem;
+  border: 0;
+  border-radius: 0.2rem;
+  background: transparent;
+  color: var(--tertiary);
+  font: inherit;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.text-size-controls button:hover,
+.text-size-controls button[aria-pressed="true"] {
+  background: var(--highlight);
+  color: var(--dark);
+}

@@ -1,6 +1,18 @@
 @use "./base.scss";
 @use "./variables.scss" as *;
 
+:root {
+  --reading-scale: 1;
+}
+
+:root[data-reading-size="small"] {
+  --reading-scale: 0.9;
+}
+
+:root[data-reading-size="large"] {
+  --reading-scale: 1.1;
+}
+
 // Custom Quartz Styling
 // Organized by: Typography → Colors → Layout → Components
 
@@ -21,6 +33,25 @@ html {
   // Desktop - smaller for cleaner look
   @media (min-width: 1025px) {
     font-size: 17px !important;
+  }
+}
+
+// Reader scale applies to article prose while leaving metadata and navigation stable.
+@media (max-width: 1200px) {
+  .center > article,
+  .center > article p,
+  .center > article li,
+  .center > article blockquote {
+    font-size: calc(1rem * var(--reading-scale)) !important;
+  }
+}
+
+@media (min-width: 1201px) {
+  .center > article,
+  .center > article p,
+  .center > article li,
+  .center > article blockquote {
+    font-size: calc(19px * var(--reading-scale)) !important;
   }
 }
 
