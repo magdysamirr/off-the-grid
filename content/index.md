@@ -19,9 +19,8 @@ I could have just asked a developer. I could have used WordPress. Instead, I cho
 
 I'm a Dentist by training. Co-founder and operations manager of [WordReward](https://wordreward.net) by choice. Living off-grid in Nuweiba because cities are too loud, too crowded.   
 
-Business strategy, tough choices, and building a life that works with my brain, not against it. From the desert.
+Business strategy, tough choices, and building a life that works with my brain, not against it. From the desert, only 200 meters from the sea.
 
-The distance matters because it is close enough to reach when the day needs perspective, yet far enough from the city to leave its noise behind. The garden lives in that same interval: a short distance from noise, where ideas have room to become useful.
 
 ## Explore the garden
 
