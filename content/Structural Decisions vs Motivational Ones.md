@@ -8,6 +8,8 @@ topics:
 - systems
 - operations
 ---
+> I'm skeptical of frameworks that work perfectly in theory. I'm interested in what holds when conditions are bad, resources are limited, and you can't rely on consistency.
+
 I don't lack disciplin. I lack structure. There's a difference, and mistaking one for the other will drain years of effort into a black hole of good intentions.
 
 A **structural decision** removes future decision points entirely. I build the system once, and the behavior follows automatically. A **motivational decision** requires me to choose correctly every single time, relying on willpower, energy, or feeling like it to execute.

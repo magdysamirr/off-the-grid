@@ -12,6 +12,8 @@ topics:
 ---
 
 
+> I'm skeptical of frameworks that work perfectly in theory. I'm interested in what holds when conditions are bad, resources are limited, and you can't rely on consistency.
+
 Every productivity system eventually fails ADHD brains. Because it was designed for neurotypical executive function.
 
 The standard advice is build better habits, use willpower, stay disciplined. This is like telling someone with bad eyesight to squint harder. The problem isn't effort. It's that the tool doesn't match the operating system.

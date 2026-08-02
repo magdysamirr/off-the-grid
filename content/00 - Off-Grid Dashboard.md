@@ -1,10 +1,12 @@
 ---
+draft: true
 type: dashboard
 status: growing
 topics:
 - off-grid
 - operations
 ---
+
 
 # 00 - Off-Grid Dashboard
 

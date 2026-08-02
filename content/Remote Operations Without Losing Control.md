@@ -13,6 +13,8 @@ topics:
 ---
 ![A passive signal connecting an off-grid operator, team, and clinic](./static/notes/passive-visibility.png)
 
+> I'm skeptical of frameworks that work perfectly in theory. I'm interested in what holds when conditions are bad, resources are limited, and you can't rely on consistency.
+
 Distance is a distraction. It does not matter whether the team is 70 kilometers away or 700. Digital work already removes the physical office from the equation.
 
 The real problem is incomplete observation. A project-management tool can show assigned tasks, updated statuses, and recorded activity. It cannot tell me whether someone understood the assignment, noticed the risk, communicated before acting, or had the judgment to handle an unexpected problem.
