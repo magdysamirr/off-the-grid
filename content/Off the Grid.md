@@ -16,7 +16,7 @@ People hear "off-grid" and picture solar panels, a water well, and a smug Instag
 
 I need to correct this, because it's not what I live.
 
-I live in Nuweiba. That's not off-grid. It's a small town. There's electricity. There's internet — when it works. There are shops, neighbors, a clinic, a road. I'm not generating my own watts or drawing water from a well I dug. I'm not surviving. I'm just living in a place that asks less of me and gives me more room.
+I live in Nuweiba. That's not off-grid. It's a small town. There's electricity. There's internet, when it works. There are shops, neighbors, a clinic, a road. I'm not generating my own watts or drawing water from a well I dug. I'm not surviving. I'm just living in a place that asks less of me and gives me more room.
 
 The difference between Nuweiba and Alexandria isn't grid vs. wilderness. It's noise vs. quiet. Density vs. space. Pace vs. time.
 
@@ -26,9 +26,9 @@ That's the whole trade. And it's the only one my brain needed.
 
 I didn't leave a utility grid. I left a pace of life.
 
-Cities run on a fake urgency — traffic that pretends to be importance, notifications that pretend to be relevance, a hum that convinces you everything is urgent so you never stop to check if any of it matters. My ADHD brain doesn't filter that hum. It absorbs it. And after thirty years of absorbing it, I was running on fumes, not strategy.
+Cities run on a fake urgency. Traffic that pretends to be importance, notifications that pretend to be relevance, a hum that convinces you everything is urgent so you never stop to check if any of it matters. My ADHD brain doesn't filter that hum. It absorbs it. And after thirty years of absorbing it, I was running on fumes, not strategy.
 
-Let me be clear about something, because it's easy to misread: my brain doesn't think slowly. The problem was never that the city was faster than my mind. The problem was that the city is fragmented — and a brain that doesn't think slowly, fed constant interruptions, doesn't think better. It just burns hotter with less to show for it.
+Let me be clear about something, because it's easy to misread: my brain doesn't think slowly. The problem was never that the city was faster than my mind. The problem was that the city is fragmented, and a brain that doesn't think slowly, fed constant interruptions, doesn't think better. It just burns hotter with less to show for it.
 
 Nuweiba didn't slow my thinking down. It removed the noise that was competing with it. My mind works the same way here. The difference is that here, it gets to actually work. In Alexandria, it was spending itself on the hum.
 
@@ -57,9 +57,9 @@ I'm skeptical of frameworks that work perfectly in theory. I'm interested in wha
 
 ## What this isn't
 
-It's not a personality. It's not a brand. It's not a recommendation. Most people should not do this, and most people who romanticize it would hate it within a week. There are real reasons cities exist — services, density, proximity, options. I gave those up knowingly, not virtuously.
+It's not a personality. It's not a brand. It's not a recommendation. Most people should not do this, and most people who romanticize it would hate it within a week. There are real reasons cities exist: services, density, proximity, options. I gave those up knowingly, not virtuously.
 
-But if your brain works better without the hum — if you think clearer when the noise stops — then the trade-off is worth naming honestly. You give up options and convenience. You give up being easy to reach. You get back the conditions under which you can actually think.
+But if your brain works better without the hum, if you think clearer when the noise stops, then the trade-off is worth naming honestly. You give up options and convenience. You give up being easy to reach. You get back the conditions under which you can actually think.
 
 That's the deal. Not off-grid. Just slower, smaller, quieter, and 200 meters from the sea. And it still works. Not because the setup is clever. Because it was designed to work when conditions are bad, and conditions here are often bad.
 

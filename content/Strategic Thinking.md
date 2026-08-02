@@ -28,9 +28,9 @@ Strategy is [[Strategy Is Winning Before You Start|winning before you start]]. I
 
 Three questions, all from the board:
 
-**Where am I playing?** The battlefield decides the fight more than the generals. Most agencies compete on execution quality — marginally better work for marginally better results. We chose a different game: structural position inside the client's retention mechanics, not prettier Instagram posts. Same effort, asymmetric impact.
+**Where am I playing?** The battlefield decides the fight more than the generals. Most agencies compete on execution quality. Marginally better work for marginally better results. We chose a different game: structural position inside the client's retention mechanics, not prettier Instagram posts. Same effort, asymmetric impact.
 
-**How does this compound?** Tactics deplete. A price cut works until someone goes lower. A viral moment works once. Strategy compounds — the tenth article about X is more credible because you wrote nine before it. The fifth client who chose you for Y positioning makes the sixth easier to close. If the move resets to zero tomorrow, it was a tactic. If it makes the next move cheaper, it was strategy.
+**How does this compound?** Tactics deplete. A price cut works until someone goes lower. A viral moment works once. Strategy compounds. The tenth article about X is more credible because you wrote nine before it. The fifth client who chose you for Y positioning makes the sixth easier to close. If the move resets to zero tomorrow, it was a tactic. If it makes the next move cheaper, it was strategy.
 
 **Can they copy it?** If a competitor can do exactly what you're doing, that's not strategy, that's keeping up. Real strategy creates a position competitors either can't match or won't risk trying. Everything else is resource allocation.
 
@@ -48,13 +48,13 @@ Burger King had fewer locations than McDonald's. Instead of fighting that weakne
 
 The pattern isn't "be clever." The pattern is: stop fighting the asymmetry. Find what the competitor's position forces them to do, and make that exact move cost them.
 
-I run the same pattern smaller. I can't compete on consistent daily execution — my neurology doesn't support it. So I stopped fighting that fight. I arranged operations to win on strategic clarity and system design instead. The position has to [[What Holds When Conditions Are Bad|hold when my execution is mediocre]]. If my advantage disappears the moment I have a bad week, it was never strategy — it was current resource allocation.
+I run the same pattern smaller. I can't compete on consistent daily execution. My neurology doesn't support it. So I stopped fighting that fight. I arranged operations to win on strategic clarity and system design instead. The position has to [[What Holds When Conditions Are Bad|hold when my execution is mediocre]]. If my advantage disappears the moment I have a bad week, it was never strategy. It was current resource allocation.
 
 ## The filter
 
 Before we take a client at WordReward: what do they have that competitors can't easily copy? If the answer is "nothing yet" or "we'll create something in the campaign," we don't proceed. The [[Building Unfair Advantages|advantage already exists]]. Our job is finding it.
 
-Most agencies take any client who pays, then try to make magic through tactics. They're fighting the wrong war — trying to beat other agencies' creative when they should be fighting for attention against the entire internet. We filter for substance first. Strategy without actual advantage isn't strategy. It's expensive hope.
+Most agencies take any client who pays, then try to make magic through tactics. They're fighting the wrong war. Trying to beat other agencies' creative when they should be fighting for attention against the entire internet. We filter for substance first. Strategy without actual advantage isn't strategy. It's expensive hope.
 
 The same filter applies to my own decisions: if a move doesn't strengthen the position, it doesn't get made. Revenue today that undermines strategic position tomorrow is a bad trade.
 
