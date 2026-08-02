@@ -39,7 +39,7 @@ export function pageResources(
     ],
     js: [
       {
-        src: joinSegments(baseDir, "prescript.js") + "?v=20260802-8",
+        src: joinSegments(baseDir, "prescript.js") + "?v=20260802-13",
         loadTime: "beforeDOMReady",
         contentType: "external",
       },
@@ -55,7 +55,7 @@ export function pageResources(
   }
 
   resources.js.push({
-    src: joinSegments(baseDir, "postscript.js") + "?v=20260802-8",
+    src: joinSegments(baseDir, "postscript.js") + "?v=20260802-13",
     loadTime: "afterDOMReady",
     moduleType: "module",
     contentType: "external",
