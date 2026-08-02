@@ -36,6 +36,7 @@ files=(
   "Error vs. Wrongdoing.md"
   "The First Mistake Is an Error. The Third Becomes Culture.md"
   "The Trap, The Tempter, and The Mercy Clause.md"
+  "What Holds When Conditions Are Bad.md"
 )
 
 missing=0
