@@ -36,6 +36,8 @@ files=(
   "The First Mistake Is an Error. The Third Becomes Culture.md"
   "The Trap, The Tempter, and The Mercy Clause.md"
   "What Holds When Conditions Are Bad.md"
+  "Give Value, Get Respect.md"
+  "Toxic Blame Culture.md"
 )
 
 missing=0
