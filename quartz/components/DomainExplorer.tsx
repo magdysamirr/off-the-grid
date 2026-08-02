@@ -32,7 +32,7 @@ const domains: DomainGroup[] = [
       "Systems Over Willpower",
       "Think or Act, But Not Both",
       "Structural Decisions vs Motivational Ones",
-      "Psychology, Behavior, and Systems Thinking",
+      "What Holds When Conditions Are Bad",
     ],
   },
   {
@@ -69,6 +69,14 @@ const domains: DomainGroup[] = [
   {
     label: "Philosophy",
     notes: ["Error vs. Wrongdoing"],
+  },
+  {
+    label: "Leadership",
+    notes: [
+      "Give Value, Get Respect",
+      "Toxic Blame Culture",
+      "The Trap, The Tempter, and The Mercy Clause",
+    ],
   },
 ]
 
