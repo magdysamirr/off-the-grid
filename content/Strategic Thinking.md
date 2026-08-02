@@ -70,8 +70,4 @@ We don't market. We mark. [WordReward](https://wordreward.net)
 
 ## Continue from here
 
-- [[Strategy Is Winning Before You Start]]: the core principle, stated directly
-- [[Building Unfair Advantages]]: find the advantage, don't manufacture one
 - [[Why Most Marketing Isn't Strategic]]: tactics without position is noise
-- [[Trade-offs and Strategic Choices]]: choose what you're willing to lose
-- [[What Holds When Conditions Are Bad]]: the position that holds when execution doesn't

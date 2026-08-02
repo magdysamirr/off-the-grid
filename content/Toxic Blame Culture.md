@@ -39,6 +39,5 @@ The fix is not softer management. It is honest management: teach first, then hol
 
 ## Continue from here
 
-- [[The Trap, The Tempter, and The Mercy Clause]]: the restraint principle that prevents the trap
 - [[Give Value, Get Respect]]: the exchange that makes teaching the default
 - [[The First Mistake Is an Error. The Third Becomes Culture.]]: the difference between a first error and a pattern

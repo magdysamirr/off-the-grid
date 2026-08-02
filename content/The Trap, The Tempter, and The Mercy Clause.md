@@ -48,6 +48,5 @@ The more capable side should carry the restraint. If you will not do that, step 
 
 ## Continue from here
 
-- [[The First Mistake Is an Error. The Third Becomes Culture.]]: when failure repeats after fair conditions were given
 - [[Error vs. Wrongdoing]]: the moral distinction behind the principle
 - [[Why I Choose Discipline Over Brilliance]]: the standard that accountability builds

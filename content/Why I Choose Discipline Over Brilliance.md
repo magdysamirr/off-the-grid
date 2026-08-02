@@ -54,7 +54,5 @@ That's why I choose discipline over brilliance. Because brilliance without relia
 
 ## Continue from here
 
-- [[The First Mistake Is an Error. The Third Becomes Culture.]]: when repeated failure becomes pattern
-- [[Error vs. Wrongdoing]]: the moral line behind the operational one
 - [[Systems Over Willpower]]: design reliability into the system
 - [[What Holds When Conditions Are Bad]]: the discipline that holds when people fail

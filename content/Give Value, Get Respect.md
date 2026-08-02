@@ -43,6 +43,5 @@ Respect is a return, not a right. [[Toxic Blame Culture|Blame]] is what you get 
 
 ## Continue from here
 
-- [[Toxic Blame Culture]]: what you get when you skip the giving
 - [[The Trap, The Tempter, and The Mercy Clause]]: the restraint principle behind the exchange
 - [[The First Mistake Is an Error. The Third Becomes Culture.]]: what the deposit does not cancel
