@@ -16,7 +16,6 @@ files=(
   "Systems Over Willpower.md"
   "Think or Act, But Not Both.md"
   "Structural Decisions vs Motivational Ones.md"
-  "Psychology, Behavior, and Systems Thinking.md"
   "Strategy.md"
   "Strategy Is Winning Before You Start.md"
   "Strategic Thinking.md"

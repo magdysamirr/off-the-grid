@@ -27,4 +27,4 @@ The question is how to operate WordReward in Alexandria and NDC in Nuweiba from 
 ## Continue from here
 
 - **Neurological constraint**: [[Running a Business with ADHD]]
-- **Systems lens**: [[Psychology, Behavior, and Systems Thinking]]
+- **Systems lens**: [[Systems Over Willpower]]
