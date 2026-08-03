@@ -27,6 +27,69 @@
   }
 }
 
+.content-meta__confidence {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.15rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 400 !important;
+
+  --tier-color: #8a9e3f;
+
+  &[data-tier="20"] { --tier-color: #c1503f; }
+  &[data-tier="40"] { --tier-color: #b98f4a; }
+  &[data-tier="60"] { --tier-color: #8a9e3f; }
+  &[data-tier="80"] { --tier-color: #5f9e7a; }
+  &[data-tier="100"] { --tier-color: var(--secondary); }
+
+  &.internal {
+    text-decoration: none;
+  }
+}
+
+:root[saved-theme="dark"] .content-meta__confidence {
+  &[data-tier="20"] { --tier-color: #d97562; }
+  &[data-tier="40"] { --tier-color: #cda361; }
+  &[data-tier="60"] { --tier-color: #a3ba5c; }
+  &[data-tier="80"] { --tier-color: #78c19a; }
+}
+
+.content-meta__confidence-blocks {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.content-meta__confidence-block {
+  width: 0.7rem;
+  height: 0.45rem;
+  border-radius: 1px;
+  background: var(--lightgray);
+
+  &.is-filled {
+    background: var(--tier-color);
+  }
+}
+
+.content-meta__confidence-label {
+  color: var(--darkgray);
+  font-weight: 400;
+}
+
+.content-meta__confidence-pct {
+  font-family: var(--codeFont);
+  color: var(--darkgray);
+  opacity: 0.75;
+}
+
+.content-meta__confidence-icon {
+  width: 0.75em;
+  height: 0.75em;
+  color: var(--darkgray);
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+
 .text-size-controls {
   display: inline-flex;
   align-items: center;

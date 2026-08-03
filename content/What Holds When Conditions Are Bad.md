@@ -4,6 +4,7 @@ lastmod: 2026-08-03
 title: What Holds When Conditions Are Bad
 type: evergreen
 status: evergreen
+confidence: 80
 topics:
 - strategy
 - systems

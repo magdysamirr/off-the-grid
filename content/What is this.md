@@ -3,7 +3,6 @@ date: 2025-12-20
 lastmod: 2026-07-15
 type: snapshot
 status: evergreen
-draft: true
 topics:
 - off-grid
 - systems

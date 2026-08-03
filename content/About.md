@@ -4,6 +4,7 @@ lastmod: 2026-08-03
 title: About
 type: evergreen
 status: evergreen
+confidence: 100
 topics:
 - off-grid
 - adhd
@@ -11,7 +12,6 @@ topics:
 - dentistry
 dg-publish: true
 ---
-
 <div class="about-header">
 <svg class="sea-waves" width="240" height="44" viewBox="0 0 240 44" fill="none" xmlns="http://www.w3.org/2000/svg">
   <line x1="0" y1="12" x2="240" y2="12" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.8"/>
@@ -21,8 +21,7 @@ dg-publish: true
   <path d="M55 35 C73 30 91 38 109 35" stroke="currentColor" stroke-width="1" stroke-opacity="0.4"/>
   <path d="M125 35 C143 30 161 38 179 35" stroke="currentColor" stroke-width="1" stroke-opacity="0.4"/>
 </svg>
-<p class="about-title-big">200 Meters</p>
-<p class="about-title-medium">from the sea</p>
+
 </div>
 
 My thinking comes from doing.

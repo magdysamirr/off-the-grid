@@ -5,6 +5,7 @@ aliases:
 - hyperfocus means I disappear
 type: evergreen
 status: growing
+confidence: 80
 topics:
 - strategy
 - adhd

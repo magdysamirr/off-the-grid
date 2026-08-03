@@ -23,7 +23,7 @@ Strategy is the domain map for decisions, positioning, trade-offs, and the marke
 
 - **Application**: [[Digital Marketing and Design Strategy]]: how strategic position becomes marketing work.
 - **Diagnosis**: [[Why Most Marketing Isn't Strategic]]: why activity without position is noise.
-- **Agency application**: [[WordReward Positioning - Stop Managing Brands, Start Marking Them]]: the WordReward position in practice.
+- **Agency application**: [[Refuse the Work, or Refuse to Own It]]: the WordReward position in practice.
 
 ## Continue from here
 

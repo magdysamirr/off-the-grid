@@ -4,6 +4,7 @@ lastmod: 2026-07-15
 title: Why I Built an 11 PM Report
 type: essay
 status: growing
+confidence: 60
 topics:
 - wr
 - systems

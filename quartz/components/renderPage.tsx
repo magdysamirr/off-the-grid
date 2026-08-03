@@ -22,6 +22,10 @@ interface RenderComponents {
   footer: QuartzComponent
 }
 
+// Cache-busting suffix computed once per build so every deploy forces browsers
+// to fetch fresh CSS/JS instead of reusing a stale cached copy under the same URL.
+const BUILD_VERSION = Date.now().toString(36)
+
 const headerRegex = new RegExp(/h[1-6]/)
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
@@ -33,13 +37,13 @@ export function pageResources(
   const resources: StaticResources = {
     css: [
       {
-        content: joinSegments(baseDir, "index.css") + "?v=20260802-12",
+        content: joinSegments(baseDir, "index.css") + "?v=" + BUILD_VERSION,
       },
       ...staticResources.css,
     ],
     js: [
       {
-        src: joinSegments(baseDir, "prescript.js") + "?v=20260802-13",
+        src: joinSegments(baseDir, "prescript.js") + "?v=" + BUILD_VERSION,
         loadTime: "beforeDOMReady",
         contentType: "external",
       },

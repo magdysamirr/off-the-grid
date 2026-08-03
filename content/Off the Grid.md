@@ -6,6 +6,7 @@ aliases:
 - off-the-grid
 type: evergreen
 status: seedling
+confidence: 80
 topics:
 - off-grid
 - systems

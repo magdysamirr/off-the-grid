@@ -3,6 +3,7 @@ date: 2025-12-16
 lastmod: 2026-08-03
 type: evergreen
 status: evergreen
+confidence: 40
 topics:
 - strategy
 - marketing
@@ -37,11 +38,11 @@ Every business that survives past being a commodity has something. The dentist w
 
 Most businesses can't see their own advantage. They think they compete on price or speed or "quality." But there's always something deeper: expertise nobody else bothered building, actual integrity where competitors cut corners, a process that gets better the longer you use it.
 
-If we can't find that real advantage, we don't take the client. Because manufactured difference doesn't compound. You can fake enthusiasm for maybe 30 days. The algorithm figures it out. People scroll past. Performance drops. Client blames us for "creative not working."
+Manufactured difference doesn't compound. You can fake enthusiasm for maybe 30 days. The algorithm figures it out. People scroll past. Performance drops. Client blames us for "creative not working."
 
 ## The filter
 
-Before we take a client: what do they have that competitors can't easily copy? If the answer is "nothing yet" or "we'll create something in the campaign," we don't proceed.
+Before we take a client: what do they have that competitors can't easily copy? If the answer is "nothing yet" or "we'll create something in the campaign," that's where we [[Refuse the Work, or Refuse to Own It|try to walk away]].
 
 Strategy without actual advantage isn't strategy. It's [[What Holds When Conditions Are Bad|expensive hope]]. And hope doesn't win against infinite scroll.
 
@@ -54,4 +55,4 @@ The advantage already exists. Our job is finding it, defining it, making it obvi
 - [[Strategic Thinking]]: the position that makes the advantage structural
 - [[Strategy Is Winning Before You Start]]: choose the battlefield before the tactic
 - [[Why Most Marketing Isn't Strategic]]: tactics without position is noise
-- [[WordReward Positioning - Stop Managing Brands, Start Marking Them]]: the agency application
+- [[Refuse the Work, or Refuse to Own It]]: the agency application

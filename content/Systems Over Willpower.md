@@ -6,6 +6,7 @@ aliases:
 - Systems Over Willpower.. Why All Systems Will Fail ADHD Brains
 type: evergreen
 status: growing
+confidence: 60
 topics:
 - adhd
 - systems

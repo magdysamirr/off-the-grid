@@ -4,6 +4,7 @@ lastmod: 2026-07-15
 title: Strategy Is Winning Before You Start
 type: evergreen
 status: growing
+confidence: 60
 topics:
 - strategy
 - marketing
@@ -37,7 +38,7 @@ Most businesses fail because they optimize tactics without establishing strategy
 
 **Strategy is doing less, but in ways that matter more.**
 
-For WordReward, this means saying no to project types where we'd compete on execution quality alone, and yes to engagements where we can build structural position. For [[Psychology, Behavior, and Systems Thinking]], it means understanding that human decisions are made on strategic positioning-people choose options that feel like winning positions, not just good execution.
+For WordReward, this means saying no to project types where we'd compete on execution quality alone, and yes to engagements where we can build structural position. More broadly, it means understanding that human decisions are made on strategic positioning-people choose options that feel like winning positions, not just good execution.
 
 The hard part isn't understanding this intellectually. It's having the discipline to pass on tactically attractive opportunities that are strategically weak. Revenue today that undermines strategic position tomorrow is a bad trade. But it requires confidence in your strategy to turn down immediate money.
 

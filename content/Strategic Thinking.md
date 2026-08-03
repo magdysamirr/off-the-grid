@@ -6,6 +6,7 @@ aliases:
 - Strategic Thinking, From Real Life to Digital Marketing
 type: evergreen
 status: evergreen
+confidence: 60
 topics:
 - strategy
 - marketing
@@ -52,7 +53,7 @@ I run the same pattern smaller. I can't compete on consistent daily execution. M
 
 ## The filter
 
-Before we take a client at WordReward: what do they have that competitors can't easily copy? If the answer is "nothing yet" or "we'll create something in the campaign," we don't proceed. The [[Building Unfair Advantages|advantage already exists]]. Our job is finding it.
+Before we take a client at WordReward: what do they have that competitors can't easily copy? If the answer is "nothing yet" or "we'll create something in the campaign," that's where we [[Refuse the Work, or Refuse to Own It|try to walk away]]. The [[Building Unfair Advantages|advantage already exists]]. Our job is finding it.
 
 Most agencies take any client who pays, then try to make magic through tactics. They're fighting the wrong war. Trying to beat other agencies' creative when they should be fighting for attention against the entire internet. We filter for substance first. Strategy without actual advantage isn't strategy. It's expensive hope.
 

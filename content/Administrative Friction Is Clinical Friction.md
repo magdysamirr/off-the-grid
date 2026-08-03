@@ -4,6 +4,7 @@ lastmod: 2026-07-15
 title: Administrative Friction Is Clinical Friction
 type: evergreen
 status: growing
+confidence: 60
 topics:
 - ndc
 - systems

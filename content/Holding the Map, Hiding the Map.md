@@ -1,16 +1,22 @@
 ---
 date: 2026-06-21
 lastmod: 2026-08-03
-title: The Trap, The Tempter, and The Mercy Clause
+title: Holding the Map, Hiding the Map
+aliases:
+- Capability Is a Debt, Not a Credit
+- Whoever Can See the Gap Has to Close It
+- The More Capable Side Carries the Restraint
+- The Trap, The Tempter, and The Mercy Clause
 type: evergreen
 status: growing
+confidence: 80
 topics:
 - philosophy
 - operations
 dg-publish: true
 ---
 
-I once raised a kid who was learning a new task. I wanted to teach it properly. But I rushed, I lost patience, I pressured them into a corner instead of showing the better way. The guilt stayed with me for years. I had more experience, more maturity, more control. And the more capable side chose force instead of something smarter. The more capable side in any relationship should carry the restraint. The lesser side does not owe you understanding it was never built to have.
+I once raised a kid who was learning a new task. I wanted to teach it properly. But I rushed, I lost patience, I pressured them into a corner instead of showing the better way. The guilt stayed with me for years. I had more experience, more maturity, more control. And the more capable side chose force instead of something smarter. In any relationship, whoever can see the gap has to close it. The lesser side does not owe you understanding it was never built to have.
 
 Now push it further. Say the kid learned the rule. They knew it, they knew what upset me. One day they slipped. What does a sane adult do? At worst, you correct them. Maybe you admit you are not the right person to teach them, and you pass them to someone better. You do not punish them for it. Revenge is not even on the table.
 
@@ -26,7 +32,7 @@ The senior has the better mind. They have the experience, the context, the autho
 
 ## The restraint principle
 
-The more capable side should carry the restraint. Always.
+Capability is not a credit. It is a debt. Whoever can see the gap has to close it. Always.
 
 A manager has more context than their team. A senior clinician has more experience than the junior dentist. A founder has more visibility into the business than the person executing a single task. In every case, the person with the better mind has the obligation to bridge the gap. Not to test for the gap. Not to wait at the gap and punish whoever falls into it. To bridge it.
 
@@ -42,7 +48,7 @@ This is not an argument against standards or consequences. People who repeatedly
 
 This is an argument against the person who skips the teaching and goes straight to the verdict. The one who holds the map, hides the map, and then blames you for getting lost. That person is not a leader. They are a trap.
 
-The more capable side should carry the restraint. If you will not do that, step aside for someone who will.
+Whoever can see the gap has to close it. If you will not, step aside for someone who will.
 
 <center>• • •</center>
 

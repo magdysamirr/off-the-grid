@@ -6,6 +6,7 @@ aliases:
 - Why I Hate Dentistry (and Why I'm Still a dentist)
 type: essay
 status: growing
+confidence: 80
 topics:
 - dentistry
 - adhd
@@ -31,7 +32,7 @@ Most people would call this burnout or poor career choice or some diagnostic lab
 
 ## The Reframe
 
-I'm a dentist for a reason. And I tired to know why for a long time. Maybe my actual purpose isn't to be the best technical dentist. Maybe it's to honestly remove pain from someone's mouth, improve their health and smile, help them regain their self-confidence, while being honest, authentic, and refusing to turn healthcare into just a transaction.
+I'm a dentist for a reason. And I tried to know why for a long time. Maybe my actual purpose isn't to be the best technical dentist. Maybe it's to honestly remove pain from someone's mouth, improve their health and smile, help them regain their self-confidence, while being honest, authentic, and refusing to turn healthcare into just a transaction.
 
 I teach patients the importance of good oral hygiene and lifestyle choices. Not the cliché talk about healthy food and perfect habits that ignores their reality. I give practical instructions based on their actual environment, culture, and constraints.
 

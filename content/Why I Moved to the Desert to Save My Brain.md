@@ -3,6 +3,7 @@ date: 2025-12-20
 lastmod: 2026-07-15
 type: essay
 status: growing
+confidence: 80
 topics:
 - off-grid
 - adhd

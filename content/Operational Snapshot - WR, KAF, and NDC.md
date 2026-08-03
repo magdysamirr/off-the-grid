@@ -4,6 +4,7 @@ lastmod: 2026-07-15
 title: "Operational Snapshot: WR, KAF, and NDC"
 type: snapshot
 status: growing
+confidence: 40
 topics:
 - operations
 - wr

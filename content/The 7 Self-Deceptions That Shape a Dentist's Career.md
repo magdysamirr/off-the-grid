@@ -4,6 +4,7 @@ lastmod: 2026-07-15
 title: The 7 Self-Deceptions That Shape a Dentist's Career
 type: essay
 status: growing
+confidence: 40
 topics:
 - dentistry
 - strategy

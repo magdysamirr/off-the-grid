@@ -15,7 +15,6 @@ Living off-grid in Nuweiba isn't lifestyle optimization or digital nomad aesthet
 The question is how to operate WordReward in Alexandria and NDC in Nuweiba from 700km away with intermittent connectivity. The answer has to hold both sides of the tension: escape the urban noise without abandoning professional obligation.
 
 ---
-
 ## Start here
 
 - **Origin**: [[Why I Moved to the Desert to Save My Brain]]: the 72-hour decision that changed everything.

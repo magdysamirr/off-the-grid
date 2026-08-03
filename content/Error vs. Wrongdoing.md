@@ -3,6 +3,7 @@ date: 2025-12-21
 lastmod: 2026-07-15
 type: evergreen
 status: seedling
+confidence: 40
 topics:
 - philosophy
 - personal
@@ -62,7 +63,3 @@ My conscience knows the difference. I listen to what it's actually measuring.
 
 - [[Why I Choose Discipline Over Brilliance]]: the operating standard
 - [[Systems Over Willpower]]: the systems perspective
-
-**Word count:** ~480 words | **Read time:** ~2.5 minutes
-
-**Type:** philosophical-principle

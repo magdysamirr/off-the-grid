@@ -12,17 +12,12 @@ const domains: DomainGroup[] = [
   {
     label: "Start here",
     map: "200 Meters",
-    notes: ["About", "What is this"],
-  },
-  {
-    label: "Off-grid",
-    map: "Off-Grid Reality and Professional Obligation",
     notes: [
+      "About",
+      "What is this",
+      "Off-Grid Reality and Professional Obligation",
       "Why I Moved to the Desert to Save My Brain",
-      "Remote Operations Without Losing Control",
       "Off the Grid",
-      "Why I Built an 11 PM Report",
-      "Operational Snapshot: WR, KAF, and NDC",
     ],
   },
   {
@@ -36,6 +31,15 @@ const domains: DomainGroup[] = [
     ],
   },
   {
+    label: "Operations",
+    notes: [
+      "Remote Operations Without Losing Control",
+      "Why I Built an 11 PM Report",
+      "Operational Snapshot: WR, KAF, and NDC",
+      "Why I Choose Discipline Over Brilliance",
+    ],
+  },
+  {
     label: "Strategy",
     map: "Strategy",
     notes: [
@@ -43,8 +47,6 @@ const domains: DomainGroup[] = [
       "Strategic Thinking",
       "Trade-offs and Strategic Choices",
       "Building Unfair Advantages",
-      "Why I Choose Discipline Over Brilliance",
-      "The First Mistake Is an Error. The Third Becomes Culture.",
     ],
     children: [
       {
@@ -52,7 +54,7 @@ const domains: DomainGroup[] = [
         map: "Marketing Branch: Digital Marketing and Design Strategy",
         notes: [
           "Why Most Marketing Isn't Strategic",
-          "WordReward Positioning: Stop Managing Brands, Start Marking Them",
+          "Refuse the Work, or Refuse to Own It",
         ],
       },
     ],
@@ -68,14 +70,12 @@ const domains: DomainGroup[] = [
   },
   {
     label: "Philosophy",
-    notes: ["Error vs. Wrongdoing"],
-  },
-  {
-    label: "Management style",
     notes: [
+      "Error vs. Wrongdoing",
+      "The First Mistake Is an Error. The Third Becomes Culture.",
       "Give Value, Get Respect",
       "Toxic Blame Culture",
-      "The Trap, The Tempter, and The Mercy Clause",
+      "Holding the Map, Hiding the Map",
     ],
   },
 ]
@@ -99,7 +99,7 @@ export default (() => {
     }
     const isCurrent = (title: string) => findNote(title)?.slug && simplifySlug(findNote(title)!.slug!) === currentSlug
 
-    const renderLink = (title: string, className = "") => {
+    const renderLink = (title: string, className = "", displayText?: string) => {
       const file = findNote(title)
       if (!file?.slug) return null
       return (
@@ -108,7 +108,7 @@ export default (() => {
           class={`domain-explorer__link internal ${className} ${isCurrent(title) ? "is-current" : ""}`}
           data-no-popover="true"
         >
-          {title}
+          {displayText ?? title}
         </a>
       )
     }
@@ -124,7 +124,7 @@ export default (() => {
         <details class={`domain-explorer__group ${nested ? "domain-explorer__group--nested" : ""}`} open={active}>
           <summary>
             <span class="domain-explorer__chevron" aria-hidden="true">›</span>
-            {group.map ? renderLink(group.map, "domain-explorer__map") : <span class="domain-explorer__map">{group.label}</span>}
+            {group.map ? renderLink(group.map, "domain-explorer__map", group.label) : <span class="domain-explorer__link domain-explorer__map">{group.label}</span>}
           </summary>
           <div class="domain-explorer__notes">
             {group.notes.map((title) => renderLink(title))}
@@ -202,7 +202,7 @@ export default (() => {
       transform: rotate(90deg);
     }
 
-    .domain-explorer__link {
+    .domain-explorer .domain-explorer__link {
       display: block;
       overflow: hidden;
       padding: 0.18rem 0;
@@ -213,15 +213,15 @@ export default (() => {
       white-space: nowrap;
     }
 
-    .domain-explorer__map {
+    .domain-explorer .domain-explorer__map {
       padding: 0.28rem 0;
       color: var(--dark);
       font-size: 0.9rem;
       font-weight: 500;
     }
 
-    .domain-explorer__link:hover,
-    .domain-explorer__link.is-current {
+    .domain-explorer .domain-explorer__link:hover,
+    .domain-explorer .domain-explorer__link.is-current {
       color: var(--secondary);
     }
 

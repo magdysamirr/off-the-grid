@@ -1,6 +1,7 @@
 ---
 type: evergreen
 status: evergreen
+confidence: 80
 date: 2025-12-20
 lastmod: 2026-08-03
 title: Why I Choose Discipline Over Brilliance
@@ -18,9 +19,9 @@ Not because I don't value talent. Because unreliability threatens the entire fab
 
 When someone becomes unreliable, I lose sleep. Not because of the missed task, but because of the signal it sends: if he can get away with it, why can't the rest of us? One person's lack of accountability becomes permission for everyone else to slack. The cohesion collapses. What looked like a team turns into individuals optimizing for themselves.
 
-This isn't a theory I read in a management book. Real Madrid in the early 2000s had Zidane, Ronaldo, Beckham, Figo. Each could carry a World Cup alone. On paper, unstoppable. In practice, they underperformed. Barcelona, built on youngsters, discipline, and a clear system, blew them out of the water. Talent alone doesn't win. Cohesion does.
+This isn't a theory I read in a management book. Southwest built a major airline on one aircraft type, standardized routines, and a culture obsessed with consistency, while legacy carriers ran wider fleets, deeper pockets, and bigger-name executives. Southwest kept winning on reliability and cost, because its advantage was structural, not individual. A legacy carrier's talent could still be undone by one unreliable link in the chain: a delayed hub, a labor dispute, a temperamental exec. Cohesion doesn't take days off. Talent does.
 
-The pattern is older than football. Basecamp built a $100M+ remote software company on "managers of one," people who self-manage, not on rockstar developers.
+Basecamp built a $100M+ remote software company the same way, on "managers of one," people who self-manage, not on rockstar developers.
 
 ## The hierarchy that makes it hold
 
@@ -38,11 +39,7 @@ A reliable team member will make the same trade-offs you would when forced to ch
 
 ## Accountability as foundation
 
-Discipline isn't just showing up or meeting deadlines. It's [[The First Mistake Is an Error. The Third Becomes Culture.|accountability as a life foundation]]. Can the team trust that when you commit, reality will match your word? That's what makes collective work possible.
-
-This is also why I treat repeated failure differently from the first mistake. The first is an [[Error vs. Wrongdoing|error]]. By the third, the behavior has become culture, and the conversation is theatre. An apology without changed behavior is a surface treatment. I pay attention to what happens after the apology.
-
-Words can close a conversation. Only changed behavior closes the problem.
+Discipline isn't just showing up or meeting deadlines. It's [[The First Mistake Is an Error. The Third Becomes Culture.|accountability as a life foundation]]: the first slip is an [[Error vs. Wrongdoing|error]], but by the third it's a pattern, and no apology fixes a pattern. Can the team trust that when you commit, reality will match your word? That's what makes collective work possible.
 
 ## The real difference
 

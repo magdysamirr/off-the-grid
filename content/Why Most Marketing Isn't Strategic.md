@@ -4,6 +4,7 @@ lastmod: 2026-07-15
 title: Why Most Marketing Isn't Strategic
 type: evergreen
 status: growing
+confidence: 40
 topics:
 - marketing
 - strategy
@@ -53,4 +54,4 @@ The test: if you stopped all marketing activity today, would anything persist? W
 
 - [[Strategy Is Winning Before You Start]]: choose the position before the tactic
 - [[Building Unfair Advantages]]: build what compounds
-- [[WordReward Positioning - Stop Managing Brands, Start Marking Them]]: the agency application
+- [[Refuse the Work, or Refuse to Own It]]: the agency application

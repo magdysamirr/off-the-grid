@@ -6,6 +6,7 @@ aliases:
 - Remote Operations Without Losing Control.. Building While Off-Grid
 type: essay
 status: growing
+confidence: 60
 topics:
 - operations
 - adhd

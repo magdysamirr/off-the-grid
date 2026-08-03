@@ -6,6 +6,7 @@ aliases:
 - ADHD choice, Think or Act, but not both.
 type: evergreen
 status: growing
+confidence: 60
 topics:
 - adhd
 - systems
@@ -54,3 +55,11 @@ The hardest part is trusting your thinking enough to execute without questioning
 **The pattern: separate modes temporally, then execute each fully.**
 
 Most people leak between modes constantly, never fully committing to either. They think a little, do a little, think again, do again, and wonder why nothing feels finished. The cost of that approach for ADHD brains is paralysis disguised as productivity.
+
+<center>• • •</center>
+
+## Continue from here
+
+- [[Systems Over Willpower]]: why systems that expect mode-switching fail
+- [[Structural Decisions vs Motivational Ones]]: build the structure that removes the switch
+- [[Running a Business with ADHD]]: the operating constraint this protects
