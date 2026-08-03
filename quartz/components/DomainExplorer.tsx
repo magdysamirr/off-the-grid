@@ -71,7 +71,7 @@ const domains: DomainGroup[] = [
     notes: ["Error vs. Wrongdoing"],
   },
   {
-    label: "Leadership",
+    label: "Management style",
     notes: [
       "Give Value, Get Respect",
       "Toxic Blame Culture",

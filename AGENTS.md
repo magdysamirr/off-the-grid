@@ -24,6 +24,18 @@ This repo is a **publish mirror + build system** (Quartz → build → deploy).
 2) Then sync vault → Quartz `content/` using the provided script.
 3) Then build/publish as usual.
 
+### Sidebar navigation (DomainExplorer)
+
+The left sidebar is **not** auto-generated. It is a hardcoded list in
+`quartz/components/DomainExplorer.tsx` (the `domains` array). Newly published
+notes will be emitted as pages, but they will **not appear in the sidebar**
+until they are registered in that array by exact note title.
+
+- When adding a new published note, add its title to the appropriate group's `notes` list.
+- When deleting a note, remove its title from the list too, or it renders as a dead link.
+- A note should appear in **one** group only (do not duplicate an entity across groups).
+- Unlike garden notes, this file is edited directly in the repo, then built and pushed.
+
 ### Never do
 
 - Do not author new longform content directly inside `content/` unless explicitly asked to do a one-off emergency patch.
