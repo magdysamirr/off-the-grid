@@ -17,7 +17,7 @@ dg-publish: true
 
 ## What bad conditions means
 
-Not the power cut. Not the internet drop. Those are brief situations. They pass in hours.
+Not the power blip. That passes in minutes.
 
 Bad conditions are what doesn't pass: people who don't communicate, circumstances that shift overnight, decisions other people make that land on your operation without warning. A client moves a deadline. A team member goes silent on a critical task. A partner changes scope after the work started.
 
@@ -61,4 +61,4 @@ That's the whole test. It's the only one that's never let me down.
 - [[Structural Decisions vs Motivational Ones]]: structural beats motivational
 - [[Remote Operations Without Losing Control]]: the system that assumes people won't volunteer problems
 - [[Strategy Is Winning Before You Start]]: the position that holds when execution doesn't
-- [[The First Mistake Is an Error. The Third Becomes Culture.]]: when people's failures become pattern
+- [[The First Mistake Is an Error. The Third Becomes Culture]]: when people's failures become pattern

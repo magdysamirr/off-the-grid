@@ -16,7 +16,7 @@ I hate dashboards.
 
 But I built nightly report because administrative fog is expensive.
 
-Running WordReward from Nuweiba means I cannot depend on real-time presence. I am far from the office. Internet is not always stable. Team context gets fragmented. Deadlines move. Decisions hide inside different tools. If I need to manually reconstruct reality every morning, I start the day already behind.
+Running WordReward from Nuweiba means I cannot depend on real-time presence. I am far from the office. Team context gets fragmented. Deadlines move. Decisions hide inside different tools. If I need to manually reconstruct reality every morning, I start the day already behind.
 
 So the nightly report does one simple thing: it collapses scattered operational signals into one clean view.
 

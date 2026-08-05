@@ -11,10 +11,10 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   return (
     <div class={classNames(displayClass, "page-title")}>
       <a href={baseDir}>
-        <picture class="page-title-mark" aria-hidden="true">
-          <source srcSet={iconDarkPath} media="(prefers-color-scheme: dark)" />
-          <img src={iconLightPath} alt="" width={44} height={44} />
-        </picture>
+        <span class="page-title-mark" aria-hidden="true">
+          <img class="page-title-mark-light" src={iconLightPath} alt="" width={44} height={44} />
+          <img class="page-title-mark-dark" src={iconDarkPath} alt="" width={44} height={44} />
+        </span>
         <span class="page-title-copy">
           <span class="page-title-main">{title}</span>
           <span class="page-title-sub">from the sea</span>
@@ -52,10 +52,25 @@ PageTitle.css = `
 }
 
 .page-title-mark img {
-  display: block;
   width: 3rem;
   height: 3rem;
   object-fit: contain;
+}
+
+.page-title-mark-light {
+  display: block;
+}
+
+.page-title-mark-dark {
+  display: none;
+}
+
+:root[saved-theme="dark"] .page-title-mark-light {
+  display: none;
+}
+
+:root[saved-theme="dark"] .page-title-mark-dark {
+  display: block;
 }
 
 .page-title-main {

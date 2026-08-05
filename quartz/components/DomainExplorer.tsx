@@ -18,6 +18,7 @@ const domains: DomainGroup[] = [
       "Off-Grid Reality and Professional Obligation",
       "Why I Moved to the Desert to Save My Brain",
       "Off the Grid",
+      "Less Dramatic Than It Sounds",
     ],
   },
   {
@@ -37,6 +38,8 @@ const domains: DomainGroup[] = [
       "Why I Built an 11 PM Report",
       "Operational Snapshot: WR, KAF, and NDC",
       "Why I Choose Discipline Over Brilliance",
+      "Different Blind Spots Make Better Partners",
+      "Trust-Building Isn't Systems-Building",
     ],
   },
   {
@@ -72,7 +75,7 @@ const domains: DomainGroup[] = [
     label: "Philosophy",
     notes: [
       "Error vs. Wrongdoing",
-      "The First Mistake Is an Error. The Third Becomes Culture.",
+      "The First Mistake Is an Error. The Third Becomes Culture",
       "Give Value, Get Respect",
       "Toxic Blame Culture",
       "Holding the Map, Hiding the Map",

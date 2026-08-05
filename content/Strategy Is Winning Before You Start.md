@@ -26,7 +26,7 @@ Most agencies compete on execution quality, which is tactics. Marginally better 
 
 The same thinking applies to [[Running a Business with ADHD]]. I can't compete on consistent daily execution-my neurology doesn't support it. So I arrange operations to win on strategic clarity and system design instead. I build frameworks the team executes within, rather than executing everything myself.
 
-In #off-grid in Nuweiba, the constraint is unreliable connectivity. I can't win by being the most responsive. So I win by having information architecture that works asynchronously. The strategic position makes tactical limitations irrelevant.
+In #off-grid in Nuweiba, the constraint is distance, not connectivity. I can't win by being the most responsive from 700km away. So I win by having information architecture that works asynchronously. The strategic position makes tactical limitations irrelevant.
 
 **The test of real strategy: does it make you harder to compete with regardless of execution quality?**
 

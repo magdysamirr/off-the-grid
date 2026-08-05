@@ -1,7 +1,7 @@
 ---
 date: 2026-08-02
 lastmod: 2026-08-02
-title: The First Mistake Is an Error. The Third Becomes Culture.
+title: The First Mistake Is an Error. The Third Becomes Culture
 type: essay
 status: seedling
 confidence: 60

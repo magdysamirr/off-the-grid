@@ -39,7 +39,7 @@ A reliable team member will make the same trade-offs you would when forced to ch
 
 ## Accountability as foundation
 
-Discipline isn't just showing up or meeting deadlines. It's [[The First Mistake Is an Error. The Third Becomes Culture.|accountability as a life foundation]]: the first slip is an [[Error vs. Wrongdoing|error]], but by the third it's a pattern, and no apology fixes a pattern. Can the team trust that when you commit, reality will match your word? That's what makes collective work possible.
+Discipline isn't just showing up or meeting deadlines. It's [[The First Mistake Is an Error. The Third Becomes Culture|accountability as a life foundation]]: the first slip is an [[Error vs. Wrongdoing|error]], but by the third it's a pattern, and no apology fixes a pattern. Can the team trust that when you commit, reality will match your word? That's what makes collective work possible.
 
 ## The real difference
 
@@ -53,3 +53,4 @@ That's why I choose discipline over brilliance. Because brilliance without relia
 
 - [[Systems Over Willpower]]: design reliability into the system
 - [[What Holds When Conditions Are Bad]]: the discipline that holds when people fail
+- [[Different Blind Spots Make Better Partners]]: the complementary half of this question

@@ -45,4 +45,4 @@ Respect is a return, not a right. [[Toxic Blame Culture|Blame]] is what you get 
 ## Continue from here
 
 - [[Holding the Map, Hiding the Map]]: the restraint principle behind the exchange
-- [[The First Mistake Is an Error. The Third Becomes Culture.]]: what the deposit does not cancel
+- [[The First Mistake Is an Error. The Third Becomes Culture]]: what the deposit does not cancel

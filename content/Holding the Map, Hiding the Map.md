@@ -44,7 +44,7 @@ The pattern is the same. The senior person carries the asymmetry. If you hold mo
 
 ## What this isn't
 
-This is not an argument against standards or consequences. People who repeatedly fail after receiving context, training, and fair conditions need to be [[The First Mistake Is an Error. The Third Becomes Culture.|held to account]]. That is a different conversation.
+This is not an argument against standards or consequences. People who repeatedly fail after receiving context, training, and fair conditions need to be [[The First Mistake Is an Error. The Third Becomes Culture|held to account]]. That is a different conversation.
 
 This is an argument against the person who skips the teaching and goes straight to the verdict. The one who holds the map, hides the map, and then blames you for getting lost. That person is not a leader. They are a trap.
 

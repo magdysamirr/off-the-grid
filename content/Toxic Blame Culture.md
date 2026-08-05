@@ -28,4 +28,4 @@ The fix is not softer management. It is honest management: teach first, then hol
 
 - [[Holding the Map, Hiding the Map]]: the argument behind the test
 - [[Give Value, Get Respect]]: the exchange that makes teaching the default
-- [[The First Mistake Is an Error. The Third Becomes Culture.]]: the difference between a first error and a pattern
+- [[The First Mistake Is an Error. The Third Becomes Culture]]: the difference between a first error and a pattern

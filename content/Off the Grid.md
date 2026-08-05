@@ -17,7 +17,7 @@ People hear "off-grid" and picture solar panels, a water well, and a smug Instag
 
 I need to correct this, because it's not what I live.
 
-I live in Nuweiba. That's not off-grid. It's a small town. There's electricity. There's internet, when it works. There are shops, neighbors, a clinic, a road. I'm not generating my own watts or drawing water from a well I dug. I'm not surviving. I'm just living in a place that asks less of me and gives me more room.
+I live in Nuweiba. That's not off-grid. It's a small town. There's electricity. There's internet. There are shops, neighbors, a clinic, a road. I'm not generating my own watts or drawing water from a well I dug. I'm not surviving. I'm just living in a place that asks less of me and gives me more room.
 
 The difference between Nuweiba and Alexandria isn't grid vs. wilderness. It's noise vs. quiet. Density vs. space. Pace vs. time.
 
@@ -39,7 +39,7 @@ I didn't become more capable here. I became less interrupted. That's the entire 
 
 I keep the phrase because it's useful shorthand, but stripped of romance it means something narrower than people imagine:
 
-- **Fewer services**, not no services. I drive further for things. The internet drops. Options are limited. But I'm not building a bunker.
+- **Fewer services**, not no services. I drive further for things. Daily supplies cost more. Options are limited. But I'm not building a bunker.
 - **Slower pace of life**, not slower thinking. Things take the time they take. Conversations start and end without someone checking their phone. Bedouins speak slowly because there's no reason to rush. That pace is the asset, not a hardship.
 - **More nature, more time.** The sea is 200 meters away. Mountains behind. Stars at night because the lights are few. Time that in a city would get absorbed by commutes and noise gets returned to me here, and I spend it on thinking.
 - **Distance as a filter.** Living 700km from the office doesn't make me rugged. It filters out the non-essential. If something reaches me here, it had to be worth the distance.
@@ -50,7 +50,7 @@ That's it. No sovereignty speech. No anti-fragility. Just a quieter operating en
 
 This part usually gets skipped, and it's the part I'm skeptical of frameworks for hiding.
 
-Nuweiba is not the opposite of fragile. It's a different kind of constraint. The power cuts. The internet drops for hours. A storm takes the cell signal down for a day. Running WordReward in Alexandria and NDC in Nuweiba from 700km apart means I can't assume connectivity, real-time presence, or that the tool I used yesterday will respond today.
+Nuweiba is not the opposite of fragile. It's a different kind of constraint, and a duller one than people expect. Water is scarce, though it has nothing to do with the work. Power cuts happen, but rarely longer than fifteen minutes. The real cost is logistics: fewer services, longer drives for basic things, higher prices on daily supplies. Running WordReward in Alexandria and NDC in Nuweiba from 700km apart means I can't assume real-time presence, or that the person I need is in the room when I need them.
 
 So one design rule fell out of the move, and it's the only one that matters: anything that only works when conditions are good is not a system. It's a hope.
 
@@ -62,7 +62,7 @@ It's not a personality. It's not a brand. It's not a recommendation. Most people
 
 But if your brain works better without the hum, if you think clearer when the noise stops, then the trade-off is worth naming honestly. You give up options and convenience. You give up being easy to reach. You get back the conditions under which you can actually think.
 
-That's the deal. Not off-grid. Just slower, smaller, quieter, and 200 meters from the sea. And it still works. Not because the setup is clever. Because it was designed to work when conditions are bad, and conditions here are often bad.
+That's the deal. Not off-grid. Just slower, smaller, quieter, and 200 meters from the sea. And it still works. Not because the setup is clever. Because it was designed to work when conditions are bad, even though most days here they aren't.
 
 <center>• • •</center>
 
@@ -71,3 +71,4 @@ That's the deal. Not off-grid. Just slower, smaller, quieter, and 200 meters fro
 - **Domain map**: [[Off-Grid Reality and Professional Obligation]]
 - **Operating application**: [[Remote Operations Without Losing Control]]
 - **Origin story**: [[Why I Moved to the Desert to Save My Brain]]
+- **What a day actually looks like**: [[Less Dramatic Than It Sounds]]
