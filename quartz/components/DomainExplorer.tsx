@@ -1,155 +1,96 @@
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import { QuartzComponent, QuartzComponentProps } from "./types"
 import { resolveRelative, simplifySlug } from "../util/path"
 
-type DomainGroup = {
+type MapEntry = {
+  topic: string
   label: string
-  map?: string
-  notes: string[]
-  children?: DomainGroup[]
+  file: QuartzComponentProps["allFiles"][number]
+  count: number
+  nested?: boolean
 }
 
-const domains: DomainGroup[] = [
-  {
-    label: "Start here",
-    map: "200 Meters",
-    notes: [
-      "About",
-      "What is this",
-      "Off-Grid Reality and Professional Obligation",
-      "Why I Moved to the Desert to Save My Brain",
-      "Off the Grid",
-      "Less Dramatic Than It Sounds",
-    ],
-  },
-  {
-    label: "ADHD",
-    map: "Running a Business with ADHD",
-    notes: [
-      "Systems Over Willpower",
-      "Think or Act, But Not Both",
-      "Structural Decisions vs Motivational Ones",
-      "What Holds When Conditions Are Bad",
-    ],
-  },
-  {
-    label: "Operations",
-    notes: [
-      "Remote Operations Without Losing Control",
-      "Why I Built an 11 PM Report",
-      "Operational Snapshot: WR, KAF, and NDC",
-      "Why I Choose Discipline Over Brilliance",
-      "Different Blind Spots Make Better Partners",
-      "Trust-Building Isn't Systems-Building",
-    ],
-  },
-  {
-    label: "Strategy",
-    map: "Strategy",
-    notes: [
-      "Strategy Is Winning Before You Start",
-      "Strategic Thinking",
-      "Trade-offs and Strategic Choices",
-      "Building Unfair Advantages",
-    ],
-    children: [
-      {
-        label: "Marketing",
-        map: "Marketing Branch: Digital Marketing and Design Strategy",
-        notes: [
-          "Why Most Marketing Isn't Strategic",
-          "Refuse the Work, or Refuse to Own It",
-        ],
-      },
-    ],
-  },
-  {
-    label: "Dentistry",
-    map: "Dentistry",
-    notes: [
-      "Why I Hate Dentistry (and Why I'm Still a Dentist)",
-      "The 7 Self-Deceptions That Shape a Dentist's Career",
-      "Administrative Friction Is Clinical Friction",
-    ],
-  },
-  {
-    label: "Philosophy",
-    notes: [
-      "Error vs. Wrongdoing",
-      "The First Mistake Is an Error. The Third Becomes Culture",
-      "Give Value, Get Respect",
-      "Toxic Blame Culture",
-      "Holding the Map, Hiding the Map",
-    ],
-  },
-]
+const topicOrder = ["off-grid", "adhd", "strategy", "dentistry"]
+const topicLabels: Record<string, string> = {
+  "off-grid": "Off-grid",
+  adhd: "ADHD",
+  strategy: "Strategy",
+  dentistry: "Dentistry",
+  marketing: "Marketing",
+}
+
+const getTopics = (file: QuartzComponentProps["allFiles"][number]) => {
+  const topics = file.frontmatter?.topics
+  return (Array.isArray(topics) ? topics : topics ? [topics] : [])
+    .filter((topic): topic is string => typeof topic === "string")
+    .map((topic) => topic.toLowerCase().trim())
+}
 
 export default (() => {
   const DomainExplorer: QuartzComponent = ({ fileData, allFiles, displayClass }: QuartzComponentProps) => {
     const currentSlug = simplifySlug(fileData.slug!)
-    const normalize = (value: string) =>
-      value.toLowerCase().replace(/[’']/g, "'").replace(/[^a-z0-9]+/g, " ").trim()
-    const findNote = (title: string) => {
-      const target = normalize(title)
-      return allFiles.find((file) => {
-        const aliases = file.frontmatter?.aliases
-        const candidates = [
-          file.frontmatter?.title,
-          ...(Array.isArray(aliases) ? aliases : aliases ? [aliases] : []),
-          file.slug?.split("/").pop()?.replace(/-/g, " "),
-        ].filter((value): value is string => typeof value === "string")
-        return candidates.some((value) => normalize(value) === target)
+    const maps = allFiles.filter((file) => file.frontmatter?.type === "map" && simplifySlug(file.slug!) !== "index")
+
+    const entries: MapEntry[] = topicOrder
+      .map((topic) => {
+        const file = maps.find((candidate) => getTopics(candidate).includes(topic) &&
+          !(topic === "strategy" && getTopics(candidate).includes("marketing") && candidate.frontmatter?.title !== "Strategy"))
+        if (!file) return null
+        const count = allFiles.filter((candidate) =>
+          simplifySlug(candidate.slug!) !== "index" &&
+          candidate.frontmatter?.type !== "map" &&
+          getTopics(candidate).includes(topic),
+        ).length
+        return { topic, label: topicLabels[topic], file, count }
+      })
+      .filter((entry): entry is MapEntry => entry !== null)
+
+    const marketingMap = maps.find((file) =>
+      getTopics(file).includes("marketing") && getTopics(file).includes("strategy") &&
+      file.frontmatter?.title !== "Strategy",
+    )
+    if (marketingMap) {
+      entries.splice(2, 0, {
+        topic: "marketing",
+        label: topicLabels.marketing,
+        file: marketingMap,
+        count: allFiles.filter((candidate) =>
+          simplifySlug(candidate.slug!) !== "index" &&
+          candidate.frontmatter?.type !== "map" &&
+          getTopics(candidate).includes("marketing"),
+        ).length,
+        nested: true,
       })
     }
-    const isCurrent = (title: string) => findNote(title)?.slug && simplifySlug(findNote(title)!.slug!) === currentSlug
 
-    const renderLink = (title: string, className = "", displayText?: string) => {
-      const file = findNote(title)
-      if (!file?.slug) return null
+    const renderMap = (entry: MapEntry) => {
+      const slug = simplifySlug(entry.file.slug!)
+      const active = slug === currentSlug
       return (
         <a
-          href={resolveRelative(fileData.slug!, file.slug)}
-          class={`domain-explorer__link internal ${className} ${isCurrent(title) ? "is-current" : ""}`}
+          href={resolveRelative(fileData.slug!, entry.file.slug!)}
+          class={`domain-explorer__map ${entry.nested ? "domain-explorer__map--nested" : ""} ${active ? "is-current" : ""}`}
+          aria-current={active ? "page" : undefined}
           data-no-popover="true"
         >
-          {displayText ?? title}
+          <span>{entry.label}</span>
+          <span class="domain-explorer__count" aria-label={`${entry.count} notes`}>{entry.count}</span>
         </a>
-      )
-    }
-
-    const renderGroup = (group: DomainGroup, nested = false) => {
-      const active =
-        (group.map ? isCurrent(group.map) : false) ||
-        group.notes.some(isCurrent) ||
-        group.children?.some(
-          (child) => (child.map ? isCurrent(child.map) : false) || child.notes.some(isCurrent),
-        )
-      return (
-        <details class={`domain-explorer__group ${nested ? "domain-explorer__group--nested" : ""}`} open={active}>
-          <summary>
-            <span class="domain-explorer__chevron" aria-hidden="true">›</span>
-            {group.map ? renderLink(group.map, "domain-explorer__map", group.label) : <span class="domain-explorer__link domain-explorer__map">{group.label}</span>}
-          </summary>
-          <div class="domain-explorer__notes">
-            {group.notes.map((title) => renderLink(title))}
-            {group.children?.map((child) => renderGroup(child, true))}
-          </div>
-        </details>
       )
     }
 
     return (
       <nav class={`${displayClass ?? ""} domain-explorer`} aria-label="Explore domains">
         <p class="domain-explorer__title">Explore</p>
-        <div class="domain-explorer__groups">
-          {domains.map((domain) => renderGroup(domain))}
+        <div class="domain-explorer__maps">
+          {entries.map(renderMap)}
         </div>
         <details class="domain-explorer__mobile">
           <summary>
             <span class="domain-explorer__mobile-icon" aria-hidden="true">☰</span>
             <span>Explore</span>
           </summary>
-          <div class="domain-explorer__groups">
-            {domains.map((domain) => renderGroup(domain))}
+          <div class="domain-explorer__maps">
+            {entries.map(renderMap)}
           </div>
         </details>
       </nav>
@@ -164,7 +105,7 @@ export default (() => {
     }
 
     .domain-explorer__title {
-      margin: 0 0 0.55rem;
+      margin: 0 0 0.7rem;
       color: var(--darkgray);
       font-size: 0.72rem;
       font-weight: 600;
@@ -176,71 +117,50 @@ export default (() => {
       display: none;
     }
 
-    .domain-explorer__group {
-      margin: 0.15rem 0;
-    }
-
-    .domain-explorer__group summary {
+    .domain-explorer__maps {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       gap: 0.25rem;
-      cursor: pointer;
-      list-style: none;
     }
 
-    .domain-explorer__group summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .domain-explorer__chevron {
-      display: inline-block;
-      width: 0.8rem;
-      color: var(--tertiary);
-      font-size: 1.1rem;
-      line-height: 1;
-      transition: transform 120ms ease;
-    }
-
-    .domain-explorer__group[open] > summary .domain-explorer__chevron {
-      transform: rotate(90deg);
-    }
-
-    .domain-explorer .domain-explorer__link {
-      display: block;
-      overflow: hidden;
-      padding: 0.18rem 0;
+    .domain-explorer__map {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.65rem;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid transparent;
       color: var(--darkgray);
-      font-size: 0.82rem;
+      font-size: 0.88rem;
       line-height: 1.25;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      text-decoration: none;
+      transition: color 160ms ease, border-color 160ms ease;
     }
 
-    .domain-explorer .domain-explorer__map {
-      padding: 0.28rem 0;
-      color: var(--dark);
-      font-size: 0.9rem;
-      font-weight: 500;
+    .domain-explorer__map--nested {
+      margin-left: 0.85rem;
+      padding-left: 0.7rem;
+      border-left: 1px solid var(--lightgray);
+      font-size: 0.82rem;
     }
 
-    .domain-explorer .domain-explorer__link:hover,
-    .domain-explorer .domain-explorer__link.is-current {
+    .domain-explorer__count {
+      flex: 0 0 auto;
+      color: var(--darkgray);
+      font-size: 0.7rem;
+      opacity: 0.7;
+    }
+
+    .domain-explorer__map:hover,
+    .domain-explorer__map.is-current {
+      border-color: var(--secondary);
       color: var(--secondary);
     }
 
-    .domain-explorer__notes {
-      margin: 0.15rem 0 0.35rem 1.05rem;
-      padding-left: 0.65rem;
-      border-left: 1px solid var(--lightgray);
-    }
-
-    .domain-explorer__group--nested {
-      margin-top: 0.3rem;
-    }
-
-    .domain-explorer__group--nested > summary .domain-explorer__map {
-      font-size: 0.8rem;
-      font-weight: 500;
+    .domain-explorer__map:hover .domain-explorer__count,
+    .domain-explorer__map.is-current .domain-explorer__count {
+      color: var(--secondary);
+      opacity: 1;
     }
 
     @media all and (max-width: 1100px) {
@@ -261,7 +181,7 @@ export default (() => {
       }
 
       .domain-explorer > .domain-explorer__title,
-      .domain-explorer > .domain-explorer__groups {
+      .domain-explorer > .domain-explorer__maps {
         display: none;
       }
 
@@ -278,13 +198,11 @@ export default (() => {
         align-items: center;
         gap: 0.55rem;
         padding: 0.65rem 0.8rem;
+        color: var(--dark);
         cursor: pointer;
-        color: var(--darkgray);
-        font-size: 0.78rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
+        font-size: 0.85rem;
+        font-weight: 500;
         list-style: none;
-        text-transform: uppercase;
       }
 
       .domain-explorer__mobile > summary::-webkit-details-marker {
@@ -294,16 +212,14 @@ export default (() => {
       .domain-explorer__mobile-icon {
         color: var(--secondary);
         font-size: 1rem;
-        line-height: 1;
       }
 
-      .domain-explorer__mobile[open] > .domain-explorer__groups {
-        display: block;
-        padding: 0.4rem 0.8rem 0.75rem;
-        border-top: 1px solid var(--lightgray);
+      .domain-explorer__mobile > .domain-explorer__maps {
+        display: flex;
+        padding: 0 0.8rem 0.7rem;
       }
     }
   `
 
   return DomainExplorer
-}) satisfies QuartzComponentConstructor
+}) satisfies QuartzComponent

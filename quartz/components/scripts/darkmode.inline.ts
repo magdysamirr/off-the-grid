@@ -1,9 +1,7 @@
-const themeStorageKey = "theme-mode"
 const colorSchemeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
 const systemTheme = colorSchemeMediaQuery.matches ? "dark" : "light"
-const storedTheme = localStorage.getItem(themeStorageKey)
-const currentTheme = storedTheme === "light" || storedTheme === "dark" ? storedTheme : systemTheme
-document.documentElement.setAttribute("saved-theme", currentTheme)
+let manualTheme: "light" | "dark" | null = null
+document.documentElement.setAttribute("saved-theme", systemTheme)
 
 const emitThemeChangeEvent = (theme: "light" | "dark") => {
   const event: CustomEventMap["themechange"] = new CustomEvent("themechange", {
@@ -16,14 +14,14 @@ document.addEventListener("nav", () => {
   const switchTheme = () => {
     const newTheme =
       document.documentElement.getAttribute("saved-theme") === "dark" ? "light" : "dark"
+    manualTheme = newTheme
     document.documentElement.setAttribute("saved-theme", newTheme)
-    localStorage.setItem(themeStorageKey, newTheme)
     emitThemeChangeEvent(newTheme)
   }
 
   const themeChange = (e: MediaQueryListEvent) => {
     const newTheme = e.matches ? "dark" : "light"
-    if (localStorage.getItem(themeStorageKey)) return
+    if (manualTheme) return
     document.documentElement.setAttribute("saved-theme", newTheme)
     emitThemeChangeEvent(newTheme)
   }
