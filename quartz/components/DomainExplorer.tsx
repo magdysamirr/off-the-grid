@@ -49,7 +49,7 @@ export default (() => {
       file.frontmatter?.title !== "Strategy",
     )
     if (marketingMap) {
-      entries.splice(2, 0, {
+      entries.splice(3, 0, {
         topic: "marketing",
         label: topicLabels.marketing,
         file: marketingMap,
