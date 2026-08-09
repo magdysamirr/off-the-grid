@@ -7,7 +7,6 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.PageTransition(),
-    Component.DomainNotes(),
     Component.Signature(), // Signature above backlinks
     Component.Backlinks(), // Moved from right sidebar to below content
     Component.PrevNext(),
@@ -37,6 +36,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
+    Component.DomainNotes(),
     Component.MobileOnly(Component.DomainExplorer()),
     // Component.TagList(), // Removed - tags appear at bottom of notes only
   ],

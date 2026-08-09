@@ -42,8 +42,10 @@ export default (() => {
 
     return (
       <section class="domain-notes" aria-labelledby="domain-notes-title">
-        <h2 id="domain-notes-title">All {topicLabels[topic]} notes</h2>
-        <p class="domain-notes__intro">{notes.length} notes in this path.</p>
+        <div class="domain-notes__heading">
+          <h2 id="domain-notes-title">All {topicLabels[topic]} notes</h2>
+          <span class="domain-notes__intro">{notes.length} notes</span>
+        </div>
         <ul class="domain-notes__list">
           {notes.map((note) => (
             <li>
@@ -62,28 +64,36 @@ export default (() => {
 
   DomainNotes.css = `
     .domain-notes {
-      margin: 4rem 0 2rem;
-      padding-top: 1.5rem;
+      margin: 0.9rem 0 2.5rem;
+      padding: 0.75rem 0 0.9rem;
       border-top: 1px solid var(--lightgray);
+      border-bottom: 1px solid var(--lightgray);
+    }
+
+    .domain-notes__heading {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.65rem;
     }
 
     .domain-notes h2 {
-      margin: 0 0 0.35rem;
+      margin: 0;
       color: var(--secondary);
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 400;
     }
 
     .domain-notes__intro {
-      margin: 0 0 1rem;
       color: var(--darkgray);
-      font-size: 0.85rem;
+      font-size: 0.72rem;
+      opacity: 0.75;
     }
 
     .domain-notes__list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.55rem 2rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.35rem 1.25rem;
       margin: 0;
       padding: 0;
       list-style: none;
@@ -95,8 +105,7 @@ export default (() => {
       justify-content: space-between;
       gap: 0.75rem;
       min-width: 0;
-      padding-bottom: 0.35rem;
-      border-bottom: 1px solid color-mix(in srgb, var(--lightgray) 55%, transparent);
+      padding-bottom: 0.2rem;
     }
 
     .domain-notes__list a {
@@ -116,7 +125,7 @@ export default (() => {
 
     @media (max-width: 700px) {
       .domain-notes {
-        margin-top: 2.5rem;
+        margin-bottom: 2rem;
       }
 
       .domain-notes__list {
