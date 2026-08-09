@@ -27,6 +27,7 @@ import Signature from "./Signature"
 import PageTransition from "./PageTransition"
 import PrevNext from "./PrevNext"
 import DomainExplorer from "./DomainExplorer"
+import DomainNotes from "./DomainNotes"
 
 export {
   ArticleTitle,
@@ -58,4 +59,5 @@ export {
   PageTransition,
   PrevNext,
   DomainExplorer,
+  DomainNotes,
 }
