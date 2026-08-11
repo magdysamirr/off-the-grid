@@ -178,11 +178,11 @@ a {
   transition: color 0.2s ease;
 }
 
-// Hover effect for all links and clickable elements - #48A9A6
+// Hover effect for all links and clickable elements - #168685
 a:hover,
 button:hover,
 .clickable:hover {
-  color: #48A9A6 !important;
+  color: #168685 !important;
 }
 
 // ============================================================================
@@ -545,10 +545,10 @@ a.external {
   transition: color 0.2s ease;
 
   &:hover {
-    color: #48A9A6 !important;
+    color: #168685 !important;
 
     .external-icon path {
-      fill: #48A9A6 !important;
+      fill: #168685 !important;
     }
   }
 
@@ -576,8 +576,8 @@ article a.internal {
   transition: color 0.2s ease, border-bottom-color 0.2s ease;
 
   &:hover {
-    color: #48A9A6 !important;
-    border-bottom-color: #48A9A6 !important;
+    color: #168685 !important;
+    border-bottom-color: #168685 !important;
   }
 }
 
@@ -638,7 +638,7 @@ article a.internal {
 }
 
 .tags a:hover {
-  color: #48A9A6 !important;
+  color: #168685 !important;
 }
 
 // ============================================================================
@@ -736,7 +736,7 @@ button#explorer-ul {
   transition: color 0.2s ease;
 
   &:hover {
-    color: #48A9A6 !important;
+    color: #168685 !important;
   }
 }
 
@@ -957,7 +957,7 @@ footer a {
   transition: color 0.2s ease;
 
   &:hover {
-    color: #48A9A6 !important;
+    color: #168685 !important;
   }
 }
 
@@ -1026,7 +1026,7 @@ footer a {
   transition: color 0.2s ease;
 
   &:hover {
-    color: #48A9A6 !important;
+    color: #168685 !important;
   }
 }
 
@@ -1236,7 +1236,7 @@ blockquote p,
   filter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(504%) hue-rotate(329deg) brightness(101%) contrast(96%);
 }
 
-// Hover effect for both light and dark mode - #48A9A6
+// Hover effect for both light and dark mode - #168685
 :root[saved-theme="dark"] .signature-wrapper a:hover .signature-image {
   filter: brightness(0) saturate(100%) invert(48%) sepia(51%) saturate(459%) hue-rotate(128deg) brightness(93%) contrast(89%) !important;
 }
