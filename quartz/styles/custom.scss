@@ -76,21 +76,19 @@ html {
 }
 
 // Keep discovery rails quiet until the reader reaches for them.
-.domain-explorer,
+// The explorer fades per item instead of as a whole block, so the current
+// page stays legible at rest. See DomainExplorer.tsx.
 .toc {
   opacity: 0.3;
   transition: opacity 0.2s ease;
 }
 
-.domain-explorer:hover,
 .toc:hover {
   opacity: 1;
 }
 
 @media (max-width: 1200px) {
-  .domain-explorer,
   .toc,
-  .domain-explorer:hover,
   .toc:hover {
     opacity: 1;
   }
@@ -265,7 +263,7 @@ h6 { font-size: 0.95rem !important; }
 
 // In-article headings (not the article/blog title, not UI panel headings
 // like Graph/Backlinks) use a dimmed base text color instead of the teal
-// accent, sit just above body text size, and use a lighter weight —
+// accent, sit just above body text size, and use a lighter weight,
 // in both light and dark mode. An h1 written inside a note's own body
 // (e.g. a markdown "# Heading") counts as in-article too.
 article h1:not(.article-title),

@@ -12,7 +12,7 @@ topics:
 - adhd
 - systems
 ---
-![A passive signal connecting an off-grid operator, team, and clinic](./static/notes/passive-visibility.png)
+![A passive signal connecting an off-grid operator, team, and clinic](./static/notes/passive-visibility.webp)
 
 > I'm skeptical of frameworks that work perfectly in theory. I'm interested in what holds when conditions are bad, resources are limited, and you can't rely on consistency.
 

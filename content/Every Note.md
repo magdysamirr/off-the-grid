@@ -7,7 +7,7 @@ status: evergreen
 threads: true
 dg-publish: true
 ---
-Six threads, every note in each. Pick one — the notes link onward from there, you don't have to come back here to keep reading.
+Six threads, every note in each. Pick one. The notes link onward from there, so you don't have to come back here to keep reading.
 
 ### Off-grid
 Life and operations under constraint.

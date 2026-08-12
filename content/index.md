@@ -26,7 +26,7 @@ From the desert, only 200 meters from the sea.
 
 ## Explore the garden
 
-Six threads, every note in each. Pick one — the notes link onward from there, you don't have to come back here to keep reading.
+Six threads, every note in each. Pick one. The notes link onward from there, so you don't have to come back here to keep reading.
 
 Five ways in below. The whole tree lives in [[Every Note]].
 

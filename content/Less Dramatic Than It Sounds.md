@@ -25,7 +25,7 @@ The story people expect is dramatic: the internet drops, the power dies, you're 
 
 What actually costs something is duller. Water is scarce here, though it has nothing to do with the work, it's just a fact of the desert. Daily supplies cost more than they would in Alexandria. Services are fewer, so errands take longer than they should. None of it is a crisis. All of it adds friction to a day that would otherwise be simple.
 
-![A page of real doodles from my notebook: perspective sketches of the clinic, texture studies, cube shading practice, and a few pen drawings done between other things](./static/notes/doodles-collage.jpg)
+![A page of real doodles from my notebook: perspective sketches of the clinic, texture studies, cube shading practice, and a few pen drawings done between other things](./static/notes/doodles-collage.webp)
 
 ## The part that surprised me
 

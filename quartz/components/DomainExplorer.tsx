@@ -63,18 +63,18 @@ export default (() => {
     }
 
     const fullIndex = allFiles.find((file) => file.frontmatter?.threads === true)
-    if (fullIndex) {
-      entries.unshift({
-        topic: "all",
-        label: "Every note",
-        file: fullIndex,
-        count: allFiles.filter((candidate) =>
-          candidate.slug !== "index" &&
-          candidate.slug !== fullIndex.slug &&
-          candidate.frontmatter?.type !== "map",
-        ).length,
-      })
-    }
+    const allEntry: MapEntry | null = fullIndex
+      ? {
+          topic: "all",
+          label: "Every note",
+          file: fullIndex,
+          count: allFiles.filter((candidate) =>
+            candidate.slug !== "index" &&
+            candidate.slug !== fullIndex.slug &&
+            candidate.frontmatter?.type !== "map",
+          ).length,
+        }
+      : null
 
     const renderMap = (entry: MapEntry) => {
       const slug = simplifySlug(entry.file.slug!)
@@ -82,11 +82,11 @@ export default (() => {
       return (
         <a
           href={resolveRelative(fileData.slug!, entry.file.slug!)}
-          class={`domain-explorer__map ${entry.nested ? "domain-explorer__map--nested" : ""} ${active ? "is-current" : ""}`}
+          class={`domain-explorer__map ${entry.nested ? "domain-explorer__map--nested" : ""} ${entry.topic === "all" ? "domain-explorer__map--all" : ""} ${active ? "is-current" : ""}`}
           aria-current={active ? "page" : undefined}
           data-no-popover="true"
         >
-          <span>{entry.label}</span>
+          <span class="domain-explorer__label">{entry.label}</span>
           <span class="domain-explorer__count" aria-label={`${entry.count} notes`}>{entry.count}</span>
         </a>
       )
@@ -96,7 +96,8 @@ export default (() => {
       <nav class={`${displayClass ?? ""} domain-explorer`} aria-label="Explore domains">
         <p class="domain-explorer__title">Explore</p>
         <div class="domain-explorer__maps">
-          {entries.map(renderMap)}
+          {allEntry && renderMap(allEntry)}
+          <div class="domain-explorer__tree">{entries.map(renderMap)}</div>
         </div>
         <details class="domain-explorer__mobile">
           <summary>
@@ -104,7 +105,8 @@ export default (() => {
             <span>Explore</span>
           </summary>
           <div class="domain-explorer__maps">
-            {entries.map(renderMap)}
+            {allEntry && renderMap(allEntry)}
+            <div class="domain-explorer__tree">{entries.map(renderMap)}</div>
           </div>
         </details>
       </nav>
@@ -114,17 +116,24 @@ export default (() => {
   DomainExplorer.css = `
     .domain-explorer {
       width: 100%;
-      max-width: 13rem;
+      max-width: 12rem;
       margin-top: 1rem;
     }
 
     .domain-explorer__title {
-      margin: 0 0 0.7rem;
+      margin: 0 0 0.45rem;
+      padding-left: 0.5rem;
       color: var(--darkgray);
-      font-size: 0.72rem;
+      font-size: 0.62rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.14em;
+      opacity: 0.45;
       text-transform: uppercase;
+      transition: opacity 200ms ease;
+    }
+
+    .domain-explorer:hover .domain-explorer__title {
+      opacity: 0.75;
     }
 
     .domain-explorer__mobile {
@@ -134,47 +143,121 @@ export default (() => {
     .domain-explorer__maps {
       display: flex;
       flex-direction: column;
-      gap: 0.25rem;
     }
 
     .domain-explorer__map {
+      position: relative;
       display: flex;
       align-items: baseline;
-      justify-content: space-between;
-      gap: 0.65rem;
-      padding: 0.35rem 0;
-      border-bottom: 1px solid transparent;
-      color: var(--darkgray);
-      font-size: 0.88rem;
-      line-height: 1.25;
+      gap: 0.5rem;
+      padding: 0.28rem 0.4rem 0.28rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.84rem;
+      line-height: 1.3;
+      opacity: 0.6;
       text-decoration: none;
-      transition: color 160ms ease, border-color 160ms ease;
+      transition: opacity 200ms ease, background 120ms ease;
+    }
+
+    .domain-explorer:hover .domain-explorer__map,
+    .domain-explorer__map.is-current {
+      opacity: 1;
+    }
+
+    /* The spine turns five loose links into one tree, and gives the current
+       page something to sit against. */
+    .domain-explorer__tree {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.3rem;
+      padding-left: 0.55rem;
+      border-left: 1px solid var(--lightgray);
+    }
+
+    .domain-explorer__tree .domain-explorer__map::before {
+      content: "";
+      position: absolute;
+      top: 0.3rem;
+      bottom: 0.3rem;
+      left: calc(-0.55rem - 1px);
+      width: 2px;
+      background: transparent;
+      transition: background 120ms ease;
+    }
+
+    .domain-explorer__map--all {
+      font-weight: 500;
+    }
+
+    .domain-explorer__map--all .domain-explorer__label {
+      color: var(--dark);
     }
 
     .domain-explorer__map--nested {
-      margin-left: 0.85rem;
-      padding-left: 0.7rem;
-      border-left: 1px solid var(--lightgray);
-      font-size: 0.82rem;
+      margin-left: 0.7rem;
+      font-size: 0.79rem;
+    }
+
+    .domain-explorer__map--nested .domain-explorer__label::before {
+      content: "";
+      display: inline-block;
+      width: 0.5rem;
+      height: 1px;
+      margin-right: 0.4rem;
+      vertical-align: 0.25em;
+      background: var(--lightgray);
+    }
+
+    /* The global stylesheet sets "a { color: var(--tertiary) !important }", so
+       the state colours live on this span rather than on the anchor. */
+    .domain-explorer__label {
+      min-width: 0;
+      overflow: hidden;
+      color: var(--darkgray);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      transition: color 120ms ease;
     }
 
     .domain-explorer__count {
       flex: 0 0 auto;
+      margin-left: auto;
       color: var(--darkgray);
-      font-size: 0.7rem;
-      opacity: 0.7;
+      font-family: var(--codeFont);
+      font-size: 0.66rem;
+      font-variant-numeric: tabular-nums;
+      opacity: 0.5;
     }
 
-    .domain-explorer__map:hover,
+    .domain-explorer__map:hover {
+      background: var(--highlight);
+    }
+
     .domain-explorer__map.is-current {
-      border-color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .domain-explorer__map.is-current::before {
+      background: var(--secondary);
+    }
+
+    .domain-explorer__map:hover .domain-explorer__label,
+    .domain-explorer__map.is-current .domain-explorer__label {
       color: var(--secondary);
     }
 
     .domain-explorer__map:hover .domain-explorer__count,
     .domain-explorer__map.is-current .domain-explorer__count {
       color: var(--secondary);
-      opacity: 1;
+      opacity: 0.85;
+    }
+
+    @media all and (max-width: 1200px) {
+      /* No hover to reach for on touch, so the rail rests at full strength. */
+      .domain-explorer__map,
+      .domain-explorer__title {
+        opacity: 1;
+      }
     }
 
     @media all and (max-width: 1100px) {
