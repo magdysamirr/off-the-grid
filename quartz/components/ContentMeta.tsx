@@ -130,7 +130,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       return (
         <>
           <p show-comma={false} class={classNames(displayClass, "content-meta", isRTL ? "rtl" : "")}>
-            {segments}
+            <span class="content-meta__facts">{segments}</span>
             <span class="text-size-controls" aria-label="Text size">
               <button type="button" data-reading-size="default" aria-label="Default text size" title="Default text size">A</button>
               <button type="button" data-reading-size="large" aria-label="Larger text" title="Larger text">A+</button>
