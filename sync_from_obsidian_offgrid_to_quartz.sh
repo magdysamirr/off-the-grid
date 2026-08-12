@@ -7,6 +7,7 @@ QUARTZ_DST="/Users/theparadox/Documents/Magdy Workspace/01_LIVE_PROJECTS/Digital
 # Notes that are part of the published garden
 files=(
   "index.md"
+  "Every Note.md"
   "About.md"
   "What is this.md"
   "Off the Grid.md"

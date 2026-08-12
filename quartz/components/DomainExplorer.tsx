@@ -28,7 +28,7 @@ const getTopics = (file: QuartzComponentProps["allFiles"][number]) => {
 export default (() => {
   const DomainExplorer: QuartzComponent = ({ fileData, allFiles, displayClass }: QuartzComponentProps) => {
     const currentSlug = simplifySlug(fileData.slug!)
-    const maps = allFiles.filter((file) => file.frontmatter?.type === "map" && simplifySlug(file.slug!) !== "index")
+    const maps = allFiles.filter((file) => file.frontmatter?.type === "map" && file.slug !== "index")
 
     const entries: MapEntry[] = topicOrder
       .map((topic) => {
@@ -36,7 +36,7 @@ export default (() => {
           !(topic === "strategy" && getTopics(candidate).includes("marketing") && candidate.frontmatter?.title !== "Strategy"))
         if (!file) return null
         const count = allFiles.filter((candidate) =>
-          simplifySlug(candidate.slug!) !== "index" &&
+          candidate.slug !== "index" &&
           candidate.frontmatter?.type !== "map" &&
           getTopics(candidate).includes(topic),
         ).length
@@ -54,11 +54,25 @@ export default (() => {
         label: topicLabels.marketing,
         file: marketingMap,
         count: allFiles.filter((candidate) =>
-          simplifySlug(candidate.slug!) !== "index" &&
+          candidate.slug !== "index" &&
           candidate.frontmatter?.type !== "map" &&
           getTopics(candidate).includes("marketing"),
         ).length,
         nested: true,
+      })
+    }
+
+    const fullIndex = allFiles.find((file) => file.frontmatter?.threads === true)
+    if (fullIndex) {
+      entries.unshift({
+        topic: "all",
+        label: "Every note",
+        file: fullIndex,
+        count: allFiles.filter((candidate) =>
+          candidate.slug !== "index" &&
+          candidate.slug !== fullIndex.slug &&
+          candidate.frontmatter?.type !== "map",
+        ).length,
       })
     }
 

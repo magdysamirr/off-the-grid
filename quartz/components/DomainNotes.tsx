@@ -31,15 +31,13 @@ const isMarketingMap = (file: QuartzComponentProps["allFiles"][number]) =>
 
 export default (() => {
   const DomainNotes: QuartzComponent = ({ fileData, allFiles }: QuartzComponentProps) => {
-    if (fileData.frontmatter?.type !== "map") return null
-
     const notesOnly = allFiles.filter(
       (file) => file.frontmatter?.type !== "map" && file.slug !== "index",
     )
     const countFor = (topic: string) =>
       notesOnly.filter((file) => getTopics(file).includes(topic)).length
 
-    if (fileData.slug === "index") {
+    if (fileData.frontmatter?.threads === true) {
       const maps = allFiles.filter(
         (file) => file.frontmatter?.type === "map" && file.slug !== "index",
       )
@@ -80,6 +78,8 @@ export default (() => {
         </nav>
       )
     }
+
+    if (fileData.frontmatter?.type !== "map") return null
 
     const mapTopics = getTopics(fileData)
     const topic = isMarketingMap(fileData)
