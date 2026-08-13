@@ -1,12 +1,25 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VAULT_SRC="/Users/theparadox/Library/Mobile Documents/iCloud~md~obsidian/Documents/The Paradox/Off-Grid"
+VAULT_SRC="/Users/theparadox/Library/Mobile Documents/iCloud~md~obsidian/Documents/The Paradox/200 Meters"
 QUARTZ_DST="/Users/theparadox/Documents/Magdy Workspace/01_LIVE_PROJECTS/Digital_Garden_200_Meters/Quartz_200_Meters/content"
+
+# Quartz content/ is flat, because note URLs are derived from it. In the vault the
+# same notes sit either at the top of "200 Meters" or inside a topic subfolder
+# such as Off-Grid, so look the file up by name rather than assuming a path.
+vault_path() {
+  local name="$1"
+  if [[ -f "$VAULT_SRC/$name" ]]; then
+    printf '%s' "$VAULT_SRC/$name"
+    return 0
+  fi
+  find "$VAULT_SRC" -type f -name "$name" -print -quit
+}
 
 # Notes that are part of the published garden
 files=(
   "index.md"
+  "Every Note.md"
   "About.md"
   "What is this.md"
   "Off the Grid.md"
@@ -45,17 +58,23 @@ files=(
 
 missing=0
 for f in "${files[@]}"; do
-  if [[ ! -f "$VAULT_SRC/$f" ]]; then
+  src="$(vault_path "$f")"
+  if [[ -z "$src" ]]; then
     echo "MISSING in vault: $f" >&2
     missing=$((missing+1))
     continue
   fi
-  cp "$VAULT_SRC/$f" "$QUARTZ_DST/$f"
-  echo "synced: $f"
+  cp "$src" "$QUARTZ_DST/$f"
+  rel="${src#"$VAULT_SRC"/}"
+  if [[ "$rel" == "$f" ]]; then
+    echo "synced: $f"
+  else
+    echo "synced: $f (from $rel)"
+  fi
 done
 
 if [[ $missing -gt 0 ]]; then
-  echo "\nWARNING: $missing files were missing in the vault source folder. Quartz mirror may be incomplete." >&2
+  printf '\nWARNING: %s files were missing in the vault source folder. Quartz mirror may be incomplete.\n' "$missing" >&2
 fi
 
-echo "\nDone. Vault → Quartz content sync complete."
+printf '\nDone. Vault → Quartz content sync complete.\n'
