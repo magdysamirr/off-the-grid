@@ -468,16 +468,27 @@ export async function handleBuild(argv) {
   }
 
   if (argv.watch) {
-    const paths = await globby([
-      "**/*.ts",
-      "quartz/cli/*.js",
-      "quartz/static/**/*",
-      "**/*.tsx",
-      "**/*.scss",
-      "package.json",
-    ])
+    const paths = await globby(
+      [
+        "**/*.ts",
+        "quartz/cli/*.js",
+        "quartz/static/**/*",
+        "**/*.tsx",
+        "**/*.scss",
+        "package.json",
+      ],
+      {
+        ignore: [
+          "**/node_modules/**",
+          "**/.npm-cache/**",
+          "**/.git/**",
+          "**/.quartz-cache/**",
+          `${argv.output}/**`,
+        ],
+      },
+    )
     chokidar
-      .watch(paths, { ignoreInitial: true })
+      .watch(paths, { ignoreInitial: true, followSymlinks: false })
       .on("add", () => build(clientRefresh))
       .on("change", () => build(clientRefresh))
       .on("unlink", () => build(clientRefresh))
