@@ -95,9 +95,12 @@ html {
 }
 
 // Align the top-rail controls with the "200 Meters" title line, below the mark.
+// Offset, never transform: a transformed ancestor traps position: fixed children, so the search and
+// graph overlays opened inside a 16px box off to the right instead of covering the screen.
 @media (min-width: 800px) {
   .page-header .flex-component > div:nth-child(n + 2) {
-    transform: translateY(3.25rem);
+    position: relative;
+    top: 3.25rem;
   }
 }
 
