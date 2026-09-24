@@ -34,6 +34,8 @@ Five ways in below. The whole tree lives in [[Every Note]].
 - [[What is this]]: what this place is, who it's for, and what the confidence bars mean
 - [[Why I Moved to the Desert to Save My Brain]]: the origin story
 - [[Running a Business with ADHD]]: running a company on a brain that won't cooperate
+- [[Management Is an Algorithm]]: turning scattered input into useful attention and accountable action
+- [[Tana Made Work Move]]: how a capture tool changed the way I organize and think
 - [[Strategy Is Winning Before You Start]]: positioning before the fight, not during it
 - [[Why I Hate Dentistry (and Why I'm Still a Dentist)]]: the honest version of that contradiction
 

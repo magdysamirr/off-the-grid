@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SRC="/Users/theparadox/Documents/Magdy Workspace/01_LIVE_PROJECTS/Digital_Garden_200_Meters/Quartz_200_Meters/content"
+SRC="/Users/theparadox/Documents/Magdy Workspace/05_PER/Projects/Digital_Garden_200_Meters/Quartz_200_Meters/content"
 VAULT_DST="/Users/theparadox/Library/Mobile Documents/iCloud~md~obsidian/Documents/The Paradox/200 Meters"
 
 # Quartz content/ is flat. In the vault a note may already live inside a topic

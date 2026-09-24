@@ -24,9 +24,9 @@ Date of snapshot: **April 23, 2026**
 
 ### Latest signal
 
-- On **April 22, 2026**, WR closed **9 Vikunja tasks**.
-- As of **April 23, 2026**, WR had **9 overdue tasks across 8 projects**.
-- A related software sprint board under the WR umbrella still showed **6 overdue sprint items**.
+- On **April 22, 2026**, WRD closed **9 Vikunja tasks**.
+- As of **April 23, 2026**, WRD had **9 overdue tasks across 8 projects**.
+- A related software sprint board under the WRD umbrella still showed **6 overdue sprint items**.
 
 ### Most recent full work block
 
@@ -39,7 +39,7 @@ From **April 11 to April 16, 2026**:
 
 ### What this means
 
-WR is producing output, but timing discipline is still unstable. The problem is not total motion. The problem is how much of that motion lands late.
+WRD is producing output, but timing discipline is still unstable. The problem is not total motion. The problem is how much of that motion lands late.
 
 ## KAF
 
@@ -65,7 +65,7 @@ As of **April 23, 2026**:
 
 ### What this means
 
-KAF looks cleaner than WR at the surface because the board shows zero overdue items, but it is still concentrated risk. Three meaningful items are in progress at once under one developer, and the board has weak deadline pressure.
+KAF looks cleaner than WRD at the surface because the board shows zero overdue items, but it is still concentrated risk. Three meaningful items are in progress at once under one developer, and the board has weak deadline pressure.
 
 ## NDC
 
@@ -93,7 +93,7 @@ NDC was operationally active and commercially productive, but collection lag and
 
 These are three different realities:
 
-- WR is execution-heavy and team-distributed
+- WRD is execution-heavy and team-distributed
 - KAF is product-heavy and developer-constrained
 - NDC is clinical, calendar-based, and cash-flow-sensitive
 
@@ -101,7 +101,7 @@ The value of a real report is not that it looks impressive.
 
 The value is that it lets me see, in one page, where friction is coming from:
 
-- timing discipline in WR
+- timing discipline in WRD
 - concentration risk in KAF
 - follow-up and collections in NDC
 

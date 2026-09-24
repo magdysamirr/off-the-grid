@@ -50,7 +50,7 @@ Everything else is downstream.
 
 1) **Authoring** happens in Obsidian (iCloud vault).
 2) Notes are mirrored into the Quartz repo content folder:
-   `/Users/theparadox/Documents/Magdy Workspace/01_LIVE_PROJECTS/Digital_Garden_200_Meters/Quartz_200_Meters/content/`
+   `/Users/theparadox/Documents/Magdy Workspace/05_PER/Projects/Digital_Garden_200_Meters/Quartz_200_Meters/content/`
 3) Quartz builds the site and Vercel publishes it at `magdysamir.online`.
 
 ## Why this matters

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 VAULT_SRC="/Users/theparadox/Library/Mobile Documents/iCloud~md~obsidian/Documents/The Paradox/200 Meters"
-QUARTZ_DST="/Users/theparadox/Documents/Magdy Workspace/01_LIVE_PROJECTS/Digital_Garden_200_Meters/Quartz_200_Meters/content"
+QUARTZ_DST="/Users/theparadox/Documents/Magdy Workspace/05_PER/Projects/Digital_Garden_200_Meters/Quartz_200_Meters/content"
 
 # Quartz content/ is flat, because note URLs are derived from it. In the vault the
 # same notes sit either at the top of "200 Meters" or inside a topic subfolder
@@ -19,6 +19,18 @@ vault_path() {
 # Notes that are part of the published garden
 files=(
   "index.md"
+  "Management Is an Algorithm.md"
+  "Tana Made Work Move.md"
+  "Blind Spots.md"
+  "Weak Links.md"
+  "Bottlenecks.md"
+  "Contradictions.md"
+  "Conflicts.md"
+  "Fluctuations.md"
+  "Inconsistencies.md"
+  "Illogic.md"
+  "Irrelevance.md"
+  "Risk.md"
   "Every Note.md"
   "About.md"
   "What is this.md"

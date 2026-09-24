@@ -19,6 +19,7 @@ Life and operations under constraint.
 ### ADHD
 Systems for attention, memory, and execution.
 - [[Running a Business with ADHD]]: running a company on a brain that won't cooperate
+- [[Tana Made Work Move]]: capture first, connect and clarify as understanding arrives
 - [[Systems Over Willpower]]: design around your brain, don't fight it
 - [[Think or Act, But Not Both]]: why switching mid-task fails
 - [[Structural Decisions vs Motivational Ones]]: decisions that don't depend on how you feel that day
@@ -28,7 +29,7 @@ Systems for attention, memory, and execution.
 Running WordReward, KAF, and NDC without being in the room.
 - [[Remote Operations Without Losing Control]]: running a team you can't see
 - [[Why I Built an 11 PM Report]]: the check-in that replaced babysitting the team
-- [[Operational Snapshot: WR, KAF, and NDC]]: how the three businesses actually run, side by side
+- [[Operational Snapshot: WRD, KAF, and NDC]]: how the three businesses actually run, side by side
 - [[Why I Choose Discipline Over Brilliance]]: reliability beats talent, every time
 - [[Different Blind Spots Make Better Partners]]: why a partner who thinks differently is worth the friction
 - [[Trust-Building Isn't Systems-Building]]: the skill my processes can't replace
