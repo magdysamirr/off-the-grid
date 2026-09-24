@@ -53,5 +53,5 @@ Personal example: I wanted to read more consistently. I'll read 30 minutes befor
 ## Continue from here
 
 - [[Systems Over Willpower|ADHD and systems]]: the cognitive constraint
-- [[Operational Snapshot: WRD, KAF, and NDC|WordReward operations]]: the operating evidence
+- [[Operational Snapshot - WR, KAF, and NDC|WordReward operations]]: the operating evidence
 - [[Off-Grid Reality and Professional Obligation|delegation at scale]]: the structural application

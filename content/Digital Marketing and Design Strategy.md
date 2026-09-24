@@ -9,7 +9,7 @@ topics:
 - strategy
 ---
 
-Marketing without strategy is noise generation. Most agencies execute tactics-run ads, post content, send emails-without building durable competitive position. At WordReward, we start with strategic questions: What position are we building? What trade-offs create unfair advantages? How does each execution compound previous work?
+Marketing without [[Strategy|strategy]] is noise generation. Most agencies execute tactics-run ads, post content, send emails-without building durable competitive position. At WordReward, we start with strategic questions: What position are we building? What trade-offs create unfair advantages? How does each execution compound previous work?
 
 The work is choosing what not to do, accepting trade-offs, and building positions that strengthen with each execution.
 
@@ -27,6 +27,6 @@ The work is choosing what not to do, accepting trade-offs, and building position
 
 ## Continue from here
 
-- **Parent map**: [[Strategy]]
+- **Parent map**: Strategy
 - **Operating constraint**: [[Running a Business with ADHD]]
 - **Context**: [[Off-Grid Reality and Professional Obligation]]

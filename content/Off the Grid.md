@@ -27,7 +27,7 @@ That's the whole trade. And it's the only one my brain needed.
 
 I didn't leave a utility grid. I left a pace of life.
 
-Cities run on a fake urgency. Traffic that pretends to be importance, notifications that pretend to be relevance, a hum that convinces you everything is urgent so you never stop to check if any of it matters. My ADHD brain doesn't filter that hum. It absorbs it. And after thirty years of absorbing it, I was running on fumes, not strategy.
+Cities run on a fake urgency. Traffic that pretends to be importance, notifications that pretend to be relevance, a hum that convinces you everything is urgent so you never stop to check if any of it matters. My ADHD brain doesn't filter that hum. It absorbs it. And after thirty years of absorbing it, I was running on fumes, not [[Strategy|strategy]].
 
 Let me be clear about something, because it's easy to misread: my brain doesn't think slowly. The problem was never that the city was faster than my mind. The problem was that the city is fragmented, and a brain that doesn't think slowly, fed constant interruptions, doesn't think better. It just burns hotter with less to show for it.
 

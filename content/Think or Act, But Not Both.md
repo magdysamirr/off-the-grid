@@ -22,7 +22,7 @@ In doing mode, you're executing against a clear plan. Writing the email, buildin
 
 **The catastrophic mistake is trying to think while doing or do while thinking.**
 
-When you're in execution mode and stop to reconsider strategy, you break flow and lose momentum. When you're in thinking mode and try to execute simultaneously, you produce low-quality strategy and low-quality execution. The context-switch penalty for ADHD brains is enormous, not minutes, but hours to regain the previous state.
+When you're in execution mode and stop to reconsider [[Strategy|strategy]], you break flow and lose momentum. When you're in thinking mode and try to execute simultaneously, you produce low-quality strategy and low-quality execution. The context-switch penalty for ADHD brains is enormous, not minutes, but hours to regain the previous state.
 
 This is why most productivity advice fails for ADHD brains. "Just start working and adjust as you go" assumes you can think and do in parallel. You can't. "Plan everything perfectly before starting" assumes unlimited thinking-mode availability. You don't have that either.
 
@@ -58,6 +58,6 @@ Most people leak between modes constantly, never fully committing to either. The
 
 ## Continue from here
 
-- [[Systems Over Willpower]]: why systems that expect mode-switching fail
+- Systems Over Willpower: why systems that expect mode-switching fail
 - [[Structural Decisions vs Motivational Ones]]: build the structure that removes the switch
-- [[Running a Business with ADHD]]: the operating constraint this protects
+- Running a Business with ADHD: the operating constraint this protects

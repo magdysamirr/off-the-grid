@@ -43,7 +43,7 @@ The system that doesn't need the favorable input to function.
 - **Remote ops**: the report surfaces problems. It doesn't wait for people to raise their hand.
 - **ADHD**: tasks live where the decision happens. The next action is there without memory or motivation.
 - **The clinic**: the hire makes taking work back harder than letting it go. Behavior follows structure.
-- **Strategy**: the position holds when execution is mediocre. If it vanishes on a bad week, it was never a position.
+- **[[Strategy]]**: the position holds when execution is mediocre. If it vanishes on a bad week, it was never a position.
 
 One test, applied four ways: strip the favorable condition, see what's still standing.
 

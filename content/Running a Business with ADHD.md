@@ -29,4 +29,4 @@ The useful question is not how to become more consistent. It is how to build Wor
 ## Continue from here
 
 - **Environment**: [[Off-Grid Reality and Professional Obligation]]
-- **Systems lens**: [[Systems Over Willpower]]
+- **Systems lens**: Systems Over Willpower

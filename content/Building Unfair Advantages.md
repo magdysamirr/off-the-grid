@@ -44,7 +44,7 @@ Manufactured difference doesn't compound. You can fake enthusiasm for maybe 30 d
 
 Before we take a client: what do they have that competitors can't easily copy? If the answer is "nothing yet" or "we'll create something in the campaign," that's where we [[Refuse the Work, or Refuse to Own It|try to walk away]].
 
-Strategy without actual advantage isn't strategy. It's [[What Holds When Conditions Are Bad|expensive hope]]. And hope doesn't win against infinite scroll.
+[[Strategy]] without actual advantage isn't strategy. It's [[What Holds When Conditions Are Bad|expensive hope]]. And hope doesn't win against infinite scroll.
 
 The advantage already exists. Our job is finding it, defining it, making it obvious, then presenting it through strategy competitors can't copy and won't risk trying.
 
@@ -55,4 +55,4 @@ The advantage already exists. Our job is finding it, defining it, making it obvi
 - [[Strategic Thinking]]: the position that makes the advantage structural
 - [[Strategy Is Winning Before You Start]]: choose the battlefield before the tactic
 - [[Why Most Marketing Isn't Strategic]]: tactics without position is noise
-- [[Refuse the Work, or Refuse to Own It]]: the agency application
+- Refuse the Work, or Refuse to Own It: the agency application

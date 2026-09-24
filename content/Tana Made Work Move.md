@@ -18,7 +18,7 @@ Tana changed the order. I can capture a thought while it is still messy, then co
 
 That changed how I think. I don't have to finish the thought before I save it. I can catch it, see what it connects to, and clarify it when I have context. A meeting becomes more than notes: it can reveal decisions, promises, questions, and patterns across projects.
 
-Tana became my workspace for what is moving. [[Obsidian]] is where knowledge settles and grows. Tana helps me stay with today's work without pretending my attention or memory will be consistent. The system can hold the thread while my mind moves to the next thing.
+Tana became my workspace for what is moving. Obsidian is where knowledge settles and grows. Tana helps me stay with today's work without pretending my attention or memory will be consistent. The system can hold the thread while my mind moves to the next thing.
 
 It is still a practice, not a victory story. The change is that organizing no longer has to come before thinking. Capture first. Connect and clarify as understanding arrives.
 
@@ -26,4 +26,4 @@ It is still a practice, not a victory story. The change is that organizing no lo
 
 - [[Management Is an Algorithm]]: connect new input with what is already known
 - [[Systems Over Willpower]]: design around real attention and energy
-- [[My Process-Led Design, Dynamic Task Intelligence System]]: the underlying task-system design
+- My Process-Led Design, Dynamic Task Intelligence System: the underlying task-system design

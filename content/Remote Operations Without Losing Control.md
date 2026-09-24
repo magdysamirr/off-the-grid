@@ -18,7 +18,7 @@ topics:
 
 Distance is a distraction. It does not matter whether the team is 70 kilometers away or 700. Digital work already removes the physical office from the equation.
 
-The real problem is incomplete observation. A project-management tool can show assigned tasks, updated statuses, and recorded activity. It cannot tell me whether someone understood the assignment, noticed the risk, communicated before acting, or had the judgment to handle an unexpected problem.
+The real problem is incomplete observation. A project-management tool can show assigned tasks, updated statuses, and recorded activity. It cannot tell me whether someone understood the assignment, noticed the [[Risk|risk]], communicated before acting, or had the judgment to handle an unexpected problem.
 
 Software records traces. People reveal capacity.
 

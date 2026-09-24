@@ -23,4 +23,5 @@ A weak link is a vulnerability to examine, not a verdict about a person's worth.
 ## Continue from here
 
 - [[Management Is an Algorithm]]
+- [[Bottlenecks]]
 - [[Remote Operations Without Losing Control]]

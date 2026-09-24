@@ -48,7 +48,7 @@ That is the only reason I care about this category of tooling.
 
 One public example of that reporting style:
 
-- **Evidence**: [[Operational Snapshot: WRD, KAF, and NDC]]
+- **Evidence**: [[Operational Snapshot - WR, KAF, and NDC]]
 
 ## Continue from here
 

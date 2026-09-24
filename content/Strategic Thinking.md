@@ -15,7 +15,7 @@ dg-publish: true
 
 I played chess long before I ran a business. The same lesson kept showing up: the player with the better position wins, even when the other player finds better moves.
 
-Strategy is position. Tactics are moves. Confuse the two and you'll spend years perfecting moves that lose.
+[[Strategy]] is position. Tactics are moves. Confuse the two and you'll spend years perfecting moves that lose.
 
 ## Position beats tactics
 

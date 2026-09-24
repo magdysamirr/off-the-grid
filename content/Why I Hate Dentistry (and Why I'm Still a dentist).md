@@ -18,7 +18,7 @@ Imagine spending 25 years trying to escape a single decision you made at 17, and
 
 It's 2000, one year before graduation, entering the clinical section of removable prosthesis. That's the moment I knew: this isn't for me. The realization hit hard, but I was already four years deep into a five-year program. So what do you do with that knowledge? You finish. You graduate. You become a dentist because that's what you're supposed to do with a dental degree.
 
-I worked as a dentist for a while, then tried escaping as a medical rep for two years, anything to get away from clinical work. Didn't take. Came back to dentistry for ten years because bills don't pay themselves. Then I tried the business route for three years. Failed again.
+I worked as a dentist for a while, then tried escaping as a medical rep for two years, anything to get away from clinical work. Didn't take. Came back to [[Dentistry|dentistry]] for ten years because bills don't pay themselves. Then I tried the business route for three years. Failed again.
 
 ## The Trap
 
@@ -60,4 +60,4 @@ If you want to see where this tension goes in practice:
 
 - [[Why I Moved to the Desert to Save My Brain]]: the off-grid context
 - [[Running a Business with ADHD]]: the ADHD and career constraint
-- [[Administrative Friction Is Clinical Friction]]: the clinical operations consequence
+- Administrative Friction Is Clinical Friction: the clinical operations consequence

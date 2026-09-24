@@ -10,7 +10,7 @@ topics:
 - strategy
 ---
 
-Most marketing is tactical execution disguised as strategy. Someone runs ads, posts content, sends emails, and calls it a marketing strategy. It's not. It's a list of tactics without strategic foundation.
+Most marketing is tactical execution disguised as [[Strategy|strategy]]. Someone runs ads, posts content, sends emails, and calls it a marketing strategy. It's not. It's a list of tactics without strategic foundation.
 
 **Strategy answers "why should someone choose us over alternatives" in a way that compounds over time.** Tactics answer "what should we do this week." You need both, but tactics without strategy is just noise generation.
 
@@ -52,6 +52,6 @@ The test: if you stopped all marketing activity today, would anything persist? W
 
 ## Continue from here
 
-- [[Strategy Is Winning Before You Start]]: choose the position before the tactic
-- [[Building Unfair Advantages]]: build what compounds
+- Strategy Is Winning Before You Start: choose the position before the tactic
+- Building Unfair Advantages: build what compounds
 - [[Refuse the Work, or Refuse to Own It]]: the agency application

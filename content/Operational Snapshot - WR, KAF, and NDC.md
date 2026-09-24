@@ -65,7 +65,7 @@ As of **April 23, 2026**:
 
 ### What this means
 
-KAF looks cleaner than WRD at the surface because the board shows zero overdue items, but it is still concentrated risk. Three meaningful items are in progress at once under one developer, and the board has weak deadline pressure.
+KAF looks cleaner than WRD at the surface because the board shows zero overdue items, but it is still concentrated [[Risk|risk]]. Three meaningful items are in progress at once under one developer, and the board has weak deadline pressure.
 
 ## NDC
 

@@ -19,7 +19,7 @@ Every system I've built, every decision I write about, came from a real constrai
 I'm skeptical of frameworks that work perfectly in theory.
 I'm interested in [[What Holds When Conditions Are Bad|what holds when conditions are bad]], resources are limited, and you can't rely on consistency.
 
-Strategy, systems design, and what actually happens when you apply both to a business that has to function in the real world.
+[[Strategy]], systems design, and what actually happens when you apply both to a business that has to function in the real world.
 
 **What to expect:**
 Long gaps between posts. No filler.

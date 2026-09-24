@@ -10,7 +10,7 @@ topics:
 - marketing
 ---
 
-Most people mistake tactics for strategy. They think strategy means having a plan. It doesn't. Strategy means arranging conditions so you win regardless of tactics.
+Most people mistake tactics for [[Strategy|strategy]]. They think strategy means having a plan. It doesn't. Strategy means arranging conditions so you win regardless of tactics.
 
 In chess, strategy is controlling the center and developing pieces so you have more options than your opponent. Tactics are the specific move sequences. You can execute brilliant tactics and still lose if your strategic position is weak. You can execute mediocre tactics and win if your strategic position is strong.
 

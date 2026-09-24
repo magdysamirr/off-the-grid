@@ -33,4 +33,4 @@ We don't market. We mark.
 - **Prerequisite**: [[Strategy Is Winning Before You Start]]
 - **Core framework**: [[Strategic Thinking]]
 - **Counterpoint**: [[Why Most Marketing Isn't Strategic]]
-- **Compounding application**: [[Building Unfair Advantages]]
+- **Compounding application**: Building Unfair Advantages

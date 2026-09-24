@@ -37,4 +37,4 @@ I expected off-grid to feel like a trade: give up convenience, get back time. Th
 
 - [[Off the Grid]]: what off-grid actually costs, without the myth
 - [[Why I Moved to the Desert to Save My Brain]]: the origin story this day is the result of
-- [[Structural Decisions vs Motivational Ones]]: why the work has structure and the rest of the day doesn't need one
+- Structural Decisions vs Motivational Ones: why the work has structure and the rest of the day doesn't need one

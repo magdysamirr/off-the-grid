@@ -21,7 +21,7 @@ We're treating the trade-off like a puzzle to solve rather than a choice to make
 
 #### Fake Strategy vs Real Strategy
 
-Most strategic decisions aren't strategic. Real strategy requires eliminating options permanently. Fake strategy preserves optionality while pretending to choose.
+Most strategic decisions aren't strategic. Real [[Strategy|strategy]] requires eliminating options permanently. Fake strategy preserves optionality while pretending to choose.
 
 We'll focus on premium clients, sounds strategic. But if our pricing still allows budget projects, we haven't made a trade-off, we've made a preference. And preferences collapse under pressure. Worse: premium clients can smell the hesitation. They know we'll discount when desperate, so they negotiate harder. Budget clients expect premium effort because our positioning says premium. We end up delivering premium work at budget prices, the worst of both worlds.
 #### The ADHD Perfectionism Trap

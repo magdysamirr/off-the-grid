@@ -24,5 +24,5 @@ Fix the constraint first: protect its time, move work off it, or add capacity th
 ## Continue from here
 
 - [[Management Is an Algorithm]]
-- [[Weak Links]]
+- Weak Links
 - [[Risk]]

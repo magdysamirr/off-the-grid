@@ -37,7 +37,7 @@ Life is unfair. But I refuse to add unnecessary cruelty to necessary decisions. 
 
 **In marketing:** I've turned down clients I knew would demand dishonest tactics. Lost revenue, kept my conscience intact. I've also launched campaigns that flopped, honest miscalculation, no guilt.
 
-**In dentistry:** I've referred patients to specialists when I wasn't 100% certain I couldn't handle the case myself. Lost income, protected the patient, slept fine. I've also made clinical calls that didn't work out, error in judgment, not ethical violation.
+**In [[Dentistry|dentistry]]:** I've referred patients to specialists when I wasn't 100% certain I couldn't handle the case myself. Lost income, protected the patient, slept fine. I've also made clinical calls that didn't work out, error in judgment, not ethical violation.
 
 **With ADHD:** I forget commitments. Miss deadlines despite trying. Make impulsive decisions I later regret. These are errors from how my brain works, not moral failures. But when I commit to something knowing I won't follow through? That's wrongdoing, and my conscience knows it.
 
