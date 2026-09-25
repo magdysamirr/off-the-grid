@@ -143,6 +143,14 @@ h6 {
 // ============================================================================
 
 // Text selection contrast
+:root {
+  --search-match-bg: rgba(22, 134, 133, 0.14);
+}
+
+:root[saved-theme="dark"] {
+  --search-match-bg: rgba(50, 169, 164, 0.22);
+}
+
 ::selection {
   background-color: var(--secondary) !important;
   color: var(--light) !important;
