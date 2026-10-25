@@ -1,154 +1,93 @@
 ---
-date: 2026-09-23
-lastmod: 2026-09-24
-title: Management Is an Algorithm
-aliases:
-- management doctrine
-- the look-for list
 type: evergreen
+title: Management Is an Algorithm
+date: 2026-09-23
+lastmod: 2026-10-25
+aliases:
+  - management doctrine
+  - the look-for list
 status: growing
 confidence: 75
 topics:
-- strategy
-- adhd
-- systems
-- management
+  - management
+  - strategy
+  - systems
+  - adhd
 dg-publish: true
 ---
 
-> I don't need more information. I need to know which piece of it should change what I do today.
+When someone tells me "it's handled," what do I actually know?
 
-I run several businesses: an agency, clinics I manage, and apps still being built. What reaches me each day isn't a report. It's pieces.
+I know they said it. I don't yet know what they did, whether it worked, or whether the next person has what they need.
 
-A complaint with no name on it. A date with no subject. A voice note that only makes sense next to a conversation from three weeks ago. A file dropped into a chat with one word under it.
+A lot of management happens in that distance between a statement and its consequences. Closing it takes a sequence of questions, and those questions can be made explicit, repeated, and improved. That's what I mean by an algorithm.
 
-For years I was the thing that connected those pieces. That doesn't scale, and with ADHD it doesn't even hold for a full day. So I wrote down how I actually manage. It turned out to be an algorithm.
+## What am I looking for?
 
-## Many doors, three sources
+I receive messages, reports, requests, and numbers from several businesses. Reading all of them doesn't tell me what needs attention. Each piece has to be connected to what I already know.
 
-Input reaches me through many doors, and the list keeps growing. The doors matter less than who is speaking through them, and there are only three sources.
+A task is late. On its own, that says very little. The deadline was unrealistic, or the owner is waiting on an approval, or nobody ever agreed who the owner was. Each explanation calls for a different response, and sending another reminder before I know which one adds work without moving anything.
 
-**What I capture.** My notes to myself: the notes app I capture into, voice memos I record in the moment, and the reminders and calendar events I set. These are the fastest input and the least complete. I write them for a version of me who still remembers the context, and that version is gone by evening. A capture usually names a date or a thing, but not who it's about. The risk here is misreading: filing a fragment as the wrong thing.
+So I start with a comparison: **what should be happening, and what evidence do I have about what is happening?**
 
-**What others send me.** Emails, WhatsApp messages, WhatsApp voice notes, and the meetings I record. This is where requests, complaints, updates and news come from: the team, clients, partners, suppliers. Reports from the systems where the work happens belong here too, because someone else set them up to speak to me. It carries a sender, which makes it easier to route. But a sender isn't proof. A message saying something happened is a claim until it's checked, and a name mentioned in a message doesn't mean that person was involved. The risk here is believing too quickly.
+The gap is where I investigate.
 
-**What I tell the system.** Chats, the files I attach to them, and my answers to the one list where the system collects its questions for me. This is the highest authority of the three. When I answer, it's a fact about the business. The risk here is the opposite: because it's authoritative, it's tempting to write it straight into the records and skip the trail.
+## A problem has a shape
 
-Voice memos split across two sources. A memo of a meeting holds other people's words; a memo of a moment holds mine. The door is the channel. The source is who is speaking. **Sort by source, not by door.**
+Say a weekly report keeps arriving late.
 
-That's also why the list of doors can stay open. A phone call, a conversation in a corridor, a letter, a new app someone adds next year: a new door doesn't get new rules. It gets sorted into one of the three sources and inherits their rules. If it doesn't fit any of them, that's the finding, and the doctrine gets looked at before the door does.
+I could treat each delay as its own incident: ask for the report, receive it, repeat next week. But the repetition is information. It points at the process producing the report; the late arrival is just where the problem showed up.
 
-Reminders and calendar events are the clearest case, because they come back. I set them as output, and they return as input. A reminder ticked or a meeting that happened is news. A reminder left open for two weeks, or an event moved three times, is a signal, usually a plateau before anyone calls it one. An invite from someone else is what others send me, like any message.
+If every report waits for one person's approval, that's a bottleneck. If two people each believe the other owns it, that's a conflict of expectations. If it arrives on time and nobody uses it to decide anything, the question is whether it's relevant at all.
 
-All three land in the same place first: the day's note, with the source attached. Nothing goes straight into the record. Not even what I say myself.
+That's why I keep a list of patterns to look for: [[Blind Spots|blind spots]], [[Weak Links|weak links]], [[Bottlenecks|bottlenecks]], [[Contradictions|contradictions]], [[Conflicts|conflicts]], [[Fluctuations|fluctuations]], [[Inconsistencies|inconsistencies]], [[Illogic|illogic]], [[Irrelevance|irrelevance]], and [[Risk|risk]].
 
-The source also decides where the input starts. What I tell the system goes to the top once it's registered. What others send starts low and has to earn its way up. What I capture waits until something connects it to a person or a piece of work.
+They help me form questions; the answers have to come from evidence. Calling something a bottleneck is only useful if I can say what is waiting, where it's waiting, and why.
 
-The reason for all of this is the trail. A fact that can't say where it came from is a claim. Six weeks later, when two records disagree, the trail is the only thing that settles it without asking me twice.
+## A response needs a return path
 
-## Read from the top down
+Once I understand enough to act, the response needs an owner and an expected result.
 
-This is the core of it. Information lives in levels, and new input gets checked against the highest level first, then the next one down, until something from my look-for list shows up.
+"Improve reporting" leaves too much open. "Send the report every Thursday" is clearer, but it still leaves a question: what happens when Thursday passes and nothing arrives?
 
-1. **What I've decided or answered.** My answer is a fact about the business, not an opinion to weigh against a record. If they disagree, the record is the bug.
-2. **The rules.** Policies, protocols, standing agreements.
-3. **The canonical record.** Who a person is, what a client pays for, what a project promised.
-4. **Current state.** What's happening this week.
-5. **History and raw notes.** Everything else.
+A decision needs a way back into observation. Otherwise I've issued an instruction and left it to memory to find out whether it worked.
 
-Stop when something shows. Most input never gets past level two, and that's fine.
+The loop is:
 
-Why top down? Because newer isn't truer. A WhatsApp message saying one thing doesn't overwrite a decision I made last month. It collides with it, and **the collision is the finding.**
+**Observe → compare → investigate → act → check the result.**
 
-## The look-for list
+Checking can show the action was wrong. The report went to someone who can't reach the numbers. Removing the approval made it faster and less reliable. The next pass through the loop uses what the last one taught me.
 
-The list is a checklist, not a mood. Ten things:
+## The gap between deciding and knowing
 
-| Look for            | What it looks like                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Look for            | What it means here                                                                                                             |
-| [[Blind Spots]]     | An important area that is unseen, unexamined, or not being monitored.                                                          |
-| [[Weak Links]]      | A component or dependency whose failure can undermine the larger system.                                                       |
-| [[Bottlenecks]]     | The one constrained step, person, or resource that limits how much the whole system can move, however hard the rest works.     |
-| [[Contradictions]]  | Claims or records that cannot both be true in the same respect and at the same time.                                           |
-| [[Conflicts]]       | Incompatible interests, goals, needs, or expectations that create opposition or force a choice.                                |
-| [[Fluctuations]]    | Meaningful movement up and down in a measure or behaviour; investigate before calling it a trend or problem.                   |
-| [[Inconsistencies]] | Mismatches between claims, standards, or repeated handling; unlike a contradiction, they need not make both claims impossible. |
-| [[Illogic]]         | Reasoning or a decision that does not follow coherently from its premises, evidence, or stated objective.                      |
-| [[Irrelevance]]     | Information or effort that has no material bearing on the question, objective, or decision at hand.                            |
-| [[Risk]]            | The effect of uncertainty on objectives, including possible harm, loss, delay, or lost opportunity.                            |
+I can decide who owns a task. Completion is a fact I discover later, from the result.
 
-If new input trips none of them, it gets filed quietly. That's most input. **That's the point.** A system that makes noise about everything has taught me to ignore it.
+That matters when records disagree. A message saying "done" is evidence. So is the missing result. Both need to stay on the table long enough to explain the gap between them.
 
-## Connect before concluding
+The same goes for my own assumptions. If I remember agreeing a deadline and nobody else understood it that way, repeating my memory more firmly won't repair the process.
 
-A fragment is not a fact. Before anything gets filed, the system has to find who and what it's about.
+A useful system keeps three things apart: where information came from, what was decided, and what was observed. That's what lets me revise my understanding instead of defending it.
 
-It learned this the hard way. A captured line about a jaw support solution planned for the 26th got filed as my own plan. It was a patient's arrival date. Keywords guessed. Context would have known.
+## Where automation helps
 
-So the rule is simple. If nobody and nothing known is named, the item waits as unresolved. **A wrong route is worse than a slow one**, because it looks finished.
+I run businesses remotely, with ADHD. Holding these loops in my head doesn't last a day.
 
-## Weight is earned, never inherited
+Software can hold a commitment, connect it to a later message, notice that its date has passed, and bring it back with the context. It applies the same checks to more work than I could watch myself.
 
-I track entities, projects, requests, complaints, people, businesses, clients, and events. Each one carries a weight, and the weight has to come from somewhere:
+But first I have to know what I want checked. If a process depends on an approval nobody records, the software has nothing to follow. If I've never defined a good result, more reports won't settle it.
 
-- **Direct input.** I said it matters.
-- **Context.** Someone is blocked by it, or something depends on it.
-- **Situation.** A deadline, a season, someone just left.
+Building the system forced me to explain my management: what counts as evidence, which differences matter, when to investigate, and when a person has to make the call. That's the real value of writing the algorithm down. I can examine it. Other people can follow it. When something slips through, we can find the missing check and add it.
 
-These stay separate. "Magdy said this is urgent" and "this looks urgent because the deadline is Thursday and two people are waiting" are both valid. They are not the same kind of evidence.
+## Back to "it's handled"
 
-And weight is never inherited. A small task under an important client isn't important because of its parent. The parent is a ceiling, not a starting point.
+Now the sentence has a test. Handled means someone owns it, the result can be seen, and there's a date when we look again. Without those, all we have is a description of the work. Nothing yet shows it happened.
 
-## Ideas get a place before a verdict
-
-An idea spoken aloud is not a task. It deserves to be written down before it disappears, then judged on three separate questions:
-
-- **Potential.** If this works, what does it make possible?
-- **Achievability.** Can we do it with the people, time and position we actually have?
-- **Constraints.** What blocks it, limits it, or makes the cost too high?
-
-"Noted" is not a classification. Every idea gets all three.
-
-Good artists copy, great artists steal. The useful part isn't imitation. It's spotting the mechanism in someone else's field and making it work in mine.
-
-## KPIs live where the work lives
-
-KPIs belong to the entity, project or relationship they measure. The people closest to the work set them and watch them in the system where the work happens.
-
-I don't operate every metric in every business. I get the change: a number moved, a target was reached, a target was missed, a trend turned. With enough context to decide whether I should care.
-
-The exception is a high-stakes project or relationship. Then the measure itself earns a place in my system, because the stakes have crossed out of ordinary local management.
-
-## The fewest moving parts
-
-Least change possible. Least moving parts. Win-win where it exists. A clear owner for every next move.
-
-This isn't minimalism for its own sake. A missing check that lets a serious problem through isn't simplicity. A second dashboard repeating the first isn't control.
-
-Two rules came out of real failures:
-
-**A failure must be loud.** A system that returns nothing when it can't read its source looks exactly like a system with nothing to report. Everything downstream believes the empty answer.
-
-**Correct at the source.** When I corrected who heads the nursing team at one clinic, the fix went into a summary. The summary was rebuilt from the old record, and I corrected it again the same day. Fix the record that produced the error, then rebuild what it made.
-
-The progression is **data to information, information to knowledge, knowledge to automation.** Each step has to earn the next. Automating a stale fact only makes the error faster.
-
-## What I need back
-
-Three things. Simplicity. To be called when there's an issue. And to be called when something is heading **downhill, or has gone flat.**
-
-The plateau is the one systems miss. Nothing is red. Nothing moved. It looks like stability. It's usually the start of decline, and a flat line is a finding.
-
-I have authority and I want collaboration. They don't compete. My job isn't to touch every task. It's to make sure every important thing has an owner, the right people can act, and the decisions that need me reach me in time.
-
-So I don't judge this by how clever it sounds. I judge it by one question: **does the business notice things before I have to?**
+And when the same problem comes back, blame is the easy question and the least useful one. Ask two questions instead: **what did we learn last time, and where should that learning have changed the process?**
 
 <center>• • •</center>
 
 ## Continue from here
 
-- [[Systems Over Willpower]]: design for the brain you have, not the one you wish you had
-- [[Why I Built an 11 PM Report]]: one daily signal instead of constant checking
-- [[Remote Operations Without Losing Control]]: ownership and feedback at a distance
-- [[Running a Business with ADHD]]: where most of these rules came from
+- [[The First Mistake Is an Error. The Third Becomes Culture]]: what repetition reveals
+- [[Remote Operations Without Losing Control]]: the dashboard is not the team
+- [[Running a Business with ADHD]]: why the loop can't live in my head

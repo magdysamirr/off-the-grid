@@ -54,7 +54,6 @@ files=(
   "Administrative Friction Is Clinical Friction.md"
   "The 7 Self-Deceptions That Shape a Dentist's Career.md"
   "Why I Built an 11 PM Report.md"
-  "Operational Snapshot - WR, KAF, and NDC.md"
   "Why I Moved to the Desert to Save My Brain.md"
   "Why I Choose Discipline Over Brilliance.md"
   "Different Blind Spots Make Better Partners.md"
