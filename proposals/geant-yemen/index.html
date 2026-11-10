@@ -6,10 +6,7 @@
     <title>Géant Yemen Proposal</title>
     <meta name="description" content="عرض WordReward لإدارة صفحات جيان هايبرماركت، عدن مول." />
     <meta property="og:title" content="WordReward × Géant Yemen" />
-    <meta
-      property="og:description"
-      content="وجهان لعملة واحدة. افتحه على الموبايل، واقلب العملة."
-    />
+    <meta property="og:description" content="عرض لإدارة صفحات جيان على مواقع التواصل." />
     <meta property="og:image" content="assets/og.png" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -18,11 +15,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&family=Noto+Kufi+Arabic:wght@600;700;800&family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@600;700&family=Almarai:wght@400;700;800&family=Montserrat:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&family=Noto+Kufi+Arabic:wght@600;700&family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@600;700&family=Almarai:wght@400;700;800&family=Montserrat:wght@700&display=swap"
       rel="stylesheet"
     />
     <style>
-      /* Layout: one reading column; the cube and the footer sit on full-bleed navy bands. */
+      /* Layout: one column on phones; two columns (heading beside content) from tablet width up. */
       :root {
         /* WRD brand, light mode (WordReward Brand Colors) */
         --bg: #f7f3eb;
@@ -38,8 +35,7 @@
         --band-muted: rgba(255, 252, 249, 0.74);
         --band-line: rgba(255, 252, 249, 0.14);
         --band-accent: #ffdb8e;
-        --shadow: rgba(30, 31, 39, 0.26);
-        --amber: #ffdb8e;
+        --shadow: rgba(30, 31, 39, 0.24);
         /* Géant colours, only inside the sample cards */
         --g-green: #3daa35;
         --g-green-d: #2a8a24;
@@ -53,7 +49,7 @@
         --en-display: Rockwell, "Rockwell Nova", Clarendon, "Roboto Slab", Georgia, serif;
         --g-ar: "Almarai", var(--ar);
         --g-en: "Montserrat", var(--en);
-        --gutter: clamp(16px, 5vw, 48px);
+        --gutter: clamp(16px, 5vw, 56px);
       }
       @media (prefers-color-scheme: dark) {
         :root:not([data-theme="light"]) {
@@ -94,6 +90,9 @@
       * {
         box-sizing: border-box;
       }
+      [hidden] {
+        display: none !important;
+      }
       html {
         -webkit-text-size-adjust: 100%;
         scroll-behavior: smooth;
@@ -120,9 +119,6 @@
       a {
         color: inherit;
       }
-      [hidden] {
-        display: none !important;
-      }
       [data-t]:empty {
         display: none;
       }
@@ -132,11 +128,11 @@
         border-radius: 4px;
       }
       .wrap {
-        width: min(100% - 2 * var(--gutter), 760px);
+        width: min(100% - 2 * var(--gutter), 1080px);
         margin-inline: auto;
       }
       section {
-        padding-block: clamp(64px, 12vw, 112px);
+        padding-block: clamp(56px, 9vw, 96px);
         scroll-margin-top: 60px;
       }
       h1,
@@ -146,7 +142,7 @@
         margin: 0;
         font-family: var(--ar-display);
         font-weight: 700;
-        line-height: 1.25;
+        line-height: 1.3;
         text-wrap: balance;
       }
       html[lang="en"] h1,
@@ -157,19 +153,22 @@
         font-family: var(--en);
         font-weight: 600;
       }
+      h1 {
+        font-size: clamp(30px, 6.4vw, 48px);
+      }
       h2 {
-        font-size: clamp(28px, 6.4vw, 46px);
-        margin-bottom: 16px;
+        font-size: clamp(26px, 4.6vw, 36px);
+        margin-bottom: 12px;
       }
       h3 {
-        font-size: 19px;
+        font-size: 18px;
         margin-bottom: 4px;
       }
       p {
         margin: 0 0 12px;
       }
       .lead {
-        font-size: clamp(18px, 4.2vw, 21px);
+        font-size: 18px;
         color: var(--muted);
       }
       .kicker {
@@ -177,10 +176,10 @@
         align-items: center;
         gap: 10px;
         font: 600 13px/1.4 var(--en);
-        letter-spacing: 0.14em;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--fg);
-        margin: 0 0 14px;
+        margin: 0 0 12px;
       }
       html[lang="ar"] .kicker {
         font-family: var(--ar);
@@ -216,6 +215,26 @@
         color: var(--band-muted);
       }
 
+      /* the two-column split */
+      .split {
+        display: grid;
+        gap: 22px;
+      }
+      .split > * {
+        min-width: 0;
+      }
+      @media (min-width: 760px) {
+        .split {
+          grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+          gap: 56px;
+          align-items: start;
+        }
+        .side {
+          position: sticky;
+          top: 84px;
+        }
+      }
+
       /* top bar */
       .bar {
         position: fixed;
@@ -237,7 +256,6 @@
         background: var(--surface);
         border: 1px solid var(--line);
         border-radius: 999px;
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
       }
       .brand {
         display: flex;
@@ -268,23 +286,39 @@
 
       /* HERO + COIN */
       #hero {
-        padding-top: calc(86px + env(safe-area-inset-top, 0px));
-        padding-bottom: 56px;
-        text-align: center;
-        overflow: hidden;
+        padding-top: calc(84px + env(safe-area-inset-top, 0px));
+      }
+      .hero {
+        display: grid;
+        gap: 8px;
+        align-items: center;
+      }
+      .hero .stage {
+        order: -1;
+      }
+      @media (min-width: 760px) {
+        .hero {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+          gap: 40px;
+        }
+        .hero .stage {
+          order: 0;
+        }
+      }
+      .hero-text .lead {
+        margin-top: 12px;
       }
       .stage {
         position: relative;
         width: 100%;
-        height: min(70vw, 380px);
-        min-height: 270px;
-        margin: 4px auto 0;
+        height: min(78vw, 380px);
+        min-height: 260px;
         touch-action: pan-y;
         cursor: grab;
         user-select: none;
         -webkit-user-select: none;
         -webkit-tap-highlight-color: transparent;
-        perspective: 900px;
+        perspective: 1000px;
       }
       .stage:active {
         cursor: grabbing;
@@ -294,42 +328,19 @@
         inset: 0;
         display: grid;
         place-items: center;
-        animation: float 5s ease-in-out infinite;
-      }
-      @keyframes float {
-        50% {
-          transform: translateY(-8px);
-        }
-      }
-      .coin-hop {
-        position: relative;
-        transition: transform 0.18s ease;
-      }
-      .coin-hop.hop {
-        animation: hop 0.7s cubic-bezier(0.3, 0.7, 0.3, 1);
-      }
-      @keyframes hop {
-        30% {
-          transform: translateY(-34px);
-        }
-        60% {
-          transform: translateY(4px);
-        }
-        100% {
-          transform: none;
-        }
-      }
-      .stage.pressed .coin-hop {
-        transform: scale(0.95);
       }
       .coin {
-        --d: min(54vw, 290px);
-        --t: calc(var(--d) * 0.085);
+        --d: min(56vw, 270px);
+        --t: calc(var(--d) * 0.08);
         position: relative;
         width: var(--d);
         height: var(--d);
         transform-style: preserve-3d;
         will-change: transform;
+        transition: scale 0.15s ease;
+      }
+      .stage.pressed .coin {
+        scale: 0.97;
       }
       .coin .face {
         position: absolute;
@@ -343,11 +354,10 @@
       }
       .coin .front {
         transform: translateZ(calc(var(--t) / 2));
-        background: radial-gradient(circle at 34% 28%, #ffffff 0, #fbf6ee 38%, #ece3d3 100%);
+        background: radial-gradient(circle at 36% 30%, #ffffff 0, #f8f2e8 45%, #e8dfcf 100%);
         box-shadow:
-          inset 0 0 0 calc(var(--d) * 0.035) #e4d9c5,
-          inset 0 0 0 calc(var(--d) * 0.05) #f6efe3,
-          inset 0 0 0 calc(var(--d) * 0.056) rgba(67, 68, 89, 0.25);
+          inset 0 0 0 calc(var(--d) * 0.045) #ebe2d2,
+          inset 0 2px 10px rgba(0, 0, 0, 0.06);
       }
       .coin .front svg {
         width: 48%;
@@ -356,19 +366,18 @@
       }
       .coin .back {
         transform: rotateY(180deg) translateZ(calc(var(--t) / 2));
-        background: radial-gradient(circle at 34% 28%, #5a5b75 0, #434459 45%, #2b2c3a 100%);
+        background: radial-gradient(circle at 36% 30%, #595a72 0, #434459 48%, #30313f 100%);
         color: #fffcf9;
         box-shadow:
-          inset 0 0 0 calc(var(--d) * 0.035) #33344a,
-          inset 0 0 0 calc(var(--d) * 0.05) #4d4e66,
-          inset 0 0 0 calc(var(--d) * 0.056) rgba(255, 219, 142, 0.6);
+          inset 0 0 0 calc(var(--d) * 0.045) #3b3c4f,
+          inset 0 2px 10px rgba(0, 0, 0, 0.2);
       }
       .back .inner {
         display: grid;
         place-items: center;
       }
       .back .big {
-        font: 700 calc(var(--d) * 0.3)/1 var(--en-display);
+        font: 700 calc(var(--d) * 0.28)/1 var(--en-display);
         letter-spacing: -0.03em;
       }
       .back .big i {
@@ -386,12 +395,12 @@
         border-radius: 50%;
         pointer-events: none;
         background: linear-gradient(
-          105deg,
-          transparent 35%,
-          rgba(255, 255, 255, 0.24) 50%,
-          transparent 65%
+          110deg,
+          transparent 30%,
+          rgba(255, 255, 255, 0.2) 50%,
+          transparent 70%
         );
-        transform: translateZ(calc(var(--t) / 2 + 1px));
+        transform: translateZ(calc(var(--t) / 2 + 0.5px));
         backface-visibility: hidden;
       }
       .rim {
@@ -412,121 +421,62 @@
       .shadow {
         position: absolute;
         left: 50%;
-        bottom: 3%;
-        width: min(42vw, 230px);
-        height: 18px;
+        bottom: 4%;
+        width: min(44vw, 220px);
+        height: 16px;
         transform: translateX(-50%);
         border-radius: 50%;
         background: radial-gradient(var(--shadow), transparent 70%);
-        filter: blur(2px);
-      }
-      .ripple {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: var(--rs, 260px);
-        height: var(--rs, 260px);
-        margin: calc(var(--rs, 260px) / -2) 0 0 calc(var(--rs, 260px) / -2);
-        border-radius: 50%;
-        border: 2px solid var(--accent);
-        pointer-events: none;
-        animation: ripple 0.7s ease-out forwards;
-      }
-      @keyframes ripple {
-        from {
-          transform: scale(0.85);
-          opacity: 0.9;
-        }
-        to {
-          transform: scale(1.35);
-          opacity: 0;
-        }
-      }
-      .count {
-        position: absolute;
-        top: 8%;
-        inset-inline-end: 12%;
-        min-width: 46px;
-        padding: 6px 12px;
-        border-radius: 999px;
-        background: var(--accent);
-        color: var(--on-accent);
-        font: 700 16px/1 var(--en);
-        opacity: 0;
-        transform: scale(0.6);
-        transition:
-          opacity 0.25s,
-          transform 0.25s;
-        pointer-events: none;
-        direction: ltr;
-      }
-      .count.on {
-        opacity: 1;
-        transform: scale(1);
-      }
-      .count.pop {
-        animation: pop 0.3s ease;
-      }
-      @keyframes pop {
-        50% {
-          transform: scale(1.25);
-        }
+        filter: blur(3px);
       }
       .hint {
         position: absolute;
         left: 50%;
         top: 52%;
-        width: 54px;
-        height: 54px;
-        margin: -27px 0 0 -27px;
+        width: 44px;
+        height: 44px;
+        margin: -22px 0 0 -22px;
         border-radius: 50%;
-        border: 2px solid var(--fg);
-        background: rgba(var(--fg-rgb), 0.08);
+        background: rgba(var(--fg-rgb), 0.16);
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.4s;
       }
       .hint.on {
-        opacity: 0.8;
-        animation: swipe 1.8s ease-in-out infinite;
+        opacity: 1;
+        animation: swipe 2s ease-in-out infinite;
       }
       @keyframes swipe {
         0% {
-          transform: translateX(46px) scale(0.9);
+          transform: translateX(40px);
         }
         50% {
-          transform: translateX(-46px) scale(1);
+          transform: translateX(-40px);
         }
         100% {
-          transform: translateX(46px) scale(0.9);
+          transform: translateX(40px);
         }
-      }
-      .hero-title {
-        font-size: clamp(38px, 10vw, 72px);
-        margin: 6px 0 12px;
       }
       .goals {
         display: flex;
-        justify-content: center;
-        gap: 10px;
+        gap: 8px;
         flex-wrap: wrap;
+        margin-top: 16px;
       }
       .goal {
         border: 1px solid var(--line);
         border-radius: 999px;
-        padding: 8px 16px;
+        padding: 6px 14px;
         font-size: 15px;
         transition:
-          background 0.35s,
-          color 0.35s,
-          border-color 0.35s,
-          transform 0.35s;
+          background 0.3s,
+          color 0.3s,
+          border-color 0.3s;
       }
       .goal.on {
         background: var(--fg);
         color: var(--bg);
         border-color: var(--fg);
-        transform: translateY(-2px);
       }
       .goal.on.b {
         background: var(--accent);
@@ -534,120 +484,52 @@
         border-color: var(--accent);
       }
       .cue {
-        margin: 12px 0 0;
+        margin: 10px 0 0;
         font-size: 15px;
         color: var(--muted);
         min-height: 1.75em;
       }
       .gotcha {
-        max-width: 560px;
-        margin: 18px auto 0;
-        padding: 16px 20px;
-        border-radius: 16px;
+        margin: 16px 0 0;
+        padding: 14px 18px;
+        border-radius: 14px;
         background: var(--surface);
         border: 1px solid var(--line);
-        text-align: start;
-        font-size: 17px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        font-size: 16.5px;
       }
-      .gotcha:not([hidden]) {
-        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+      .gotcha.show {
+        animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
       }
       .gotcha b {
-        color: var(--fg);
-      }
-      .gotcha .mark {
-        display: block;
-        font: 600 12px/1 var(--en);
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: 8px;
-      }
-      html[lang="ar"] .gotcha .mark {
-        font-family: var(--ar);
-        letter-spacing: 0;
-        font-size: 13px;
-        text-transform: none;
+        font-weight: 700;
       }
       .band .gotcha {
         background: rgba(255, 252, 249, 0.06);
         border-color: var(--band-line);
         color: var(--band-fg);
-        box-shadow: none;
       }
       .band .gotcha b {
         color: var(--band-accent);
       }
-      .band .gotcha .mark {
-        color: var(--band-muted);
-      }
       @keyframes rise {
         from {
           opacity: 0;
-          transform: translateY(14px);
+          transform: translateY(10px);
         }
         to {
           opacity: 1;
           transform: none;
         }
       }
-      .down {
-        display: inline-block;
-        margin-top: 22px;
-        font-size: 14px;
-        color: var(--muted);
-        text-decoration: none;
-      }
-
-      /* HEARD */
-      .quotes {
-        display: grid;
-        gap: 12px;
-        margin-top: 22px;
-      }
-      @media (min-width: 700px) {
-        .quotes {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      .q {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: 18px 20px;
-        font-size: 17px;
-        font-weight: 500;
-        line-height: 1.6;
-      }
 
       /* WEEK + CUBE */
       .cube-stage {
         position: relative;
         height: calc(var(--S) * 2);
-        margin: 18px auto 0;
         user-select: none;
         -webkit-user-select: none;
         perspective: 1100px;
-        --S: min(230px, 56vw);
-      }
-      .cube-glow {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: calc(var(--S) * 1.9);
-        height: calc(var(--S) * 1.9);
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        background: radial-gradient(rgba(255, 219, 142, 0.16), transparent 65%);
-        animation: glow 4s ease-in-out infinite;
-        pointer-events: none;
-      }
-      @keyframes glow {
-        50% {
-          opacity: 0.55;
-          transform: translate(-50%, -50%) scale(0.92);
-        }
+        --S: min(220px, 54vw);
       }
       .cube-hit {
         position: absolute;
@@ -673,7 +555,7 @@
         height: var(--S);
         margin: calc(var(--S) / -2) 0 0 calc(var(--S) / -2);
         transform-style: preserve-3d;
-        transition: transform 1.1s cubic-bezier(0.3, 0.7, 0.2, 1);
+        transition: transform 0.9s cubic-bezier(0.3, 0.7, 0.2, 1);
       }
       .cube {
         position: absolute;
@@ -681,40 +563,36 @@
         transform-style: preserve-3d;
         will-change: transform;
       }
-      .cube.tween {
-        transition: transform 1.1s cubic-bezier(0.3, 0.7, 0.2, 1);
-      }
       .cube-hint {
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 50px;
-        height: 50px;
-        margin: -25px 0 0 -25px;
+        width: 40px;
+        height: 40px;
+        margin: -20px 0 0 -20px;
         border-radius: 50%;
-        border: 2px solid var(--band-fg);
-        background: rgba(255, 252, 249, 0.1);
+        background: rgba(255, 252, 249, 0.2);
         opacity: 0;
         pointer-events: none;
         z-index: 3;
         transition: opacity 0.4s;
       }
       .cube-hint.on {
-        opacity: 0.85;
-        animation: swirl 2.4s ease-in-out infinite;
+        opacity: 1;
+        animation: swirl 2.6s ease-in-out infinite;
       }
       @keyframes swirl {
         0% {
-          transform: translate(-60px, 30px);
+          transform: translate(-50px, 26px);
         }
         33% {
-          transform: translate(50px, -40px);
+          transform: translate(44px, -34px);
         }
         66% {
-          transform: translate(40px, 50px);
+          transform: translate(34px, 44px);
         }
         100% {
-          transform: translate(-60px, 30px);
+          transform: translate(-50px, 26px);
         }
       }
       .f {
@@ -724,13 +602,10 @@
         height: var(--S);
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        border-radius: 6px;
         overflow: hidden;
         transform: translate3d(var(--x, 0px), var(--y, 0px), 0) rotateY(var(--ry, 0deg))
           rotateX(var(--rx, 0deg)) translateZ(var(--z));
-        transition:
-          transform 1.1s cubic-bezier(0.3, 0.7, 0.2, 1),
-          border-radius 1.1s;
+        transition: transform 0.9s cubic-bezier(0.3, 0.7, 0.2, 1);
         --z: calc(var(--S) / 2);
         font-size: calc(var(--S) * 0.062);
         line-height: 1.3;
@@ -760,7 +635,11 @@
         --z: 0px;
         --ry: 0deg;
         --rx: 0deg;
+        cursor: zoom-in;
         border-radius: 3px;
+      }
+      .net .f:hover {
+        box-shadow: 0 0 0 3px var(--band-accent);
       }
       .net .f.fr {
         --x: 0px;
@@ -788,7 +667,7 @@
         text-align: center;
       }
       .cube-cue {
-        font-size: 16px;
+        font-size: 15.5px;
         color: var(--band-muted);
         margin: 0;
         min-height: 1.75em;
@@ -798,39 +677,37 @@
         background: transparent;
         color: var(--band-fg);
         border-radius: 999px;
-        padding: 10px 18px;
-        font-size: 14px;
+        padding: 9px 18px;
+        font-size: 14.5px;
         cursor: pointer;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.5s;
       }
-      .pill.on {
-        opacity: 1;
-        pointer-events: auto;
+      .pill.solid {
+        background: var(--band-accent);
+        color: #434459;
+        border-color: var(--band-accent);
+        font-weight: 600;
+      }
+      .cube-ui .gotcha {
+        text-align: start;
+        width: 100%;
       }
       .tally {
         display: flex;
-        justify-content: center;
-        gap: clamp(18px, 6vw, 48px);
-        margin-top: 30px;
+        gap: 28px;
+        margin-top: 22px;
         flex-wrap: wrap;
-        text-align: center;
-      }
-      .tally div {
-        min-width: 92px;
       }
       .tally b {
         display: block;
-        font: 700 clamp(32px, 8vw, 46px)/1 var(--en-display);
+        font: 700 34px/1 var(--en-display);
         color: var(--band-fg);
       }
       .tally span {
-        font-size: 13px;
+        font-size: 13.5px;
         color: var(--band-muted);
       }
 
-      /* sample cards (typographic stand-ins from Géant's real source pages) */
+      /* sample cards (typographic stand-ins built from Géant's real source pages) */
       .card {
         position: absolute;
         inset: 0;
@@ -868,7 +745,6 @@
         border-radius: 0.4em;
         overflow: hidden;
         margin-top: 0.6em;
-        box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.15);
         direction: ltr;
         font-family: var(--g-en);
         font-weight: 700;
@@ -918,14 +794,7 @@
         padding: 0.15em 0.8em;
         margin-top: 0.7em;
         font-size: 1.05em;
-      }
-      .c-cover .dots {
-        position: absolute;
-        inset: auto -10% -18% auto;
-        width: 70%;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.12);
+        white-space: nowrap;
       }
       .c-item,
       .c-nf {
@@ -975,28 +844,6 @@
         background: radial-gradient(circle at 75% 10%, #3a2f12, #15120b 70%);
         color: #f4dc93;
       }
-      .c-gold::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          115deg,
-          transparent 30%,
-          rgba(255, 226, 140, 0.22) 45%,
-          transparent 60%
-        );
-        background-size: 250% 100%;
-        animation: gleam 3.2s ease-in-out infinite;
-        pointer-events: none;
-      }
-      @keyframes gleam {
-        0% {
-          background-position: 120% 0;
-        }
-        100% {
-          background-position: -120% 0;
-        }
-      }
       .c-gold .tag {
         color: #ffd76a;
       }
@@ -1005,7 +852,6 @@
         font-size: 2.1em;
       }
       .c-gold .day {
-        white-space: nowrap;
         align-self: flex-start;
         margin-top: 0.4em;
         border: 1px solid rgba(255, 215, 106, 0.6);
@@ -1013,6 +859,7 @@
         padding: 0.05em 0.7em;
         font-weight: 700;
         font-size: 0.9em;
+        white-space: nowrap;
       }
       .c-gold .prod {
         margin-top: auto;
@@ -1039,7 +886,6 @@
         display: grid;
         place-items: center;
         margin-top: auto;
-        box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.2);
       }
       .c-cook .play::before {
         content: "";
@@ -1074,251 +920,7 @@
         padding: 0.45em 0.7em;
       }
 
-      /* PLAN (unfolded week) */
-      #plan {
-        padding-top: 0;
-      }
-      .days {
-        display: grid;
-        gap: 10px;
-      }
-      .day {
-        display: grid;
-        grid-template-columns: 92px 1fr;
-        gap: 14px;
-        align-items: baseline;
-        border: 1px solid var(--band-line);
-        border-radius: 12px;
-        padding: 14px 16px;
-      }
-      .day b {
-        color: var(--band-fg);
-        font-size: 16px;
-      }
-      .day p {
-        margin: 0;
-        font-size: 15.5px;
-        color: var(--band-muted);
-      }
-      .day.gold {
-        border-color: rgba(255, 219, 142, 0.55);
-        background: rgba(255, 219, 142, 0.06);
-      }
-      .day.gold b {
-        color: var(--band-accent);
-      }
-      #plan:not([hidden]) .day {
-        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
-      }
-      .plan-note {
-        margin-top: 16px;
-        font-size: 14.5px;
-        color: var(--band-muted);
-      }
-      .refold {
-        margin-top: 6px;
-        background: none;
-        border: 0;
-        color: var(--band-accent);
-        text-decoration: underline;
-        cursor: pointer;
-        font-size: 14px;
-        padding: 0;
-      }
-
-      /* OFFER grid */
-      .offer {
-        display: grid;
-        gap: 12px;
-        margin-top: 22px;
-      }
-      @media (min-width: 640px) {
-        .offer {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      .o {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: 18px 20px;
-        display: grid;
-        grid-template-columns: 40px 1fr;
-        gap: 14px;
-        align-items: start;
-      }
-      .o > div {
-        min-width: 0;
-      }
-      .o svg {
-        width: 40px;
-        height: 40px;
-        color: var(--fg);
-      }
-      .o .ac {
-        color: var(--accent);
-      }
-      .o p {
-        margin: 0;
-        font-size: 15.5px;
-        color: var(--muted);
-      }
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 16px;
-      }
-      .chip {
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 5px 13px;
-        font: 500 14px/1.4 var(--en);
-        background: var(--surface);
-      }
-
-      /* BEYOND */
-      .pillars {
-        display: grid;
-        margin-top: 18px;
-      }
-      .pillar {
-        padding: 14px 0;
-        border-top: 1px solid var(--line);
-      }
-      .pillar p {
-        margin: 0;
-        font-size: 15.5px;
-        color: var(--muted);
-      }
-      .note {
-        margin-top: 18px;
-        padding: 14px 18px;
-        border-radius: 12px;
-        background: var(--surface);
-        border: 1px solid var(--line);
-        font-size: 15.5px;
-      }
-
-      /* DO (timeline) */
-      .road {
-        position: relative;
-        margin-top: 24px;
-        padding-inline-start: 28px;
-        display: grid;
-        gap: 22px;
-      }
-      .road::before {
-        content: "";
-        position: absolute;
-        inset-block: 8px;
-        inset-inline-start: 7px;
-        width: 2px;
-        background: linear-gradient(var(--accent), var(--amber));
-      }
-      .stop {
-        position: relative;
-      }
-      .stop::before {
-        content: "";
-        position: absolute;
-        inset-inline-start: -27px;
-        top: 8px;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background: var(--bg);
-        border: 3px solid var(--accent);
-      }
-      .stop small {
-        display: block;
-        font: 600 13px/1.3 var(--en);
-        color: var(--muted);
-        letter-spacing: 0.06em;
-      }
-      html[lang="ar"] .stop small {
-        font-family: var(--ar);
-        letter-spacing: 0;
-        font-size: 14px;
-      }
-      .stop p {
-        margin: 4px 0 0;
-        font-size: 16px;
-      }
-
-      /* MONTH */
-      .month {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        margin-top: 26px;
-      }
-      .m {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: 18px;
-      }
-      .m b {
-        display: block;
-        font: 700 clamp(34px, 9vw, 46px)/1 var(--en-display);
-        color: var(--fg);
-      }
-      .m span {
-        display: block;
-        margin-top: 8px;
-        font-size: 14.5px;
-        line-height: 1.5;
-        color: var(--muted);
-      }
-
-      /* SAMPLES */
-      .pairs {
-        display: grid;
-        gap: 18px;
-        margin-top: 22px;
-      }
-      .pair {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-      }
-      .pair figure {
-        margin: 0;
-        min-width: 0;
-      }
-      .pair figcaption {
-        font-size: 12.5px;
-        margin-top: 6px;
-        color: var(--muted);
-      }
-      .pair img {
-        border-radius: 8px;
-        border: 1px solid var(--line);
-        background: #fff;
-        width: 100%;
-        aspect-ratio: 1;
-        object-fit: contain;
-      }
-
-      /* expanded net: every design opens large */
-      .net .f {
-        cursor: zoom-in;
-      }
-      .net .f:hover {
-        box-shadow: 0 0 0 3px var(--band-accent);
-      }
-      .pill.solid {
-        background: var(--band-accent);
-        color: #434459;
-        border-color: var(--band-accent);
-        font-weight: 600;
-      }
-      .tap-note {
-        margin: 0;
-        font-size: 14px;
-        color: var(--band-muted);
-      }
+      /* lightbox for the flat net */
       .lb {
         position: fixed;
         inset: 0;
@@ -1329,11 +931,6 @@
           max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px))
           max(16px, env(safe-area-inset-left, 0px));
         background: rgba(12, 12, 16, 0.86);
-        -webkit-backdrop-filter: blur(6px);
-        backdrop-filter: blur(6px);
-      }
-      .lb:not([hidden]) .lb-body {
-        animation: rise 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
       }
       .lb-body {
         position: relative;
@@ -1353,7 +950,6 @@
         color: #1d1d1d;
         direction: rtl;
         font-family: var(--g-ar);
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
         touch-action: pan-y;
       }
       .lb-cap {
@@ -1392,11 +988,226 @@
         color: #434459;
       }
 
+      /* PLAN */
+      .days {
+        display: grid;
+        gap: 8px;
+      }
+      .day {
+        display: grid;
+        grid-template-columns: 88px 1fr;
+        gap: 14px;
+        align-items: baseline;
+        border: 1px solid var(--band-line);
+        border-radius: 12px;
+        padding: 12px 16px;
+      }
+      .day b {
+        color: var(--band-fg);
+        font-size: 15.5px;
+      }
+      .day p {
+        margin: 0;
+        font-size: 15.5px;
+        color: var(--band-muted);
+      }
+      .day.gold {
+        border-color: rgba(255, 219, 142, 0.5);
+      }
+      .day.gold b {
+        color: var(--band-accent);
+      }
+      .plan-note {
+        margin-top: 14px;
+        font-size: 14.5px;
+        color: var(--band-muted);
+      }
+
+      /* OFFER */
+      .offer {
+        display: grid;
+        gap: 10px;
+      }
+      @media (min-width: 1000px) {
+        .offer {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .o {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px 18px;
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 14px;
+        align-items: start;
+      }
+      .o > div {
+        min-width: 0;
+      }
+      .o svg {
+        width: 34px;
+        height: 34px;
+        color: var(--fg);
+      }
+      .o .ac {
+        color: var(--accent);
+      }
+      .o p {
+        margin: 0;
+        font-size: 15.5px;
+        color: var(--muted);
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .chip {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 12px;
+        font: 500 14px/1.5 var(--en);
+        background: var(--surface);
+      }
+
+      /* HOW WE WORK */
+      .how {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: h;
+        display: grid;
+      }
+      .how li {
+        counter-increment: h;
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        gap: 14px;
+        padding: 14px 0;
+        border-top: 1px solid var(--line);
+      }
+      .how li:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+      .how li::before {
+        content: counter(h);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1.5px solid var(--accent);
+        display: grid;
+        place-items: center;
+        font: 600 14px/1 var(--en);
+      }
+      .how p {
+        margin: 0;
+        font-size: 15.5px;
+        color: var(--muted);
+      }
+
+      /* PLAN OF THE FIRST YEAR + MONTH */
+      .road {
+        position: relative;
+        padding-inline-start: 26px;
+        display: grid;
+        gap: 18px;
+      }
+      .road::before {
+        content: "";
+        position: absolute;
+        inset-block: 8px;
+        inset-inline-start: 6px;
+        width: 2px;
+        background: var(--line);
+      }
+      .stop {
+        position: relative;
+      }
+      .stop::before {
+        content: "";
+        position: absolute;
+        inset-inline-start: -25px;
+        top: 8px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 2.5px solid var(--accent);
+      }
+      .stop small {
+        display: block;
+        font: 600 13px/1.3 var(--en);
+        color: var(--muted);
+      }
+      html[lang="ar"] .stop small {
+        font-family: var(--ar);
+        font-size: 14px;
+      }
+      .stop p {
+        margin: 2px 0 0;
+        font-size: 16px;
+      }
+      .month {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 26px;
+      }
+      .m {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px;
+      }
+      .m b {
+        display: block;
+        font: 700 34px/1 var(--en-display);
+        color: var(--fg);
+      }
+      .m span {
+        display: block;
+        margin-top: 6px;
+        font-size: 14.5px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+
+      /* SAMPLES */
+      .pairs {
+        display: grid;
+        gap: 18px;
+      }
+      .pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .pair figure {
+        margin: 0;
+        min-width: 0;
+      }
+      .pair figcaption {
+        font-size: 12.5px;
+        margin-top: 6px;
+        color: var(--muted);
+      }
+      .pair img {
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: #fff;
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+
       /* PRICING */
       .price-table {
-        margin-top: 22px;
         border: 1px solid var(--line);
-        border-radius: 16px;
+        border-radius: 14px;
         overflow: hidden;
         background: var(--surface);
       }
@@ -1404,7 +1215,7 @@
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
         gap: 16px;
-        padding: 18px 20px;
+        padding: 16px 18px;
         border-top: 1px solid var(--line);
         align-items: start;
       }
@@ -1412,7 +1223,7 @@
         border-top: 0;
       }
       .row h3 {
-        font-size: 18px;
+        font-size: 17px;
       }
       .row p {
         margin: 2px 0 0;
@@ -1420,7 +1231,7 @@
         color: var(--muted);
       }
       .amt {
-        font: 700 22px/1.2 var(--en-display);
+        font: 700 26px/1.2 var(--en-display);
         white-space: nowrap;
         direction: ltr;
         text-align: end;
@@ -1435,44 +1246,22 @@
         font-family: var(--en);
         direction: ltr;
       }
-      .amt.todo {
-        font: 600 14px/1.3 var(--ar);
-        color: var(--fg);
-        border: 1.5px dashed var(--accent);
-        border-radius: 8px;
-        padding: 6px 10px;
-      }
       .amt.txt {
         font: 600 15px/1.4 var(--ar);
         white-space: normal;
         max-width: 9em;
       }
-      html[lang="en"] .amt.todo,
       html[lang="en"] .amt.txt {
         font-family: var(--en);
       }
-      .row.main {
-        background: rgba(var(--fg-rgb), 0.03);
-      }
-      .row.main .amt {
-        font-size: 28px;
-      }
-      .row.main .amt.todo {
-        font-size: 15px;
-      }
-      .lists {
+      .boxes {
         display: grid;
-        gap: 14px;
-        margin-top: 14px;
-      }
-      @media (min-width: 700px) {
-        .lists.two {
-          grid-template-columns: 1fr 1fr;
-        }
+        gap: 12px;
+        margin-top: 12px;
       }
       .box {
         border-radius: 14px;
-        padding: 20px;
+        padding: 18px;
         border: 1px solid var(--line);
         background: var(--surface);
         min-width: 0;
@@ -1482,11 +1271,11 @@
         border-style: dashed;
       }
       .box ul {
-        margin: 8px 0 0;
+        margin: 6px 0 0;
         padding-inline-start: 18px;
       }
       .box li {
-        margin: 7px 0;
+        margin: 6px 0;
         font-size: 15.5px;
       }
       .box li::marker {
@@ -1497,7 +1286,7 @@
       .steps {
         display: grid;
         gap: 12px;
-        margin: 22px 0 0;
+        margin: 0;
         padding: 0;
         list-style: none;
         counter-reset: s;
@@ -1505,32 +1294,23 @@
       .steps li {
         counter-increment: s;
         display: grid;
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 36px 1fr;
         gap: 12px;
         align-items: center;
         font-size: 16.5px;
       }
       .steps li::before {
         content: counter(s);
-        font: 700 15px/40px var(--en);
-        width: 40px;
-        height: 40px;
+        font: 600 14px/36px var(--en);
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         background: var(--fg);
         color: var(--bg);
         text-align: center;
       }
       footer {
-        padding-block: 56px calc(40px + env(safe-area-inset-bottom, 0px));
-      }
-      .foot-grid {
-        display: grid;
-        gap: 24px;
-      }
-      @media (min-width: 700px) {
-        .foot-grid {
-          grid-template-columns: 1.2fr 1fr;
-        }
+        padding-block: 52px calc(36px + env(safe-area-inset-bottom, 0px));
       }
       .foot-brand {
         display: flex;
@@ -1543,7 +1323,7 @@
         justify-content: flex-end;
       }
       .foot-brand svg {
-        width: 34px;
+        width: 32px;
         height: auto;
         color: var(--band-fg);
       }
@@ -1551,6 +1331,11 @@
         margin: 14px 0 0;
         color: var(--band-muted);
         font-size: 15.5px;
+      }
+      .people {
+        margin-top: 12px;
+        color: var(--band-muted);
+        font-size: 14.5px;
       }
       .contact {
         display: grid;
@@ -1570,20 +1355,13 @@
       .contact bdi {
         color: var(--band-fg);
         text-decoration: none;
-        user-select: all;
       }
-      html[lang="ar"] .contact a,
       html[lang="ar"] .contact .ltr {
         text-align: right;
       }
-      .people {
-        margin-top: 14px;
-        color: var(--band-muted);
-        font-size: 14.5px;
-      }
       .legal {
         margin-top: 28px;
-        padding-top: 18px;
+        padding-top: 16px;
         border-top: 1px solid var(--band-line);
         font-size: 13px;
         color: var(--band-muted);
@@ -1597,15 +1375,9 @@
         html {
           scroll-behavior: auto;
         }
-        .coin-float,
-        .c-gold::after,
-        .cube-glow,
         .hint.on,
-        .cube-hint.on {
-          animation: none;
-        }
-        .gotcha:not([hidden]),
-        #plan:not([hidden]) .day {
+        .cube-hint.on,
+        .gotcha.show {
           animation: none;
         }
       }
@@ -1630,15 +1402,23 @@
       <button class="lang pill-ui" id="lang" type="button">English</button>
     </div>
 
-    <!-- HERO: the coin, with its gotcha right under it -->
+    <!-- HERO -->
     <section id="hero">
-      <div class="wrap">
-        <p class="kicker" style="justify-content: center" data-t="hero.kicker"></p>
-      </div>
-      <div class="stage" id="coinStage" role="img" data-t-aria="hero.aria">
-        <div class="shadow" id="coinShadow"></div>
-        <div class="coin-float">
-          <div class="coin-hop" id="coinHop">
+      <div class="wrap hero">
+        <div class="hero-text">
+          <p class="kicker" data-t="hero.kicker"></p>
+          <h1 data-t="hero.title"></h1>
+          <p class="lead" data-t="hero.lead"></p>
+          <div class="goals">
+            <span class="goal on" id="goalA" data-t="hero.goalA"></span
+            ><span class="goal b" id="goalB" data-t="hero.goalB"></span>
+          </div>
+          <p class="cue" id="coinCue" aria-live="polite"></p>
+          <p class="gotcha" id="coinGotcha" hidden aria-live="polite"></p>
+        </div>
+        <div class="stage" id="coinStage" role="img" data-t-aria="hero.aria">
+          <div class="shadow" id="coinShadow"></div>
+          <div class="coin-float">
             <div class="coin" id="coin">
               <div class="rim" id="rim"></div>
               <div class="face front">
@@ -1663,364 +1443,383 @@
               <div class="shine" id="shine"></div>
             </div>
           </div>
-        </div>
-        <div class="count" id="coinCount">×0</div>
-        <div class="hint" id="coinHint"></div>
-      </div>
-      <div class="wrap">
-        <h1 class="hero-title" data-t="hero.title"></h1>
-        <div class="goals">
-          <span class="goal on" id="goalA" data-t="hero.goalA"></span
-          ><span class="goal b" id="goalB" data-t="hero.goalB"></span>
-        </div>
-        <p class="cue" id="coinCue" aria-live="polite"></p>
-        <div class="gotcha" id="coinGotcha" hidden aria-live="polite">
-          <span class="mark" data-t="gotcha.mark"></span><span id="coinGotchaText"></span>
-        </div>
-        <a class="down" href="#heard" data-t="hero.down"></a>
-      </div>
-    </section>
-
-    <!-- WHAT WE UNDERSTOOD -->
-    <section id="heard" style="padding-top: 0">
-      <div class="wrap">
-        <p class="kicker" data-t="heard.kicker"></p>
-        <h2 data-t="heard.title"></h2>
-        <div class="quotes">
-          <div class="q" data-t="heard.q1"></div>
-          <div class="q" data-t="heard.q2"></div>
-          <div class="q" data-t="heard.q3"></div>
-          <div class="q" data-t="heard.q4"></div>
+          <div class="hint" id="coinHint"></div>
         </div>
       </div>
     </section>
 
-    <!-- ONE WEEK: the cube, its gotcha right under it, then the unfolded plan -->
+    <!-- ONE WEEK: the cube -->
     <div class="band">
       <section id="week">
-        <div class="wrap">
-          <p class="kicker" data-t="week.kicker"></p>
-          <h2 data-t="week.title"></h2>
-          <p class="lead" data-t="week.lead"></p>
-        </div>
-        <div class="cube-stage" id="cubeStage" role="img" data-t-aria="week.aria">
-          <div class="cube-glow"></div>
-          <div class="cube-fit" id="cubeFit">
-            <div class="cube" id="cube">
-              <div class="f fr">
-                <div class="card c-cover">
-                  <div class="dots"></div>
-                  <span class="tag">جيان هايبرماركت</span>
-                  <div class="ttl">العروض<br />الأسبوعية</div>
-                  <span class="date">من ٥ إلى ١١ نوفمبر</span>
-                  <div class="foot">
-                    <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
-                  </div>
-                </div>
-              </div>
-              <div class="f ri">
-                <div class="card c-item">
-                  <div class="band2">عرض الأسبوع</div>
-                  <div class="ttl">أرز ديفايا بسمتي</div>
-                  <span class="w">٥ كجم</span>
-                  <div class="price">
-                    <span class="old"><small>YER</small><s>10,500</s></span
-                    ><span class="new">8,800</span>
-                  </div>
-                  <div class="foot">
-                    <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
-                  </div>
-                </div>
-              </div>
-              <div class="f bk">
-                <div class="card c-gold">
-                  <span class="tag">جيان هايبرماركت</span>
-                  <div class="ttl">العرض الذهبي</div>
-                  <span class="day">الثلاثاء فقط</span>
-                  <div class="prod">أرز المزان بسمتي أبيض ١٠ كجم</div>
-                  <div class="price">
-                    <span class="old"><small>YER</small><s>17,000</s></span
-                    ><span class="new">14,500</span>
-                  </div>
-                  <div class="foot">
-                    <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
-                  </div>
-                </div>
-              </div>
-              <div class="f le">
-                <div class="card c-nf">
-                  <div class="band2">توفير أكثر في نوفمبر</div>
-                  <div class="ttl">خلاط فيديم إيفا<br /><span dir="ltr">650W</span></div>
-                  <div class="price">
-                    <span class="old"><small>YER</small><s>119,000</s></span
-                    ><span class="new">69,000</span>
-                  </div>
-                  <span class="save">وفّر 50,000</span>
-                  <div class="foot">
-                    <span>في جيان، الخير مليان</span><span dir="ltr">@GeantYemen</span>
-                  </div>
-                </div>
-              </div>
-              <div class="f tp">
-                <div class="card c-cook">
-                  <span class="idea">IDEA</span
-                  ><span class="tag" style="margin-top: 2.2em">مطبخ جيان · كل أسبوع</span>
-                  <div class="ttl">زربيان<br />عدني</div>
-                  <div class="sub">بمكونات من رفوف جيان</div>
-                  <div class="play"></div>
-                </div>
-              </div>
-              <div class="f bt">
-                <div class="card c-edu">
-                  <span class="idea">IDEA</span>
-                  <div class="ttl" style="margin-top: 1.6em; font-size: 1.35em">
-                    قبل أن تشتري الأرز، انظر إلى ٣ أشياء
-                  </div>
-                  <ol>
-                    <li>تاريخ التعبئة</li>
-                    <li>طول الحبة</li>
-                    <li>بلد المنشأ</li>
-                  </ol>
-                </div>
-              </div>
+        <div class="wrap split">
+          <div class="side">
+            <p class="kicker" data-t="week.kicker"></p>
+            <h2 data-t="week.title"></h2>
+            <p class="lead" data-t="week.lead"></p>
+            <div class="tally">
+              <div><b>42</b><span data-t="week.t1"></span></div>
+              <div><b>12</b><span data-t="week.t2"></span></div>
+              <div><b>22</b><span data-t="week.t3"></span></div>
             </div>
           </div>
-          <div class="cube-hit" id="cubeHit"></div>
-          <div class="cube-hint" id="cubeHint"></div>
-        </div>
-        <div class="wrap cube-ui">
-          <p class="cube-cue" id="cubeCue" aria-live="polite"></p>
-          <button class="pill" id="skipBtn" type="button" data-t="week.skip"></button>
-          <button class="pill solid" id="foldBtn" type="button" data-t="week.fold"></button>
-          <p class="tap-note" id="tapNote" hidden data-t="week.tap"></p>
-          <div class="gotcha" id="cubeGotcha" hidden aria-live="polite">
-            <span class="mark" data-t="gotcha.mark"></span><span id="cubeGotchaText"></span>
-          </div>
-        </div>
-        <div class="wrap">
-          <div class="tally">
-            <div><b>42</b><span data-t="week.t1"></span></div>
-            <div><b>12</b><span data-t="week.t2"></span></div>
-            <div><b>22</b><span data-t="week.t3"></span></div>
+          <div>
+            <div class="cube-stage" id="cubeStage" role="img" data-t-aria="week.aria">
+              <div class="cube-fit" id="cubeFit">
+                <div class="cube" id="cube">
+                  <div class="f fr">
+                    <div class="card c-cover">
+                      <span class="tag">جيان هايبرماركت</span>
+                      <div class="ttl">العروض<br />الأسبوعية</div>
+                      <span class="date">من ٥ إلى ١١ نوفمبر</span>
+                      <div class="foot">
+                        <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f ri">
+                    <div class="card c-item">
+                      <div class="band2">عرض الأسبوع</div>
+                      <div class="ttl">أرز ديفايا بسمتي</div>
+                      <span class="w">٥ كجم</span>
+                      <div class="price">
+                        <span class="old"><small>YER</small><s>10,500</s></span
+                        ><span class="new">8,800</span>
+                      </div>
+                      <div class="foot">
+                        <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f bk">
+                    <div class="card c-gold">
+                      <span class="tag">جيان هايبرماركت</span>
+                      <div class="ttl">العرض الذهبي</div>
+                      <span class="day">الثلاثاء فقط</span>
+                      <div class="prod">أرز المزان بسمتي أبيض ١٠ كجم</div>
+                      <div class="price">
+                        <span class="old"><small>YER</small><s>17,000</s></span
+                        ><span class="new">14,500</span>
+                      </div>
+                      <div class="foot">
+                        <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f le">
+                    <div class="card c-nf">
+                      <div class="band2">توفير أكثر في نوفمبر</div>
+                      <div class="ttl">خلاط فيديم إيفا<br /><span dir="ltr">650W</span></div>
+                      <div class="price">
+                        <span class="old"><small>YER</small><s>119,000</s></span
+                        ><span class="new">69,000</span>
+                      </div>
+                      <span class="save">وفّر 50,000</span>
+                      <div class="foot">
+                        <span>في جيان، الخير مليان</span><span dir="ltr">@GeantYemen</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f tp">
+                    <div class="card c-cook">
+                      <span class="idea">IDEA</span
+                      ><span class="tag" style="margin-top: 2.2em">مطبخ جيان · كل أسبوع</span>
+                      <div class="ttl">زربيان<br />عدني</div>
+                      <div class="sub">بمكونات من رفوف جيان</div>
+                      <div class="play"></div>
+                    </div>
+                  </div>
+                  <div class="f bt">
+                    <div class="card c-edu">
+                      <span class="idea">IDEA</span>
+                      <div class="ttl" style="margin-top: 1.6em; font-size: 1.35em">
+                        قبل أن تشتري الأرز، انظر إلى ٣ أشياء
+                      </div>
+                      <ol>
+                        <li>تاريخ التعبئة</li>
+                        <li>طول الحبة</li>
+                        <li>بلد المنشأ</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cube-hit" id="cubeHit"></div>
+              <div class="cube-hint" id="cubeHint"></div>
+            </div>
+            <div class="cube-ui">
+              <p class="cube-cue" id="cubeCue" aria-live="polite"></p>
+              <button class="pill" id="flatBtn" type="button" data-t="week.flat"></button>
+              <button
+                class="pill solid"
+                id="foldBtn"
+                type="button"
+                hidden
+                data-t="week.fold"
+              ></button>
+              <p class="gotcha" id="cubeGotcha" hidden aria-live="polite"></p>
+            </div>
           </div>
         </div>
       </section>
-      <section id="plan" hidden>
-        <div class="wrap">
-          <p class="kicker" data-t="plan.kicker"></p>
-          <h2 data-t="plan.title"></h2>
-          <div class="days" id="days"></div>
-          <p class="plan-note" data-t="plan.note"></p>
+      <section id="plan" style="padding-top: 0">
+        <div class="wrap split">
+          <div class="side">
+            <p class="kicker" data-t="plan.kicker"></p>
+            <h2 data-t="plan.title"></h2>
+          </div>
+          <div>
+            <div class="days" id="days"></div>
+            <p class="plan-note" data-t="plan.note"></p>
+          </div>
         </div>
       </section>
     </div>
 
     <!-- WHAT WE OFFER -->
     <section id="offer">
-      <div class="wrap">
-        <p class="kicker" data-t="offer.kicker"></p>
-        <h2 data-t="offer.title"></h2>
-        <div class="offer">
-          <div class="o">
-            <svg
-              viewBox="0 0 40 40"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <rect x="7" y="9" width="26" height="24" rx="3" />
-              <path d="M7 16h26M14 5v7M26 5v7" />
-              <path class="ac" d="M13 23l4 4 9-8" stroke="currentColor" />
-            </svg>
-            <div>
-              <h3 data-t="offer.o1"></h3>
-              <p data-t="offer.o1s"></p>
-            </div>
-          </div>
-          <div class="o">
-            <svg
-              viewBox="0 0 40 40"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <rect x="5" y="5" width="13" height="13" rx="2" />
-              <rect x="22" y="5" width="13" height="13" rx="2" />
-              <rect x="5" y="22" width="13" height="13" rx="2" />
-              <rect class="ac" x="22" y="22" width="13" height="13" rx="2" stroke="currentColor" />
-            </svg>
-            <div>
-              <h3 data-t="offer.o2"></h3>
-              <p data-t="offer.o2s"></p>
-            </div>
-          </div>
-          <div class="o">
-            <svg
-              viewBox="0 0 40 40"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <path d="M20 10c-4-3-9-3-14-2v24c5-1 10-1 14 2 4-3 9-3 14-2V8c-5-1-10-1-14 2z" />
-              <path class="ac" d="M20 10v24" stroke="currentColor" />
-            </svg>
-            <div>
-              <h3 data-t="offer.o3"></h3>
-              <p data-t="offer.o3s"></p>
-            </div>
-          </div>
-          <div class="o">
-            <svg
-              viewBox="0 0 40 40"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <rect x="11" y="4" width="18" height="32" rx="4" />
-              <path class="ac" d="M17 15l8 5-8 5z" stroke="currentColor" />
-            </svg>
-            <div>
-              <h3 data-t="offer.o4"></h3>
-              <p data-t="offer.o4s"></p>
-            </div>
-          </div>
-          <div class="o">
-            <svg
-              viewBox="0 0 40 40"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <path d="M6 24l14-14v8c8 0 14 5 14 14-3-5-7-7-14-7v8z" />
-              <circle class="ac" cx="9" cy="33" r="2.5" stroke="currentColor" />
-            </svg>
-            <div>
-              <h3 data-t="offer.o5"></h3>
-              <p data-t="offer.o5s"></p>
-            </div>
-          </div>
-          <div class="o">
-            <svg
-              viewBox="0 0 40 40"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <path d="M7 33V7M7 33h27" />
-              <path class="ac" d="M12 26l7-7 5 4 9-11" stroke="currentColor" />
-            </svg>
-            <div>
-              <h3 data-t="offer.o6"></h3>
-              <p data-t="offer.o6s"></p>
-            </div>
-          </div>
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="offer.kicker"></p>
+          <h2 data-t="offer.title"></h2>
+          <p class="lead" data-t="offer.lead"></p>
         </div>
-        <div class="chips">
-          <span class="chip">Facebook</span><span class="chip">Instagram</span
-          ><span class="chip">TikTok</span><span class="chip" data-t="offer.snap"></span>
+        <div>
+          <div class="offer">
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <rect x="7" y="9" width="26" height="24" rx="3" />
+                <path d="M7 16h26M14 5v7M26 5v7" />
+                <path class="ac" d="M13 23l4 4 9-8" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o1"></h3>
+                <p data-t="offer.o1s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <rect x="5" y="5" width="13" height="13" rx="2" />
+                <rect x="22" y="5" width="13" height="13" rx="2" />
+                <rect x="5" y="22" width="13" height="13" rx="2" />
+                <rect
+                  class="ac"
+                  x="22"
+                  y="22"
+                  width="13"
+                  height="13"
+                  rx="2"
+                  stroke="currentColor"
+                />
+              </svg>
+              <div>
+                <h3 data-t="offer.o2"></h3>
+                <p data-t="offer.o2s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M20 10c-4-3-9-3-14-2v24c5-1 10-1 14 2 4-3 9-3 14-2V8c-5-1-10-1-14 2z" />
+                <path class="ac" d="M20 10v24" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o3"></h3>
+                <p data-t="offer.o3s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <rect x="11" y="4" width="18" height="32" rx="4" />
+                <path class="ac" d="M17 15l8 5-8 5z" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o4"></h3>
+                <p data-t="offer.o4s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M6 24l14-14v8c8 0 14 5 14 14-3-5-7-7-14-7v8z" />
+                <circle class="ac" cx="9" cy="33" r="2.5" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o5"></h3>
+                <p data-t="offer.o5s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M7 33V7M7 33h27" />
+                <path class="ac" d="M12 26l7-7 5 4 9-11" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o6"></h3>
+                <p data-t="offer.o6s"></p>
+              </div>
+            </div>
+          </div>
+          <div class="chips">
+            <span class="chip">Facebook</span><span class="chip">Instagram</span
+            ><span class="chip">TikTok</span><span class="chip" data-t="offer.snap"></span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BEYOND PRICE -->
-    <section id="beyond" style="padding-top: 0">
-      <div class="wrap">
-        <p class="kicker" data-t="beyond.kicker"></p>
-        <h2 data-t="beyond.title"></h2>
-        <div class="pillars">
-          <div class="pillar">
-            <h3 data-t="beyond.p1"></h3>
-            <p data-t="beyond.p1s"></p>
-          </div>
-          <div class="pillar">
-            <h3 data-t="beyond.p2"></h3>
-            <p data-t="beyond.p2s"></p>
-          </div>
-          <div class="pillar">
-            <h3 data-t="beyond.p3"></h3>
-            <p data-t="beyond.p3s"></p>
-          </div>
-          <div class="pillar">
-            <h3 data-t="beyond.p4"></h3>
-            <p data-t="beyond.p4s"></p>
-          </div>
-          <div class="pillar">
-            <h3 data-t="beyond.p5"></h3>
-            <p data-t="beyond.p5s"></p>
-          </div>
+    <!-- HOW WE WORK -->
+    <section id="how" style="padding-top: 0">
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="how.kicker"></p>
+          <h2 data-t="how.title"></h2>
+          <p class="lead" data-t="how.lead"></p>
         </div>
-        <p class="note" data-t="beyond.ai"></p>
+        <ol class="how">
+          <li>
+            <div>
+              <h3 data-t="how.h1"></h3>
+              <p data-t="how.h1s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h2"></h3>
+              <p data-t="how.h2s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h3"></h3>
+              <p data-t="how.h3s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h4"></h3>
+              <p data-t="how.h4s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h5"></h3>
+              <p data-t="how.h5s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h6"></h3>
+              <p data-t="how.h6s"></p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- WHAT WE WILL DO -->
+    <!-- THE PLAN + MONTHLY AMOUNTS -->
     <section id="do" style="padding-top: 0">
-      <div class="wrap">
-        <p class="kicker" data-t="do.kicker"></p>
-        <h2 data-t="do.title"></h2>
-        <div class="road">
-          <div class="stop">
-            <small data-t="do.s1k"></small>
-            <p data-t="do.s1"></p>
-          </div>
-          <div class="stop">
-            <small data-t="do.s2k"></small>
-            <p data-t="do.s2"></p>
-          </div>
-          <div class="stop">
-            <small data-t="do.s3k"></small>
-            <p data-t="do.s3"></p>
-          </div>
-          <div class="stop">
-            <small data-t="do.s4k"></small>
-            <p data-t="do.s4"></p>
-          </div>
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="do.kicker"></p>
+          <h2 data-t="do.title"></h2>
         </div>
-        <div class="month">
-          <div class="m"><b>4</b><span data-t="month.m1"></span></div>
-          <div class="m"><b>4</b><span data-t="month.m2"></span></div>
-          <div class="m"><b>2</b><span data-t="month.m3"></span></div>
-          <div class="m"><b>4</b><span data-t="month.m4"></span></div>
+        <div>
+          <div class="road">
+            <div class="stop">
+              <small data-t="do.s1k"></small>
+              <p data-t="do.s1"></p>
+            </div>
+            <div class="stop">
+              <small data-t="do.s2k"></small>
+              <p data-t="do.s2"></p>
+            </div>
+            <div class="stop">
+              <small data-t="do.s3k"></small>
+              <p data-t="do.s3"></p>
+            </div>
+            <div class="stop">
+              <small data-t="do.s4k"></small>
+              <p data-t="do.s4"></p>
+            </div>
+          </div>
+          <div class="month">
+            <div class="m"><b>4</b><span data-t="month.m1"></span></div>
+            <div class="m"><b>4</b><span data-t="month.m2"></span></div>
+            <div class="m"><b>2</b><span data-t="month.m3"></span></div>
+            <div class="m"><b>4</b><span data-t="month.m4"></span></div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- BEFORE / AFTER: appears once the team's redesigns are in assets/samples -->
     <section id="samples" style="padding-top: 0" hidden>
-      <div class="wrap">
-        <p class="kicker" data-t="samples.kicker"></p>
-        <h2 data-t="samples.title"></h2>
-        <p class="lead" data-t="samples.lead"></p>
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="samples.kicker"></p>
+          <h2 data-t="samples.title"></h2>
+          <p class="lead" data-t="samples.lead"></p>
+        </div>
         <div class="pairs" id="pairs"></div>
       </div>
     </section>
 
-    <!-- PRICING, PAYMENT, TERMS, EXCLUSIONS -->
+    <!-- PRICE, PAYMENT, TERMS, NOT INCLUDED -->
     <section id="pricing" style="padding-top: 0">
-      <div class="wrap">
-        <p class="kicker" data-t="price.kicker"></p>
-        <h2 data-t="price.title"></h2>
-        <div class="price-table" id="priceTable"></div>
-        <div class="lists two">
-          <div class="box">
-            <h3 data-t="pay.title"></h3>
-            <ul data-t="pay.list"></ul>
-          </div>
-          <div class="box">
-            <h3 data-t="terms.title"></h3>
-            <ul data-t="terms.list"></ul>
-          </div>
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="price.kicker"></p>
+          <h2 data-t="price.title"></h2>
         </div>
-        <div class="lists">
-          <div class="box out">
-            <h3 data-t="ex.title"></h3>
-            <ul data-t="ex.list"></ul>
+        <div>
+          <div class="price-table" id="priceTable"></div>
+          <div class="boxes">
+            <div class="box">
+              <h3 data-t="pay.title"></h3>
+              <ul data-t="pay.list"></ul>
+            </div>
+            <div class="box">
+              <h3 data-t="terms.title"></h3>
+              <ul data-t="terms.list"></ul>
+            </div>
+            <div class="box out">
+              <h3 data-t="ex.title"></h3>
+              <ul data-t="ex.list"></ul>
+            </div>
           </div>
         </div>
       </div>
@@ -2028,9 +1827,11 @@
 
     <!-- NEXT -->
     <section id="next" style="padding-top: 0">
-      <div class="wrap">
-        <p class="kicker" data-t="next.kicker"></p>
-        <h2 data-t="next.title"></h2>
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="next.kicker"></p>
+          <h2 data-t="next.title"></h2>
+        </div>
         <ol class="steps">
           <li data-t="next.s1"></li>
           <li data-t="next.s2"></li>
@@ -2042,7 +1843,7 @@
     <!-- FOOTER: WRD -->
     <footer class="band">
       <div class="wrap">
-        <div class="foot-grid">
+        <div class="split">
           <div>
             <div class="foot-brand">
               <svg viewBox="15 16 151 148" aria-hidden="true">
@@ -2105,7 +1906,6 @@
       ;(() => {
         "use strict"
 
-        /* Fill these in before sending. null shows a dashed "amount to add" slot on the page. */
         const PRICING = { currency: "USD", monthly: 2000 }
 
         const T = {
@@ -2113,208 +1913,179 @@
             ar: "عرض من WordReward إلى جيان هايبرماركت، عدن مول",
             en: "A WordReward proposal for Géant Hypermarket, Aden Mall",
           },
+          "hero.title": {
+            ar: "إدارة صفحات جيان على مواقع التواصل",
+            en: "Managing Géant's social media pages",
+          },
+          "hero.lead": {
+            ar: "في هذه الصفحة: ما سنقدمه، وكيف نعمل، والسعر والشروط.",
+            en: "On this page: what we will provide, how we work, and the price and terms.",
+          },
           "hero.aria": {
             ar: "عملة WordReward. اسحبها لتقلبها.",
             en: "The WordReward coin. Drag it to flip it.",
           },
           "coin.back": { ar: "متابع", en: "followers" },
-          "hero.title": { ar: "وجهان لعملة واحدة.", en: "Two sides of one coin." },
-          "hero.goalA": { ar: "مبيعات أكثر كل أسبوع", en: "More sales every week" },
-          "hero.goalB": { ar: "صفحة يتابعها مليون شخص", en: "A page a million people follow" },
-          "hero.cue": { ar: "اسحب العملة يمينًا أو يسارًا", en: "Drag the coin left or right" },
+          "hero.goalA": { ar: "مبيعات أكثر", en: "More sales" },
+          "hero.goalB": { ar: "متابعون أكثر", en: "More followers" },
+          "hero.cue": { ar: "يمكنك سحب العملة لتقلبها.", en: "You can drag the coin to flip it." },
           "hero.cueA": {
-            ar: "الوجه الأول: عروض تبيع أكثر كل أسبوع.",
-            en: "Side one: offers that sell more, every week.",
+            ar: "الوجه الأول: مبيعات أكثر من كل عرض.",
+            en: "Side one: more sales from each offer.",
           },
           "hero.cueB": {
-            ar: "الوجه الثاني: صفحة كبيرة تبيع مساحتها للمعلنين.",
-            en: "Side two: a page big enough to sell its space to advertisers.",
-          },
-          "hero.down": { ar: "اقرأ العرض ↓", en: "Read the proposal ↓" },
-          "gotcha.mark": { ar: "لاحظت؟", en: "Did you notice?" },
-
-          "heard.kicker": {
-            ar: "ما فهمناه منكم في اجتماع ٨ نوفمبر",
-            en: "What we understood on 8 November",
-          },
-          "heard.title": {
-            ar: "تريدون أفكارًا جديدة، وليس تنفيذ الطلبات فقط.",
-            en: "You want new ideas, not just orders carried out.",
-          },
-          "heard.q1": {
-            ar: "«أرني نموذجًا أولًا، وأنا أعرضه على الإدارة.»",
-            en: "“Show me a sample first, and I will take it to management.”",
-          },
-          "heard.q2": {
-            ar: "المنشورات اليوم أسعار فقط، والتعليقات تقول: «رفعتم الأسعار».",
-            en: "Today's posts are prices only, and the comments say “you raised prices.”",
-          },
-          "heard.q3": {
-            ar: "لا تريدون صورًا يظهر أنها مصنوعة بالذكاء الاصطناعي.",
-            en: "No pictures that look made by AI.",
-          },
-          "heard.q4": {
-            ar: "هدفان: مبيعات أكثر، وصفحة كبيرة تجلب دخلًا من الإعلانات.",
-            en: "Two goals: more sales, and a big page that earns from advertising.",
+            ar: "الوجه الثاني: صفحة يتابعها عدد أكبر من الناس.",
+            en: "Side two: a page more people follow.",
           },
 
-          "week.kicker": { ar: "أسبوع واحد في جيان", en: "One week at Géant" },
-          "week.title": {
-            ar: "هذا ما نصممه لكم كل أسبوع.",
-            en: "This is what we design for you every week.",
-          },
+          "week.kicker": { ar: "أسبوع من العمل", en: "A week of work" },
+          "week.title": { ar: "ما نصممه لكم كل أسبوع", en: "What we design for you each week" },
           "week.lead": {
-            ar: "كل وجه بطاقة من عروضكم الحقيقية، والعرض الذهبي مخبأ في أحد الوجوه.",
-            en: "Every face is a card from your real offers, and the Golden Offer is hidden on one of them.",
+            ar: "كل وجه في المكعب مثال لنوع من المنشورات. يمكنك تدويره في أي اتجاه، والعرض الذهبي على أحد الوجوه.",
+            en: "Each face of the cube is an example of one type of post. You can turn it in any direction; the Golden Offer is on one of the faces.",
           },
           "week.aria": {
-            ar: "مكعب من بطاقات عروض جيان. أدره لتجد العرض الذهبي.",
-            en: "A cube of Géant offer cards. Spin it to find the Golden Offer.",
+            ar: "مكعب من بطاقات عروض جيان. أدره لترى الوجوه.",
+            en: "A cube of Géant offer cards. Turn it to see the faces.",
           },
-          "week.cue": {
-            ar: "أدر المكعب في أي اتجاه، وابحث عن العرض الذهبي.",
-            en: "Spin the cube any way you like, and find the Golden Offer.",
-          },
-          "week.cueTurned": { ar: "استمر، اقتربت منه.", en: "Keep going, you are close." },
-          "week.found": {
-            ar: "وجدته! هذا هو العرض الذهبي.",
-            en: "Found it! That is the Golden Offer.",
-          },
+          "week.cue": { ar: "أدر المكعب بإصبعك.", en: "Turn the cube with your finger." },
+          "week.found": { ar: "هذا هو العرض الذهبي.", en: "This is the Golden Offer." },
           "week.open": {
-            ar: "ستة وجوه، وأسبوع كامل من العمل.",
-            en: "Six faces, one full week of work.",
+            ar: "اضغط على أي تصميم لتراه بحجم أكبر.",
+            en: "Tap any design to see it larger.",
           },
-          "week.skip": { ar: "اعرض خطة الأسبوع", en: "Show the weekly plan" },
-          "week.unfold": { ar: "افرد المكعب", en: "Flatten the cube" },
+          "week.flat": { ar: "افرد المكعب", en: "Lay the cube flat" },
           "week.fold": { ar: "أعده مكعبًا", en: "Fold it back into a cube" },
-          "week.tap": {
-            ar: "اضغط على أي تصميم لتراه بحجم كامل.",
-            en: "Tap any design to see it full size.",
-          },
-          "week.t1": { ar: "بطاقة عروض كل أسبوع", en: "offer cards every week" },
+          "week.t1": { ar: "بطاقة عروض كل أسبوع", en: "offer cards a week" },
           "week.t2": { ar: "بطاقة للعرض الذهبي", en: "Golden Offer cards" },
           "week.t3": { ar: "صفحة مجلة كل أسبوعين", en: "magazine pages every two weeks" },
 
-          "plan.kicker": {
-            ar: "الأسبوع كاملًا، من الأربعاء إلى الأربعاء",
-            en: "The full week, Wednesday to Wednesday",
+          "plan.kicker": { ar: "الأسبوع من الأربعاء إلى الأربعاء", en: "Wednesday to Wednesday" },
+          "plan.title": {
+            ar: "توزيع المنشورات على الأسبوع",
+            en: "How posts are spread across the week",
           },
-          "plan.title": { ar: "دورة تتكرر كل أسبوع.", en: "A cycle that repeats every week." },
           "plan.note": {
-            ar: "نتابع الإعلانات كل يوم، ونرسل لكم تقريرًا كل أربعاء. توزيع الأيام اقتراح منا، ونعدله معكم.",
-            en: "We watch the ads every day and send you a report every Wednesday. The days are our suggestion; we adjust them with you.",
+            ar: "هذا توزيع مقترح، ونعدله معكم.",
+            en: "This is a suggested schedule; we adjust it with you.",
           },
           days: {
             ar: [
               ["الأربعاء", "", "العروض الأسبوعية: غلاف و٤٢ بطاقة. ومجلة كل أسبوعين."],
-              ["الخميس", "", "حلقة من «مطبخ جيان»."],
-              ["الجمعة", "", "منشور للعائلة يحب الناس مشاركته."],
-              ["السبت", "", "نصيحة مفيدة: كيف توفر في مشترياتك."],
-              ["الأحد", "", "من داخل جيان: الناس والمكان."],
-              ["الاثنين", "", "تشويق للعرض الذهبي."],
-              ["الثلاثاء", "gold", "العرض الذهبي: ١٢ بطاقة ليوم واحد."],
+              ["الخميس", "", "وصفة من «مطبخ جيان»."],
+              ["الجمعة", "", "منشور للعائلة."],
+              ["السبت", "", "نصيحة مفيدة في الشراء أو التوفير."],
+              ["الأحد", "", "صور من داخل المتجر."],
+              ["الاثنين", "", "إعلان عن العرض الذهبي."],
+              ["الثلاثاء", "gold", "العرض الذهبي: ١٢ بطاقة."],
             ],
             en: [
               ["Wednesday", "", "Weekly offers: a cover and 42 cards. A magazine every two weeks."],
-              ["Thursday", "", "A “Géant Kitchen” episode."],
-              ["Friday", "", "A family post people like to share."],
-              ["Saturday", "", "A useful tip: how to save on shopping."],
-              ["Sunday", "", "Inside Géant: the people and the place."],
-              ["Monday", "", "A teaser for the Golden Offer."],
-              ["Tuesday", "gold", "The Golden Offer: 12 cards, one day only."],
+              ["Thursday", "", "A recipe from Géant Kitchen."],
+              ["Friday", "", "A family post."],
+              ["Saturday", "", "A useful shopping or saving tip."],
+              ["Sunday", "", "Photos from inside the store."],
+              ["Monday", "", "An announcement of the Golden Offer."],
+              ["Tuesday", "gold", "The Golden Offer: 12 cards."],
             ],
           },
 
-          "offer.kicker": { ar: "ماذا نقدم", en: "What we offer" },
+          "offer.kicker": { ar: "ما نقدمه", en: "What we provide" },
           "offer.title": {
-            ar: "كل ما تحتاجه صفحات جيان، من فريق واحد.",
-            en: "Everything Géant's pages need, from one team.",
+            ar: "الخدمات المشمولة في العرض",
+            en: "Services included in this proposal",
           },
-          "offer.o1": { ar: "الخطة", en: "The plan" },
+          "offer.lead": {
+            ar: "يعمل عليها فريق واحد من WordReward.",
+            en: "Handled by one WordReward team.",
+          },
+          "offer.o1": { ar: "الخطة الشهرية", en: "Monthly plan" },
           "offer.o1s": {
-            ar: "خطة شهرية واضحة، تعتمدونها قبل أن نبدأ.",
-            en: "A clear monthly plan that you approve before we start.",
+            ar: "نرسلها لكم لتوافقوا عليها قبل أن نبدأ.",
+            en: "Sent to you for approval before we start.",
           },
           "offer.o2": { ar: "تصميم العروض", en: "Offer design" },
           "offer.o2s": {
-            ar: "العروض الأسبوعية والعرض الذهبي، بشكل ثابت يعرفه الناس من أول نظرة.",
-            en: "Weekly offers and the Golden Offer, in one look people recognise at a glance.",
+            ar: "العروض الأسبوعية والعرض الذهبي، بقوالب ثابتة.",
+            en: "Weekly offers and the Golden Offer, on fixed templates.",
           },
           "offer.o3": { ar: "المجلة", en: "The magazine" },
           "offer.o3s": {
-            ar: "مجلة غير الغذائيات كل أسبوعين، مرتبة وسهلة القراءة.",
-            en: "The non-food magazine every two weeks, tidy and easy to read.",
+            ar: "مجلة غير الغذائيات، عدد كل أسبوعين.",
+            en: "The non-food magazine, one issue every two weeks.",
           },
           "offer.o4": { ar: "الفيديو والريلز", en: "Video and reels" },
           "offer.o4s": {
-            ar: "نصنعها من المواد التي تصورونها في المتجر.",
-            en: "Cut from the footage you film in the store.",
+            ar: "نجهزها من المواد التي تصورونها.",
+            en: "Edited from the footage you film.",
           },
           "offer.o5": { ar: "الإعلانات الممولة", en: "Paid ads" },
-          "offer.o5s": {
-            ar: "نديرها ونتابعها كل يوم على كل المنصات.",
-            en: "Run and watched every day, on every platform.",
-          },
+          "offer.o5s": { ar: "نديرها ونتابعها كل يوم.", en: "Set up and checked every day." },
           "offer.o6": { ar: "التقارير", en: "Reports" },
           "offer.o6s": {
-            ar: "تقرير كل أسبوع بالأرقام، ومعه خطة الأسبوع القادم.",
-            en: "A report every week with the numbers and next week's plan.",
+            ar: "تقرير كل أسبوع، ومراجعة كل شهر.",
+            en: "A report every week and a review every month.",
           },
-          "offer.snap": { ar: "Snapchat إذا رأينا فائدته", en: "Snapchat, if it helps" },
+          "offer.snap": { ar: "Snapchat إن كان مناسبًا", en: "Snapchat, if it suits" },
 
-          "beyond.kicker": { ar: "أكثر من سعر", en: "More than a price" },
-          "beyond.title": {
-            ar: "السعر يبيع مرة، والثقة تبيع كل يوم.",
-            en: "A price sells once. Trust sells every day.",
+          "how.kicker": { ar: "طريقة عملنا", en: "How we work" },
+          "how.title": { ar: "ما نفعله مع كل عميل", en: "What we do with every client" },
+          "how.lead": {
+            ar: "نتبع الخطوات نفسها مع كل العملاء، ونعدل التفاصيل حسب كل مشروع.",
+            en: "We follow the same steps with every client and adjust the details to each project.",
           },
-          "beyond.p1": { ar: "مطبخ جيان", en: "Géant Kitchen" },
-          "beyond.p1s": {
-            ar: "وصفة عدنية كل أسبوع، وكل مكون عليه سعره.",
-            en: "An Adeni recipe every week, every ingredient with its price.",
+          "how.h1": { ar: "نفهم العلامة والسوق", en: "We learn the brand and the market" },
+          "how.h1s": {
+            ar: "نراجع الهوية والصفحات الحالية والمنافسين والجمهور.",
+            en: "We review the identity, current pages, competitors and audience.",
           },
-          "beyond.p2": { ar: "لماذا هذا السعر؟", en: "Why this price?" },
-          "beyond.p2s": {
-            ar: "نشرح الأسعار بصراحة، فتقل تعليقات «رفعتم الأسعار».",
-            en: "We explain prices openly, so fewer people comment “you raised prices.”",
+          "how.h2": { ar: "نضع خطة شهرية", en: "We write a monthly plan" },
+          "how.h2s": {
+            ar: "فيها المنشورات ومواعيدها، ونرسلها للموافقة قبل التنفيذ.",
+            en: "It lists the posts and their dates, and goes to you for approval first.",
           },
-          "beyond.p3": { ar: "نصائح مفيدة", en: "Useful tips" },
-          "beyond.p3s": { ar: "كيف تختار، وكيف توفر.", en: "How to choose, and how to save." },
-          "beyond.p4": { ar: "من داخل جيان", en: "Inside Géant" },
-          "beyond.p4s": {
-            ar: "الناس الذين يعملون في المتجر. الوجوه الحقيقية تبني الثقة.",
-            en: "The people who work in the store. Real faces build trust.",
+          "how.h3": { ar: "نصمم قوالب ثابتة", en: "We design fixed templates" },
+          "how.h3s": {
+            ar: "حتى تظهر المنشورات بشكل واحد ويتعرف الناس عليها بسهولة.",
+            en: "So posts look consistent and people recognise them easily.",
           },
-          "beyond.p5": { ar: "ريلز قصيرة", en: "Short reels" },
-          "beyond.p5s": {
-            ar: "من ١٥ إلى ٣٠ ثانية، لأن الناس يشاهدون على الموبايل.",
-            en: "15 to 30 seconds, because people watch on their phones.",
+          "how.h4": { ar: "ننشر في مواعيد ثابتة", en: "We post on a fixed schedule" },
+          "how.h4s": {
+            ar: "ونتابع التفاعل والتعليقات ونبلغكم بما يحتاج إلى رد.",
+            en: "We follow engagement and comments and flag what needs a reply.",
           },
-          "beyond.ai": {
-            ar: "نستخدم الذكاء الاصطناعي لنعمل أسرع فقط. الصور الحقيقية تأتي أولًا.",
-            en: "We use AI only to work faster. Real pictures come first.",
+          "how.h5": { ar: "ندير الإعلانات يوميًا", en: "We manage ads daily" },
+          "how.h5s": {
+            ar: "ونغير الميزانية بين الإعلانات حسب النتائج.",
+            en: "We move budget between ads according to results.",
+          },
+          "how.h6": { ar: "نراجع النتائج معكم", en: "We review results with you" },
+          "how.h6s": {
+            ar: "تقرير كل أسبوع، واجتماع كل شهر لتعديل الخطة.",
+            en: "A report every week and a meeting every month to adjust the plan.",
           },
 
-          "do.kicker": { ar: "ماذا سنفعل", en: "What we will do" },
-          "do.title": { ar: "خطة العمل.", en: "The work plan." },
+          "do.kicker": { ar: "خطة البداية", en: "Getting started" },
+          "do.title": { ar: "السنة الأولى باختصار", en: "The first year, briefly" },
           "do.s1k": { ar: "أول أسبوعين", en: "First two weeks" },
           "do.s1": {
-            ar: "نستلم ملفات الهوية والمواد، ونصمم قوالب البطاقات الثلاث، ونجهز خطة الشهر الأول.",
-            en: "We receive the brand files and materials, design the three card templates, and prepare the first month's plan.",
+            ar: "نستلم ملفات الهوية والمواد، ونصمم القوالب، ونجهز خطة الشهر الأول.",
+            en: "We receive the brand files and materials, design the templates and prepare the first month's plan.",
           },
           "do.s2k": { ar: "من الشهر ١ إلى ٣", en: "Months 1 to 3" },
           "do.s2": {
-            ar: "نشر منتظم بشكل واحد، وانطلاق «مطبخ جيان»، وبداية الإعلانات.",
-            en: "Regular posting in one look, Géant Kitchen goes live, and the ads begin.",
+            ar: "نبدأ النشر والإعلانات، ونثبّت شكل الصفحات.",
+            en: "We start posting and ads and settle the look of the pages.",
           },
           "do.s3k": { ar: "من الشهر ٤ إلى ٦", en: "Months 4 to 6" },
           "do.s3": {
-            ar: "نزيد ما ينجح ونوقف ما لا ينجح، حسب الأرقام.",
-            en: "We do more of what works and stop what doesn't, by the numbers.",
+            ar: "نراجع الأرقام، ونركز على ما يعطي نتيجة أفضل.",
+            en: "We look at the numbers and focus on what works best.",
           },
-          "do.s4k": { ar: "من الشهر ٧ إلى ١٢", en: "Months 7 to 12" },
+          "do.s4k": { ar: "بعد ذلك", en: "After that" },
           "do.s4": {
-            ar: "نجهز ملفًا للمعلنين، ونبدأ بيع مساحات إعلانية للشركات اليمنية الكبيرة.",
-            en: "We prepare a media kit and start selling ad space to large Yemeni companies.",
+            ar: "نراجع النتائج معكم كل شهر، ونطور الخطة حسبها.",
+            en: "We review results with you every month and adjust the plan.",
           },
           "month.m1": {
             ar: "مجموعات عروض أسبوعية في الشهر، ٤٢ بطاقة في كل مجموعة",
@@ -2334,66 +2105,57 @@
           },
 
           "samples.kicker": { ar: "قبل وبعد", en: "Before and after" },
-          "samples.title": {
-            ar: "نفس المنتج ونفس السعر، وشكل مختلف تمامًا.",
-            en: "Same product, same price, a whole new look.",
-          },
+          "samples.title": { ar: "أمثلة من تصميمات فريقنا", en: "Examples from our team" },
           "samples.lead": {
-            ar: "أعدنا تصميم صفحتين من كل نوع من عروضكم، دون تغيير أي منتج أو سعر أو تاريخ.",
-            en: "We redesigned two pages of each of your offer types, without changing any product, price or date.",
+            ar: "صفحتان من كل نوع من العروض، بنفس المنتجات والأسعار والتواريخ.",
+            en: "Two pages of each offer type, with the same products, prices and dates.",
           },
 
-          "price.kicker": { ar: "السعر", en: "Pricing" },
-          "price.title": {
-            ar: "مبلغ شهري واحد، شامل كل الخدمات.",
-            en: "One monthly fee, all inclusive.",
-          },
-          "price.main": { ar: "الباقة الشهرية الشاملة", en: "All-inclusive monthly package" },
+          "price.kicker": { ar: "السعر", en: "Price" },
+          "price.title": { ar: "٢٠٠٠ دولار في الشهر", en: "USD 2,000 a month" },
+          "price.main": { ar: "الباقة الشهرية", en: "Monthly package" },
           "price.mainS": {
-            ar: "كل ما في «ماذا نقدم»: الخطة، العروض الأسبوعية، العرض الذهبي، المجلة، الريلز، الإعلانات، والتقارير.",
-            en: "Everything under What we offer: the plan, weekly offers, Golden Offer, magazine, reels, ads and reports.",
+            ar: "تشمل كل الخدمات المذكورة في هذا العرض.",
+            en: "Includes every service listed in this proposal.",
           },
           "price.ads": { ar: "ميزانية الإعلانات", en: "Ad budget" },
           "price.adsS": {
-            ar: "تدفعونها مباشرة للمنصات، وتحددون قيمتها بأنفسكم.",
-            en: "Paid by you directly to the platforms, at an amount you set.",
+            ar: "تدفعونها مباشرة للمنصات، وتحددون قيمتها.",
+            en: "Paid by you directly to the platforms, at an amount you choose.",
           },
           "price.adsV": { ar: "تحددونها أنتم", en: "Set by you" },
-          "price.perMonth": { ar: "في الشهر، شامل كل ما سبق", en: "per month, all inclusive" },
+          "price.perMonth": { ar: "في الشهر، شاملة", en: "per month, all inclusive" },
 
           "pay.title": { ar: "الدفع والمدة", en: "Payment and term" },
           "pay.list": {
-            ar: "<li>الدفع شهريًا مقدمًا، قبل بداية كل شهر.</li><li>مدة التعاقد ٦ أشهر، تبدأ مع العام الجديد بعد الجرد السنوي، أو قبل ذلك إذا أردتم.</li><li>أول أسبوعين للتجهيز، ثم يبدأ النشر.</li><li>بعد ٦ أشهر، يمكن لأي طرف إنهاء التعاقد بإشعار مكتوب قبل ٣٠ يومًا، ويُحسب شهر الإشعار كاملًا.</li>",
-            en: "<li>Paid monthly in advance, before each month begins.</li><li>A 6 month term, starting with the new year after your stock count, or sooner if you prefer.</li><li>The first two weeks are set-up; posting starts after that.</li><li>After 6 months either side may end the contract with 30 days written notice; the notice month is billed in full.</li>",
+            ar: "<li>الدفع شهريًا مقدمًا، قبل بداية كل شهر.</li><li>مدة التعاقد ٦ أشهر، ويمكن أن نبدأ في الموعد الذي يناسبكم.</li><li>أول أسبوعين للتجهيز، ثم يبدأ النشر.</li><li>بعد ٦ أشهر، يمكن لأي طرف إنهاء التعاقد بإشعار مكتوب قبل ٣٠ يومًا، ويُحسب شهر الإشعار كاملًا.</li>",
+            en: "<li>Paid monthly in advance, before each month begins.</li><li>A 6 month term, starting on a date that suits you.</li><li>The first two weeks are for set-up; posting starts after that.</li><li>After 6 months either side may end the contract with 30 days written notice; the notice month is billed in full.</li>",
           },
           "terms.title": { ar: "الشروط", en: "Terms" },
           "terms.list": {
-            ar: "<li>نرسل خطة كل شهر لتعتمدوها قبل التنفيذ، ولكل تصميم جولة تعديل واحدة.</li><li>ترسلون قوائم العروض والأسعار والمواد في موعد نتفق عليه قبل كل دورة.</li><li>الأسعار تُنشر كما ترسلونها وبعد موافقتكم.</li><li>أي عمل إضافي نخبركم بسعره أولًا، ولا ننفذه إلا بموافقة مكتوبة.</li><li>التصاميم وملفاتها ملك لجيان بعد سداد كل شهر، ولنا أن نعرضها ضمن أعمالنا إلا إذا طلبتم غير ذلك كتابيًا.</li>",
-            en: "<li>We send a plan every month for your approval before production; each design gets one round of changes.</li><li>You send the offer lists, prices and materials by a date we agree before each cycle.</li><li>Prices are published exactly as you send and approve them.</li><li>Any extra work is quoted first and done only with written approval.</li><li>Designs and their files belong to Géant once each month is paid; we may show them in our portfolio unless you ask otherwise in writing.</li>",
+            ar: "<li>لكل شهر خطة توافقون عليها قبل التنفيذ، ولكل تصميم جولة تعديل واحدة.</li><li>ترسلون قوائم العروض والأسعار والمواد في موعد نتفق عليه قبل كل دورة.</li><li>تُنشر الأسعار كما ترسلونها وبعد موافقتكم.</li><li>أي عمل إضافي نخبركم بسعره أولًا، ولا ننفذه إلا بموافقة مكتوبة.</li><li>التصميمات وملفاتها ملك لجيان بعد سداد كل شهر، ويمكننا عرضها ضمن أعمالنا إلا إذا طلبتم غير ذلك كتابيًا.</li>",
+            en: "<li>Each month has a plan you approve before production; each design gets one round of changes.</li><li>You send the offer lists, prices and materials by a date we agree before each cycle.</li><li>Prices are published exactly as you send and approve them.</li><li>Any extra work is quoted first and done only with written approval.</li><li>Designs and their files belong to Géant once each month is paid; we may show them in our portfolio unless you ask otherwise in writing.</li>",
           },
-          "ex.title": { ar: "غير داخل في العرض", en: "Not included" },
+          "ex.title": { ar: "غير مشمول في العرض", en: "Not included" },
           "ex.list": {
-            ar: "<li>التصوير بالصور والفيديو: ترسلون لنا المواد الخام.</li><li>الرد على الرسائل والتعليقات. يمكن أن نضيف لكم موظفًا يمنيًا لذلك بعرض منفصل.</li><li>ميزانية الإعلانات نفسها.</li><li>طباعة المجلات وأي مطبوعات.</li><li>الموقع الإلكتروني وتطبيق الولاء ومشروع Element: نقدم لها عروضًا منفصلة بعد الموافقة على هذا العرض.</li>",
-            en: "<li>Photo and video shooting: you send us the raw material.</li><li>Answering messages and comments. We can add a Yemeni team member for this in a separate quote.</li><li>The ad budget itself.</li><li>Printing the magazines or any printed matter.</li><li>A website, the loyalty app and the Element project: separate proposals once this one is approved.</li>",
+            ar: "<li>التصوير بالصور والفيديو: ترسلون لنا المواد.</li><li>الرد على الرسائل والتعليقات. يمكن أن نضيف موظفًا لذلك بعرض منفصل.</li><li>ميزانية الإعلانات نفسها.</li><li>طباعة المجلات وأي مطبوعات.</li><li>الموقع الإلكتروني والتطبيقات.</li>",
+            en: "<li>Photo and video shooting: you send us the material.</li><li>Answering messages and comments. We can add a person for this in a separate quote.</li><li>The ad budget itself.</li><li>Printing the magazines or any printed matter.</li><li>A website or apps.</li>",
           },
 
-          "next.kicker": { ar: "الخطوة التالية", en: "Next steps" },
-          "next.title": { ar: "من هنا إلى يناير.", en: "From here to January." },
+          "next.kicker": { ar: "الخطوات التالية", en: "Next steps" },
+          "next.title": { ar: "بعد قراءة العرض", en: "After you read this" },
           "next.s1": {
-            ar: "نراجع هذا العرض معكم، ونعدل ما تريدون.",
-            en: "We go through this proposal together and change what you need.",
+            ar: "نجيب عن أسئلتكم، ونعدل ما يلزم.",
+            en: "We answer your questions and change what is needed.",
           },
           "next.s2": {
-            ar: "نرسل النسخة النهائية إلى الإدارة.",
-            en: "We send the final version to management.",
+            ar: "نتفق على موعد البداية، ونوقع العقد.",
+            en: "We agree a start date and sign.",
           },
-          "next.s3": {
-            ar: "نوقع العقد، ونبدأ أسبوعي التجهيز.",
-            en: "We sign and start the two set-up weeks.",
-          },
+          "next.s3": { ar: "نبدأ أسبوعي التجهيز.", en: "We begin the two set-up weeks." },
 
           "foot.about": {
-            ar: "وكالة تسويق رقمي وبرمجيات في الإسكندرية، نعمل منذ ٢٠٢٢ مع عملاء في مصر والإمارات والعراق والسعودية والولايات المتحدة.",
+            ar: "وكالة تسويق رقمي وبرمجيات في الإسكندرية، تعمل منذ ٢٠٢٢ مع عملاء في مصر والإمارات والعراق والسعودية والولايات المتحدة.",
             en: "A digital marketing and software agency in Alexandria, working since 2022 with clients in Egypt, the UAE, Iraq, Saudi Arabia and the USA.",
           },
           "foot.people": {
@@ -2414,26 +2176,17 @@
         const FACES = ["fr", "ri", "bk", "le", "tp", "bt"]
         const CAPS = {
           fr: {
-            ar: "غلاف العروض الأسبوعية. يُنشر كل أربعاء.",
-            en: "Weekly offers cover. Published every Wednesday.",
+            ar: "غلاف العروض الأسبوعية، يُنشر كل أربعاء.",
+            en: "Weekly offers cover, posted every Wednesday.",
           },
-          ri: {
-            ar: "بطاقة منتج من العروض الأسبوعية. ٤٢ بطاقة مثلها كل أسبوع.",
-            en: "A weekly offer card. 42 like it every week.",
-          },
-          bk: {
-            ar: "العرض الذهبي. ١٢ بطاقة ليوم الثلاثاء فقط.",
-            en: "The Golden Offer. 12 cards, Tuesday only.",
-          },
-          le: {
-            ar: "صفحة من مجلة غير الغذائيات. عدد جديد كل أسبوعين.",
-            en: "A page from the non-food magazine. A new issue every two weeks.",
-          },
+          ri: { ar: "بطاقة منتج من العروض الأسبوعية.", en: "A weekly offer card." },
+          bk: { ar: "العرض الذهبي، ليوم الثلاثاء فقط.", en: "The Golden Offer, Tuesday only." },
+          le: { ar: "صفحة من مجلة غير الغذائيات.", en: "A page from the non-food magazine." },
           tp: {
-            ar: "فكرة: «مطبخ جيان»، وصفة عدنية كل أسبوع.",
-            en: "Idea: Géant Kitchen, an Adeni recipe every week.",
+            ar: "مثال لمنشور غير إعلاني: وصفة من «مطبخ جيان».",
+            en: "A non-sales post: a recipe from Géant Kitchen.",
           },
-          bt: { ar: "فكرة: نصيحة مفيدة تبني الثقة.", en: "Idea: a useful tip that builds trust." },
+          bt: { ar: "مثال لمنشور غير إعلاني: نصيحة مفيدة.", en: "A non-sales post: a useful tip." },
         }
         const SAMPLES = [
           { id: "1A", ar: "غلاف العروض الأسبوعية", en: "Weekly offers cover" },
@@ -2475,72 +2228,41 @@
           L()
             ? countAr(n, "ثانية واحدة", "ثانيتين", "ثوانٍ", "ثانية")
             : n + (n === 1 ? " second" : " seconds")
-
-        function renderPrice() {
-          const sym = PRICING.currency === "USD" ? "$" : PRICING.currency + " "
-          $("#priceTable").innerHTML =
-            `<div class="row main"><div><h3>${t("price.main")}</h3><p>${t("price.mainS")}</p></div><div class="amt">${sym}${Number(PRICING.monthly).toLocaleString("en-US")}<small>${t("price.perMonth")}</small></div></div>` +
-            `<div class="row"><div><h3>${t("price.ads")}</h3><p>${t("price.adsS")}</p></div><div class="amt txt">${t("price.adsV")}</div></div>`
-        }
-        function applyLang() {
-          document.documentElement.lang = lang
-          document.documentElement.dir = L() ? "rtl" : "ltr"
-          $$("[data-t]").forEach((el) => {
-            el.innerHTML = t(el.dataset.t)
-          })
-          $$("[data-t-aria]").forEach((el) => el.setAttribute("aria-label", t(el.dataset.tAria)))
-          $("#lang").textContent = L() ? "English" : "العربية"
-          $("#days").innerHTML = T.days[lang]
-            .map(
-              (d, i) =>
-                `<div class="day ${d[1]}" style="animation-delay:${i * 70}ms"><b>${d[0]}</b><p>${d[2]}</p></div>`,
-            )
-            .join("")
-          renderPrice()
-          if (!lb.hidden) lbShow(lbIdx)
-          renderSamples()
-          coinCue(true)
-          cubeCue(cubeState)
-          if (!$("#coinGotcha").hidden) coinGotcha()
-          if (!$("#cubeGotcha").hidden) cubeGotcha()
-        }
-        $("#lang").addEventListener("click", () => {
-          lang = L() ? "en" : "ar"
-          try {
-            localStorage.setItem("gy-lang", lang)
-          } catch (e) {}
-          applyLang()
-        })
-
         const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches
         const buzz = (ms) => {
           try {
             if (navigator.vibrate) navigator.vibrate(ms || 8)
           } catch (e) {}
         }
+        function showNote(el, html) {
+          el.innerHTML = html
+          el.hidden = false
+          el.classList.remove("show")
+          void el.offsetWidth
+          el.classList.add("show")
+        }
 
         /* ================= COIN ================= */
         const coin = $("#coin"),
           stage = $("#coinStage"),
-          hop = $("#coinHop"),
           hint = $("#coinHint"),
           shine = $("#shine"),
-          shadow = $("#coinShadow"),
-          countEl = $("#coinCount")
+          shadow = $("#coinShadow")
         ;(function buildRim() {
+          /* a smooth edge: many thin, overlapping slices so no seams show while it turns */
           const rim = $("#rim"),
-            N = 48
+            N = 120
           const draw = () => {
             const D = coin.offsetWidth,
               r = D / 2,
-              th = D * 0.085,
-              w = (Math.PI * D) / N + 1
+              th = D * 0.08,
+              w = (Math.PI * D) / N + 1.5
             rim.innerHTML = ""
             for (let i = 0; i < N; i++) {
               const b = document.createElement("b"),
                 a = (i * 360) / N,
-                l = Math.round(58 + 26 * Math.abs(Math.cos((a * Math.PI) / 180)))
-              b.style.cssText = `width:${w}px;height:${th}px;margin:${-th / 2}px 0 0 ${-w / 2}px;transform:rotateZ(${a}deg) translateY(${r - 0.5}px) rotateX(90deg);background:hsl(38 22% ${l}%)`
+                l = Math.round(70 + 12 * Math.cos((a * Math.PI) / 180))
+              b.style.cssText = `width:${w}px;height:${th}px;margin:${-th / 2}px 0 0 ${-w / 2}px;transform:rotateZ(${a}deg) translateY(${r - 0.6}px) rotateX(90deg);background:hsl(38 18% ${l}%)`
               rim.appendChild(b)
             }
           }
@@ -2548,7 +2270,7 @@
           addEventListener("resize", draw)
         })()
         let th = 0,
-          om = reduced ? 0 : 760,
+          om = reduced ? 0 : 60,
           dragging = false,
           lastX = 0,
           lastT = 0,
@@ -2556,10 +2278,11 @@
           downT = 0,
           touched = false,
           userSpin = false,
-          tilt = -6,
+          tilt = -5,
           side = -1,
           lastFace = 0,
-          flips = 0
+          flips = 0,
+          spinFlips = 0
         const frozen = qs.has("still")
         if (frozen) {
           th = Number(qs.get("still")) || 0
@@ -2577,34 +2300,29 @@
           }
         }
         function coinGotcha() {
-          $("#coinGotchaText").innerHTML = L()
-            ? `لم يطلب منك أحد أن تقلب العملة، لكنك قلبتها <b>${timesTxt(flips)}</b>. وهذا بالضبط ما نريده لمنشورات جيان: أن يتوقف الناس عندها ويلمسوها.`
-            : `Nobody asked you to flip the coin, yet you flipped it <b>${timesTxt(flips)}</b>. That is exactly what we want for Géant's posts: people stop, and touch.`
-          $("#coinGotcha").hidden = false
-        }
-        function ripple() {
-          if (reduced) return
-          const r = document.createElement("span")
-          r.className = "ripple"
-          r.style.setProperty("--rs", coin.offsetWidth + "px")
-          stage.appendChild(r)
-          setTimeout(() => r.remove(), 750)
+          showNote(
+            $("#coinGotcha"),
+            L()
+              ? `قلبت العملة <b>${timesTxt(flips)}</b> دون أن يطلب منك أحد ذلك. هذا ما نحاول أن نصل إليه في كل منشور: أن يتوقف الناس عنده قليلًا.`
+              : `You flipped the coin <b>${timesTxt(flips)}</b> without anyone asking you to. That is what we try to achieve with every post: that people stop at it for a moment.`,
+          )
         }
         function coinStep(dt) {
           if (!dragging && !frozen) {
-            om *= Math.exp(-1.4 * dt)
-            if (!touched && !reduced) om = Math.max(om, 30)
-            else if (Math.abs(om) < 70) {
+            /* air friction, then a soft settle onto a face, like a real coin coming to rest */
+            om *= Math.exp(-1.1 * dt)
+            if (!touched && !reduced) om = Math.max(om, 28)
+            else if (Math.abs(om) < 90) {
+              if (userSpin) {
+                userSpin = false
+                if (spinFlips > 0) coinGotcha()
+              }
               const target = Math.round(th / 180) * 180
-              om += (target - th) * 22 * dt
-              om *= Math.exp(-5 * dt)
+              om += (target - th) * 26 * dt
+              om *= Math.exp(-4 * dt)
               if (Math.abs(target - th) < 0.05 && Math.abs(om) < 0.5) {
                 th = target
                 om = 0
-                if (userSpin) {
-                  userSpin = false
-                  if (flips >= 2) coinGotcha()
-                }
               }
             }
             th += om * dt
@@ -2612,27 +2330,24 @@
           const face = Math.round(th / 180)
           if (face !== lastFace) {
             if (userSpin) {
-              flips += Math.abs(face - lastFace)
+              const n = Math.abs(face - lastFace)
+              flips += n
+              spinFlips += n
               buzz()
-              ripple()
-              countEl.textContent = "×" + flips
-              countEl.classList.add("on")
-              countEl.classList.remove("pop")
-              void countEl.offsetWidth
-              countEl.classList.add("pop")
             }
             lastFace = face
           }
           coin.style.transform = `rotateX(${tilt}deg) rotateY(${th}deg)`
           const c = Math.abs(Math.cos((th * Math.PI) / 180))
-          shine.style.opacity = (0.3 + 0.7 * c).toFixed(2)
-          shadow.style.transform = `translateX(-50%) scaleX(${(0.3 + 0.7 * c).toFixed(3)})`
+          shine.style.opacity = (0.25 + 0.75 * c).toFixed(2)
+          shadow.style.transform = `translateX(-50%) scaleX(${(0.25 + 0.75 * c).toFixed(3)})`
           coinCue(false)
         }
         stage.addEventListener("pointerdown", (e) => {
           dragging = true
           touched = true
           userSpin = true
+          spinFlips = 0
           hint.classList.remove("on")
           stage.classList.add("pressed")
           lastX = downX = e.clientX
@@ -2642,7 +2357,7 @@
         })
         stage.addEventListener("pointermove", (e) => {
           if (!dragging) {
-            if (e.pointerType === "mouse") tilt = -6 + (e.offsetY / stage.clientHeight - 0.5) * -18
+            if (e.pointerType === "mouse") tilt = -5 + (e.offsetY / stage.clientHeight - 0.5) * -14
             return
           }
           const now = performance.now(),
@@ -2659,35 +2374,27 @@
           stage.classList.remove("pressed")
           const held = performance.now() - downT
           if (Math.abs(e.clientX - downX) < 6 && held < 350)
-            om = (Math.random() < 0.5 ? -1 : 1) * 1000
+            om = (Math.random() < 0.5 ? -1 : 1) * 900
           if (performance.now() - lastT > 90) om *= 0.2
-          om = Math.max(-2800, Math.min(2800, om))
+          om = Math.max(-2600, Math.min(2600, om))
         }
         stage.addEventListener("pointerup", coinUp)
         stage.addEventListener("pointercancel", coinUp)
         stage.addEventListener("pointerleave", () => {
-          if (!dragging) tilt = -6
+          if (!dragging) tilt = -5
         })
-        if (!frozen && !reduced) {
+        if (!frozen && !reduced)
           setTimeout(() => {
             if (!touched) hint.classList.add("on")
-          }, 2600)
-          /* an untouched coin hops and half-flips every few seconds, inviting a touch */
-          setInterval(() => {
-            if (touched || document.hidden) return
-            hop.classList.remove("hop")
-            void hop.offsetWidth
-            hop.classList.add("hop")
-            om += 520
-          }, 4200)
-        }
+          }, 2500)
 
         /* ================= CUBE: free rotation on 3 axes, with inertia ================= */
         const cube = $("#cube"),
           cstage = $("#cubeStage"),
           hit = $("#cubeHit"),
           cfit = $("#cubeFit"),
-          skip = $("#skipBtn"),
+          flatBtn = $("#flatBtn"),
+          foldBtn = $("#foldBtn"),
           chint = $("#cubeHint")
         const qmul = (a, b) => [
           a[0] * b[0] - a[1] * b[1] - a[2] * b[2] - a[3] * b[3],
@@ -2705,67 +2412,71 @@
           return v.map((x) => x / l)
         }
         const qdot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3]
-        const H = Math.PI / 2
+        const H = Math.PI / 2,
+          ID = [1, 0, 0, 0]
         /* the orientation that brings each face to the front, upright */
         const TARGETS = {
-          fr: [1, 0, 0, 0],
+          fr: ID,
           ri: qaxis(0, 1, 0, -H),
           bk: qaxis(0, 1, 0, Math.PI),
           le: qaxis(0, 1, 0, H),
           tp: qaxis(1, 0, 0, -H),
           bt: qaxis(1, 0, 0, H),
         }
-        const START = () => qnorm(qmul(qaxis(1, 0, 0, -0.32), qaxis(0, 1, 0, 0.55)))
-        let q = START()
-        let w = reduced ? [0, 0, 0] : [0.28, 0.55, 0.12]
+        let q = qnorm(qmul(qaxis(1, 0, 0, -0.32), qaxis(0, 1, 0, 0.55)))
+        let w = reduced ? [0, 0, 0] : [0.22, 0.45, 0.1]
         let cdrag = false,
           clx = 0,
           cly = 0,
           clt = 0,
           ctouched = false,
-          unfolded = false,
+          flat = false,
+          busy = false,
+          spinAng = 0,
+          spinStart = 0,
           totalAng = 0,
-          firstTouch = 0,
-          lastTouch = 0,
           cubeState = "idle",
           gold = false,
-          settledFace = ""
+          settledFace = "",
+          userCube = false
         function cubeCue(state) {
           cubeState = state
-          const key =
-            { found: "week.found", open: "week.open", turned: "week.cueTurned" }[state] ||
-            "week.cue"
-          $("#cubeCue").textContent = t(key)
+          $("#cubeCue").textContent = t(
+            { found: "week.found", open: "week.open" }[state] || "week.cue",
+          )
         }
-        const turns = () => Math.max(1, Math.round(totalAng / H))
         function cubeGotcha() {
-          const secs = Math.max(1, Math.round((lastTouch - firstTouch) / 1000))
-          $("#cubeGotchaText").innerHTML = L()
-            ? `أدرت المكعب <b>${timesTxt(turns())}</b> وبقيت معه <b>${secsTxt(secs)}</b>${gold ? "، ووجدت العرض الذهبي بنفسك" : ""}. هذا هو الاهتمام الذي نريده لكل عرض من عروض جيان.`
-            : `You turned the cube <b>${timesTxt(turns())}</b> and stayed with it for <b>${secsTxt(secs)}</b>${gold ? ", and found the Golden Offer yourself" : ""}. That is the attention we want for every Géant offer.`
-          $("#cubeGotcha").hidden = false
+          const turns = Math.max(1, Math.round(spinAng / H)),
+            secs = Math.max(1, Math.round((performance.now() - spinStart) / 1000))
+          showNote(
+            $("#cubeGotcha"),
+            L()
+              ? `أدرت المكعب <b>${timesTxt(turns)}</b> وبقيت معه <b>${secsTxt(secs)}</b>. نريد أن يقضي الناس مع منشورات جيان وقتًا مثل هذا.`
+              : `You turned the cube <b>${timesTxt(turns)}</b> and spent <b>${secsTxt(secs)}</b> with it. We would like people to spend time like this with Géant's posts.`,
+          )
         }
         function render() {
-          const a = 2 * Math.acos(Math.max(-1, Math.min(1, q[0]))),
-            s = Math.sqrt(Math.max(0, 1 - q[0] * q[0]))
+          const v =
+            q[0] < 0 ? q.map((x) => -x) : q /* shortest way round, never more than half a turn */
+          const a = 2 * Math.acos(Math.min(1, v[0])),
+            s = Math.sqrt(Math.max(0, 1 - v[0] * v[0]))
           cube.style.transform =
-            s < 1e-5
-              ? "rotate3d(0,1,0,0rad)"
-              : `rotate3d(${q[1] / s},${q[2] / s},${q[3] / s},${a}rad)`
+            s < 1e-5 ? "none" : `rotate3d(${v[1] / s},${v[2] / s},${v[3] / s},${a}rad)`
         }
         function cubeStep(dt) {
-          if (unfolded) return
+          if (flat || busy) return
           const speed = Math.hypot(w[0], w[1], w[2])
           if (!cdrag) {
             if (speed > 1e-4) {
               q = qnorm(qmul(qaxis(w[0], w[1], w[2], speed * dt), q))
-              if (ctouched) totalAng += speed * dt
+              if (userCube) {
+                spinAng += speed * dt
+                totalAng += speed * dt
+              }
             }
             if (ctouched) {
-              const k = Math.exp(-0.75 * dt)
-              w = w.map((v) => v * k)
+              w = w.map((v) => v * Math.exp(-0.8 * dt))
               if (speed < 1.4) {
-                /* slow enough: settle onto the nearest face, upright */
                 w = w.map((v) => v * Math.exp(-4 * dt))
                 let best = "fr",
                   bd = -1
@@ -2780,36 +2491,33 @@
                 if (qdot(q, tq) < 0) tq = tq.map((v) => -v)
                 const f = 1 - Math.exp(-5 * dt)
                 q = qnorm(q.map((v, i) => v + (tq[i] - v) * f))
-                if (bd > 0.99995 && speed < 0.05 && settledFace !== best) {
+                if (bd > 0.9999 && speed < 0.08 && (settledFace !== best || userCube)) {
                   settledFace = best
                   w = [0, 0, 0]
-                  lastTouch = performance.now()
-                  if (best === "bk" && !gold) foundGold()
-                  else if (turns() >= 2) cubeGotcha()
+                  if (userCube) {
+                    userCube = false
+                    if (spinAng > 0.4) cubeGotcha()
+                    if (best === "bk") {
+                      gold = true
+                      cubeCue("found")
+                      buzz(30)
+                    } else if (cubeState === "found") cubeCue("idle")
+                  }
                 }
               }
             }
           }
           render()
         }
-        let lastQuarter = 0
-        setInterval(() => {
-          const qt = Math.floor(totalAng / H)
-          if (qt !== lastQuarter) {
-            lastQuarter = qt
-            buzz(6)
-            if (cubeState === "idle" && ctouched) cubeCue("turned")
-          }
-        }, 60)
         hit.addEventListener("pointerdown", (e) => {
-          if (unfolded) return
+          if (flat || busy) return
           cdrag = true
-          settledFace = ""
-          if (!ctouched) firstTouch = performance.now()
           ctouched = true
-          lastTouch = performance.now()
+          userCube = true
+          spinAng = 0
+          spinStart = performance.now()
+          settledFace = ""
           chint.classList.remove("on")
-          skip.classList.add("on")
           clx = e.clientX
           cly = e.clientY
           clt = performance.now()
@@ -2827,76 +2535,106 @@
           const ang = d * 0.011,
             ax = [-dy / d, dx / d, 0]
           q = qnorm(qmul(qaxis(ax[0], ax[1], ax[2], ang), q))
+          spinAng += ang
           totalAng += ang
-          const sp = ang / dt
-          w = w.map((v, i) => v * 0.5 + ax[i] * sp * 0.5)
+          w = w.map((v, i) => v * 0.5 + ax[i] * (ang / dt) * 0.5)
           clx = e.clientX
           cly = e.clientY
           clt = now
-          lastTouch = now
           render()
         })
         const cubeUp = () => {
           if (!cdrag) return
           cdrag = false
-          lastTouch = performance.now()
           if (performance.now() - clt > 90) w = w.map((v) => v * 0.15)
           const sp = Math.hypot(w[0], w[1], w[2])
-          if (sp > 22) w = w.map((v) => (v * 22) / sp)
+          if (sp > 20) w = w.map((v) => (v * 20) / sp)
         }
         hit.addEventListener("pointerup", cubeUp)
         hit.addEventListener("pointercancel", cubeUp)
 
         function fitNet() {
           const S = cube.offsetWidth,
-            W = cstage.clientWidth - 16
+            W = cstage.clientWidth - 8
           const k = Math.min(0.92, W / (S * 4.2))
           cfit.style.transform = `translateX(${-S * 0.52 * k}px) scale(${k})`
         }
-        const foldBtn = $("#foldBtn"),
-          tapNote = $("#tapNote")
-        function unfold() {
-          if (unfolded) return
-          unfolded = true
-          skip.classList.remove("on")
-          chint.classList.remove("on")
-          hit.style.pointerEvents = "none"
-          void cube.offsetWidth
-          cube.classList.add("tween")
-          cube.style.transform = "rotate3d(0,1,0,0rad)"
-          cube.classList.add("net")
-          fitNet()
-          setTimeout(() => cubeCue("open"), gold ? 1000 : 0)
-          FACES.forEach((k) => cube.querySelector(".f." + k).setAttribute("tabindex", "0"))
-          setTimeout(() => {
-            $("#plan").hidden = false
-            foldBtn.classList.add("on")
-            tapNote.hidden = false
-          }, 900)
+        /* lay flat in two steps: first turn the cube to face front, then open the faces */
+        function turnToFront(done) {
+          const from = qdot(q, ID) < 0 ? q.map((x) => -x) : q.slice()
+          const t0 = performance.now(),
+            dur = reduced ? 1 : 550
+          ;(function step(now) {
+            const p = Math.min(1, (now - t0) / dur),
+              e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2
+            q = qnorm(from.map((v, i) => v + (ID[i] - v) * e))
+            render()
+            if (p < 1) requestAnimationFrame(step)
+            else {
+              q = ID.slice()
+              render()
+              done()
+            }
+          })(t0)
         }
-        function fold() {
-          if (!unfolded) return
-          foldBtn.classList.remove("on")
-          tapNote.hidden = true
+        function layFlat() {
+          if (flat || busy) return
+          busy = true
+          w = [0, 0, 0]
+          cdrag = false
+          hit.style.pointerEvents = "none"
+          chint.classList.remove("on")
+          flatBtn.hidden = true
+          turnToFront(() => {
+            cube.classList.add("net")
+            fitNet()
+            FACES.forEach((k) => cube.querySelector(".f." + k).setAttribute("tabindex", "0"))
+            setTimeout(() => {
+              busy = false
+              flat = true
+              foldBtn.hidden = false
+              cubeCue("open")
+            }, 900)
+          })
+        }
+        function foldBack() {
+          if (!flat || busy) return
+          busy = true
+          foldBtn.hidden = true
           FACES.forEach((k) => cube.querySelector(".f." + k).setAttribute("tabindex", "-1"))
           cube.classList.remove("net")
           cfit.style.transform = ""
           setTimeout(() => {
-            cube.classList.remove("tween")
-            q = [1, 0, 0, 0]
+            busy = false
+            flat = false
+            q = ID.slice()
             settledFace = "fr"
-            w = reduced ? [0, 0, 0] : [0.35, 2.2, 0.2]
-            unfolded = false
+            userCube = false
+            w = reduced ? [0, 0, 0] : [0.3, 1.8, 0.15]
             hit.style.pointerEvents = ""
-            skip.dataset.t = "week.unfold"
-            skip.textContent = t("week.unfold")
-            skip.classList.add("on")
-            cubeCue("turned")
-          }, 1150)
+            flatBtn.hidden = false
+            cubeCue("idle")
+          }, 950)
         }
-        foldBtn.addEventListener("click", fold)
+        flatBtn.addEventListener("click", layFlat)
+        foldBtn.addEventListener("click", foldBack)
+        addEventListener("resize", () => {
+          if (flat) fitNet()
+        })
+        new IntersectionObserver(
+          (es, io) =>
+            es.forEach((en) => {
+              if (en.isIntersecting) {
+                setTimeout(() => {
+                  if (!ctouched && !reduced) chint.classList.add("on")
+                }, 1600)
+                io.disconnect()
+              }
+            }),
+          { threshold: 0.5 },
+        ).observe(cstage)
 
-        /* lightbox: while flat, every design opens full size */
+        /* lightbox: while flat, every design opens larger */
         const lb = $("#lb"),
           lbCard = $("#lbCard")
         let lbIdx = 0,
@@ -2916,7 +2654,7 @@
           document.body.style.overflow = "hidden"
           $("#lbClose").focus()
         }
-        function lbCloseFn() {
+        function lbClose() {
           lb.hidden = true
           document.body.style.overflow = ""
           if (lbLast && lbLast.focus) lbLast.focus()
@@ -2925,24 +2663,24 @@
           const f = cube.querySelector(".f." + key)
           f.setAttribute("tabindex", "-1")
           f.addEventListener("click", () => {
-            if (unfolded) lbOpen(i)
+            if (flat) lbOpen(i)
           })
           f.addEventListener("keydown", (e) => {
-            if (unfolded && (e.key === "Enter" || e.key === " ")) {
+            if (flat && (e.key === "Enter" || e.key === " ")) {
               e.preventDefault()
               lbOpen(i)
             }
           })
         })
-        $("#lbClose").addEventListener("click", lbCloseFn)
+        $("#lbClose").addEventListener("click", lbClose)
         $("#lbPrev").addEventListener("click", () => lbShow(lbIdx - 1))
         $("#lbNext").addEventListener("click", () => lbShow(lbIdx + 1))
         lb.addEventListener("click", (e) => {
-          if (e.target === lb) lbCloseFn()
+          if (e.target === lb) lbClose()
         })
         addEventListener("keydown", (e) => {
           if (lb.hidden) return
-          if (e.key === "Escape") lbCloseFn()
+          if (e.key === "Escape") lbClose()
           if (e.key === "ArrowRight") lbShow(lbIdx + (L() ? -1 : 1))
           if (e.key === "ArrowLeft") lbShow(lbIdx + (L() ? 1 : -1))
         })
@@ -2956,32 +2694,54 @@
           lbX = null
           if (Math.abs(dx) > 40) lbShow(lbIdx + (dx < 0 ? 1 : -1))
         })
-        function foundGold() {
-          gold = true
-          cubeCue("found")
-          buzz(30)
-          cubeGotcha()
-          setTimeout(unfold, 1600)
+
+        /* ================= text, price, samples ================= */
+        function renderPrice() {
+          const sym = PRICING.currency === "USD" ? "$" : PRICING.currency + " "
+          $("#priceTable").innerHTML =
+            `<div class="row"><div><h3>${t("price.main")}</h3><p>${t("price.mainS")}</p></div><div class="amt">${sym}${Number(PRICING.monthly).toLocaleString("en-US")}<small>${t("price.perMonth")}</small></div></div>` +
+            `<div class="row"><div><h3>${t("price.ads")}</h3><p>${t("price.adsS")}</p></div><div class="amt txt">${t("price.adsV")}</div></div>`
         }
-        skip.addEventListener("click", unfold)
-        addEventListener("resize", () => {
-          if (unfolded) fitNet()
+        function renderSamples() {
+          const host = $("#pairs")
+          host.innerHTML = ""
+          SAMPLES.forEach((s) => {
+            const after = new Image()
+            after.onload = () => {
+              $("#samples").hidden = false
+              const fig = document.createElement("div")
+              fig.className = "pair"
+              fig.innerHTML = `<figure><img loading="lazy" src="assets/samples/${s.id}-before.png" alt=""><figcaption>${L() ? "قبل" : "Before"} · ${s[lang]}</figcaption></figure><figure><img loading="lazy" src="assets/samples/${s.id}-after.png" alt=""><figcaption>${L() ? "بعد" : "After"} · WordReward</figcaption></figure>`
+              host.appendChild(fig)
+            }
+            after.src = `assets/samples/${s.id}-after.png`
+          })
+        }
+        function applyLang() {
+          document.documentElement.lang = lang
+          document.documentElement.dir = L() ? "rtl" : "ltr"
+          $$("[data-t]").forEach((el) => {
+            el.innerHTML = t(el.dataset.t)
+          })
+          $$("[data-t-aria]").forEach((el) => el.setAttribute("aria-label", t(el.dataset.tAria)))
+          $("#lang").textContent = L() ? "English" : "العربية"
+          $("#days").innerHTML = T.days[lang]
+            .map((d) => `<div class="day ${d[1]}"><b>${d[0]}</b><p>${d[2]}</p></div>`)
+            .join("")
+          renderPrice()
+          renderSamples()
+          coinCue(true)
+          cubeCue(cubeState)
+          if (!$("#coinGotcha").hidden && flips) coinGotcha()
+          if (!lb.hidden) lbShow(lbIdx)
+        }
+        $("#lang").addEventListener("click", () => {
+          lang = L() ? "en" : "ar"
+          try {
+            localStorage.setItem("gy-lang", lang)
+          } catch (e) {}
+          applyLang()
         })
-        new IntersectionObserver(
-          (es, io) =>
-            es.forEach((en) => {
-              if (en.isIntersecting) {
-                setTimeout(() => {
-                  if (!ctouched && !reduced) chint.classList.add("on")
-                }, 1800)
-                setTimeout(() => {
-                  if (!unfolded) skip.classList.add("on")
-                }, 7000)
-                io.disconnect()
-              }
-            }),
-          { threshold: 0.5 },
-        ).observe(cstage)
 
         /* ================= loop ================= */
         const vis = { coin: true, cube: false }
@@ -3003,24 +2763,6 @@
           if (vis.cube) cubeStep(dt)
           requestAnimationFrame(loop)
         }
-
-        /* ================= samples ================= */
-        function renderSamples() {
-          const host = $("#pairs")
-          host.innerHTML = ""
-          SAMPLES.forEach((s) => {
-            const after = new Image()
-            after.onload = () => {
-              $("#samples").hidden = false
-              const fig = document.createElement("div")
-              fig.className = "pair"
-              fig.innerHTML = `<figure><img loading="lazy" src="assets/samples/${s.id}-before.png" alt=""><figcaption>${L() ? "قبل" : "Before"} · ${s[lang]}</figcaption></figure><figure><img loading="lazy" src="assets/samples/${s.id}-after.png" alt=""><figcaption>${L() ? "بعد" : "After"} · WordReward</figcaption></figure>`
-              host.appendChild(fig)
-            }
-            after.src = `assets/samples/${s.id}-after.png`
-          })
-        }
-
         applyLang()
         render()
         requestAnimationFrame(loop)
