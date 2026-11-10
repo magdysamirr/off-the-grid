@@ -655,6 +655,40 @@
         gap: 10px;
         text-align: center;
       }
+      .seek {
+        width: min(100%, 380px);
+        margin-top: 4px;
+      }
+      .seek-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        font-size: 14.5px;
+        color: var(--band-muted);
+      }
+      .seek-top b {
+        font: 600 15px/1 var(--en);
+        color: var(--band-fg);
+      }
+      .seek-bar {
+        height: 10px;
+        margin-top: 8px;
+        border-radius: 999px;
+        background: rgba(255, 252, 249, 0.12);
+        overflow: hidden;
+      }
+      .seek-bar i {
+        display: block;
+        height: 100%;
+        width: 0;
+        border-radius: inherit;
+        background: var(--band-accent);
+        transition: width 0.12s linear;
+      }
+      .seek.done .seek-top {
+        color: var(--band-accent);
+      }
       .cube-cue {
         font-size: 15.5px;
         color: var(--band-muted);
@@ -1601,6 +1635,18 @@
               </div>
             </div>
             <div class="cube-ui">
+              <div class="seek" id="seek">
+                <div class="seek-top"><span id="seekLabel"></span><b id="seekPct"></b></div>
+                <div
+                  class="seek-bar"
+                  role="progressbar"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  id="seekBar"
+                >
+                  <i id="seekFill"></i>
+                </div>
+              </div>
               <p class="cube-cue" id="cubeCue" aria-live="polite"></p>
               <button class="pill" id="flatBtn" type="button" data-t="week.flat"></button>
               <button
@@ -1992,15 +2038,23 @@
           "week.kicker": { ar: "أسبوع من العمل", en: "A week of work" },
           "week.title": { ar: "ما نصممه لكم كل أسبوع", en: "What we design for you each week" },
           "week.lead": {
-            ar: "كل وجه في المكعب مثال لنوع من المنشورات. يمكنك تدويره في أي اتجاه، والعرض الذهبي على أحد الوجوه.",
-            en: "Each face of the cube is an example of one type of post. You can turn it in any direction; the Golden Offer is on one of the faces.",
+            ar: "كل وجه في المكعب مثال لنوع من المنشورات. المطلوب: ابحث عن وجه «العرض الذهبي». الشريط تحت المكعب يمتلئ كلما اقترب هذا الوجه منك، ويفرغ كلما ابتعد.",
+            en: "Each face of the cube is an example of one type of post. Your task: find the Golden Offer face. The bar under the cube fills as that face turns toward you and empties as it turns away.",
           },
           "week.aria": {
             ar: "مكعب من بطاقات عروض جيان. أدره لترى الوجوه.",
             en: "A cube of Géant offer cards. Turn it to see the faces.",
           },
-          "week.cue": { ar: "أدر المكعب بإصبعك.", en: "Turn the cube with your finger." },
-          "week.found": { ar: "هذا هو العرض الذهبي.", en: "This is the Golden Offer." },
+          "week.cue": {
+            ar: "أدر المكعب بإصبعك حتى يصبح وجه «العرض الذهبي» أمامك.",
+            en: "Turn the cube with your finger until the Golden Offer face is in front of you.",
+          },
+          "week.seek": { ar: "قربك من العرض الذهبي", en: "How close you are to the Golden Offer" },
+          "week.seekDone": { ar: "وجدت العرض الذهبي", en: "You found the Golden Offer" },
+          "week.found": {
+            ar: "أحسنت، هذا هو العرض الذهبي. يمكنك الآن فرد المكعب لترى كل الوجوه.",
+            en: "Well done, this is the Golden Offer. You can now lay the cube flat to see every face.",
+          },
           "week.open": {
             ar: "اضغط على أي تصميم لتراه بحجم أكبر.",
             en: "Tap any design to see it larger.",
@@ -2442,6 +2496,11 @@
           }, 2500)
 
         /* ================= CUBE: free rotation on 3 axes, with inertia ================= */
+        const seek = $("#seek"),
+          seekFill = $("#seekFill"),
+          seekBar = $("#seekBar"),
+          seekPct = $("#seekPct"),
+          seekLabel = $("#seekLabel")
         const cube = $("#cube"),
           cstage = $("#cubeStage"),
           hit = $("#cubeHit"),
@@ -2508,6 +2567,27 @@
               : `You turned the cube <b>${timesTxt(turns)}</b> and spent <b>${secsTxt(secs)}</b> with it. We would like people to spend time like this with Géant's posts.`,
           )
         }
+        /* how directly the Golden Offer face (local normal 0,0,-1) faces the reader: 0 = away, 1 = straight on */
+        let seekShown = -1
+        function seekUpdate() {
+          const [qw, qx, qy, qz] = q
+          /* rotate v = (0,0,-1) by q: v + 2w(u x v) + 2u x (u x v), u = (qx,qy,qz) */
+          const cx = -qy,
+            cy = qx /* u x v with v=(0,0,-1): (qy*-1 - 0, 0 - qx*-1, 0) = (-qy, qx, 0) */
+          const zz =
+            -1 + 2 * (qx * cy - qy * cx) /* z of v + 2u x (u x v); the 2w term has no z part */
+          const p = Math.acos(Math.max(-1, Math.min(1, zz))) /* angle from the reader */
+          let pct = Math.round((1 - p / Math.PI) * 100)
+          if (gold && settledFace === "bk") pct = 100
+          if (pct === seekShown) return
+          seekShown = pct
+          seekFill.style.width = pct + "%"
+          seekBar.setAttribute("aria-valuenow", pct)
+          seekPct.textContent = L() ? num(pct) + "٪" : pct + "%"
+          const done = gold && settledFace === "bk"
+          seek.classList.toggle("done", done)
+          seekLabel.textContent = t(done ? "week.seekDone" : "week.seek")
+        }
         function render() {
           const v =
             q[0] < 0 ? q.map((x) => -x) : q /* shortest way round, never more than half a turn */
@@ -2515,6 +2595,7 @@
             s = Math.sqrt(Math.max(0, 1 - v[0] * v[0]))
           cube.style.transform =
             s < 1e-5 ? "none" : `rotate3d(${v[1] / s},${v[2] / s},${v[3] / s},${a}rad)`
+          seekUpdate()
         }
         function cubeStep(dt) {
           if (flat || busy) return
@@ -2647,6 +2728,7 @@
               flat = true
               foldBtn.hidden = false
               foldGuide.hidden = false
+              seek.hidden = true
               cstage.style.touchAction = "pan-y"
               cubeCue("open")
             }, 900)
@@ -2657,6 +2739,7 @@
           busy = true
           foldBtn.hidden = true
           foldGuide.hidden = true
+          seek.hidden = false
           cstage.style.touchAction = ""
           pts.clear()
           FACES.forEach((k) => cube.querySelector(".f." + k).setAttribute("tabindex", "-1"))
@@ -2832,6 +2915,8 @@
           renderSamples()
           coinCue(true)
           cubeCue(cubeState)
+          seekShown = -1
+          seekUpdate()
           if (!$("#coinGotcha").hidden && flips) coinGotcha()
           if (!lb.hidden) lbShow(lbIdx)
         }
