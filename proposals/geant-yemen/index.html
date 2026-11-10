@@ -1,0 +1,2957 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Géant Yemen Proposal</title>
+    <meta name="description" content="عرض WordReward لإدارة صفحات جيان هايبرماركت، عدن مول." />
+    <meta property="og:title" content="WordReward × Géant Yemen" />
+    <meta property="og:description" content="عرض لإدارة صفحات جيان على مواقع التواصل." />
+    <meta property="og:image" content="assets/og.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&family=Noto+Kufi+Arabic:wght@600;700&family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@600;700&family=Almarai:wght@400;700;800&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Layout: one column on phones; two columns (heading beside content) from tablet width up. */
+      :root {
+        /* WRD brand, light mode (WordReward Brand Colors) */
+        --bg: #f7f3eb;
+        --surface: #fffcf9;
+        --fg: #434459;
+        --fg-rgb: 67, 68, 89;
+        --muted: rgba(67, 68, 89, 0.74);
+        --line: rgba(67, 68, 89, 0.15);
+        --accent: #39b5a8;
+        --on-accent: #434459;
+        --band: #1e1f27;
+        --band-fg: #fffcf9;
+        --band-muted: rgba(255, 252, 249, 0.74);
+        --band-line: rgba(255, 252, 249, 0.14);
+        --band-accent: #ffdb8e;
+        --shadow: rgba(30, 31, 39, 0.24);
+        /* Géant colours, only inside the sample cards */
+        --g-green: #3daa35;
+        --g-green-d: #2a8a24;
+        --g-red: #e2231a;
+        --g-orange: #f7a823;
+        --g-yellow: #ffe418;
+        /* type */
+        --ar: "IBM Plex Sans Arabic", "Geeza Pro", Tahoma, sans-serif;
+        --ar-display: "DIN Next LT Arabic", "Noto Kufi Arabic", "IBM Plex Sans Arabic", sans-serif;
+        --en: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --en-display: Rockwell, "Rockwell Nova", Clarendon, "Roboto Slab", Georgia, serif;
+        --g-ar: "Almarai", var(--ar);
+        --g-en: "Montserrat", var(--en);
+        --gutter: clamp(16px, 5vw, 56px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #1e1f27;
+          --surface: #272833;
+          --fg: #fffcf9;
+          --fg-rgb: 255, 252, 249;
+          --muted: rgba(255, 252, 249, 0.72);
+          --line: rgba(255, 252, 249, 0.13);
+          --accent: #ffdb8e;
+          --on-accent: #434459;
+          --band: #15161c;
+          --band-fg: #fffcf9;
+          --band-muted: rgba(255, 252, 249, 0.72);
+          --band-line: rgba(255, 252, 249, 0.12);
+          --band-accent: #ffdb8e;
+          --shadow: rgba(0, 0, 0, 0.55);
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #1e1f27;
+        --surface: #272833;
+        --fg: #fffcf9;
+        --fg-rgb: 255, 252, 249;
+        --muted: rgba(255, 252, 249, 0.72);
+        --line: rgba(255, 252, 249, 0.13);
+        --accent: #ffdb8e;
+        --on-accent: #434459;
+        --band: #15161c;
+        --band-fg: #fffcf9;
+        --band-muted: rgba(255, 252, 249, 0.72);
+        --band-line: rgba(255, 252, 249, 0.12);
+        --band-accent: #ffdb8e;
+        --shadow: rgba(0, 0, 0, 0.55);
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 400 17px/1.75 var(--ar);
+        overflow-x: hidden;
+      }
+      html[lang="en"] body {
+        font-family: var(--en);
+        line-height: 1.65;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+      }
+      a {
+        color: inherit;
+      }
+      [data-t]:empty {
+        display: none;
+      }
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      .wrap {
+        width: min(100% - 2 * var(--gutter), 1080px);
+        margin-inline: auto;
+      }
+      section {
+        padding-block: clamp(56px, 9vw, 96px);
+        scroll-margin-top: 60px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--fg);
+        margin: 0;
+        font-family: var(--ar-display);
+        font-weight: 700;
+        line-height: 1.3;
+        text-wrap: balance;
+      }
+      html[lang="en"] h1,
+      html[lang="en"] h2 {
+        font-family: var(--en-display);
+      }
+      html[lang="en"] h3 {
+        font-family: var(--en);
+        font-weight: 600;
+      }
+      h1 {
+        font-size: clamp(30px, 6.4vw, 48px);
+      }
+      h2 {
+        font-size: clamp(26px, 4.6vw, 36px);
+        margin-bottom: 12px;
+      }
+      h3 {
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      p {
+        margin: 0 0 12px;
+      }
+      .lead {
+        font-size: 18px;
+        color: var(--muted);
+      }
+      .kicker {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font: 600 13px/1.4 var(--en);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--fg);
+        margin: 0 0 12px;
+      }
+      html[lang="ar"] .kicker {
+        font-family: var(--ar);
+        letter-spacing: 0;
+        font-size: 15px;
+        text-transform: none;
+        font-weight: 500;
+      }
+      .kicker::before {
+        content: "";
+        width: 20px;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--accent);
+        flex: none;
+      }
+      .band {
+        background: var(--band);
+        color: var(--band-fg);
+        overflow: hidden;
+      }
+      .band h2,
+      .band h3 {
+        color: var(--band-fg);
+      }
+      .band .kicker {
+        color: var(--band-fg);
+      }
+      .band .kicker::before {
+        background: var(--band-accent);
+      }
+      .band .lead {
+        color: var(--band-muted);
+      }
+
+      /* the two-column split */
+      .split {
+        display: grid;
+        gap: 22px;
+      }
+      .split > * {
+        min-width: 0;
+      }
+      @media (min-width: 760px) {
+        .split {
+          grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+          gap: 56px;
+          align-items: start;
+        }
+        .side {
+          position: sticky;
+          top: 84px;
+        }
+      }
+
+      /* top bar */
+      .bar {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: calc(10px + env(safe-area-inset-top, 0px))
+          max(var(--gutter), env(safe-area-inset-right, 0px)) 10px
+          max(var(--gutter), env(safe-area-inset-left, 0px));
+        pointer-events: none;
+      }
+      .bar > * {
+        pointer-events: auto;
+      }
+      .pill-ui {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        padding: 7px 14px 7px 10px;
+        font: 600 13px/1 var(--en);
+        text-decoration: none;
+        direction: ltr;
+        color: var(--fg);
+      }
+      .brand svg {
+        width: 18px;
+        height: auto;
+        color: var(--fg);
+      }
+      .brand span {
+        opacity: 0.7;
+      }
+      .lang {
+        padding: 8px 14px;
+        font: 600 13px/1 var(--en);
+        cursor: pointer;
+      }
+      html[lang="en"] .lang {
+        font-family: var(--ar);
+      }
+
+      /* HERO + COIN */
+      #hero {
+        padding-top: calc(84px + env(safe-area-inset-top, 0px));
+      }
+      .hero {
+        display: grid;
+        gap: 8px;
+        align-items: center;
+      }
+      .hero .stage {
+        order: -1;
+      }
+      @media (min-width: 760px) {
+        .hero {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+          gap: 40px;
+        }
+        .hero .stage {
+          order: 0;
+        }
+      }
+      .hero-text .lead {
+        margin-top: 12px;
+      }
+      .stage {
+        position: relative;
+        width: 100%;
+        height: min(78vw, 380px);
+        min-height: 260px;
+        touch-action: pan-y;
+        cursor: grab;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        perspective: 1000px;
+      }
+      .stage:active {
+        cursor: grabbing;
+      }
+      .coin-float {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+      .coin {
+        --d: min(56vw, 270px);
+        --t: calc(var(--d) * 0.08);
+        position: relative;
+        width: var(--d);
+        height: var(--d);
+        transform-style: preserve-3d;
+        will-change: transform;
+        transition: scale 0.15s ease;
+      }
+      .stage.pressed .coin {
+        scale: 0.97;
+      }
+      .coin .face {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+      .coin .front {
+        transform: translateZ(calc(var(--t) / 2));
+        background: radial-gradient(circle at 36% 30%, #ffffff 0, #f8f2e8 45%, #e8dfcf 100%);
+        box-shadow:
+          inset 0 0 0 calc(var(--d) * 0.045) #ebe2d2,
+          inset 0 2px 10px rgba(0, 0, 0, 0.06);
+      }
+      .coin .front svg {
+        width: 48%;
+        height: auto;
+        color: #434459;
+      }
+      .coin .back {
+        transform: rotateY(180deg) translateZ(calc(var(--t) / 2));
+        background: radial-gradient(circle at 36% 30%, #595a72 0, #434459 48%, #30313f 100%);
+        color: #fffcf9;
+        box-shadow:
+          inset 0 0 0 calc(var(--d) * 0.045) #3b3c4f,
+          inset 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+      .back .growth {
+        width: 50%;
+        height: auto;
+        overflow: visible;
+      }
+      .back .growth rect {
+        fill: rgba(255, 219, 142, 0.35);
+      }
+      .back .growth .arrow {
+        fill: none;
+        stroke: #ffdb8e;
+        stroke-width: 6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .back .inner {
+        display: grid;
+        place-items: center;
+      }
+      .back .big {
+        font: 700 calc(var(--d) * 0.28)/1 var(--en-display);
+        letter-spacing: -0.03em;
+      }
+      .back .big i {
+        font-style: normal;
+        color: #ffdb8e;
+      }
+      .back .small {
+        font: 600 calc(var(--d) * 0.06)/1.2 var(--ar);
+        opacity: 0.85;
+        margin-top: calc(var(--d) * 0.03);
+      }
+      .coin .shine {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        pointer-events: none;
+        background: linear-gradient(
+          110deg,
+          transparent 30%,
+          rgba(255, 255, 255, 0.2) 50%,
+          transparent 70%
+        );
+        transform: translateZ(calc(var(--t) / 2 + 0.5px));
+        backface-visibility: hidden;
+      }
+      .rim {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        height: 0;
+        transform-style: preserve-3d;
+      }
+      .rim b {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        backface-visibility: visible;
+      }
+      .shadow {
+        position: absolute;
+        left: 50%;
+        bottom: 4%;
+        width: min(44vw, 220px);
+        height: 16px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: radial-gradient(var(--shadow), transparent 70%);
+        filter: blur(3px);
+      }
+      .hint {
+        position: absolute;
+        left: 50%;
+        top: 52%;
+        width: 44px;
+        height: 44px;
+        margin: -22px 0 0 -22px;
+        border-radius: 50%;
+        background: rgba(var(--fg-rgb), 0.16);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .hint.on {
+        opacity: 1;
+        animation: swipe 2s ease-in-out infinite;
+      }
+      @keyframes swipe {
+        0% {
+          transform: translateX(40px);
+        }
+        50% {
+          transform: translateX(-40px);
+        }
+        100% {
+          transform: translateX(40px);
+        }
+      }
+      .cue {
+        margin: 10px 0 0;
+        font-size: 15px;
+        color: var(--muted);
+        min-height: 1.75em;
+      }
+      .gotcha {
+        margin: 16px 0 0;
+        padding: 14px 18px;
+        border-radius: 14px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        font-size: 16.5px;
+      }
+      .gotcha.show {
+        animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .gotcha b {
+        font-weight: 700;
+      }
+      .band .gotcha {
+        background: rgba(255, 252, 249, 0.06);
+        border-color: var(--band-line);
+        color: var(--band-fg);
+      }
+      .band .gotcha b {
+        color: var(--band-accent);
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* WEEK + CUBE */
+      .cube-stage {
+        position: relative;
+        height: calc(var(--S) * 2);
+        user-select: none;
+        -webkit-user-select: none;
+        perspective: 1100px;
+        --S: min(220px, 54vw);
+      }
+      .cube-hit {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: calc(var(--S) * 1.35);
+        height: calc(var(--S) * 1.35);
+        transform: translate(-50%, -50%);
+        touch-action: none;
+        cursor: grab;
+        z-index: 2;
+        border-radius: 50%;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .cube-hit:active {
+        cursor: grabbing;
+      }
+      .cube-fit {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: var(--S);
+        height: var(--S);
+        margin: calc(var(--S) / -2) 0 0 calc(var(--S) / -2);
+        transform-style: preserve-3d;
+        transition: transform 0.9s cubic-bezier(0.3, 0.7, 0.2, 1);
+      }
+      .cube {
+        position: absolute;
+        inset: 0;
+        transform-style: preserve-3d;
+        will-change: transform;
+      }
+      .cube-hint {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        margin: -20px 0 0 -20px;
+        border-radius: 50%;
+        background: rgba(255, 252, 249, 0.2);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 3;
+        transition: opacity 0.4s;
+      }
+      .cube-hint.on {
+        opacity: 1;
+        animation: swirl 2.6s ease-in-out infinite;
+      }
+      @keyframes swirl {
+        0% {
+          transform: translate(-50px, 26px);
+        }
+        33% {
+          transform: translate(44px, -34px);
+        }
+        66% {
+          transform: translate(34px, 44px);
+        }
+        100% {
+          transform: translate(-50px, 26px);
+        }
+      }
+      .f {
+        position: absolute;
+        inset: 0;
+        width: var(--S);
+        height: var(--S);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        overflow: hidden;
+        transform: translate3d(var(--x, 0px), var(--y, 0px), 0) rotateY(var(--ry, 0deg))
+          rotateX(var(--rx, 0deg)) translateZ(var(--z));
+        transition: transform 0.9s cubic-bezier(0.3, 0.7, 0.2, 1);
+        --z: calc(var(--S) / 2);
+        font-size: calc(var(--S) * 0.062);
+        line-height: 1.3;
+        color: #1d1d1d;
+        direction: rtl;
+        font-family: var(--g-ar);
+      }
+      .f.fr {
+        --ry: 0deg;
+      }
+      .f.ri {
+        --ry: 90deg;
+      }
+      .f.bk {
+        --ry: 180deg;
+      }
+      .f.le {
+        --ry: -90deg;
+      }
+      .f.tp {
+        --rx: 90deg;
+      }
+      .f.bt {
+        --rx: -90deg;
+      }
+      .net .f {
+        --z: 0px;
+        --ry: 0deg;
+        --rx: 0deg;
+        cursor: zoom-in;
+        border-radius: 3px;
+      }
+      .net .f:hover {
+        box-shadow: 0 0 0 3px var(--band-accent);
+      }
+      .net .f.fr {
+        --x: 0px;
+      }
+      .net .f.ri {
+        --x: calc(var(--S) * 1.04);
+      }
+      .net .f.bk {
+        --x: calc(var(--S) * 2.08);
+      }
+      .net .f.le {
+        --x: calc(var(--S) * -1.04);
+      }
+      .net .f.tp {
+        --y: calc(var(--S) * -1.04);
+      }
+      .net .f.bt {
+        --y: calc(var(--S) * 1.04);
+      }
+      .cube-ui {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+      }
+      .seek {
+        width: min(100%, 380px);
+        margin-top: 4px;
+      }
+      .seek-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        font-size: 14.5px;
+        color: var(--band-muted);
+      }
+      .seek-top b {
+        font: 600 15px/1 var(--en);
+        color: var(--band-fg);
+      }
+      .seek-bar {
+        height: 10px;
+        margin-top: 8px;
+        border-radius: 999px;
+        background: rgba(255, 252, 249, 0.12);
+        overflow: hidden;
+      }
+      .seek-bar i {
+        display: block;
+        height: 100%;
+        width: 0;
+        border-radius: inherit;
+        background: var(--band-accent);
+        transition: width 0.12s linear;
+      }
+      .seek.done .seek-top {
+        color: var(--band-accent);
+      }
+      .cube-cue {
+        font-size: 15.5px;
+        color: var(--band-muted);
+        margin: 0;
+        min-height: 1.75em;
+      }
+      .pill {
+        border: 1px solid var(--band-line);
+        background: transparent;
+        color: var(--band-fg);
+        border-radius: 999px;
+        padding: 9px 18px;
+        font-size: 14.5px;
+        cursor: pointer;
+      }
+      .pill.solid {
+        background: var(--band-accent);
+        color: #434459;
+        border-color: var(--band-accent);
+        font-weight: 600;
+      }
+      .cube-ui .gotcha {
+        text-align: start;
+        width: 100%;
+      }
+      .tally {
+        display: flex;
+        gap: 28px;
+        margin-top: 22px;
+        flex-wrap: wrap;
+      }
+      .tally b {
+        display: block;
+        font: 700 34px/1 var(--en-display);
+        color: var(--band-fg);
+      }
+      .tally span {
+        font-size: 13.5px;
+        color: var(--band-muted);
+      }
+
+      /* sample cards (typographic stand-ins built from Géant's real source pages) */
+      .card {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 8%;
+      }
+      .card .tag {
+        font-size: 0.78em;
+        font-weight: 700;
+        opacity: 0.9;
+      }
+      .card .ttl {
+        font-weight: 800;
+        font-size: 1.9em;
+        line-height: 1.08;
+        margin-top: 0.2em;
+      }
+      .card .sub {
+        font-size: 0.95em;
+        margin-top: 0.35em;
+      }
+      .card .foot {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.72em;
+        font-weight: 700;
+        opacity: 0.9;
+      }
+      .price {
+        display: inline-flex;
+        align-items: stretch;
+        border-radius: 0.4em;
+        overflow: hidden;
+        margin-top: 0.6em;
+        direction: ltr;
+        font-family: var(--g-en);
+        font-weight: 700;
+        align-self: flex-start;
+      }
+      .price .old {
+        background: var(--g-red);
+        color: #fff;
+        padding: 0.35em 0.55em;
+        font-size: 0.82em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.1;
+      }
+      .price .old small {
+        font-size: 0.75em;
+        opacity: 0.85;
+      }
+      .price .new {
+        background: var(--g-yellow);
+        color: var(--g-red);
+        padding: 0.15em 0.5em;
+        font-size: 1.9em;
+        line-height: 1.1;
+        display: flex;
+        align-items: center;
+      }
+      .c-cover {
+        background: radial-gradient(
+          circle at 80% 15%,
+          #5cc653,
+          var(--g-green) 45%,
+          var(--g-green-d)
+        );
+        color: #fff;
+      }
+      .c-cover .ttl {
+        font-size: 2.5em;
+      }
+      .c-cover .date {
+        align-self: flex-start;
+        background: var(--g-yellow);
+        color: #1d1d1d;
+        font-weight: 800;
+        border-radius: 999px;
+        padding: 0.15em 0.8em;
+        margin-top: 0.7em;
+        font-size: 1.05em;
+        white-space: nowrap;
+      }
+      .c-item,
+      .c-nf {
+        background: #fff;
+      }
+      .c-item .band2,
+      .c-nf .band2 {
+        margin: -8% -8% 6% -8%;
+        padding: 4% 8%;
+        color: #fff;
+        font-weight: 800;
+        font-size: 0.85em;
+      }
+      .c-item .band2 {
+        background: var(--g-green);
+      }
+      .c-nf .band2 {
+        background: var(--g-red);
+      }
+      .c-item .ttl {
+        font-size: 1.55em;
+      }
+      .c-item .w {
+        align-self: flex-start;
+        background: #eef6ec;
+        color: var(--g-green-d);
+        border-radius: 0.3em;
+        padding: 0 0.4em;
+        font-weight: 800;
+        margin-top: 0.3em;
+        font-size: 0.9em;
+      }
+      .c-nf .ttl {
+        font-size: 1.45em;
+      }
+      .c-nf .save {
+        align-self: flex-start;
+        margin-top: 0.5em;
+        background: #1d1d1d;
+        color: #fff;
+        border-radius: 0.3em;
+        padding: 0.05em 0.5em;
+        font-weight: 800;
+        font-size: 0.85em;
+      }
+      .c-gold {
+        background: radial-gradient(circle at 75% 10%, #3a2f12, #15120b 70%);
+        color: #f4dc93;
+      }
+      .c-gold .tag {
+        color: #ffd76a;
+      }
+      .c-gold .ttl {
+        color: #ffe7a6;
+        font-size: 2.1em;
+      }
+      .c-gold .day {
+        align-self: flex-start;
+        margin-top: 0.4em;
+        border: 1px solid rgba(255, 215, 106, 0.6);
+        border-radius: 999px;
+        padding: 0.05em 0.7em;
+        font-weight: 700;
+        font-size: 0.9em;
+        white-space: nowrap;
+      }
+      .c-gold .prod {
+        margin-top: auto;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.05em;
+      }
+      .c-gold .price .new {
+        background: linear-gradient(#ffe27a, #e7b52d);
+        color: #2a1d00;
+      }
+      .c-gold .foot {
+        margin-top: 0.6em;
+      }
+      .c-cook {
+        background: linear-gradient(160deg, #ffb94a, var(--g-orange) 55%, #e48b0b);
+        color: #2a1700;
+      }
+      .c-cook .play {
+        width: 2.6em;
+        height: 2.6em;
+        border-radius: 50%;
+        background: #fff;
+        display: grid;
+        place-items: center;
+        margin-top: auto;
+      }
+      .c-cook .play::before {
+        content: "";
+        border-style: solid;
+        border-width: 0.55em 0 0.55em 0.9em;
+        border-color: transparent transparent transparent #2a1700;
+        margin-left: 0.2em;
+      }
+      .c-edu {
+        background: #fbf8f1;
+        color: #1d1d1d;
+      }
+      .c-edu ol {
+        margin: 0.6em 0 0;
+        padding-inline-start: 1.2em;
+        font-size: 0.95em;
+        line-height: 1.45;
+      }
+      .c-edu ol li::marker {
+        color: var(--g-green-d);
+        font-weight: 800;
+      }
+      .idea {
+        position: absolute;
+        top: 6%;
+        left: 6%;
+        font: 700 0.62em/1 var(--en);
+        letter-spacing: 0.08em;
+        background: rgba(0, 0, 0, 0.75);
+        color: #fff;
+        border-radius: 999px;
+        padding: 0.45em 0.7em;
+      }
+
+      .fold-guide {
+        position: absolute;
+        right: 3%;
+        bottom: 7%;
+        z-index: 4;
+        width: min(46%, 230px);
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px dashed var(--band-line);
+        color: var(--band-muted);
+        font-size: 13.5px;
+        line-height: 1.5;
+        text-align: center;
+        pointer-events: none;
+      }
+      .fold-guide:not([hidden]) {
+        animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .pinch {
+        position: relative;
+        width: 64px;
+        height: 26px;
+      }
+      .pinch i {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--band-accent);
+        opacity: 0.85;
+        animation: pinchL 1.6s ease-in-out infinite;
+      }
+      .pinch i + i {
+        left: auto;
+        right: 0;
+        animation-name: pinchR;
+      }
+      @keyframes pinchL {
+        0%,
+        15% {
+          transform: translateX(0);
+        }
+        60%,
+        100% {
+          transform: translateX(18px);
+        }
+      }
+      @keyframes pinchR {
+        0%,
+        15% {
+          transform: translateX(0);
+        }
+        60%,
+        100% {
+          transform: translateX(-18px);
+        }
+      }
+      /* lightbox for the flat net */
+      .lb {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: grid;
+        place-items: center;
+        padding: calc(16px + env(safe-area-inset-top, 0px))
+          max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px))
+          max(16px, env(safe-area-inset-left, 0px));
+        background: rgba(12, 12, 16, 0.86);
+      }
+      .lb-body {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        gap: 14px;
+        --L: min(86vw, 60vh, 520px);
+      }
+      .lb-card {
+        position: relative;
+        width: var(--L);
+        height: var(--L);
+        border-radius: 10px;
+        overflow: hidden;
+        font-size: calc(var(--L) * 0.062);
+        line-height: 1.3;
+        color: #1d1d1d;
+        direction: rtl;
+        font-family: var(--g-ar);
+        touch-action: pan-y;
+      }
+      .lb-cap {
+        margin: 0;
+        max-width: var(--L);
+        text-align: center;
+        color: #fffcf9;
+        font-size: 16px;
+      }
+      .lb-nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: rgba(255, 252, 249, 0.75);
+        font: 500 14px/1 var(--en);
+        direction: ltr;
+      }
+      .lb-btn,
+      .lb-x {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 252, 249, 0.3);
+        background: rgba(255, 252, 249, 0.08);
+        color: #fffcf9;
+        font-size: 24px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .lb-x {
+        position: absolute;
+        top: -10px;
+        inset-inline-end: -10px;
+        z-index: 2;
+        background: #fffcf9;
+        color: #434459;
+      }
+
+      /* PLAN */
+      .days {
+        display: grid;
+        gap: 8px;
+      }
+      .day {
+        display: grid;
+        grid-template-columns: 88px 1fr;
+        gap: 14px;
+        align-items: baseline;
+        border: 1px solid var(--band-line);
+        border-radius: 12px;
+        padding: 12px 16px;
+      }
+      .day b {
+        color: var(--band-fg);
+        font-size: 15.5px;
+      }
+      .day p {
+        margin: 0;
+        font-size: 15.5px;
+        color: var(--band-muted);
+      }
+      .day.gold {
+        border-color: rgba(255, 219, 142, 0.5);
+      }
+      .day.gold b {
+        color: var(--band-accent);
+      }
+      .plan-note {
+        margin-top: 14px;
+        font-size: 14.5px;
+        color: var(--band-muted);
+      }
+
+      /* OFFER */
+      .offer {
+        display: grid;
+        gap: 10px;
+      }
+      @media (min-width: 1000px) {
+        .offer {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .o {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px 18px;
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 14px;
+        align-items: start;
+      }
+      .o > div {
+        min-width: 0;
+      }
+      .o svg {
+        width: 34px;
+        height: 34px;
+        color: var(--fg);
+      }
+      .o .ac {
+        color: var(--accent);
+      }
+      .o p {
+        margin: 0;
+        font-size: 15.5px;
+        color: var(--muted);
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .chip {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 12px;
+        font: 500 14px/1.5 var(--en);
+        background: var(--surface);
+      }
+
+      /* HOW WE WORK */
+      .how {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: h;
+        display: grid;
+      }
+      .how li {
+        counter-increment: h;
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        gap: 14px;
+        padding: 14px 0;
+        border-top: 1px solid var(--line);
+      }
+      .how li:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+      .how li::before {
+        content: counter(h);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1.5px solid var(--accent);
+        display: grid;
+        place-items: center;
+        font: 600 14px/1 var(--en);
+      }
+      .how p {
+        margin: 0;
+        font-size: 15.5px;
+        color: var(--muted);
+      }
+
+      /* PLAN OF THE FIRST YEAR + MONTH */
+      .road {
+        position: relative;
+        padding-inline-start: 26px;
+        display: grid;
+        gap: 18px;
+      }
+      .road::before {
+        content: "";
+        position: absolute;
+        inset-block: 8px;
+        inset-inline-start: 6px;
+        width: 2px;
+        background: var(--line);
+      }
+      .stop {
+        position: relative;
+      }
+      .stop::before {
+        content: "";
+        position: absolute;
+        inset-inline-start: -25px;
+        top: 8px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 2.5px solid var(--accent);
+      }
+      .stop small {
+        display: block;
+        font: 600 13px/1.3 var(--en);
+        color: var(--muted);
+      }
+      html[lang="ar"] .stop small {
+        font-family: var(--ar);
+        font-size: 14px;
+      }
+      .stop p {
+        margin: 2px 0 0;
+        font-size: 16px;
+      }
+      .month {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 26px;
+      }
+      .m {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px;
+      }
+      .m b {
+        display: block;
+        font: 700 34px/1 var(--en-display);
+        color: var(--fg);
+      }
+      .m span {
+        display: block;
+        margin-top: 6px;
+        font-size: 14.5px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+
+      /* SAMPLES */
+      .pairs {
+        display: grid;
+        gap: 18px;
+      }
+      .pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .pair figure {
+        margin: 0;
+        min-width: 0;
+      }
+      .pair figcaption {
+        font-size: 12.5px;
+        margin-top: 6px;
+        color: var(--muted);
+      }
+      .pair img {
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: #fff;
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+
+      /* PRICING */
+      .price-table {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        overflow: hidden;
+        background: var(--surface);
+      }
+      .row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+        padding: 16px 18px;
+        border-top: 1px solid var(--line);
+        align-items: start;
+      }
+      .row:first-child {
+        border-top: 0;
+      }
+      .row h3 {
+        font-size: 17px;
+      }
+      .row p {
+        margin: 2px 0 0;
+        font-size: 15px;
+        color: var(--muted);
+      }
+      .amt {
+        font: 700 26px/1.2 var(--en-display);
+        white-space: nowrap;
+        direction: ltr;
+        text-align: end;
+      }
+      .amt small {
+        display: block;
+        font: 500 12.5px/1.4 var(--ar);
+        color: var(--muted);
+        direction: rtl;
+      }
+      html[lang="en"] .amt small {
+        font-family: var(--en);
+        direction: ltr;
+      }
+      .amt.txt {
+        font: 600 15px/1.4 var(--ar);
+        white-space: normal;
+        max-width: 9em;
+      }
+      html[lang="en"] .amt.txt {
+        font-family: var(--en);
+      }
+      .boxes {
+        display: grid;
+        gap: 12px;
+        margin-top: 12px;
+      }
+      .box {
+        border-radius: 14px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        min-width: 0;
+      }
+      .box.out {
+        background: transparent;
+        border-style: dashed;
+      }
+      .box ul {
+        margin: 6px 0 0;
+        padding-inline-start: 18px;
+      }
+      .box li {
+        margin: 6px 0;
+        font-size: 15.5px;
+      }
+      .box li::marker {
+        color: var(--accent);
+      }
+
+      /* NEXT + FOOTER */
+      .steps {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: s;
+      }
+      .steps li {
+        counter-increment: s;
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        gap: 12px;
+        align-items: center;
+        font-size: 16.5px;
+      }
+      .steps li::before {
+        content: counter(s);
+        font: 600 14px/36px var(--en);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--fg);
+        color: var(--bg);
+        text-align: center;
+      }
+      footer {
+        padding-block: 52px calc(36px + env(safe-area-inset-bottom, 0px));
+      }
+      .foot-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font: 600 20px/1 var(--en);
+        direction: ltr;
+      }
+      html[lang="ar"] .foot-brand {
+        justify-content: flex-end;
+      }
+      .foot-brand svg {
+        width: 32px;
+        height: auto;
+        color: var(--band-fg);
+      }
+      .foot-about {
+        margin: 14px 0 0;
+        color: var(--band-muted);
+        font-size: 15.5px;
+      }
+      .people {
+        margin-top: 12px;
+        color: var(--band-muted);
+        font-size: 14.5px;
+      }
+      .contact {
+        display: grid;
+        gap: 8px;
+        font-size: 15.5px;
+        align-content: start;
+      }
+      .contact div {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 10px;
+      }
+      .contact span {
+        color: var(--band-muted);
+      }
+      .contact a,
+      .contact bdi {
+        color: var(--band-fg);
+        text-decoration: none;
+      }
+      html[lang="ar"] .contact .ltr {
+        text-align: right;
+      }
+      .legal {
+        margin-top: 28px;
+        padding-top: 16px;
+        border-top: 1px solid var(--band-line);
+        font-size: 13px;
+        color: var(--band-muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 18px;
+        justify-content: space-between;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .hint.on,
+        .cube-hint.on,
+        .gotcha.show {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+      <a class="brand pill-ui" href="#hero" aria-label="WordReward">
+        <svg viewBox="15 16 151 148" aria-hidden="true">
+          <path
+            d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
+            fill="currentColor"
+          />
+          <path
+            d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+        WordReward <span>× Géant Yemen</span>
+      </a>
+      <button class="lang pill-ui" id="lang" type="button">English</button>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="wrap hero">
+        <div class="hero-text">
+          <p class="kicker" data-t="hero.kicker"></p>
+          <h1 data-t="hero.title"></h1>
+          <p class="lead" data-t="hero.lead"></p>
+          <p class="cue" id="coinCue" aria-live="polite"></p>
+          <p class="gotcha" id="coinGotcha" hidden aria-live="polite"></p>
+        </div>
+        <div class="stage" id="coinStage" role="img" data-t-aria="hero.aria">
+          <div class="shadow" id="coinShadow"></div>
+          <div class="coin-float">
+            <div class="coin" id="coin">
+              <div class="rim" id="rim"></div>
+              <div class="face front">
+                <svg viewBox="15 16 151 148" aria-hidden="true">
+                  <path
+                    d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="face back">
+                <svg class="growth" viewBox="0 0 100 100" aria-hidden="true">
+                  <rect x="18" y="58" width="15" height="24" rx="3" />
+                  <rect x="42" y="44" width="15" height="38" rx="3" />
+                  <rect x="66" y="28" width="15" height="54" rx="3" />
+                  <path class="arrow" d="M14 50 L36 33 L52 40 L80 16" />
+                  <path class="arrow" d="M66 15 L81 15 L81 30" />
+                </svg>
+              </div>
+              <div class="shine" id="shine"></div>
+            </div>
+          </div>
+          <div class="hint" id="coinHint"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONE WEEK: the cube -->
+    <div class="band">
+      <section id="week">
+        <div class="wrap split">
+          <div class="side">
+            <p class="kicker" data-t="week.kicker"></p>
+            <h2 data-t="week.title"></h2>
+            <p class="lead" data-t="week.lead"></p>
+            <div class="tally">
+              <div><b>42</b><span data-t="week.t1"></span></div>
+              <div><b>12</b><span data-t="week.t2"></span></div>
+              <div><b>22</b><span data-t="week.t3"></span></div>
+            </div>
+          </div>
+          <div>
+            <div class="cube-stage" id="cubeStage" role="img" data-t-aria="week.aria">
+              <div class="cube-fit" id="cubeFit">
+                <div class="cube" id="cube">
+                  <div class="f fr">
+                    <div class="card c-cover">
+                      <span class="tag">جيان هايبرماركت</span>
+                      <div class="ttl">العروض<br />الأسبوعية</div>
+                      <span class="date">من ٥ إلى ١١ نوفمبر</span>
+                      <div class="foot">
+                        <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f ri">
+                    <div class="card c-item">
+                      <div class="band2">عرض الأسبوع</div>
+                      <div class="ttl">أرز ديفايا بسمتي</div>
+                      <span class="w">٥ كجم</span>
+                      <div class="price">
+                        <span class="old"><small>YER</small><s>10,500</s></span
+                        ><span class="new">8,800</span>
+                      </div>
+                      <div class="foot">
+                        <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f bk">
+                    <div class="card c-gold">
+                      <span class="tag">جيان هايبرماركت</span>
+                      <div class="ttl">العرض الذهبي</div>
+                      <span class="day">الثلاثاء فقط</span>
+                      <div class="prod">أرز المزان بسمتي أبيض ١٠ كجم</div>
+                      <div class="price">
+                        <span class="old"><small>YER</small><s>17,000</s></span
+                        ><span class="new">14,500</span>
+                      </div>
+                      <div class="foot">
+                        <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f le">
+                    <div class="card c-nf">
+                      <div class="band2">توفير أكثر في نوفمبر</div>
+                      <div class="ttl">خلاط فيديم إيفا<br /><span dir="ltr">650W</span></div>
+                      <div class="price">
+                        <span class="old"><small>YER</small><s>119,000</s></span
+                        ><span class="new">69,000</span>
+                      </div>
+                      <span class="save">وفّر 50,000</span>
+                      <div class="foot">
+                        <span>في جيان، الخير مليان</span><span dir="ltr">@GeantYemen</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f tp">
+                    <div class="card c-cook">
+                      <span class="idea">IDEA</span
+                      ><span class="tag" style="margin-top: 2.2em">مطبخ جيان · كل أسبوع</span>
+                      <div class="ttl">زربيان<br />عدني</div>
+                      <div class="sub">بمكونات من رفوف جيان</div>
+                      <div class="play"></div>
+                    </div>
+                  </div>
+                  <div class="f bt">
+                    <div class="card c-edu">
+                      <span class="idea">IDEA</span>
+                      <div class="ttl" style="margin-top: 1.6em; font-size: 1.35em">
+                        قبل أن تشتري الأرز، انظر إلى ٣ أشياء
+                      </div>
+                      <ol>
+                        <li>تاريخ التعبئة</li>
+                        <li>طول الحبة</li>
+                        <li>بلد المنشأ</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cube-hit" id="cubeHit"></div>
+              <div class="cube-hint" id="cubeHint"></div>
+              <div class="fold-guide" id="foldGuide" hidden>
+                <span class="pinch" aria-hidden="true"><i></i><i></i></span>
+                <span data-t="week.foldHint"></span>
+              </div>
+            </div>
+            <div class="cube-ui">
+              <div class="seek" id="seek">
+                <div class="seek-top"><span id="seekLabel"></span><b id="seekPct"></b></div>
+                <div
+                  class="seek-bar"
+                  role="progressbar"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  id="seekBar"
+                >
+                  <i id="seekFill"></i>
+                </div>
+              </div>
+              <p class="cube-cue" id="cubeCue" aria-live="polite"></p>
+              <button class="pill" id="flatBtn" type="button" data-t="week.flat"></button>
+              <button
+                class="pill solid"
+                id="foldBtn"
+                type="button"
+                hidden
+                data-t="week.fold"
+              ></button>
+              <p class="gotcha" id="cubeGotcha" hidden aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="plan" style="padding-top: 0">
+        <div class="wrap split">
+          <div class="side">
+            <p class="kicker" data-t="plan.kicker"></p>
+            <h2 data-t="plan.title"></h2>
+          </div>
+          <div>
+            <div class="days" id="days"></div>
+            <p class="plan-note" data-t="plan.note"></p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- WHAT WE OFFER -->
+    <section id="offer">
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="offer.kicker"></p>
+          <h2 data-t="offer.title"></h2>
+          <p class="lead" data-t="offer.lead"></p>
+        </div>
+        <div>
+          <div class="offer">
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <rect x="7" y="9" width="26" height="24" rx="3" />
+                <path d="M7 16h26M14 5v7M26 5v7" />
+                <path class="ac" d="M13 23l4 4 9-8" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o1"></h3>
+                <p data-t="offer.o1s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <rect x="5" y="5" width="13" height="13" rx="2" />
+                <rect x="22" y="5" width="13" height="13" rx="2" />
+                <rect x="5" y="22" width="13" height="13" rx="2" />
+                <rect
+                  class="ac"
+                  x="22"
+                  y="22"
+                  width="13"
+                  height="13"
+                  rx="2"
+                  stroke="currentColor"
+                />
+              </svg>
+              <div>
+                <h3 data-t="offer.o2"></h3>
+                <p data-t="offer.o2s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M20 10c-4-3-9-3-14-2v24c5-1 10-1 14 2 4-3 9-3 14-2V8c-5-1-10-1-14 2z" />
+                <path class="ac" d="M20 10v24" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o3"></h3>
+                <p data-t="offer.o3s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <rect x="11" y="4" width="18" height="32" rx="4" />
+                <path class="ac" d="M17 15l8 5-8 5z" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o4"></h3>
+                <p data-t="offer.o4s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M6 24l14-14v8c8 0 14 5 14 14-3-5-7-7-14-7v8z" />
+                <circle class="ac" cx="9" cy="33" r="2.5" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o5"></h3>
+                <p data-t="offer.o5s"></p>
+              </div>
+            </div>
+            <div class="o">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M7 33V7M7 33h27" />
+                <path class="ac" d="M12 26l7-7 5 4 9-11" stroke="currentColor" />
+              </svg>
+              <div>
+                <h3 data-t="offer.o6"></h3>
+                <p data-t="offer.o6s"></p>
+              </div>
+            </div>
+          </div>
+          <div class="chips">
+            <span class="chip">Facebook</span><span class="chip">Instagram</span
+            ><span class="chip">TikTok</span><span class="chip" data-t="offer.snap"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section id="how" style="padding-top: 0">
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="how.kicker"></p>
+          <h2 data-t="how.title"></h2>
+          <p class="lead" data-t="how.lead"></p>
+        </div>
+        <ol class="how">
+          <li>
+            <div>
+              <h3 data-t="how.h1"></h3>
+              <p data-t="how.h1s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h2"></h3>
+              <p data-t="how.h2s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h3"></h3>
+              <p data-t="how.h3s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h4"></h3>
+              <p data-t="how.h4s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h5"></h3>
+              <p data-t="how.h5s"></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 data-t="how.h6"></h3>
+              <p data-t="how.h6s"></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- THE PLAN + MONTHLY AMOUNTS -->
+    <section id="do" style="padding-top: 0">
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="do.kicker"></p>
+          <h2 data-t="do.title"></h2>
+        </div>
+        <div>
+          <div class="road">
+            <div class="stop">
+              <small data-t="do.s1k"></small>
+              <p data-t="do.s1"></p>
+            </div>
+            <div class="stop">
+              <small data-t="do.s2k"></small>
+              <p data-t="do.s2"></p>
+            </div>
+            <div class="stop">
+              <small data-t="do.s3k"></small>
+              <p data-t="do.s3"></p>
+            </div>
+            <div class="stop">
+              <small data-t="do.s4k"></small>
+              <p data-t="do.s4"></p>
+            </div>
+          </div>
+          <div class="month">
+            <div class="m"><b>4</b><span data-t="month.m1"></span></div>
+            <div class="m"><b>4</b><span data-t="month.m2"></span></div>
+            <div class="m"><b>2</b><span data-t="month.m3"></span></div>
+            <div class="m"><b>4</b><span data-t="month.m4"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER: appears once the team's redesigns are in assets/samples -->
+    <section id="samples" style="padding-top: 0" hidden>
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="samples.kicker"></p>
+          <h2 data-t="samples.title"></h2>
+          <p class="lead" data-t="samples.lead"></p>
+        </div>
+        <div class="pairs" id="pairs"></div>
+      </div>
+    </section>
+
+    <!-- PRICE, PAYMENT, TERMS, NOT INCLUDED -->
+    <section id="pricing" style="padding-top: 0">
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="price.kicker"></p>
+          <h2 data-t="price.title"></h2>
+        </div>
+        <div>
+          <div class="price-table" id="priceTable"></div>
+          <div class="boxes">
+            <div class="box">
+              <h3 data-t="pay.title"></h3>
+              <ul data-t="pay.list"></ul>
+            </div>
+            <div class="box">
+              <h3 data-t="terms.title"></h3>
+              <ul data-t="terms.list"></ul>
+            </div>
+            <div class="box out">
+              <h3 data-t="ex.title"></h3>
+              <ul data-t="ex.list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT -->
+    <section id="next" style="padding-top: 0">
+      <div class="wrap split">
+        <div class="side">
+          <p class="kicker" data-t="next.kicker"></p>
+          <h2 data-t="next.title"></h2>
+        </div>
+        <ol class="steps">
+          <li data-t="next.s1"></li>
+          <li data-t="next.s2"></li>
+          <li data-t="next.s3"></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FOOTER: WRD -->
+    <footer class="band">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <div class="foot-brand">
+              <svg viewBox="15 16 151 148" aria-hidden="true">
+                <path
+                  d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                /></svg
+              >WordReward
+            </div>
+            <p class="foot-about" data-t="foot.about"></p>
+            <p class="people" data-t="foot.people"></p>
+          </div>
+          <div class="contact">
+            <div>
+              <span data-t="foot.email"></span
+              ><a class="ltr" href="mailto:info@wordreward.net" dir="ltr">info@wordreward.net</a>
+            </div>
+            <div>
+              <span data-t="foot.phone"></span><bdi class="ltr" dir="ltr">+20 155 707 5040</bdi>
+            </div>
+            <div>
+              <span data-t="foot.web"></span
+              ><a
+                class="ltr"
+                href="https://www.wordreward.net"
+                target="_blank"
+                rel="noopener"
+                dir="ltr"
+                >wordreward.net</a
+              >
+            </div>
+            <div><span data-t="foot.city"></span><bdi data-t="foot.cityv"></bdi></div>
+          </div>
+        </div>
+        <div class="legal">
+          <span data-t="foot.draft"></span><span dir="ltr">© 2026 WordReward</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lbCap">
+      <div class="lb-body">
+        <button class="lb-x" id="lbClose" type="button" aria-label="Close">×</button>
+        <div class="lb-card" id="lbCard"></div>
+        <p class="lb-cap" id="lbCap"></p>
+        <div class="lb-nav">
+          <button class="lb-btn" id="lbPrev" type="button" aria-label="Previous">‹</button>
+          <span id="lbIdx"></span>
+          <button class="lb-btn" id="lbNext" type="button" aria-label="Next">›</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      ;(() => {
+        "use strict"
+
+        const PRICING = { currency: "USD", monthly: 2000 }
+
+        const T = {
+          "hero.kicker": {
+            ar: "عرض من WordReward إلى جيان هايبرماركت، عدن مول",
+            en: "A WordReward proposal for Géant Hypermarket, Aden Mall",
+          },
+          "hero.title": {
+            ar: "إدارة صفحات جيان على مواقع التواصل",
+            en: "Managing Géant's social media pages",
+          },
+          "hero.lead": {
+            ar: "في هذه الصفحة: ما سنقدمه، وكيف نعمل، والسعر والشروط.",
+            en: "On this page: what we will provide, how we work, and the price and terms.",
+          },
+          "hero.aria": {
+            ar: "عملة عليها شعار WordReward من جهة، وعلامة نمو من الجهة الأخرى. اسحبها لتقلبها.",
+            en: "A coin with the WordReward mark on one side and a growth sign on the other. Drag it to flip it.",
+          },
+          "hero.cue": { ar: "يمكنك سحب العملة لتقلبها.", en: "You can drag the coin to flip it." },
+          "hero.cueA": {
+            ar: "الوجه الأول: شعار WordReward.",
+            en: "Side one: the WordReward mark.",
+          },
+          "hero.cueB": {
+            ar: "الوجه الثاني: النمو الذي نعمل من أجله.",
+            en: "Side two: the growth we work for.",
+          },
+
+          "week.kicker": { ar: "أسبوع من العمل", en: "A week of work" },
+          "week.title": { ar: "ما نصممه لكم كل أسبوع", en: "What we design for you each week" },
+          "week.lead": {
+            ar: "كل وجه في المكعب مثال لنوع من المنشورات. المطلوب: ابحث عن وجه «العرض الذهبي». الشريط تحت المكعب يمتلئ كلما اقترب هذا الوجه منك، ويفرغ كلما ابتعد.",
+            en: "Each face of the cube is an example of one type of post. Your task: find the Golden Offer face. The bar under the cube fills as that face turns toward you and empties as it turns away.",
+          },
+          "week.aria": {
+            ar: "مكعب من بطاقات عروض جيان. أدره لترى الوجوه.",
+            en: "A cube of Géant offer cards. Turn it to see the faces.",
+          },
+          "week.cue": {
+            ar: "أدر المكعب بإصبعك حتى يصبح وجه «العرض الذهبي» أمامك.",
+            en: "Turn the cube with your finger until the Golden Offer face is in front of you.",
+          },
+          "week.seek": { ar: "قربك من العرض الذهبي", en: "How close you are to the Golden Offer" },
+          "week.seekDone": { ar: "وجدت العرض الذهبي", en: "You found the Golden Offer" },
+          "week.found": {
+            ar: "أحسنت، هذا هو العرض الذهبي. يمكنك الآن فرد المكعب لترى كل الوجوه.",
+            en: "Well done, this is the Golden Offer. You can now lay the cube flat to see every face.",
+          },
+          "week.open": {
+            ar: "اضغط على أي تصميم لتراه بحجم أكبر.",
+            en: "Tap any design to see it larger.",
+          },
+          "week.flat": { ar: "افرد المكعب", en: "Lay the cube flat" },
+          "week.foldHint": {
+            ar: "لإعادته مكعبًا: اضغط على مساحة فارغة، أو قرّب إصبعيك.",
+            en: "To fold it back: tap an empty spot, or pinch with two fingers.",
+          },
+          "week.fold": { ar: "أعده مكعبًا", en: "Fold it back into a cube" },
+          "week.t1": { ar: "بطاقة عروض كل أسبوع", en: "offer cards a week" },
+          "week.t2": { ar: "بطاقة للعرض الذهبي", en: "Golden Offer cards" },
+          "week.t3": { ar: "صفحة مجلة كل أسبوعين", en: "magazine pages every two weeks" },
+
+          "plan.kicker": { ar: "الأسبوع من الأربعاء إلى الأربعاء", en: "Wednesday to Wednesday" },
+          "plan.title": {
+            ar: "توزيع المنشورات على الأسبوع",
+            en: "How posts are spread across the week",
+          },
+          "plan.note": {
+            ar: "هذا توزيع مقترح، ونعدله معكم.",
+            en: "This is a suggested schedule; we adjust it with you.",
+          },
+          days: {
+            ar: [
+              ["الأربعاء", "", "العروض الأسبوعية: غلاف و٤٢ بطاقة. ومجلة كل أسبوعين."],
+              ["الخميس", "", "وصفة من «مطبخ جيان»."],
+              ["الجمعة", "", "منشور للعائلة."],
+              ["السبت", "", "نصيحة مفيدة في الشراء أو التوفير."],
+              ["الأحد", "", "صور من داخل المتجر."],
+              ["الاثنين", "", "إعلان عن العرض الذهبي."],
+              ["الثلاثاء", "gold", "العرض الذهبي: ١٢ بطاقة."],
+            ],
+            en: [
+              ["Wednesday", "", "Weekly offers: a cover and 42 cards. A magazine every two weeks."],
+              ["Thursday", "", "A recipe from Géant Kitchen."],
+              ["Friday", "", "A family post."],
+              ["Saturday", "", "A useful shopping or saving tip."],
+              ["Sunday", "", "Photos from inside the store."],
+              ["Monday", "", "An announcement of the Golden Offer."],
+              ["Tuesday", "gold", "The Golden Offer: 12 cards."],
+            ],
+          },
+
+          "offer.kicker": { ar: "ما نقدمه", en: "What we provide" },
+          "offer.title": {
+            ar: "الخدمات المشمولة في العرض",
+            en: "Services included in this proposal",
+          },
+          "offer.lead": {
+            ar: "يعمل عليها فريق واحد من WordReward.",
+            en: "Handled by one WordReward team.",
+          },
+          "offer.o1": { ar: "الخطة الشهرية", en: "Monthly plan" },
+          "offer.o1s": {
+            ar: "نرسلها لكم لتوافقوا عليها قبل أن نبدأ.",
+            en: "Sent to you for approval before we start.",
+          },
+          "offer.o2": { ar: "تصميم العروض", en: "Offer design" },
+          "offer.o2s": {
+            ar: "العروض الأسبوعية والعرض الذهبي، بقوالب ثابتة.",
+            en: "Weekly offers and the Golden Offer, on fixed templates.",
+          },
+          "offer.o3": { ar: "المجلة", en: "The magazine" },
+          "offer.o3s": {
+            ar: "مجلة غير الغذائيات، عدد كل أسبوعين.",
+            en: "The non-food magazine, one issue every two weeks.",
+          },
+          "offer.o4": { ar: "الفيديو والريلز", en: "Video and reels" },
+          "offer.o4s": {
+            ar: "نجهزها من المواد التي تصورونها.",
+            en: "Edited from the footage you film.",
+          },
+          "offer.o5": { ar: "الإعلانات الممولة", en: "Paid ads" },
+          "offer.o5s": { ar: "نديرها ونتابعها كل يوم.", en: "Set up and checked every day." },
+          "offer.o6": { ar: "التقارير", en: "Reports" },
+          "offer.o6s": {
+            ar: "تقرير كل أسبوع، ومراجعة كل شهر.",
+            en: "A report every week and a review every month.",
+          },
+          "offer.snap": { ar: "Snapchat إن كان مناسبًا", en: "Snapchat, if it suits" },
+
+          "how.kicker": { ar: "طريقة عملنا", en: "How we work" },
+          "how.title": { ar: "ما نفعله مع كل عميل", en: "What we do with every client" },
+          "how.lead": {
+            ar: "نتبع الخطوات نفسها مع كل العملاء، ونعدل التفاصيل حسب كل مشروع.",
+            en: "We follow the same steps with every client and adjust the details to each project.",
+          },
+          "how.h1": { ar: "نفهم العلامة والسوق", en: "We learn the brand and the market" },
+          "how.h1s": {
+            ar: "نراجع الهوية والصفحات الحالية والمنافسين والجمهور.",
+            en: "We review the identity, current pages, competitors and audience.",
+          },
+          "how.h2": { ar: "نضع خطة شهرية", en: "We write a monthly plan" },
+          "how.h2s": {
+            ar: "فيها المنشورات ومواعيدها، ونرسلها للموافقة قبل التنفيذ.",
+            en: "It lists the posts and their dates, and goes to you for approval first.",
+          },
+          "how.h3": { ar: "نصمم قوالب ثابتة", en: "We design fixed templates" },
+          "how.h3s": {
+            ar: "حتى تظهر المنشورات بشكل واحد ويتعرف الناس عليها بسهولة.",
+            en: "So posts look consistent and people recognise them easily.",
+          },
+          "how.h4": { ar: "ننشر في مواعيد ثابتة", en: "We post on a fixed schedule" },
+          "how.h4s": {
+            ar: "ونتابع التفاعل والتعليقات ونبلغكم بما يحتاج إلى رد.",
+            en: "We follow engagement and comments and flag what needs a reply.",
+          },
+          "how.h5": { ar: "ندير الإعلانات يوميًا", en: "We manage ads daily" },
+          "how.h5s": {
+            ar: "ونغير الميزانية بين الإعلانات حسب النتائج.",
+            en: "We move budget between ads according to results.",
+          },
+          "how.h6": { ar: "نراجع النتائج معكم", en: "We review results with you" },
+          "how.h6s": {
+            ar: "تقرير كل أسبوع، واجتماع كل شهر لتعديل الخطة.",
+            en: "A report every week and a meeting every month to adjust the plan.",
+          },
+
+          "do.kicker": { ar: "خطة البداية", en: "Getting started" },
+          "do.title": { ar: "السنة الأولى باختصار", en: "The first year, briefly" },
+          "do.s1k": { ar: "أول أسبوعين", en: "First two weeks" },
+          "do.s1": {
+            ar: "نستلم ملفات الهوية والمواد، ونصمم القوالب، ونجهز خطة الشهر الأول.",
+            en: "We receive the brand files and materials, design the templates and prepare the first month's plan.",
+          },
+          "do.s2k": { ar: "من الشهر ١ إلى ٣", en: "Months 1 to 3" },
+          "do.s2": {
+            ar: "نبدأ النشر والإعلانات، ونثبّت شكل الصفحات.",
+            en: "We start posting and ads and settle the look of the pages.",
+          },
+          "do.s3k": { ar: "من الشهر ٤ إلى ٦", en: "Months 4 to 6" },
+          "do.s3": {
+            ar: "نراجع الأرقام، ونركز على ما يعطي نتيجة أفضل.",
+            en: "We look at the numbers and focus on what works best.",
+          },
+          "do.s4k": { ar: "بعد ذلك", en: "After that" },
+          "do.s4": {
+            ar: "نراجع النتائج معكم كل شهر، ونطور الخطة حسبها.",
+            en: "We review results with you every month and adjust the plan.",
+          },
+          "month.m1": {
+            ar: "مجموعات عروض أسبوعية في الشهر، ٤٢ بطاقة في كل مجموعة",
+            en: "weekly offer sets a month, 42 cards each",
+          },
+          "month.m2": {
+            ar: "مجموعات للعرض الذهبي في الشهر، ١٢ بطاقة في كل مجموعة",
+            en: "Golden Offer sets a month, 12 cards each",
+          },
+          "month.m3": {
+            ar: "عددان من المجلة في الشهر، ٢٢ صفحة لكل عدد",
+            en: "magazine issues a month, 22 pages each",
+          },
+          "month.m4": {
+            ar: "تقارير في الشهر، تقرير كل أسبوع",
+            en: "reports a month, one each week",
+          },
+
+          "samples.kicker": { ar: "قبل وبعد", en: "Before and after" },
+          "samples.title": { ar: "أمثلة من تصميمات فريقنا", en: "Examples from our team" },
+          "samples.lead": {
+            ar: "صفحتان من كل نوع من العروض، بنفس المنتجات والأسعار والتواريخ.",
+            en: "Two pages of each offer type, with the same products, prices and dates.",
+          },
+
+          "price.kicker": { ar: "السعر", en: "Price" },
+          "price.title": { ar: "٢٠٠٠ دولار في الشهر", en: "USD 2,000 a month" },
+          "price.main": { ar: "الباقة الشهرية", en: "Monthly package" },
+          "price.mainS": {
+            ar: "تشمل كل الخدمات المذكورة في هذا العرض.",
+            en: "Includes every service listed in this proposal.",
+          },
+          "price.ads": { ar: "ميزانية الإعلانات", en: "Ad budget" },
+          "price.adsS": {
+            ar: "تدفعونها مباشرة للمنصات، وتحددون قيمتها.",
+            en: "Paid by you directly to the platforms, at an amount you choose.",
+          },
+          "price.adsV": { ar: "تحددونها أنتم", en: "Set by you" },
+          "price.perMonth": { ar: "في الشهر، شاملة", en: "per month, all inclusive" },
+
+          "pay.title": { ar: "الدفع والمدة", en: "Payment and term" },
+          "pay.list": {
+            ar: "<li>الدفع شهريًا مقدمًا، قبل بداية كل شهر.</li><li>مدة التعاقد ٦ أشهر، ويمكن أن نبدأ في الموعد الذي يناسبكم.</li><li>أول أسبوعين للتجهيز، ثم يبدأ النشر.</li><li>بعد ٦ أشهر، يمكن لأي طرف إنهاء التعاقد بإشعار مكتوب قبل ٣٠ يومًا، ويُحسب شهر الإشعار كاملًا.</li>",
+            en: "<li>Paid monthly in advance, before each month begins.</li><li>A 6 month term, starting on a date that suits you.</li><li>The first two weeks are for set-up; posting starts after that.</li><li>After 6 months either side may end the contract with 30 days written notice; the notice month is billed in full.</li>",
+          },
+          "terms.title": { ar: "الشروط", en: "Terms" },
+          "terms.list": {
+            ar: "<li>لكل شهر خطة توافقون عليها قبل التنفيذ، ولكل تصميم جولة تعديل واحدة.</li><li>ترسلون قوائم العروض والأسعار والمواد في موعد نتفق عليه قبل كل دورة.</li><li>تُنشر الأسعار كما ترسلونها وبعد موافقتكم.</li><li>أي عمل إضافي نخبركم بسعره أولًا، ولا ننفذه إلا بموافقة مكتوبة.</li><li>التصميمات وملفاتها ملك لجيان بعد سداد كل شهر، ويمكننا عرضها ضمن أعمالنا إلا إذا طلبتم غير ذلك كتابيًا.</li>",
+            en: "<li>Each month has a plan you approve before production; each design gets one round of changes.</li><li>You send the offer lists, prices and materials by a date we agree before each cycle.</li><li>Prices are published exactly as you send and approve them.</li><li>Any extra work is quoted first and done only with written approval.</li><li>Designs and their files belong to Géant once each month is paid; we may show them in our portfolio unless you ask otherwise in writing.</li>",
+          },
+          "ex.title": { ar: "غير مشمول في العرض", en: "Not included" },
+          "ex.list": {
+            ar: "<li>التصوير بالصور والفيديو: ترسلون لنا المواد.</li><li>الرد على الرسائل والتعليقات. يمكن أن نضيف موظفًا لذلك بعرض منفصل.</li><li>ميزانية الإعلانات نفسها.</li><li>طباعة المجلات وأي مطبوعات.</li><li>الموقع الإلكتروني والتطبيقات.</li>",
+            en: "<li>Photo and video shooting: you send us the material.</li><li>Answering messages and comments. We can add a person for this in a separate quote.</li><li>The ad budget itself.</li><li>Printing the magazines or any printed matter.</li><li>A website or apps.</li>",
+          },
+
+          "next.kicker": { ar: "الخطوات التالية", en: "Next steps" },
+          "next.title": { ar: "بعد قراءة العرض", en: "After you read this" },
+          "next.s1": {
+            ar: "نجيب عن أسئلتكم، ونعدل ما يلزم.",
+            en: "We answer your questions and change what is needed.",
+          },
+          "next.s2": {
+            ar: "نتفق على موعد البداية، ونوقع العقد.",
+            en: "We agree a start date and sign.",
+          },
+          "next.s3": { ar: "نبدأ أسبوعي التجهيز.", en: "We begin the two set-up weeks." },
+
+          "foot.about": {
+            ar: "وكالة تسويق رقمي وبرمجيات في الإسكندرية، تعمل منذ ٢٠٢٢ مع عملاء في مصر والإمارات والعراق والسعودية والولايات المتحدة.",
+            en: "A digital marketing and software agency in Alexandria, working since 2022 with clients in Egypt, the UAE, Iraq, Saudi Arabia and the USA.",
+          },
+          "foot.people": {
+            ar: "د. إبراهيم مرسي، المدير العام · د. مجدي سمير، مدير العمليات",
+            en: "Dr. Ibrahim Morsy, General Manager · Dr. Magdy Samir, COO",
+          },
+          "foot.email": { ar: "البريد", en: "Email" },
+          "foot.phone": { ar: "الهاتف", en: "Phone" },
+          "foot.web": { ar: "الموقع", en: "Website" },
+          "foot.city": { ar: "العنوان", en: "Address" },
+          "foot.cityv": { ar: "الإسكندرية، مصر", en: "Alexandria, Egypt" },
+          "foot.draft": {
+            ar: "مسودة للمراجعة · نوفمبر ٢٠٢٦",
+            en: "Draft for review · November 2026",
+          },
+        }
+
+        const FACES = ["fr", "ri", "bk", "le", "tp", "bt"]
+        const CAPS = {
+          fr: {
+            ar: "غلاف العروض الأسبوعية، يُنشر كل أربعاء.",
+            en: "Weekly offers cover, posted every Wednesday.",
+          },
+          ri: { ar: "بطاقة منتج من العروض الأسبوعية.", en: "A weekly offer card." },
+          bk: { ar: "العرض الذهبي، ليوم الثلاثاء فقط.", en: "The Golden Offer, Tuesday only." },
+          le: { ar: "صفحة من مجلة غير الغذائيات.", en: "A page from the non-food magazine." },
+          tp: {
+            ar: "مثال لمنشور غير إعلاني: وصفة من «مطبخ جيان».",
+            en: "A non-sales post: a recipe from Géant Kitchen.",
+          },
+          bt: { ar: "مثال لمنشور غير إعلاني: نصيحة مفيدة.", en: "A non-sales post: a useful tip." },
+        }
+        const SAMPLES = [
+          { id: "1A", ar: "غلاف العروض الأسبوعية", en: "Weekly offers cover" },
+          { id: "1B", ar: "بطاقة منتج أسبوعية", en: "Weekly item card" },
+          { id: "2A", ar: "غلاف مجلة غير الغذائيات", en: "Non-food magazine cover" },
+          { id: "2B", ar: "صفحة داخلية: أجهزة المطبخ", en: "Inner page: kitchen appliances" },
+          { id: "3A", ar: "العرض الذهبي: السلة", en: "Golden Offer: the basket" },
+          { id: "3B", ar: "العرض الذهبي: بطاقة منتج", en: "Golden Offer: item card" },
+        ]
+
+        /* ---------- language ---------- */
+        const qs = new URLSearchParams(location.search)
+        let lang = qs.get("lang") === "en" ? "en" : "ar"
+        try {
+          if (!qs.get("lang")) {
+            const s = localStorage.getItem("gy-lang")
+            if (s === "en" || s === "ar") lang = s
+          }
+        } catch (e) {}
+        const $ = (s) => document.querySelector(s)
+        const $$ = (s) => Array.from(document.querySelectorAll(s))
+        const t = (k) => (T[k] && T[k][lang]) || ""
+        const L = () => lang === "ar"
+        const num = (n) => (L() ? n.toLocaleString("ar-EG") : String(n))
+        function countAr(n, one, two, few, many) {
+          if (n === 1) return one
+          if (n === 2) return two
+          return n <= 10 ? num(n) + " " + few : num(n) + " " + many
+        }
+        const timesTxt = (n) =>
+          L()
+            ? countAr(n, "مرة واحدة", "مرتين", "مرات", "مرة")
+            : n === 1
+              ? "once"
+              : n === 2
+                ? "twice"
+                : n + " times"
+        const secsTxt = (n) =>
+          L()
+            ? countAr(n, "ثانية واحدة", "ثانيتين", "ثوانٍ", "ثانية")
+            : n + (n === 1 ? " second" : " seconds")
+        const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches
+        const buzz = (ms) => {
+          try {
+            if (navigator.vibrate) navigator.vibrate(ms || 8)
+          } catch (e) {}
+        }
+        function showNote(el, html) {
+          el.innerHTML = html
+          el.hidden = false
+          el.classList.remove("show")
+          void el.offsetWidth
+          el.classList.add("show")
+        }
+
+        /* ================= COIN ================= */
+        const coin = $("#coin"),
+          stage = $("#coinStage"),
+          hint = $("#coinHint"),
+          shine = $("#shine"),
+          shadow = $("#coinShadow")
+        ;(function buildRim() {
+          /* a smooth edge: many thin, overlapping slices so no seams show while it turns */
+          const rim = $("#rim"),
+            N = 120
+          const draw = () => {
+            const D = coin.offsetWidth,
+              r = D / 2,
+              th = D * 0.08,
+              w = (Math.PI * D) / N + 1.5
+            rim.innerHTML = ""
+            for (let i = 0; i < N; i++) {
+              const b = document.createElement("b"),
+                a = (i * 360) / N,
+                l = Math.round(70 + 12 * Math.cos((a * Math.PI) / 180))
+              b.style.cssText = `width:${w}px;height:${th}px;margin:${-th / 2}px 0 0 ${-w / 2}px;transform:rotateZ(${a}deg) translateY(${r - 0.6}px) rotateX(90deg);background:hsl(38 18% ${l}%)`
+              rim.appendChild(b)
+            }
+          }
+          draw()
+          addEventListener("resize", draw)
+        })()
+        let th = 0,
+          om = reduced ? 0 : 60,
+          dragging = false,
+          lastX = 0,
+          lastT = 0,
+          downX = 0,
+          downT = 0,
+          touched = false,
+          userSpin = false,
+          tilt = -5,
+          side = -1,
+          lastFace = 0,
+          flips = 0,
+          spinFlips = 0
+        const frozen = qs.has("still")
+        if (frozen) {
+          th = Number(qs.get("still")) || 0
+          om = 0
+          touched = true
+        }
+        function coinCue(force) {
+          const s = ((Math.round(th / 180) % 2) + 2) % 2
+          if (s !== side || force) {
+            side = s
+            $("#coinCue").textContent =
+              flips > 0 ? t(s === 0 ? "hero.cueA" : "hero.cueB") : t("hero.cue")
+          }
+        }
+        function coinGotcha() {
+          showNote(
+            $("#coinGotcha"),
+            L()
+              ? `قلبت العملة <b>${timesTxt(flips)}</b> دون أن يطلب منك أحد ذلك. هذا ما نحاول أن نصل إليه في كل منشور: أن يتوقف الناس عنده قليلًا.`
+              : `You flipped the coin <b>${timesTxt(flips)}</b> without anyone asking you to. That is what we try to achieve with every post: that people stop at it for a moment.`,
+          )
+        }
+        function coinStep(dt) {
+          if (!dragging && !frozen) {
+            /* air friction, then a soft settle onto a face, like a real coin coming to rest */
+            om *= Math.exp(-1.1 * dt)
+            if (!touched && !reduced) om = Math.max(om, 28)
+            else if (Math.abs(om) < 90) {
+              if (userSpin) {
+                userSpin = false
+                if (spinFlips > 0) coinGotcha()
+              }
+              const target = Math.round(th / 180) * 180
+              om += (target - th) * 26 * dt
+              om *= Math.exp(-4 * dt)
+              if (Math.abs(target - th) < 0.05 && Math.abs(om) < 0.5) {
+                th = target
+                om = 0
+              }
+            }
+            th += om * dt
+          }
+          const face = Math.round(th / 180)
+          if (face !== lastFace) {
+            if (userSpin) {
+              const n = Math.abs(face - lastFace)
+              flips += n
+              spinFlips += n
+              buzz()
+            }
+            lastFace = face
+          }
+          coin.style.transform = `rotateX(${tilt}deg) rotateY(${th}deg)`
+          const c = Math.abs(Math.cos((th * Math.PI) / 180))
+          shine.style.opacity = (0.25 + 0.75 * c).toFixed(2)
+          shadow.style.transform = `translateX(-50%) scaleX(${(0.25 + 0.75 * c).toFixed(3)})`
+          coinCue(false)
+        }
+        stage.addEventListener("pointerdown", (e) => {
+          dragging = true
+          touched = true
+          userSpin = true
+          spinFlips = 0
+          hint.classList.remove("on")
+          stage.classList.add("pressed")
+          lastX = downX = e.clientX
+          lastT = downT = performance.now()
+          om = 0
+          if (stage.setPointerCapture) stage.setPointerCapture(e.pointerId)
+        })
+        stage.addEventListener("pointermove", (e) => {
+          if (!dragging) {
+            if (e.pointerType === "mouse") tilt = -5 + (e.offsetY / stage.clientHeight - 0.5) * -14
+            return
+          }
+          const now = performance.now(),
+            dx = e.clientX - lastX,
+            dt = Math.max(1, now - lastT) / 1000
+          th += dx * 0.8
+          om = om * 0.6 + ((dx * 0.8) / dt) * 0.4
+          lastX = e.clientX
+          lastT = now
+        })
+        const coinUp = (e) => {
+          if (!dragging) return
+          dragging = false
+          stage.classList.remove("pressed")
+          const held = performance.now() - downT
+          if (Math.abs(e.clientX - downX) < 6 && held < 350)
+            om = (Math.random() < 0.5 ? -1 : 1) * 900
+          if (performance.now() - lastT > 90) om *= 0.2
+          om = Math.max(-2600, Math.min(2600, om))
+        }
+        stage.addEventListener("pointerup", coinUp)
+        stage.addEventListener("pointercancel", coinUp)
+        stage.addEventListener("pointerleave", () => {
+          if (!dragging) tilt = -5
+        })
+        if (!frozen && !reduced)
+          setTimeout(() => {
+            if (!touched) hint.classList.add("on")
+          }, 2500)
+
+        /* ================= CUBE: free rotation on 3 axes, with inertia ================= */
+        const seek = $("#seek"),
+          seekFill = $("#seekFill"),
+          seekBar = $("#seekBar"),
+          seekPct = $("#seekPct"),
+          seekLabel = $("#seekLabel")
+        const cube = $("#cube"),
+          cstage = $("#cubeStage"),
+          hit = $("#cubeHit"),
+          cfit = $("#cubeFit"),
+          flatBtn = $("#flatBtn"),
+          foldBtn = $("#foldBtn"),
+          chint = $("#cubeHint")
+        const qmul = (a, b) => [
+          a[0] * b[0] - a[1] * b[1] - a[2] * b[2] - a[3] * b[3],
+          a[0] * b[1] + a[1] * b[0] + a[2] * b[3] - a[3] * b[2],
+          a[0] * b[2] - a[1] * b[3] + a[2] * b[0] + a[3] * b[1],
+          a[0] * b[3] + a[1] * b[2] - a[2] * b[1] + a[3] * b[0],
+        ]
+        const qaxis = (x, y, z, a) => {
+          const l = Math.hypot(x, y, z) || 1,
+            s = Math.sin(a / 2)
+          return [Math.cos(a / 2), (x / l) * s, (y / l) * s, (z / l) * s]
+        }
+        const qnorm = (v) => {
+          const l = Math.hypot(v[0], v[1], v[2], v[3]) || 1
+          return v.map((x) => x / l)
+        }
+        const qdot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3]
+        const H = Math.PI / 2,
+          ID = [1, 0, 0, 0]
+        /* the orientation that brings each face to the front, upright */
+        const TARGETS = {
+          fr: ID,
+          ri: qaxis(0, 1, 0, -H),
+          bk: qaxis(0, 1, 0, Math.PI),
+          le: qaxis(0, 1, 0, H),
+          tp: qaxis(1, 0, 0, -H),
+          bt: qaxis(1, 0, 0, H),
+        }
+        let q = qnorm(qmul(qaxis(1, 0, 0, -0.32), qaxis(0, 1, 0, 0.55)))
+        let w = reduced ? [0, 0, 0] : [0.22, 0.45, 0.1]
+        let cdrag = false,
+          clx = 0,
+          cly = 0,
+          clt = 0,
+          ctouched = false,
+          flat = false,
+          busy = false,
+          spinAng = 0,
+          spinStart = 0,
+          totalAng = 0,
+          cubeState = "idle",
+          gold = false,
+          settledFace = "",
+          userCube = false
+        function cubeCue(state) {
+          cubeState = state
+          $("#cubeCue").textContent = t(
+            { found: "week.found", open: "week.open" }[state] || "week.cue",
+          )
+        }
+        function cubeGotcha() {
+          const turns = Math.max(1, Math.round(spinAng / H)),
+            secs = Math.max(1, Math.round((performance.now() - spinStart) / 1000))
+          showNote(
+            $("#cubeGotcha"),
+            L()
+              ? `أدرت المكعب <b>${timesTxt(turns)}</b> وبقيت معه <b>${secsTxt(secs)}</b>. نريد أن يقضي الناس مع منشورات جيان وقتًا مثل هذا.`
+              : `You turned the cube <b>${timesTxt(turns)}</b> and spent <b>${secsTxt(secs)}</b> with it. We would like people to spend time like this with Géant's posts.`,
+          )
+        }
+        /* how directly the Golden Offer face (local normal 0,0,-1) faces the reader: 0 = away, 1 = straight on */
+        let seekShown = -1
+        function seekUpdate() {
+          const [qw, qx, qy, qz] = q
+          /* rotate v = (0,0,-1) by q: v + 2w(u x v) + 2u x (u x v), u = (qx,qy,qz) */
+          const cx = -qy,
+            cy = qx /* u x v with v=(0,0,-1): (qy*-1 - 0, 0 - qx*-1, 0) = (-qy, qx, 0) */
+          const zz =
+            -1 + 2 * (qx * cy - qy * cx) /* z of v + 2u x (u x v); the 2w term has no z part */
+          const p = Math.acos(Math.max(-1, Math.min(1, zz))) /* angle from the reader */
+          let pct = Math.round((1 - p / Math.PI) * 100)
+          if (gold && settledFace === "bk") pct = 100
+          if (pct === seekShown) return
+          seekShown = pct
+          seekFill.style.width = pct + "%"
+          seekBar.setAttribute("aria-valuenow", pct)
+          seekPct.textContent = L() ? num(pct) + "٪" : pct + "%"
+          const done = gold && settledFace === "bk"
+          seek.classList.toggle("done", done)
+          seekLabel.textContent = t(done ? "week.seekDone" : "week.seek")
+        }
+        function render() {
+          const v =
+            q[0] < 0 ? q.map((x) => -x) : q /* shortest way round, never more than half a turn */
+          const a = 2 * Math.acos(Math.min(1, v[0])),
+            s = Math.sqrt(Math.max(0, 1 - v[0] * v[0]))
+          cube.style.transform =
+            s < 1e-5 ? "none" : `rotate3d(${v[1] / s},${v[2] / s},${v[3] / s},${a}rad)`
+          seekUpdate()
+        }
+        function cubeStep(dt) {
+          if (flat || busy) return
+          const speed = Math.hypot(w[0], w[1], w[2])
+          if (!cdrag) {
+            if (speed > 1e-4) {
+              q = qnorm(qmul(qaxis(w[0], w[1], w[2], speed * dt), q))
+              if (userCube) {
+                spinAng += speed * dt
+                totalAng += speed * dt
+              }
+            }
+            if (ctouched) {
+              w = w.map((v) => v * Math.exp(-0.8 * dt))
+              if (speed < 1.4) {
+                w = w.map((v) => v * Math.exp(-4 * dt))
+                let best = "fr",
+                  bd = -1
+                for (const key in TARGETS) {
+                  const d = Math.abs(qdot(q, TARGETS[key]))
+                  if (d > bd) {
+                    bd = d
+                    best = key
+                  }
+                }
+                let tq = TARGETS[best]
+                if (qdot(q, tq) < 0) tq = tq.map((v) => -v)
+                const f = 1 - Math.exp(-5 * dt)
+                q = qnorm(q.map((v, i) => v + (tq[i] - v) * f))
+                if (bd > 0.9999 && speed < 0.08 && (settledFace !== best || userCube)) {
+                  settledFace = best
+                  w = [0, 0, 0]
+                  if (userCube) {
+                    userCube = false
+                    if (spinAng > 0.4) cubeGotcha()
+                    if (best === "bk") {
+                      gold = true
+                      cubeCue("found")
+                      buzz(30)
+                    } else if (cubeState === "found") cubeCue("idle")
+                  }
+                }
+              }
+            }
+          }
+          render()
+        }
+        hit.addEventListener("pointerdown", (e) => {
+          if (flat || busy) return
+          cdrag = true
+          ctouched = true
+          userCube = true
+          spinAng = 0
+          spinStart = performance.now()
+          settledFace = ""
+          chint.classList.remove("on")
+          clx = e.clientX
+          cly = e.clientY
+          clt = performance.now()
+          w = [0, 0, 0]
+          if (hit.setPointerCapture) hit.setPointerCapture(e.pointerId)
+        })
+        hit.addEventListener("pointermove", (e) => {
+          if (!cdrag) return
+          const now = performance.now(),
+            dx = e.clientX - clx,
+            dy = e.clientY - cly,
+            dt = Math.max(1, now - clt) / 1000,
+            d = Math.hypot(dx, dy)
+          if (d < 0.5) return
+          const ang = d * 0.011,
+            ax = [-dy / d, dx / d, 0]
+          q = qnorm(qmul(qaxis(ax[0], ax[1], ax[2], ang), q))
+          spinAng += ang
+          totalAng += ang
+          w = w.map((v, i) => v * 0.5 + ax[i] * (ang / dt) * 0.5)
+          clx = e.clientX
+          cly = e.clientY
+          clt = now
+          render()
+        })
+        const cubeUp = () => {
+          if (!cdrag) return
+          cdrag = false
+          if (performance.now() - clt > 90) w = w.map((v) => v * 0.15)
+          const sp = Math.hypot(w[0], w[1], w[2])
+          if (sp > 20) w = w.map((v) => (v * 20) / sp)
+        }
+        hit.addEventListener("pointerup", cubeUp)
+        hit.addEventListener("pointercancel", cubeUp)
+
+        function fitNet() {
+          const S = cube.offsetWidth,
+            W = cstage.clientWidth - 8
+          const k = Math.min(0.92, W / (S * 4.2))
+          cfit.style.transform = `translateX(${-S * 0.52 * k}px) scale(${k})`
+        }
+        /* lay flat in two steps: first turn the cube to face front, then open the faces */
+        function turnToFront(done) {
+          const from = qdot(q, ID) < 0 ? q.map((x) => -x) : q.slice()
+          const t0 = performance.now(),
+            dur = reduced ? 1 : 550
+          ;(function step(now) {
+            const p = Math.min(1, (now - t0) / dur),
+              e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2
+            q = qnorm(from.map((v, i) => v + (ID[i] - v) * e))
+            render()
+            if (p < 1) requestAnimationFrame(step)
+            else {
+              q = ID.slice()
+              render()
+              done()
+            }
+          })(t0)
+        }
+        function layFlat() {
+          if (flat || busy) return
+          busy = true
+          w = [0, 0, 0]
+          cdrag = false
+          hit.style.pointerEvents = "none"
+          chint.classList.remove("on")
+          flatBtn.hidden = true
+          turnToFront(() => {
+            cube.classList.add("net")
+            fitNet()
+            FACES.forEach((k) => cube.querySelector(".f." + k).setAttribute("tabindex", "0"))
+            setTimeout(() => {
+              busy = false
+              flat = true
+              foldBtn.hidden = false
+              foldGuide.hidden = false
+              seek.hidden = true
+              cstage.style.touchAction = "pan-y"
+              cubeCue("open")
+            }, 900)
+          })
+        }
+        function foldBack() {
+          if (!flat || busy) return
+          busy = true
+          foldBtn.hidden = true
+          foldGuide.hidden = true
+          seek.hidden = false
+          cstage.style.touchAction = ""
+          pts.clear()
+          FACES.forEach((k) => cube.querySelector(".f." + k).setAttribute("tabindex", "-1"))
+          cube.classList.remove("net")
+          cfit.style.transform = ""
+          setTimeout(() => {
+            busy = false
+            flat = false
+            q = ID.slice()
+            settledFace = "fr"
+            userCube = false
+            w = reduced ? [0, 0, 0] : [0.3, 1.8, 0.15]
+            hit.style.pointerEvents = ""
+            flatBtn.hidden = false
+            cubeCue("idle")
+          }, 950)
+        }
+        /* while flat: a tap on an empty spot, or a pinch, folds it back */
+        const foldGuide = $("#foldGuide"),
+          pts = new Map()
+        let pinchStart = 0
+        cstage.addEventListener("click", (e) => {
+          if (flat && !busy && !e.target.closest(".f")) foldBack()
+        })
+        cstage.addEventListener("pointerdown", (e) => {
+          if (!flat) return
+          pts.set(e.pointerId, [e.clientX, e.clientY])
+          if (pts.size === 2) {
+            const [a, b] = [...pts.values()]
+            pinchStart = Math.hypot(a[0] - b[0], a[1] - b[1])
+          }
+        })
+        cstage.addEventListener("pointermove", (e) => {
+          if (!flat || !pts.has(e.pointerId)) return
+          pts.set(e.pointerId, [e.clientX, e.clientY])
+          if (pts.size === 2 && pinchStart > 0) {
+            const [a, b] = [...pts.values()]
+            if (Math.hypot(a[0] - b[0], a[1] - b[1]) < pinchStart * 0.72) {
+              pinchStart = 0
+              foldBack()
+            }
+          }
+        })
+        const ptEnd = (e) => {
+          pts.delete(e.pointerId)
+          if (pts.size < 2) pinchStart = 0
+        }
+        cstage.addEventListener("pointerup", ptEnd)
+        cstage.addEventListener("pointercancel", ptEnd)
+        /* trackpad pinch on a laptop arrives as a ctrl + wheel event */
+        cstage.addEventListener(
+          "wheel",
+          (e) => {
+            if (!flat || !e.ctrlKey) return
+            e.preventDefault()
+            if (e.deltaY > 2) foldBack()
+          },
+          { passive: false },
+        )
+        flatBtn.addEventListener("click", layFlat)
+        foldBtn.addEventListener("click", foldBack)
+        addEventListener("resize", () => {
+          if (flat) fitNet()
+        })
+        new IntersectionObserver(
+          (es, io) =>
+            es.forEach((en) => {
+              if (en.isIntersecting) {
+                setTimeout(() => {
+                  if (!ctouched && !reduced && !flat && !busy) chint.classList.add("on")
+                }, 1600)
+                io.disconnect()
+              }
+            }),
+          { threshold: 0.5 },
+        ).observe(cstage)
+
+        /* lightbox: while flat, every design opens larger */
+        const lb = $("#lb"),
+          lbCard = $("#lbCard")
+        let lbIdx = 0,
+          lbLast = null
+        function lbShow(i) {
+          lbIdx = (i + FACES.length) % FACES.length
+          const key = FACES[lbIdx]
+          lbCard.innerHTML = ""
+          lbCard.appendChild(cube.querySelector(".f." + key + " .card").cloneNode(true))
+          $("#lbCap").textContent = CAPS[key][lang]
+          $("#lbIdx").textContent = num(lbIdx + 1) + " / " + num(FACES.length)
+        }
+        function lbOpen(i) {
+          lbLast = document.activeElement
+          lbShow(i)
+          lb.hidden = false
+          document.body.style.overflow = "hidden"
+          $("#lbClose").focus()
+        }
+        function lbClose() {
+          lb.hidden = true
+          document.body.style.overflow = ""
+          if (lbLast && lbLast.focus) lbLast.focus()
+        }
+        FACES.forEach((key, i) => {
+          const f = cube.querySelector(".f." + key)
+          f.setAttribute("tabindex", "-1")
+          f.addEventListener("click", () => {
+            if (flat) lbOpen(i)
+          })
+          f.addEventListener("keydown", (e) => {
+            if (flat && (e.key === "Enter" || e.key === " ")) {
+              e.preventDefault()
+              lbOpen(i)
+            }
+          })
+        })
+        $("#lbClose").addEventListener("click", lbClose)
+        $("#lbPrev").addEventListener("click", () => lbShow(lbIdx - 1))
+        $("#lbNext").addEventListener("click", () => lbShow(lbIdx + 1))
+        lb.addEventListener("click", (e) => {
+          if (e.target === lb) lbClose()
+        })
+        addEventListener("keydown", (e) => {
+          if (lb.hidden) return
+          if (e.key === "Escape") lbClose()
+          if (e.key === "ArrowRight") lbShow(lbIdx + (L() ? -1 : 1))
+          if (e.key === "ArrowLeft") lbShow(lbIdx + (L() ? 1 : -1))
+        })
+        let lbX = null
+        lbCard.addEventListener("pointerdown", (e) => {
+          lbX = e.clientX
+        })
+        lbCard.addEventListener("pointerup", (e) => {
+          if (lbX == null) return
+          const dx = e.clientX - lbX
+          lbX = null
+          if (Math.abs(dx) > 40) lbShow(lbIdx + (dx < 0 ? 1 : -1))
+        })
+
+        /* ================= text, price, samples ================= */
+        function renderPrice() {
+          const sym = PRICING.currency === "USD" ? "$" : PRICING.currency + " "
+          $("#priceTable").innerHTML =
+            `<div class="row"><div><h3>${t("price.main")}</h3><p>${t("price.mainS")}</p></div><div class="amt">${sym}${Number(PRICING.monthly).toLocaleString("en-US")}<small>${t("price.perMonth")}</small></div></div>` +
+            `<div class="row"><div><h3>${t("price.ads")}</h3><p>${t("price.adsS")}</p></div><div class="amt txt">${t("price.adsV")}</div></div>`
+        }
+        function renderSamples() {
+          const host = $("#pairs")
+          host.innerHTML = ""
+          SAMPLES.forEach((s) => {
+            const after = new Image()
+            after.onload = () => {
+              $("#samples").hidden = false
+              const fig = document.createElement("div")
+              fig.className = "pair"
+              fig.innerHTML = `<figure><img loading="lazy" src="assets/samples/${s.id}-before.png" alt=""><figcaption>${L() ? "قبل" : "Before"} · ${s[lang]}</figcaption></figure><figure><img loading="lazy" src="assets/samples/${s.id}-after.png" alt=""><figcaption>${L() ? "بعد" : "After"} · WordReward</figcaption></figure>`
+              host.appendChild(fig)
+            }
+            after.src = `assets/samples/${s.id}-after.png`
+          })
+        }
+        function applyLang() {
+          document.documentElement.lang = lang
+          document.documentElement.dir = L() ? "rtl" : "ltr"
+          $$("[data-t]").forEach((el) => {
+            el.innerHTML = t(el.dataset.t)
+          })
+          $$("[data-t-aria]").forEach((el) => el.setAttribute("aria-label", t(el.dataset.tAria)))
+          $("#lang").textContent = L() ? "English" : "العربية"
+          $("#days").innerHTML = T.days[lang]
+            .map((d) => `<div class="day ${d[1]}"><b>${d[0]}</b><p>${d[2]}</p></div>`)
+            .join("")
+          renderPrice()
+          renderSamples()
+          coinCue(true)
+          cubeCue(cubeState)
+          seekShown = -1
+          seekUpdate()
+          if (!$("#coinGotcha").hidden && flips) coinGotcha()
+          if (!lb.hidden) lbShow(lbIdx)
+        }
+        $("#lang").addEventListener("click", () => {
+          lang = L() ? "en" : "ar"
+          try {
+            localStorage.setItem("gy-lang", lang)
+          } catch (e) {}
+          applyLang()
+        })
+
+        /* ================= loop ================= */
+        const vis = { coin: true, cube: false }
+        new IntersectionObserver((es) =>
+          es.forEach((en) => {
+            vis.coin = en.isIntersecting
+          }),
+        ).observe(stage)
+        new IntersectionObserver((es) =>
+          es.forEach((en) => {
+            vis.cube = en.isIntersecting
+          }),
+        ).observe(cstage)
+        let prev = performance.now()
+        function loop(now) {
+          const dt = Math.min(0.05, (now - prev) / 1000)
+          prev = now
+          if (vis.coin) coinStep(dt)
+          if (vis.cube) cubeStep(dt)
+          requestAnimationFrame(loop)
+        }
+        applyLang()
+        render()
+        requestAnimationFrame(loop)
+      })()
+    </script>
+  </body>
+</html>
