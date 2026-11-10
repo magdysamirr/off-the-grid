@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>WordReward × Géant Yemen</title>
-    <meta
-      name="description"
-      content="مقترح WordReward لإدارة التواصل الاجتماعي لجيان هايبرماركت، عدن مول."
-    />
+    <title>Géant Yemen Proposal</title>
+    <meta name="description" content="عرض WordReward لإدارة صفحات جيان هايبرماركت، عدن مول." />
     <meta property="og:title" content="WordReward × Géant Yemen" />
     <meta
       property="og:description"
@@ -16,7 +13,6 @@
     <meta property="og:image" content="assets/og.png" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#f7f3eb" />
     <meta name="robots" content="noindex, nofollow" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,31 +22,74 @@
       rel="stylesheet"
     />
     <style>
+      /* Layout: one reading column; the cube and the footer sit on full-bleed navy bands. */
       :root {
-        color-scheme: light;
-        --navy: #1e1f27;
-        --ink: #434459;
-        --ink-rgb: 67, 68, 89;
-        --paper: #f7f3eb;
-        --warm: #fffcf9;
-        --line: rgba(67, 68, 89, 0.14);
-        --teal: #39b5a8;
+        /* WRD brand, light mode (WordReward Brand Colors) */
+        --bg: #f7f3eb;
+        --surface: #fffcf9;
+        --fg: #434459;
+        --fg-rgb: 67, 68, 89;
+        --muted: rgba(67, 68, 89, 0.74);
+        --line: rgba(67, 68, 89, 0.15);
+        --accent: #39b5a8;
+        --on-accent: #434459;
+        --band: #1e1f27;
+        --band-fg: #fffcf9;
+        --band-muted: rgba(255, 252, 249, 0.74);
+        --band-line: rgba(255, 252, 249, 0.14);
+        --band-accent: #ffdb8e;
+        --shadow: rgba(30, 31, 39, 0.26);
         --amber: #ffdb8e;
-
-        /* Géant colours, used only inside the sample cards */
+        /* Géant colours, only inside the sample cards */
         --g-green: #3daa35;
         --g-green-d: #2a8a24;
         --g-red: #e2231a;
         --g-orange: #f7a823;
         --g-yellow: #ffe418;
-        --g-gold: #d9a521;
+        /* type */
         --ar: "IBM Plex Sans Arabic", "Geeza Pro", Tahoma, sans-serif;
         --ar-display: "DIN Next LT Arabic", "Noto Kufi Arabic", "IBM Plex Sans Arabic", sans-serif;
         --en: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --en-display: Rockwell, "Rockwell Nova", Clarendon, "Roboto Slab", Georgia, serif;
         --g-ar: "Almarai", var(--ar);
         --g-en: "Montserrat", var(--en);
-        --en-display: Rockwell, "Rockwell Nova", Clarendon, "Roboto Slab", Georgia, serif;
         --gutter: clamp(16px, 5vw, 48px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #1e1f27;
+          --surface: #272833;
+          --fg: #fffcf9;
+          --fg-rgb: 255, 252, 249;
+          --muted: rgba(255, 252, 249, 0.72);
+          --line: rgba(255, 252, 249, 0.13);
+          --accent: #ffdb8e;
+          --on-accent: #434459;
+          --band: #15161c;
+          --band-fg: #fffcf9;
+          --band-muted: rgba(255, 252, 249, 0.72);
+          --band-line: rgba(255, 252, 249, 0.12);
+          --band-accent: #ffdb8e;
+          --shadow: rgba(0, 0, 0, 0.55);
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #1e1f27;
+        --surface: #272833;
+        --fg: #fffcf9;
+        --fg-rgb: 255, 252, 249;
+        --muted: rgba(255, 252, 249, 0.72);
+        --line: rgba(255, 252, 249, 0.13);
+        --accent: #ffdb8e;
+        --on-accent: #434459;
+        --band: #15161c;
+        --band-fg: #fffcf9;
+        --band-muted: rgba(255, 252, 249, 0.72);
+        --band-line: rgba(255, 252, 249, 0.12);
+        --band-accent: #ffdb8e;
+        --shadow: rgba(0, 0, 0, 0.55);
+        color-scheme: dark;
       }
       * {
         box-sizing: border-box;
@@ -61,14 +100,14 @@
       }
       body {
         margin: 0;
-        background: var(--paper);
-        color: var(--ink);
-        font: 400 17px/1.7 var(--ar);
+        background: var(--bg);
+        color: var(--fg);
+        font: 400 17px/1.75 var(--ar);
         overflow-x: hidden;
       }
       html[lang="en"] body {
         font-family: var(--en);
-        line-height: 1.6;
+        line-height: 1.65;
       }
       img {
         max-width: 100%;
@@ -78,88 +117,100 @@
         font: inherit;
         color: inherit;
       }
+      a {
+        color: inherit;
+      }
+      [data-t]:empty {
+        display: none;
+      }
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
       .wrap {
         width: min(100% - 2 * var(--gutter), 760px);
         margin-inline: auto;
       }
-      .kicker {
-        font: 700 12px/1.4 var(--en);
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--ink);
-        margin: 0 0 14px;
-      }
-      .kicker::before {
-        content: "";
-        display: inline-block;
-        width: 18px;
-        height: 3px;
-        border-radius: 2px;
-        background: var(--teal);
-        vertical-align: middle;
-        margin-inline-end: 10px;
-      }
-      #week .kicker::before,
-      #plan .kicker::before {
-        background: var(--amber);
-      }
-      html[lang="ar"] .kicker {
-        font-family: var(--ar);
-        letter-spacing: 0;
-        font-size: 14px;
-        text-transform: none;
+      section {
+        padding-block: clamp(64px, 12vw, 112px);
+        scroll-margin-top: 60px;
       }
       h1,
       h2,
       h3 {
-        color: var(--ink);
+        color: var(--fg);
         margin: 0;
-        font-weight: 700;
-        line-height: 1.2;
         font-family: var(--ar-display);
+        font-weight: 700;
+        line-height: 1.25;
+        text-wrap: balance;
       }
       html[lang="en"] h1,
       html[lang="en"] h2 {
         font-family: var(--en-display);
-        font-weight: 700;
       }
       html[lang="en"] h3 {
         font-family: var(--en);
         font-weight: 600;
       }
       h2 {
-        font-size: clamp(30px, 7vw, 52px);
-        margin-bottom: 18px;
+        font-size: clamp(28px, 6.4vw, 46px);
+        margin-bottom: 16px;
       }
       h3 {
-        font-size: 20px;
-        margin-bottom: 6px;
+        font-size: 19px;
+        margin-bottom: 4px;
       }
       p {
-        margin: 0 0 14px;
+        margin: 0 0 12px;
       }
       .lead {
-        font-size: clamp(18px, 4.4vw, 22px);
-        color: rgba(var(--ink-rgb), 0.9);
+        font-size: clamp(18px, 4.2vw, 21px);
+        color: var(--muted);
       }
-      section {
-        padding: clamp(72px, 14vw, 128px) 0;
-        position: relative;
-        scroll-margin-top: 56px;
+      .kicker {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font: 600 13px/1.4 var(--en);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--fg);
+        margin: 0 0 14px;
       }
-      .rise {
-        opacity: 0;
-        transform: translateY(24px);
-        transition:
-          opacity 0.8s ease,
-          transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      html[lang="ar"] .kicker {
+        font-family: var(--ar);
+        letter-spacing: 0;
+        font-size: 15px;
+        text-transform: none;
+        font-weight: 500;
       }
-      [data-t]:empty {
-        display: none;
+      .kicker::before {
+        content: "";
+        width: 20px;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--accent);
+        flex: none;
       }
-      .rise.in {
-        opacity: 1;
-        transform: none;
+      .band {
+        background: var(--band);
+        color: var(--band-fg);
+        overflow: hidden;
+      }
+      .band h2,
+      .band h3 {
+        color: var(--band-fg);
+      }
+      .band .kicker {
+        color: var(--band-fg);
+      }
+      .band .kicker::before {
+        background: var(--band-accent);
+      }
+      .band .lead {
+        color: var(--band-muted);
       }
 
       /* top bar */
@@ -170,42 +221,42 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: calc(10px + env(safe-area-inset-top)) var(--gutter) 10px;
+        gap: 10px;
+        padding: calc(10px + env(safe-area-inset-top, 0px))
+          max(var(--gutter), env(safe-area-inset-right, 0px)) 10px
+          max(var(--gutter), env(safe-area-inset-left, 0px));
         pointer-events: none;
       }
       .bar > * {
         pointer-events: auto;
       }
+      .pill-ui {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      }
       .brand {
         display: flex;
         align-items: center;
         gap: 9px;
-        font: 700 13px/1 var(--en);
-        color: var(--navy);
-        text-decoration: none;
-        letter-spacing: 0.02em;
-        direction: ltr;
-        background: rgba(255, 252, 249, 0.86);
-        -webkit-backdrop-filter: blur(12px);
-        backdrop-filter: blur(12px);
-        border: 1px solid var(--line);
-        border-radius: 999px;
         padding: 7px 14px 7px 10px;
+        font: 600 13px/1 var(--en);
+        text-decoration: none;
+        direction: ltr;
+        color: var(--fg);
       }
       .brand svg {
         width: 18px;
         height: auto;
-        color: var(--ink);
+        color: var(--fg);
       }
       .brand span {
-        opacity: 0.75;
+        opacity: 0.7;
       }
       .lang {
-        border: 1px solid var(--line);
-        background: var(--warm);
-        border-radius: 999px;
-        padding: 7px 14px;
-        font: 700 13px/1 var(--en);
+        padding: 8px 14px;
+        font: 600 13px/1 var(--en);
         cursor: pointer;
       }
       html[lang="en"] .lang {
@@ -214,24 +265,17 @@
 
       /* HERO + COIN */
       #hero {
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 84px;
-        padding-bottom: 40px;
+        padding-top: calc(86px + env(safe-area-inset-top, 0px));
+        padding-bottom: 56px;
         text-align: center;
         overflow: hidden;
-      }
-      #hero .kicker {
-        margin-bottom: 6px;
       }
       .stage {
         position: relative;
         width: 100%;
-        height: min(62vw, 360px);
-        min-height: 250px;
-        margin: 6px auto 4px;
+        height: min(70vw, 380px);
+        min-height: 270px;
+        margin: 4px auto 0;
         touch-action: pan-y;
         cursor: grab;
         user-select: none;
@@ -254,8 +298,29 @@
           transform: translateY(-8px);
         }
       }
+      .coin-hop {
+        position: relative;
+        transition: transform 0.18s ease;
+      }
+      .coin-hop.hop {
+        animation: hop 0.7s cubic-bezier(0.3, 0.7, 0.3, 1);
+      }
+      @keyframes hop {
+        30% {
+          transform: translateY(-34px);
+        }
+        60% {
+          transform: translateY(4px);
+        }
+        100% {
+          transform: none;
+        }
+      }
+      .stage.pressed .coin-hop {
+        transform: scale(0.95);
+      }
       .coin {
-        --d: min(52vw, 280px);
+        --d: min(54vw, 290px);
         --t: calc(var(--d) * 0.085);
         position: relative;
         width: var(--d);
@@ -275,7 +340,7 @@
       }
       .coin .front {
         transform: translateZ(calc(var(--t) / 2));
-        background: radial-gradient(circle at 34% 28%, #fff 0, #fbf6ee 38%, #ece3d3 100%);
+        background: radial-gradient(circle at 34% 28%, #ffffff 0, #fbf6ee 38%, #ece3d3 100%);
         box-shadow:
           inset 0 0 0 calc(var(--d) * 0.035) #e4d9c5,
           inset 0 0 0 calc(var(--d) * 0.05) #f6efe3,
@@ -284,33 +349,33 @@
       .coin .front svg {
         width: 48%;
         height: auto;
-        color: var(--ink);
+        color: #434459;
       }
       .coin .back {
         transform: rotateY(180deg) translateZ(calc(var(--t) / 2));
         background: radial-gradient(circle at 34% 28%, #5a5b75 0, #434459 45%, #2b2c3a 100%);
-        color: #fff;
+        color: #fffcf9;
         box-shadow:
           inset 0 0 0 calc(var(--d) * 0.035) #33344a,
           inset 0 0 0 calc(var(--d) * 0.05) #4d4e66,
           inset 0 0 0 calc(var(--d) * 0.056) rgba(255, 219, 142, 0.6);
       }
-      .back .big {
-        font: 700 calc(var(--d) * 0.3)/1 var(--en-display);
-        letter-spacing: -0.04em;
-      }
-      .back .big i {
-        font-style: normal;
-        color: var(--amber);
-      }
-      .back .small {
-        font: 700 calc(var(--d) * 0.06)/1.2 var(--ar);
-        opacity: 0.85;
-        margin-top: calc(var(--d) * 0.03);
-      }
       .back .inner {
         display: grid;
         place-items: center;
+      }
+      .back .big {
+        font: 700 calc(var(--d) * 0.3)/1 var(--en-display);
+        letter-spacing: -0.03em;
+      }
+      .back .big i {
+        font-style: normal;
+        color: #ffdb8e;
+      }
+      .back .small {
+        font: 600 calc(var(--d) * 0.06)/1.2 var(--ar);
+        opacity: 0.85;
+        margin-top: calc(var(--d) * 0.03);
       }
       .coin .shine {
         position: absolute;
@@ -320,7 +385,7 @@
         background: linear-gradient(
           105deg,
           transparent 35%,
-          rgba(255, 255, 255, 0.22) 50%,
+          rgba(255, 255, 255, 0.24) 50%,
           transparent 65%
         );
         transform: translateZ(calc(var(--t) / 2 + 1px));
@@ -344,65 +409,110 @@
       .shadow {
         position: absolute;
         left: 50%;
-        bottom: 4%;
-        width: min(40vw, 220px);
+        bottom: 3%;
+        width: min(42vw, 230px);
         height: 18px;
         transform: translateX(-50%);
         border-radius: 50%;
-        background: radial-gradient(rgba(30, 31, 39, 0.28), transparent 70%);
+        background: radial-gradient(var(--shadow), transparent 70%);
         filter: blur(2px);
-        transition: width 0.2s;
+      }
+      .ripple {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: var(--rs, 260px);
+        height: var(--rs, 260px);
+        margin: calc(var(--rs, 260px) / -2) 0 0 calc(var(--rs, 260px) / -2);
+        border-radius: 50%;
+        border: 2px solid var(--accent);
+        pointer-events: none;
+        animation: ripple 0.7s ease-out forwards;
+      }
+      @keyframes ripple {
+        from {
+          transform: scale(0.85);
+          opacity: 0.9;
+        }
+        to {
+          transform: scale(1.35);
+          opacity: 0;
+        }
+      }
+      .count {
+        position: absolute;
+        top: 8%;
+        inset-inline-end: 12%;
+        min-width: 46px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: var(--on-accent);
+        font: 700 16px/1 var(--en);
+        opacity: 0;
+        transform: scale(0.6);
+        transition:
+          opacity 0.25s,
+          transform 0.25s;
+        pointer-events: none;
+        direction: ltr;
+      }
+      .count.on {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .count.pop {
+        animation: pop 0.3s ease;
+      }
+      @keyframes pop {
+        50% {
+          transform: scale(1.25);
+        }
       }
       .hint {
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 52%;
         width: 54px;
         height: 54px;
         margin: -27px 0 0 -27px;
         border-radius: 50%;
-        border: 2px solid rgba(30, 31, 39, 0.55);
-        background: rgba(255, 255, 255, 0.35);
+        border: 2px solid var(--fg);
+        background: rgba(var(--fg-rgb), 0.08);
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.4s;
       }
       .hint.on {
-        opacity: 1;
+        opacity: 0.8;
         animation: swipe 1.8s ease-in-out infinite;
       }
       @keyframes swipe {
         0% {
-          transform: translateX(40px) scale(0.9);
+          transform: translateX(46px) scale(0.9);
         }
         50% {
-          transform: translateX(-40px) scale(1);
+          transform: translateX(-46px) scale(1);
         }
         100% {
-          transform: translateX(40px) scale(0.9);
+          transform: translateX(46px) scale(0.9);
         }
       }
       .hero-title {
-        font-size: clamp(38px, 10.5vw, 76px);
-        letter-spacing: -0.01em;
-        margin: 4px 0 10px;
-      }
-      html[lang="en"] .hero-title {
-        letter-spacing: -0.03em;
+        font-size: clamp(38px, 10vw, 72px);
+        margin: 6px 0 12px;
       }
       .goals {
         display: flex;
         justify-content: center;
         gap: 10px;
         flex-wrap: wrap;
-        margin: 6px auto 10px;
       }
       .goal {
         border: 1px solid var(--line);
         border-radius: 999px;
         padding: 8px 16px;
         font-size: 15px;
-        background: transparent;
         transition:
           background 0.35s,
           color 0.35s,
@@ -410,28 +520,80 @@
           transform 0.35s;
       }
       .goal.on {
-        background: var(--navy);
-        color: var(--warm);
-        border-color: var(--navy);
+        background: var(--fg);
+        color: var(--bg);
+        border-color: var(--fg);
         transform: translateY(-2px);
       }
       .goal.on.b {
-        background: var(--teal);
-        border-color: var(--teal);
-        color: var(--ink);
+        background: var(--accent);
+        color: var(--on-accent);
+        border-color: var(--accent);
       }
       .cue {
-        margin-top: 6px;
-        font-size: 14px;
-        color: rgba(var(--ink-rgb), 0.7);
-        min-height: 1.7em;
-        transition: opacity 0.4s;
+        margin: 12px 0 0;
+        font-size: 15px;
+        color: var(--muted);
+        min-height: 1.75em;
+      }
+      .gotcha {
+        max-width: 560px;
+        margin: 18px auto 0;
+        padding: 16px 20px;
+        border-radius: 16px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        text-align: start;
+        font-size: 17px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      }
+      .gotcha:not([hidden]) {
+        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .gotcha b {
+        color: var(--fg);
+      }
+      .gotcha .mark {
+        display: block;
+        font: 600 12px/1 var(--en);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      html[lang="ar"] .gotcha .mark {
+        font-family: var(--ar);
+        letter-spacing: 0;
+        font-size: 13px;
+        text-transform: none;
+      }
+      .band .gotcha {
+        background: rgba(255, 252, 249, 0.06);
+        border-color: var(--band-line);
+        color: var(--band-fg);
+        box-shadow: none;
+      }
+      .band .gotcha b {
+        color: var(--band-accent);
+      }
+      .band .gotcha .mark {
+        color: var(--band-muted);
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
       }
       .down {
         display: inline-block;
-        margin-top: 14px;
-        font-size: 13px;
-        color: rgba(var(--ink-rgb), 0.55);
+        margin-top: 22px;
+        font-size: 14px;
+        color: var(--muted);
         text-decoration: none;
       }
 
@@ -439,58 +601,65 @@
       .quotes {
         display: grid;
         gap: 12px;
-        margin-top: 26px;
-      }
-      .q {
-        background: var(--warm);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: 18px 20px;
-      }
-      .q strong {
-        display: block;
-        color: var(--navy);
-        font-size: 19px;
-        line-height: 1.35;
-        margin-bottom: 4px;
-      }
-      .q span {
-        font-size: 15px;
-        color: rgba(var(--ink-rgb), 0.8);
+        margin-top: 22px;
       }
       @media (min-width: 700px) {
         .quotes {
           grid-template-columns: 1fr 1fr;
         }
       }
+      .q {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px 20px;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 1.6;
+      }
 
       /* WEEK + CUBE */
-      #week {
-        background: var(--navy);
-        color: #e9e6f2;
-      }
-      #week h2 {
-        color: #fff;
-      }
-      #week .kicker {
-        color: #ffdb8e;
-      }
-      #week .lead {
-        color: rgba(233, 230, 242, 0.85);
-      }
       .cube-stage {
         position: relative;
-        height: calc(var(--S) * 1.9);
-        margin: 26px auto 0;
-        touch-action: pan-y;
-        cursor: grab;
+        height: calc(var(--S) * 2);
+        margin: 18px auto 0;
         user-select: none;
         -webkit-user-select: none;
         perspective: 1100px;
-        -webkit-tap-highlight-color: transparent;
-        --S: min(230px, 58vw);
+        --S: min(230px, 56vw);
       }
-      .cube-stage:active {
+      .cube-glow {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: calc(var(--S) * 1.9);
+        height: calc(var(--S) * 1.9);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: radial-gradient(rgba(255, 219, 142, 0.16), transparent 65%);
+        animation: glow 4s ease-in-out infinite;
+        pointer-events: none;
+      }
+      @keyframes glow {
+        50% {
+          opacity: 0.55;
+          transform: translate(-50%, -50%) scale(0.92);
+        }
+      }
+      .cube-hit {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: calc(var(--S) * 1.35);
+        height: calc(var(--S) * 1.35);
+        transform: translate(-50%, -50%);
+        touch-action: none;
+        cursor: grab;
+        z-index: 2;
+        border-radius: 50%;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .cube-hit:active {
         cursor: grabbing;
       }
       .cube-fit {
@@ -511,6 +680,39 @@
       }
       .cube.tween {
         transition: transform 1.1s cubic-bezier(0.3, 0.7, 0.2, 1);
+      }
+      .cube-hint {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        margin: -25px 0 0 -25px;
+        border-radius: 50%;
+        border: 2px solid var(--band-fg);
+        background: rgba(255, 252, 249, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 3;
+        transition: opacity 0.4s;
+      }
+      .cube-hint.on {
+        opacity: 0.85;
+        animation: swirl 2.4s ease-in-out infinite;
+      }
+      @keyframes swirl {
+        0% {
+          transform: translate(-60px, 30px);
+        }
+        33% {
+          transform: translate(50px, -40px);
+        }
+        66% {
+          transform: translate(40px, 50px);
+        }
+        100% {
+          transform: translate(-60px, 30px);
+        }
       }
       .f {
         position: absolute;
@@ -580,18 +782,18 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        margin-top: 8px;
-        min-height: 92px;
-      }
-      .cube-cue {
-        font-size: 15px;
-        color: rgba(233, 230, 242, 0.85);
         text-align: center;
       }
+      .cube-cue {
+        font-size: 16px;
+        color: var(--band-muted);
+        margin: 0;
+        min-height: 1.75em;
+      }
       .pill {
-        border: 1px solid rgba(255, 255, 255, 0.25);
+        border: 1px solid var(--band-line);
         background: transparent;
-        color: #fff;
+        color: var(--band-fg);
         border-radius: 999px;
         padding: 10px 18px;
         font-size: 14px;
@@ -607,25 +809,25 @@
       .tally {
         display: flex;
         justify-content: center;
-        gap: clamp(14px, 5vw, 40px);
-        margin-top: 28px;
+        gap: clamp(18px, 6vw, 48px);
+        margin-top: 30px;
         flex-wrap: wrap;
         text-align: center;
       }
       .tally div {
-        min-width: 90px;
+        min-width: 92px;
       }
       .tally b {
         display: block;
-        font: 700 clamp(30px, 8vw, 44px)/1 var(--en-display);
-        color: #fff;
+        font: 700 clamp(32px, 8vw, 46px)/1 var(--en-display);
+        color: var(--band-fg);
       }
       .tally span {
         font-size: 13px;
-        color: rgba(233, 230, 242, 0.7);
+        color: var(--band-muted);
       }
 
-      /* sample card faces (typographic stand-ins until the team's redesigns land) */
+      /* sample cards (typographic stand-ins from Géant's real source pages) */
       .card {
         position: absolute;
         inset: 0;
@@ -667,6 +869,7 @@
         direction: ltr;
         font-family: var(--g-en);
         font-weight: 700;
+        align-self: flex-start;
       }
       .price .old {
         background: var(--g-red);
@@ -677,9 +880,6 @@
         flex-direction: column;
         justify-content: center;
         line-height: 1.1;
-      }
-      .price .old s {
-        opacity: 0.9;
       }
       .price .old small {
         font-size: 0.75em;
@@ -724,23 +924,29 @@
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.12);
       }
-      .c-item {
+      .c-item,
+      .c-nf {
         background: #fff;
       }
-      .c-item .band {
+      .c-item .band2,
+      .c-nf .band2 {
         margin: -8% -8% 6% -8%;
         padding: 4% 8%;
-        background: var(--g-green);
         color: #fff;
         font-weight: 800;
         font-size: 0.85em;
       }
+      .c-item .band2 {
+        background: var(--g-green);
+      }
+      .c-nf .band2 {
+        background: var(--g-red);
+      }
       .c-item .ttl {
         font-size: 1.55em;
-        color: #1d1d1d;
       }
       .c-item .w {
-        display: inline-block;
+        align-self: flex-start;
         background: #eef6ec;
         color: var(--g-green-d);
         border-radius: 0.3em;
@@ -749,22 +955,11 @@
         margin-top: 0.3em;
         font-size: 0.9em;
       }
-      .c-nf {
-        background: #fff;
-      }
-      .c-nf .band {
-        margin: -8% -8% 6% -8%;
-        padding: 4% 8%;
-        background: var(--g-red);
-        color: #fff;
-        font-weight: 800;
-        font-size: 0.85em;
-      }
       .c-nf .ttl {
         font-size: 1.45em;
       }
       .c-nf .save {
-        display: inline-block;
+        align-self: flex-start;
         margin-top: 0.5em;
         background: #1d1d1d;
         color: #fff;
@@ -807,14 +1002,13 @@
         font-size: 2.1em;
       }
       .c-gold .day {
-        display: inline-block;
+        align-self: flex-start;
         margin-top: 0.4em;
         border: 1px solid rgba(255, 215, 106, 0.6);
         border-radius: 999px;
         padding: 0.05em 0.7em;
         font-weight: 700;
         font-size: 0.9em;
-        align-self: flex-start;
       }
       .c-gold .prod {
         margin-top: auto;
@@ -870,168 +1064,215 @@
         left: 6%;
         font: 700 0.62em/1 var(--en);
         letter-spacing: 0.08em;
-        text-transform: uppercase;
         background: rgba(0, 0, 0, 0.75);
         color: #fff;
         border-radius: 999px;
         padding: 0.45em 0.7em;
       }
 
-      /* PLAN */
+      /* PLAN (unfolded week) */
       #plan {
-        display: none;
         padding-top: 0;
-        background: var(--navy);
-        color: #e9e6f2;
-      }
-      #plan.open {
-        display: block;
       }
       .days {
         display: grid;
         gap: 10px;
-        margin-top: 8px;
       }
       .day {
         display: grid;
-        grid-template-columns: 86px 1fr;
+        grid-template-columns: 92px 1fr;
         gap: 14px;
-        align-items: start;
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        align-items: baseline;
+        border: 1px solid var(--band-line);
         border-radius: 12px;
         padding: 14px 16px;
-        background: rgba(255, 255, 255, 0.03);
-        opacity: 0;
-        transform: translateY(14px);
-        transition:
-          opacity 0.6s,
-          transform 0.6s;
-      }
-      #plan.open .day {
-        opacity: 1;
-        transform: none;
       }
       .day b {
-        color: #fff;
+        color: var(--band-fg);
         font-size: 16px;
       }
       .day p {
         margin: 0;
-        font-size: 15px;
-        color: rgba(233, 230, 242, 0.85);
+        font-size: 15.5px;
+        color: var(--band-muted);
       }
       .day.gold {
-        border-color: rgba(255, 215, 106, 0.55);
-        background: rgba(255, 215, 106, 0.07);
+        border-color: rgba(255, 219, 142, 0.55);
+        background: rgba(255, 219, 142, 0.06);
       }
       .day.gold b {
-        color: #ffd76a;
+        color: var(--band-accent);
       }
-      .day.go b {
-        color: #7ee07a;
+      #plan:not([hidden]) .day {
+        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
       }
       .plan-note {
         margin-top: 16px;
-        font-size: 14px;
-        color: rgba(233, 230, 242, 0.7);
+        font-size: 14.5px;
+        color: var(--band-muted);
       }
       .refold {
-        margin-top: 14px;
+        margin-top: 6px;
         background: none;
         border: 0;
-        color: #ffdb8e;
+        color: var(--band-accent);
         text-decoration: underline;
         cursor: pointer;
         font-size: 14px;
         padding: 0;
       }
 
-      /* BEYOND */
-      .pillars {
+      /* OFFER grid */
+      .offer {
         display: grid;
         gap: 12px;
         margin-top: 22px;
       }
-      .pillar {
+      @media (min-width: 640px) {
+        .offer {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .o {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px 20px;
         display: grid;
-        grid-template-columns: 44px 1fr;
+        grid-template-columns: 40px 1fr;
         gap: 14px;
         align-items: start;
-        padding: 16px 0;
-        border-top: 1px solid var(--line);
       }
-      .pillar .n {
-        font: 700 15px/44px var(--en);
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background: var(--warm);
+      .o > div {
+        min-width: 0;
+      }
+      .o svg {
+        width: 40px;
+        height: 40px;
+        color: var(--fg);
+      }
+      .o .ac {
+        color: var(--accent);
+      }
+      .o p {
+        margin: 0;
+        font-size: 15.5px;
+        color: var(--muted);
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+      .chip {
         border: 1px solid var(--line);
-        text-align: center;
-        color: var(--ink);
+        border-radius: 999px;
+        padding: 5px 13px;
+        font: 500 14px/1.4 var(--en);
+        background: var(--surface);
+      }
+
+      /* BEYOND */
+      .pillars {
+        display: grid;
+        margin-top: 18px;
+      }
+      .pillar {
+        padding: 14px 0;
+        border-top: 1px solid var(--line);
       }
       .pillar p {
         margin: 0;
         font-size: 15.5px;
+        color: var(--muted);
       }
       .note {
-        margin-top: 22px;
-        padding: 16px 18px;
+        margin-top: 18px;
+        padding: 14px 18px;
         border-radius: 12px;
-        background: var(--warm);
+        background: var(--surface);
         border: 1px solid var(--line);
         font-size: 15.5px;
       }
-      .note strong {
-        color: var(--navy);
+
+      /* DO (timeline) */
+      .road {
+        position: relative;
+        margin-top: 24px;
+        padding-inline-start: 28px;
+        display: grid;
+        gap: 22px;
+      }
+      .road::before {
+        content: "";
+        position: absolute;
+        inset-block: 8px;
+        inset-inline-start: 7px;
+        width: 2px;
+        background: linear-gradient(var(--accent), var(--amber));
+      }
+      .stop {
+        position: relative;
+      }
+      .stop::before {
+        content: "";
+        position: absolute;
+        inset-inline-start: -27px;
+        top: 8px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 3px solid var(--accent);
+      }
+      .stop small {
+        display: block;
+        font: 600 13px/1.3 var(--en);
+        color: var(--muted);
+        letter-spacing: 0.06em;
+      }
+      html[lang="ar"] .stop small {
+        font-family: var(--ar);
+        letter-spacing: 0;
+        font-size: 14px;
+      }
+      .stop p {
+        margin: 4px 0 0;
+        font-size: 16px;
       }
 
       /* MONTH */
       .month {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
-        margin-top: 24px;
+        margin-top: 26px;
       }
       .m {
-        background: var(--warm);
+        background: var(--surface);
         border: 1px solid var(--line);
         border-radius: 14px;
         padding: 18px;
       }
       .m b {
         display: block;
-        font: 700 clamp(34px, 9vw, 48px)/1 var(--en-display);
-        color: var(--navy);
+        font: 700 clamp(34px, 9vw, 46px)/1 var(--en-display);
+        color: var(--fg);
       }
       .m span {
         display: block;
-        margin-top: 6px;
+        margin-top: 8px;
         font-size: 14.5px;
         line-height: 1.5;
-      }
-      .m.wide {
-        grid-column: 1/-1;
-      }
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-      }
-      .chip {
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 4px 12px;
-        font-size: 14px;
-        background: #fff;
+        color: var(--muted);
       }
 
       /* SAMPLES */
       .pairs {
         display: grid;
         gap: 18px;
-        margin-top: 24px;
+        margin-top: 22px;
       }
       .pair {
         display: grid;
@@ -1040,11 +1281,12 @@
       }
       .pair figure {
         margin: 0;
+        min-width: 0;
       }
       .pair figcaption {
         font-size: 12.5px;
         margin-top: 6px;
-        color: rgba(var(--ink-rgb), 0.75);
+        color: var(--muted);
       }
       .pair img {
         border-radius: 8px;
@@ -1054,76 +1296,91 @@
         aspect-ratio: 1;
         object-fit: contain;
       }
-      .pair .why {
-        grid-column: 1/-1;
-        font-size: 14.5px;
-        margin: 0;
-      }
 
-      /* ROAD */
-      .road {
-        position: relative;
-        margin-top: 26px;
-        padding-inline-start: 26px;
+      /* PRICING */
+      .price-table {
+        margin-top: 22px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--surface);
       }
-      .road::before {
-        content: "";
-        position: absolute;
-        inset-block: 8px;
-        inset-inline-start: 7px;
-        width: 2px;
-        background: linear-gradient(var(--teal), var(--amber));
+      .row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+        padding: 18px 20px;
+        border-top: 1px solid var(--line);
+        align-items: start;
       }
-      .stop {
-        position: relative;
-        padding-bottom: 26px;
+      .row:first-child {
+        border-top: 0;
       }
-      .stop::before {
-        content: "";
-        position: absolute;
-        inset-inline-start: -25px;
-        top: 7px;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background: var(--paper);
-        border: 3px solid var(--teal);
+      .row h3 {
+        font-size: 18px;
       }
-      .stop:last-child::before {
-        border-color: var(--amber);
+      .row p {
+        margin: 2px 0 0;
+        font-size: 15px;
+        color: var(--muted);
       }
-      .stop small {
-        font: 700 12px/1 var(--en);
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--ink);
+      .amt {
+        font: 700 22px/1.2 var(--en-display);
+        white-space: nowrap;
+        direction: ltr;
+        text-align: end;
       }
-      html[lang="ar"] .stop small {
-        font-family: var(--ar);
-        letter-spacing: 0;
-        font-size: 13px;
+      .amt small {
+        display: block;
+        font: 500 12.5px/1.4 var(--ar);
+        color: var(--muted);
+        direction: rtl;
       }
-      .stop p {
-        font-size: 15.5px;
-        margin: 6px 0 0;
+      html[lang="en"] .amt small {
+        font-family: var(--en);
+        direction: ltr;
       }
-
-      /* SCOPE */
-      .scope {
+      .amt.todo {
+        font: 600 14px/1.3 var(--ar);
+        color: var(--fg);
+        border: 1.5px dashed var(--accent);
+        border-radius: 8px;
+        padding: 6px 10px;
+      }
+      .amt.txt {
+        font: 600 15px/1.4 var(--ar);
+        white-space: normal;
+        max-width: 9em;
+      }
+      html[lang="en"] .amt.todo,
+      html[lang="en"] .amt.txt {
+        font-family: var(--en);
+      }
+      .row.main {
+        background: rgba(var(--fg-rgb), 0.03);
+      }
+      .row.main .amt {
+        font-size: 28px;
+      }
+      .row.main .amt.todo {
+        font-size: 15px;
+      }
+      .lists {
         display: grid;
         gap: 14px;
-        margin-top: 24px;
+        margin-top: 14px;
       }
       @media (min-width: 700px) {
-        .scope {
-          grid-template-columns: 1.3fr 1fr;
+        .lists.two {
+          grid-template-columns: 1fr 1fr;
         }
       }
       .box {
         border-radius: 14px;
         padding: 20px;
         border: 1px solid var(--line);
-        background: var(--warm);
+        background: var(--surface);
+        min-width: 0;
       }
       .box.out {
         background: transparent;
@@ -1134,101 +1391,29 @@
         padding-inline-start: 18px;
       }
       .box li {
-        margin: 5px 0;
+        margin: 7px 0;
         font-size: 15.5px;
       }
-
-      /* LATER */
-      .later {
-        display: grid;
-        gap: 12px;
-        margin-top: 22px;
-      }
-      @media (min-width: 700px) {
-        .later {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-      .later div {
-        border-top: 3px solid var(--teal);
-        padding-top: 12px;
-      }
-      .later div:nth-child(2) {
-        border-color: var(--amber);
-      }
-      .later div:nth-child(3) {
-        border-color: var(--navy);
-      }
-      .later p {
-        font-size: 15px;
-      }
-
-      /* REVEAL */
-      #reveal {
-        background: var(--warm);
-        border-block: 1px solid var(--line);
-      }
-      #reveal .stats {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 20px 0 22px;
-      }
-      #reveal .stat {
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 12px 16px;
-        min-width: 120px;
-      }
-      #reveal .stat b {
-        display: block;
-        font: 700 34px/1 var(--en-display);
-        color: var(--navy);
-      }
-      #reveal .stat span {
-        font-size: 13px;
-      }
-      #reveal .punch {
-        font-size: clamp(22px, 5.6vw, 32px);
-        line-height: 1.35;
-        color: var(--navy);
-        font-weight: 800;
-        margin-top: 18px;
-      }
-      #reveal .punch em {
-        font-style: normal;
-        background: linear-gradient(transparent 62%, rgba(57, 181, 168, 0.3) 0);
-      }
-      .waiting {
-        display: none;
-      }
-      #reveal.idle .done {
-        display: none;
-      }
-      #reveal.idle .waiting {
-        display: block;
-      }
-      .waiting a {
-        color: var(--ink);
+      .box li::marker {
+        color: var(--accent);
       }
 
       /* NEXT + FOOTER */
       .steps {
-        counter-reset: s;
         display: grid;
         gap: 12px;
-        margin-top: 22px;
+        margin: 22px 0 0;
         padding: 0;
         list-style: none;
+        counter-reset: s;
       }
       .steps li {
         counter-increment: s;
         display: grid;
         grid-template-columns: 40px 1fr;
         gap: 12px;
-        align-items: start;
-        font-size: 16px;
+        align-items: center;
+        font-size: 16.5px;
       }
       .steps li::before {
         content: counter(s);
@@ -1236,38 +1421,104 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background: var(--navy);
-        color: #fff;
+        background: var(--fg);
+        color: var(--bg);
         text-align: center;
       }
       footer {
-        padding: 48px 0 calc(48px + env(safe-area-inset-bottom));
-        text-align: center;
-        font-size: 14px;
-        color: rgba(var(--ink-rgb), 0.75);
+        padding-block: 56px calc(40px + env(safe-area-inset-bottom, 0px));
       }
-      footer svg {
-        width: 30px;
-        color: var(--ink);
-        margin: 0 auto 12px;
+      .foot-grid {
+        display: grid;
+        gap: 24px;
+      }
+      @media (min-width: 700px) {
+        .foot-grid {
+          grid-template-columns: 1.2fr 1fr;
+        }
+      }
+      .foot-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font: 600 20px/1 var(--en);
+        direction: ltr;
+      }
+      html[lang="ar"] .foot-brand {
+        justify-content: flex-end;
+      }
+      .foot-brand svg {
+        width: 34px;
+        height: auto;
+        color: var(--band-fg);
+      }
+      .foot-about {
+        margin: 14px 0 0;
+        color: var(--band-muted);
+        font-size: 15.5px;
+      }
+      .contact {
+        display: grid;
+        gap: 8px;
+        font-size: 15.5px;
+        align-content: start;
+      }
+      .contact div {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 10px;
+      }
+      .contact span {
+        color: var(--band-muted);
+      }
+      .contact a,
+      .contact bdi {
+        color: var(--band-fg);
+        text-decoration: none;
+        user-select: all;
+      }
+      html[lang="ar"] .contact a,
+      html[lang="ar"] .contact .ltr {
+        text-align: right;
+      }
+      .people {
+        margin-top: 14px;
+        color: var(--band-muted);
+        font-size: 14.5px;
+      }
+      .legal {
+        margin-top: 28px;
+        padding-top: 18px;
+        border-top: 1px solid var(--band-line);
+        font-size: 13px;
+        color: var(--band-muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 18px;
+        justify-content: space-between;
       }
 
       @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
         .coin-float,
-        .c-gold::after {
+        .c-gold::after,
+        .cube-glow,
+        .hint.on,
+        .cube-hint.on {
           animation: none;
         }
-        .rise {
-          transition: none;
-          opacity: 1;
-          transform: none;
+        .gotcha:not([hidden]),
+        #plan:not([hidden]) .day {
+          animation: none;
         }
       }
     </style>
   </head>
   <body>
     <div class="bar">
-      <a class="brand" href="#hero" aria-label="WordReward">
+      <a class="brand pill-ui" href="#hero" aria-label="WordReward">
         <svg viewBox="15 16 151 148" aria-hidden="true">
           <path
             d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
@@ -1281,259 +1532,372 @@
         </svg>
         WordReward <span>× Géant Yemen</span>
       </a>
-      <button class="lang" id="lang" type="button">English</button>
+      <button class="lang pill-ui" id="lang" type="button">English</button>
     </div>
 
-    <!-- 1. HERO: the coin -->
+    <!-- HERO: the coin, with its gotcha right under it -->
     <section id="hero">
       <div class="wrap">
-        <p class="kicker" data-t="hero.kicker"></p>
+        <p class="kicker" style="justify-content: center" data-t="hero.kicker"></p>
       </div>
-      <div class="stage" id="coinStage" aria-label="" data-t-aria="hero.aria" role="img">
+      <div class="stage" id="coinStage" role="img" data-t-aria="hero.aria">
         <div class="shadow" id="coinShadow"></div>
         <div class="coin-float">
-          <div class="coin" id="coin">
-            <div class="rim" id="rim"></div>
-            <div class="face front">
-              <svg viewBox="15 16 151 148" aria-hidden="true">
-                <path
-                  d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div class="face back">
-              <div class="inner">
-                <div class="big">1<i>M</i></div>
-                <div class="small" data-t="coin.back"></div>
+          <div class="coin-hop" id="coinHop">
+            <div class="coin" id="coin">
+              <div class="rim" id="rim"></div>
+              <div class="face front">
+                <svg viewBox="15 16 151 148" aria-hidden="true">
+                  <path
+                    d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
+              <div class="face back">
+                <div class="inner">
+                  <div class="big">1<i>M</i></div>
+                  <div class="small" data-t="coin.back"></div>
+                </div>
+              </div>
+              <div class="shine" id="shine"></div>
             </div>
-            <div class="shine" id="shine"></div>
           </div>
         </div>
+        <div class="count" id="coinCount">×0</div>
         <div class="hint" id="coinHint"></div>
       </div>
       <div class="wrap">
         <h1 class="hero-title" data-t="hero.title"></h1>
         <div class="goals">
-          <span class="goal on" id="goalA" data-t="hero.goalA"></span>
-          <span class="goal b" id="goalB" data-t="hero.goalB"></span>
+          <span class="goal on" id="goalA" data-t="hero.goalA"></span
+          ><span class="goal b" id="goalB" data-t="hero.goalB"></span>
         </div>
-        <p class="cue" id="coinCue" data-t="hero.cue"></p>
+        <p class="cue" id="coinCue" aria-live="polite"></p>
+        <div class="gotcha" id="coinGotcha" hidden aria-live="polite">
+          <span class="mark" data-t="gotcha.mark"></span><span id="coinGotchaText"></span>
+        </div>
         <a class="down" href="#heard" data-t="hero.down"></a>
       </div>
     </section>
 
-    <!-- 2. WHAT WE HEARD -->
-    <section id="heard">
-      <div class="wrap rise">
+    <!-- WHAT WE UNDERSTOOD -->
+    <section id="heard" style="padding-top: 0">
+      <div class="wrap">
         <p class="kicker" data-t="heard.kicker"></p>
         <h2 data-t="heard.title"></h2>
-        <p class="lead" data-t="heard.lead"></p>
         <div class="quotes">
-          <div class="q"><strong data-t="heard.q1"></strong><span data-t="heard.q1s"></span></div>
-          <div class="q"><strong data-t="heard.q2"></strong><span data-t="heard.q2s"></span></div>
-          <div class="q"><strong data-t="heard.q3"></strong><span data-t="heard.q3s"></span></div>
-          <div class="q"><strong data-t="heard.q4"></strong><span data-t="heard.q4s"></span></div>
+          <div class="q" data-t="heard.q1"></div>
+          <div class="q" data-t="heard.q2"></div>
+          <div class="q" data-t="heard.q3"></div>
+          <div class="q" data-t="heard.q4"></div>
         </div>
       </div>
     </section>
 
-    <!-- 3. ONE WEEK: the cube -->
-    <section id="week">
-      <div class="wrap rise">
-        <p class="kicker" data-t="week.kicker"></p>
-        <h2 data-t="week.title"></h2>
-        <p class="lead" data-t="week.lead"></p>
-      </div>
-      <div class="cube-stage" id="cubeStage" role="img" data-t-aria="week.aria">
-        <div class="cube-fit" id="cubeFit">
-          <div class="cube" id="cube">
-            <!-- front: food weekly cover -->
-            <div class="f fr">
-              <div class="card c-cover">
-                <div class="dots"></div>
-                <span class="tag">جيان هايبرماركت</span>
-                <div class="ttl">العروض<br />الأسبوعية</div>
-                <span class="date">٥ – ١١ نوفمبر</span>
-                <div class="foot">
-                  <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+    <!-- ONE WEEK: the cube, its gotcha right under it, then the unfolded plan -->
+    <div class="band">
+      <section id="week">
+        <div class="wrap">
+          <p class="kicker" data-t="week.kicker"></p>
+          <h2 data-t="week.title"></h2>
+          <p class="lead" data-t="week.lead"></p>
+        </div>
+        <div class="cube-stage" id="cubeStage" role="img" data-t-aria="week.aria">
+          <div class="cube-glow"></div>
+          <div class="cube-fit" id="cubeFit">
+            <div class="cube" id="cube">
+              <div class="f fr">
+                <div class="card c-cover">
+                  <div class="dots"></div>
+                  <span class="tag">جيان هايبرماركت</span>
+                  <div class="ttl">العروض<br />الأسبوعية</div>
+                  <span class="date">من ٥ إلى ١١ نوفمبر</span>
+                  <div class="foot">
+                    <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- right: food item card -->
-            <div class="f ri">
-              <div class="card c-item">
-                <div class="band">عرض الأسبوع · ٥ – ١١ نوفمبر</div>
-                <div class="ttl">أرز ديفايا بسمتي</div>
-                <span class="w">٥ كجم</span>
-                <div class="price">
-                  <span class="old"><small>YER</small><s>10,500</s></span
-                  ><span class="new">8,800</span>
-                </div>
-                <div class="foot">
-                  <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
-                </div>
-              </div>
-            </div>
-            <!-- back: the golden offer -->
-            <div class="f bk">
-              <div class="card c-gold">
-                <span class="tag">جيان هايبرماركت</span>
-                <div class="ttl">العرض الذهبي</div>
-                <span class="day">الثلاثاء فقط · يوم واحد</span>
-                <div class="prod">أرز المزان بسمتي أبيض ١٠ كجم</div>
-                <div class="price">
-                  <span class="old"><small>YER</small><s>17,000</s></span
-                  ><span class="new">14,500</span>
-                </div>
-                <div class="foot">
-                  <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+              <div class="f ri">
+                <div class="card c-item">
+                  <div class="band2">عرض الأسبوع</div>
+                  <div class="ttl">أرز ديفايا بسمتي</div>
+                  <span class="w">٥ كجم</span>
+                  <div class="price">
+                    <span class="old"><small>YER</small><s>10,500</s></span
+                    ><span class="new">8,800</span>
+                  </div>
+                  <div class="foot">
+                    <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- left: non-food magazine page -->
-            <div class="f le">
-              <div class="card c-nf">
-                <div class="band">مجلة جيان · توفير أكثر في نوفمبر</div>
-                <div class="ttl">خلاط فيديم إيفا<br /><span dir="ltr">650W</span></div>
-                <div class="price">
-                  <span class="old"><small>YER</small><s>119,000</s></span
-                  ><span class="new">69,000</span>
-                </div>
-                <span class="save">وفّر 50,000</span>
-                <div class="foot">
-                  <span>في جيان، الخير مليان</span><span dir="ltr">@GeantYemen</span>
+              <div class="f bk">
+                <div class="card c-gold">
+                  <span class="tag">جيان هايبرماركت</span>
+                  <div class="ttl">العرض الذهبي</div>
+                  <span class="day">الثلاثاء فقط</span>
+                  <div class="prod">أرز المزان بسمتي أبيض ١٠ كجم</div>
+                  <div class="price">
+                    <span class="old"><small>YER</small><s>17,000</s></span
+                    ><span class="new">14,500</span>
+                  </div>
+                  <div class="foot">
+                    <span>الآن في عدن مول</span><span dir="ltr">@GeantYemen</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- top: cooking show idea -->
-            <div class="f tp">
-              <div class="card c-cook">
-                <span class="idea">IDEA</span>
-                <span class="tag" style="margin-top: 2.2em">مطبخ جيان · حلقة كل أسبوع</span>
-                <div class="ttl">زربيان<br />عدني</div>
-                <div class="sub">مع شيف جيان، ومكوّنات من الرف</div>
-                <div class="play"></div>
-              </div>
-            </div>
-            <!-- bottom: educational idea -->
-            <div class="f bt">
-              <div class="card c-edu">
-                <span class="idea">IDEA</span>
-                <div class="ttl" style="margin-top: 1.6em; font-size: 1.35em">
-                  قبل أن تشتري الأرز، اقرأ ٣ أشياء على الكيس
+              <div class="f le">
+                <div class="card c-nf">
+                  <div class="band2">توفير أكثر في نوفمبر</div>
+                  <div class="ttl">خلاط فيديم إيفا<br /><span dir="ltr">650W</span></div>
+                  <div class="price">
+                    <span class="old"><small>YER</small><s>119,000</s></span
+                    ><span class="new">69,000</span>
+                  </div>
+                  <span class="save">وفّر 50,000</span>
+                  <div class="foot">
+                    <span>في جيان، الخير مليان</span><span dir="ltr">@GeantYemen</span>
+                  </div>
                 </div>
-                <ol>
-                  <li>تاريخ التعبئة</li>
-                  <li>طول الحبة</li>
-                  <li>بلد المنشأ</li>
-                </ol>
+              </div>
+              <div class="f tp">
+                <div class="card c-cook">
+                  <span class="idea">IDEA</span
+                  ><span class="tag" style="margin-top: 2.2em">مطبخ جيان · كل أسبوع</span>
+                  <div class="ttl">زربيان<br />عدني</div>
+                  <div class="sub">بمكونات من رفوف جيان</div>
+                  <div class="play"></div>
+                </div>
+              </div>
+              <div class="f bt">
+                <div class="card c-edu">
+                  <span class="idea">IDEA</span>
+                  <div class="ttl" style="margin-top: 1.6em; font-size: 1.35em">
+                    قبل أن تشتري الأرز، انظر إلى ٣ أشياء
+                  </div>
+                  <ol>
+                    <li>تاريخ التعبئة</li>
+                    <li>طول الحبة</li>
+                    <li>بلد المنشأ</li>
+                  </ol>
+                </div>
               </div>
             </div>
           </div>
+          <div class="cube-hit" id="cubeHit"></div>
+          <div class="cube-hint" id="cubeHint"></div>
         </div>
-      </div>
-      <div class="wrap cube-ui">
-        <p class="cube-cue" id="cubeCue" data-t="week.cue"></p>
-        <button class="pill" id="skipBtn" type="button" data-t="week.skip"></button>
-      </div>
+        <div class="wrap cube-ui">
+          <p class="cube-cue" id="cubeCue" aria-live="polite"></p>
+          <button class="pill" id="skipBtn" type="button" data-t="week.skip"></button>
+          <div class="gotcha" id="cubeGotcha" hidden aria-live="polite">
+            <span class="mark" data-t="gotcha.mark"></span><span id="cubeGotchaText"></span>
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="tally">
+            <div><b>42</b><span data-t="week.t1"></span></div>
+            <div><b>12</b><span data-t="week.t2"></span></div>
+            <div><b>22</b><span data-t="week.t3"></span></div>
+          </div>
+        </div>
+      </section>
+      <section id="plan" hidden>
+        <div class="wrap">
+          <p class="kicker" data-t="plan.kicker"></p>
+          <h2 data-t="plan.title"></h2>
+          <div class="days" id="days"></div>
+          <p class="plan-note" data-t="plan.note"></p>
+          <button class="refold" id="refold" type="button" data-t="plan.refold"></button>
+        </div>
+      </section>
+    </div>
+
+    <!-- WHAT WE OFFER -->
+    <section id="offer">
       <div class="wrap">
-        <div class="tally rise">
-          <div><b>42</b><span data-t="week.t1"></span></div>
-          <div><b>12</b><span data-t="week.t2"></span></div>
-          <div><b>22</b><span data-t="week.t3"></span></div>
+        <p class="kicker" data-t="offer.kicker"></p>
+        <h2 data-t="offer.title"></h2>
+        <div class="offer">
+          <div class="o">
+            <svg
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <rect x="7" y="9" width="26" height="24" rx="3" />
+              <path d="M7 16h26M14 5v7M26 5v7" />
+              <path class="ac" d="M13 23l4 4 9-8" stroke="currentColor" />
+            </svg>
+            <div>
+              <h3 data-t="offer.o1"></h3>
+              <p data-t="offer.o1s"></p>
+            </div>
+          </div>
+          <div class="o">
+            <svg
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <rect x="5" y="5" width="13" height="13" rx="2" />
+              <rect x="22" y="5" width="13" height="13" rx="2" />
+              <rect x="5" y="22" width="13" height="13" rx="2" />
+              <rect class="ac" x="22" y="22" width="13" height="13" rx="2" stroke="currentColor" />
+            </svg>
+            <div>
+              <h3 data-t="offer.o2"></h3>
+              <p data-t="offer.o2s"></p>
+            </div>
+          </div>
+          <div class="o">
+            <svg
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M20 10c-4-3-9-3-14-2v24c5-1 10-1 14 2 4-3 9-3 14-2V8c-5-1-10-1-14 2z" />
+              <path class="ac" d="M20 10v24" stroke="currentColor" />
+            </svg>
+            <div>
+              <h3 data-t="offer.o3"></h3>
+              <p data-t="offer.o3s"></p>
+            </div>
+          </div>
+          <div class="o">
+            <svg
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <rect x="11" y="4" width="18" height="32" rx="4" />
+              <path class="ac" d="M17 15l8 5-8 5z" stroke="currentColor" />
+            </svg>
+            <div>
+              <h3 data-t="offer.o4"></h3>
+              <p data-t="offer.o4s"></p>
+            </div>
+          </div>
+          <div class="o">
+            <svg
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M6 24l14-14v8c8 0 14 5 14 14-3-5-7-7-14-7v8z" />
+              <circle class="ac" cx="9" cy="33" r="2.5" stroke="currentColor" />
+            </svg>
+            <div>
+              <h3 data-t="offer.o5"></h3>
+              <p data-t="offer.o5s"></p>
+            </div>
+          </div>
+          <div class="o">
+            <svg
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M7 33V7M7 33h27" />
+              <path class="ac" d="M12 26l7-7 5 4 9-11" stroke="currentColor" />
+            </svg>
+            <div>
+              <h3 data-t="offer.o6"></h3>
+              <p data-t="offer.o6s"></p>
+            </div>
+          </div>
+        </div>
+        <div class="chips">
+          <span class="chip">Facebook</span><span class="chip">Instagram</span
+          ><span class="chip">TikTok</span><span class="chip" data-t="offer.snap"></span>
         </div>
       </div>
     </section>
 
-    <!-- 3b. THE WEEK UNFOLDED -->
-    <section id="plan" aria-live="polite">
+    <!-- BEYOND PRICE -->
+    <section id="beyond" style="padding-top: 0">
       <div class="wrap">
-        <p class="kicker" style="color: #ffdb8e" data-t="plan.kicker"></p>
-        <h2 style="color: #fff" data-t="plan.title"></h2>
-        <div class="days" id="days"></div>
-        <p class="plan-note" data-t="plan.note"></p>
-        <button class="refold" id="refold" type="button" data-t="plan.refold"></button>
-      </div>
-    </section>
-
-    <!-- 4. BEYOND PRICE -->
-    <section id="beyond">
-      <div class="wrap rise">
         <p class="kicker" data-t="beyond.kicker"></p>
         <h2 data-t="beyond.title"></h2>
-        <p class="lead" data-t="beyond.lead"></p>
         <div class="pillars">
           <div class="pillar">
-            <span class="n">01</span>
-            <div>
-              <h3 data-t="beyond.p1"></h3>
-              <p data-t="beyond.p1s"></p>
-            </div>
+            <h3 data-t="beyond.p1"></h3>
+            <p data-t="beyond.p1s"></p>
           </div>
           <div class="pillar">
-            <span class="n">02</span>
-            <div>
-              <h3 data-t="beyond.p2"></h3>
-              <p data-t="beyond.p2s"></p>
-            </div>
+            <h3 data-t="beyond.p2"></h3>
+            <p data-t="beyond.p2s"></p>
           </div>
           <div class="pillar">
-            <span class="n">03</span>
-            <div>
-              <h3 data-t="beyond.p3"></h3>
-              <p data-t="beyond.p3s"></p>
-            </div>
+            <h3 data-t="beyond.p3"></h3>
+            <p data-t="beyond.p3s"></p>
           </div>
           <div class="pillar">
-            <span class="n">04</span>
-            <div>
-              <h3 data-t="beyond.p4"></h3>
-              <p data-t="beyond.p4s"></p>
-            </div>
+            <h3 data-t="beyond.p4"></h3>
+            <p data-t="beyond.p4s"></p>
           </div>
           <div class="pillar">
-            <span class="n">05</span>
-            <div>
-              <h3 data-t="beyond.p5"></h3>
-              <p data-t="beyond.p5s"></p>
-            </div>
+            <h3 data-t="beyond.p5"></h3>
+            <p data-t="beyond.p5s"></p>
           </div>
         </div>
         <p class="note" data-t="beyond.ai"></p>
       </div>
     </section>
 
-    <!-- 5. ONE MONTH -->
-    <section id="month" style="padding-top: 0">
-      <div class="wrap rise">
-        <p class="kicker" data-t="month.kicker"></p>
-        <h2 data-t="month.title"></h2>
+    <!-- WHAT WE WILL DO -->
+    <section id="do" style="padding-top: 0">
+      <div class="wrap">
+        <p class="kicker" data-t="do.kicker"></p>
+        <h2 data-t="do.title"></h2>
+        <div class="road">
+          <div class="stop">
+            <small data-t="do.s1k"></small>
+            <p data-t="do.s1"></p>
+          </div>
+          <div class="stop">
+            <small data-t="do.s2k"></small>
+            <p data-t="do.s2"></p>
+          </div>
+          <div class="stop">
+            <small data-t="do.s3k"></small>
+            <p data-t="do.s3"></p>
+          </div>
+          <div class="stop">
+            <small data-t="do.s4k"></small>
+            <p data-t="do.s4"></p>
+          </div>
+        </div>
         <div class="month">
           <div class="m"><b>4</b><span data-t="month.m1"></span></div>
           <div class="m"><b>4</b><span data-t="month.m2"></span></div>
           <div class="m"><b>2</b><span data-t="month.m3"></span></div>
           <div class="m"><b>4</b><span data-t="month.m4"></span></div>
-          <div class="m wide">
-            <span data-t="month.platforms" style="margin: 0"></span>
-            <div class="chips">
-              <span class="chip">Facebook</span><span class="chip">Instagram</span
-              ><span class="chip">TikTok</span><span class="chip" data-t="month.snap"></span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. BEFORE / AFTER (auto-hides until the redesigns are dropped into assets/samples) -->
+    <!-- BEFORE / AFTER: appears once the team's redesigns are in assets/samples -->
     <section id="samples" style="padding-top: 0" hidden>
-      <div class="wrap rise">
+      <div class="wrap">
         <p class="kicker" data-t="samples.kicker"></p>
         <h2 data-t="samples.title"></h2>
         <p class="lead" data-t="samples.lead"></p>
@@ -1541,94 +1905,35 @@
       </div>
     </section>
 
-    <!-- 7. ROAD TO 1M -->
-    <section id="road" style="padding-top: 0">
-      <div class="wrap rise">
-        <p class="kicker" data-t="road.kicker"></p>
-        <h2 data-t="road.title"></h2>
-        <div class="road">
-          <div class="stop">
-            <small data-t="road.s1k"></small>
-            <h3 data-t="road.s1"></h3>
-            <p data-t="road.s1s"></p>
-          </div>
-          <div class="stop">
-            <small data-t="road.s2k"></small>
-            <h3 data-t="road.s2"></h3>
-            <p data-t="road.s2s"></p>
-          </div>
-          <div class="stop">
-            <small data-t="road.s3k"></small>
-            <h3 data-t="road.s3"></h3>
-            <p data-t="road.s3s"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. SCOPE -->
-    <section id="scope" style="padding-top: 0">
-      <div class="wrap rise">
-        <p class="kicker" data-t="scope.kicker"></p>
-        <h2 data-t="scope.title"></h2>
-        <div class="scope">
-          <div class="box">
-            <h3 data-t="scope.in"></h3>
-            <ul data-t="scope.inList"></ul>
-          </div>
-          <div class="box out">
-            <h3 data-t="scope.out"></h3>
-            <ul data-t="scope.outList"></ul>
-          </div>
-        </div>
-        <p class="note" data-t="scope.price"></p>
-      </div>
-    </section>
-
-    <!-- 9. LATER -->
-    <section id="later" style="padding-top: 0">
-      <div class="wrap rise">
-        <p class="kicker" data-t="later.kicker"></p>
-        <h2 data-t="later.title"></h2>
-        <div class="later">
-          <div>
-            <h3 data-t="later.l1"></h3>
-            <p data-t="later.l1s"></p>
-          </div>
-          <div>
-            <h3 data-t="later.l2"></h3>
-            <p data-t="later.l2s"></p>
-          </div>
-          <div>
-            <h3 data-t="later.l3"></h3>
-            <p data-t="later.l3s"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 10. THE REVEAL: only told to readers who actually played -->
-    <section id="reveal" class="idle">
+    <!-- PRICING, PAYMENT, TERMS, EXCLUSIONS -->
+    <section id="pricing" style="padding-top: 0">
       <div class="wrap">
-        <div class="done">
-          <p class="kicker" data-t="reveal.kicker"></p>
-          <h2 data-t="reveal.title"></h2>
-          <p class="lead" id="revealLine"></p>
-          <div class="stats" id="revealStats"></div>
-          <p data-t="reveal.p1"></p>
-          <p data-t="reveal.p2"></p>
-          <p class="punch" data-t="reveal.punch"></p>
+        <p class="kicker" data-t="price.kicker"></p>
+        <h2 data-t="price.title"></h2>
+        <p class="lead" data-t="price.lead"></p>
+        <div class="price-table" id="priceTable"></div>
+        <div class="lists two">
+          <div class="box">
+            <h3 data-t="pay.title"></h3>
+            <ul data-t="pay.list"></ul>
+          </div>
+          <div class="box">
+            <h3 data-t="terms.title"></h3>
+            <ul data-t="terms.list"></ul>
+          </div>
         </div>
-        <div class="waiting">
-          <p class="kicker" data-t="reveal.wk"></p>
-          <p class="lead" data-t="reveal.wait"></p>
+        <div class="lists">
+          <div class="box out">
+            <h3 data-t="ex.title"></h3>
+            <ul data-t="ex.list"></ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 11. NEXT -->
-    <section id="next">
-      <div class="wrap rise">
+    <!-- NEXT -->
+    <section id="next" style="padding-top: 0">
+      <div class="wrap">
         <p class="kicker" data-t="next.kicker"></p>
         <h2 data-t="next.title"></h2>
         <ol class="steps">
@@ -1639,30 +1944,66 @@
       </div>
     </section>
 
-    <footer>
-      <svg viewBox="15 16 151 148" aria-hidden="true">
-        <path
-          d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
-          fill="currentColor"
-        />
-        <path
-          d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
-          fill="currentColor"
-          fill-rule="evenodd"
-        />
-      </svg>
-      <div data-t="footer"></div>
+    <!-- FOOTER: WRD -->
+    <footer class="band">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <div class="foot-brand">
+              <svg viewBox="15 16 151 148" aria-hidden="true">
+                <path
+                  d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                /></svg
+              >WordReward
+            </div>
+            <p class="foot-about" data-t="foot.about"></p>
+            <p class="people" data-t="foot.people"></p>
+          </div>
+          <div class="contact">
+            <div>
+              <span data-t="foot.email"></span
+              ><a class="ltr" href="mailto:info@wordreward.net" dir="ltr">info@wordreward.net</a>
+            </div>
+            <div>
+              <span data-t="foot.phone"></span><bdi class="ltr" dir="ltr">+20 155 707 5040</bdi>
+            </div>
+            <div>
+              <span data-t="foot.web"></span
+              ><a
+                class="ltr"
+                href="https://www.wordreward.net"
+                target="_blank"
+                rel="noopener"
+                dir="ltr"
+                >wordreward.net</a
+              >
+            </div>
+            <div><span data-t="foot.city"></span><bdi data-t="foot.cityv"></bdi></div>
+          </div>
+        </div>
+        <div class="legal">
+          <span data-t="foot.draft"></span><span dir="ltr">© 2026 WordReward</span>
+        </div>
+      </div>
     </footer>
 
     <script>
       ;(() => {
         "use strict"
 
-        /* ---------- copy (Arabic first, English second) ---------- */
+        /* Fill these in before sending. null shows a dashed "amount to add" slot on the page. */
+        const PRICING = { currency: "USD", monthly: null, responder: null }
+
         const T = {
           "hero.kicker": {
-            ar: "مقترح WordReward · جيان هايبرماركت، عدن مول",
-            en: "WordReward proposal · Géant Hypermarket, Aden Mall",
+            ar: "عرض من WordReward إلى جيان هايبرماركت، عدن مول",
+            en: "A WordReward proposal for Géant Hypermarket, Aden Mall",
           },
           "hero.aria": {
             ar: "عملة WordReward. اسحبها لتقلبها.",
@@ -1670,308 +2011,305 @@
           },
           "coin.back": { ar: "متابع", en: "followers" },
           "hero.title": { ar: "وجهان لعملة واحدة.", en: "Two sides of one coin." },
-          "hero.goalA": { ar: "مبيعات أكثر كل أسبوع", en: "More sales, every week" },
-          "hero.goalB": { ar: "صفحة بمليون متابع", en: "A page with a million followers" },
-          "hero.cue": { ar: "اسحب العملة يمينًا أو يسارًا.", en: "Drag the coin left or right." },
+          "hero.goalA": { ar: "مبيعات أكثر كل أسبوع", en: "More sales every week" },
+          "hero.goalB": { ar: "صفحة يتابعها مليون شخص", en: "A page a million people follow" },
+          "hero.cue": { ar: "اسحب العملة يمينًا أو يسارًا", en: "Drag the coin left or right" },
           "hero.cueA": {
-            ar: "هذا الوجه: البيع. كل عرض يجب أن يتحرك من الرف.",
-            en: "This side: sales. Every offer has to move off the shelf.",
+            ar: "الوجه الأول: عروض تبيع أكثر كل أسبوع.",
+            en: "Side one: offers that sell more, every week.",
           },
           "hero.cueB": {
-            ar: "وهذا الوجه: مليون متابع، وصفحة تبيع مساحتها للشركات الكبرى.",
-            en: "This side: a million followers, and a page that sells its space to big brands.",
+            ar: "الوجه الثاني: صفحة كبيرة تبيع مساحتها للمعلنين.",
+            en: "Side two: a page big enough to sell its space to advertisers.",
           },
-          "hero.down": { ar: "تابع القراءة ↓", en: "Keep reading ↓" },
+          "hero.down": { ar: "اقرأ العرض ↓", en: "Read the proposal ↓" },
+          "gotcha.mark": { ar: "لاحظت؟", en: "Did you notice?" },
 
-          "heard.kicker": { ar: "ما سمعناه منكم · ٨ نوفمبر", en: "What we heard · 8 November" },
-          "heard.title": {
-            ar: "لا تريدون منفّذًا. تريدون أفكارًا.",
-            en: "You don't need hands. You need ideas.",
+          "heard.kicker": {
+            ar: "ما فهمناه منكم في اجتماع ٨ نوفمبر",
+            en: "What we understood on 8 November",
           },
-          "heard.lead": {
-            ar: "",
-            en: "",
+          "heard.title": {
+            ar: "تريدون أفكارًا جديدة، وليس تنفيذ الطلبات فقط.",
+            en: "You want new ideas, not just orders carried out.",
           },
           "heard.q1": {
-            ar: "«أعطني نموذجًا أولًا، وأنا أبيعه للإدارة.»",
-            en: "“Show me a sample first, then I can sell it upstairs.”",
-          },
-          "heard.q1s": {
-            ar: "",
-            en: "",
+            ar: "«أرني نموذجًا أولًا، وأنا أعرضه على الإدارة.»",
+            en: "“Show me a sample first, and I will take it to management.”",
           },
           "heard.q2": {
-            ar: "الصفحة اليوم تبيع الأسعار فقط، والتعليقات ترد: «رفعتم الأسعار».",
-            en: "Today the page sells prices only, and the comments answer: “you raised prices.”",
-          },
-          "heard.q2s": {
-            ar: "",
-            en: "",
+            ar: "المنشورات اليوم أسعار فقط، والتعليقات تقول: «رفعتم الأسعار».",
+            en: "Today's posts are prices only, and the comments say “you raised prices.”",
           },
           "heard.q3": {
-            ar: "لا ذكاء اصطناعي ظاهر.",
-            en: "No visible AI.",
-          },
-          "heard.q3s": {
-            ar: "",
-            en: "",
+            ar: "لا تريدون صورًا يظهر أنها مصنوعة بالذكاء الاصطناعي.",
+            en: "No pictures that look made by AI.",
           },
           "heard.q4": {
-            ar: "هدفان: البيع، ومليون متابع.",
-            en: "Two goals: sales, and a million followers.",
-          },
-          "heard.q4s": {
-            ar: "",
-            en: "",
+            ar: "هدفان: مبيعات أكثر، وصفحة كبيرة تجلب دخلًا من الإعلانات.",
+            en: "Two goals: more sales, and a big page that earns from advertising.",
           },
 
-          "week.kicker": { ar: "أسبوع واحد من جيان", en: "One week of Géant" },
+          "week.kicker": { ar: "أسبوع واحد في جيان", en: "One week at Géant" },
           "week.title": {
-            ar: "هذا ما سنصنعه لكم كل أسبوع.",
-            en: "This is what we make for you, every week.",
+            ar: "هذا ما نصممه لكم كل أسبوع.",
+            en: "This is what we design for you every week.",
           },
           "week.lead": {
-            ar: "كل وجه بطاقة من أسبوعكم. العرض الذهبي مخبّأ في مكان ما.",
-            en: "Every face is a card from your week. The Golden Offer is hidden somewhere.",
+            ar: "كل وجه بطاقة من عروضكم الحقيقية، والعرض الذهبي مخبأ في أحد الوجوه.",
+            en: "Every face is a card from your real offers, and the Golden Offer is hidden on one of them.",
           },
           "week.aria": {
             ar: "مكعب من بطاقات عروض جيان. أدره لتجد العرض الذهبي.",
-            en: "A cube of Géant offer cards. Turn it to find the Golden Offer.",
+            en: "A cube of Géant offer cards. Spin it to find the Golden Offer.",
           },
           "week.cue": {
-            ar: "أدر المكعب، وابحث عن العرض الذهبي.",
-            en: "Turn the cube and find the Golden Offer.",
+            ar: "أدر المكعب في أي اتجاه، وابحث عن العرض الذهبي.",
+            en: "Spin the cube any way you like, and find the Golden Offer.",
           },
-          "week.cueTurned": { ar: "أقرب. استمر في التدوير.", en: "Closer. Keep turning." },
+          "week.cueTurned": { ar: "استمر، اقتربت منه.", en: "Keep going, you are close." },
           "week.found": {
-            ar: "وجدته. الآن افتح الأسبوع كله.",
-            en: "Found it. Now the whole week opens up.",
+            ar: "وجدته! هذا هو العرض الذهبي.",
+            en: "Found it! That is the Golden Offer.",
           },
-          "week.skip": { ar: "اعرض الخطة الأسبوعية", en: "Show the weekly plan" },
           "week.open": {
-            ar: "ستة وجوه، أسبوع واحد. هكذا تبدو صفحتكم حين تتجاوز السعر.",
-            en: "Six faces, one week. This is your page once it goes beyond price.",
+            ar: "ستة وجوه، وأسبوع كامل من العمل.",
+            en: "Six faces, one full week of work.",
           },
-          "week.t1": { ar: "بطاقة عروض أسبوعية", en: "weekly food cards" },
+          "week.skip": { ar: "اعرض خطة الأسبوع", en: "Show the weekly plan" },
+          "week.t1": { ar: "بطاقة عروض كل أسبوع", en: "offer cards every week" },
           "week.t2": { ar: "بطاقة للعرض الذهبي", en: "Golden Offer cards" },
-          "week.t3": { ar: "صفحة مجلة كل أسبوعين", en: "magazine pages, every other week" },
+          "week.t3": { ar: "صفحة مجلة كل أسبوعين", en: "magazine pages every two weeks" },
 
           "plan.kicker": {
-            ar: "الأسبوع مفتوحًا · من الأربعاء إلى الأربعاء",
-            en: "The week, unfolded · Wednesday to Wednesday",
+            ar: "الأسبوع كاملًا، من الأربعاء إلى الأربعاء",
+            en: "The full week, Wednesday to Wednesday",
           },
-          "plan.title": { ar: "دورة واحدة، لا تتوقف.", en: "One cycle that never stops." },
+          "plan.title": { ar: "دورة تتكرر كل أسبوع.", en: "A cycle that repeats every week." },
           "plan.note": {
-            ar: "إعلانات تُدار يوميًا، وتقرير كل أربعاء.",
-            en: "Ads managed daily. A report every Wednesday.",
+            ar: "نتابع الإعلانات كل يوم، ونرسل لكم تقريرًا كل أربعاء. توزيع الأيام اقتراح منا، ونعدله معكم.",
+            en: "We watch the ads every day and send you a report every Wednesday. The days are our suggestion; we adjust them with you.",
           },
-          "plan.refold": { ar: "أعد المكعب ↺", en: "Fold the cube back ↺" },
+          "plan.refold": { ar: "أعد المكعب", en: "Fold the cube back" },
           days: {
             ar: [
-              ["الأربعاء", "go", "العروض الأسبوعية: غلاف + ٤٢ بطاقة. ومجلة كل أسبوعين."],
-              ["الخميس", "", "مطبخ جيان."],
-              ["الجمعة", "", "محتوى عائلي."],
-              ["السبت", "", "تعليمي: كيف توفّر."],
-              ["الأحد", "", "كواليس جيان."],
-              ["الاثنين", "", "تشويق العرض الذهبي."],
-              ["الثلاثاء", "gold", "العرض الذهبي: ١٢ بطاقة، يوم واحد."],
+              ["الأربعاء", "", "العروض الأسبوعية: غلاف و٤٢ بطاقة. ومجلة كل أسبوعين."],
+              ["الخميس", "", "حلقة من «مطبخ جيان»."],
+              ["الجمعة", "", "منشور للعائلة يحب الناس مشاركته."],
+              ["السبت", "", "نصيحة مفيدة: كيف توفر في مشترياتك."],
+              ["الأحد", "", "من داخل جيان: الناس والمكان."],
+              ["الاثنين", "", "تشويق للعرض الذهبي."],
+              ["الثلاثاء", "gold", "العرض الذهبي: ١٢ بطاقة ليوم واحد."],
             ],
             en: [
-              [
-                "Wednesday",
-                "go",
-                "Weekly offers: a cover + 42 cards. A magazine every other week.",
-              ],
-              ["Thursday", "", "Géant Kitchen."],
-              ["Friday", "", "Family content."],
-              ["Saturday", "", "Useful: how to save."],
-              ["Sunday", "", "Behind the scenes."],
-              ["Monday", "", "Golden Offer teaser."],
-              ["Tuesday", "gold", "The Golden Offer: 12 cards, one day."],
+              ["Wednesday", "", "Weekly offers: a cover and 42 cards. A magazine every two weeks."],
+              ["Thursday", "", "A “Géant Kitchen” episode."],
+              ["Friday", "", "A family post people like to share."],
+              ["Saturday", "", "A useful tip: how to save on shopping."],
+              ["Sunday", "", "Inside Géant: the people and the place."],
+              ["Monday", "", "A teaser for the Golden Offer."],
+              ["Tuesday", "gold", "The Golden Offer: 12 cards, one day only."],
             ],
           },
+
+          "offer.kicker": { ar: "ماذا نقدم", en: "What we offer" },
+          "offer.title": {
+            ar: "كل ما تحتاجه صفحات جيان، من فريق واحد.",
+            en: "Everything Géant's pages need, from one team.",
+          },
+          "offer.o1": { ar: "الخطة", en: "The plan" },
+          "offer.o1s": {
+            ar: "خطة شهرية واضحة، تعتمدونها قبل أن نبدأ.",
+            en: "A clear monthly plan that you approve before we start.",
+          },
+          "offer.o2": { ar: "تصميم العروض", en: "Offer design" },
+          "offer.o2s": {
+            ar: "العروض الأسبوعية والعرض الذهبي، بشكل ثابت يعرفه الناس من أول نظرة.",
+            en: "Weekly offers and the Golden Offer, in one look people recognise at a glance.",
+          },
+          "offer.o3": { ar: "المجلة", en: "The magazine" },
+          "offer.o3s": {
+            ar: "مجلة غير الغذائيات كل أسبوعين، مرتبة وسهلة القراءة.",
+            en: "The non-food magazine every two weeks, tidy and easy to read.",
+          },
+          "offer.o4": { ar: "الفيديو والريلز", en: "Video and reels" },
+          "offer.o4s": {
+            ar: "نصنعها من المواد التي تصورونها في المتجر.",
+            en: "Cut from the footage you film in the store.",
+          },
+          "offer.o5": { ar: "الإعلانات الممولة", en: "Paid ads" },
+          "offer.o5s": {
+            ar: "نديرها ونتابعها كل يوم على كل المنصات.",
+            en: "Run and watched every day, on every platform.",
+          },
+          "offer.o6": { ar: "التقارير", en: "Reports" },
+          "offer.o6s": {
+            ar: "تقرير كل أسبوع بالأرقام، ومعه خطة الأسبوع القادم.",
+            en: "A report every week with the numbers and next week's plan.",
+          },
+          "offer.snap": { ar: "Snapchat إذا رأينا فائدته", en: "Snapchat, if it helps" },
 
           "beyond.kicker": { ar: "أكثر من سعر", en: "More than a price" },
           "beyond.title": {
-            ar: "السعر يبيع اليوم. القصة تبيع كل يوم.",
-            en: "Price sells today. Stories sell every day.",
-          },
-          "beyond.lead": {
-            ar: "",
-            en: "",
+            ar: "السعر يبيع مرة، والثقة تبيع كل يوم.",
+            en: "A price sells once. Trust sells every day.",
           },
           "beyond.p1": { ar: "مطبخ جيان", en: "Géant Kitchen" },
           "beyond.p1s": {
-            ar: "زربيان، مندي، وكل مكوّن بسعره.",
-            en: "Zurbian, mandi, every ingredient priced.",
+            ar: "وصفة عدنية كل أسبوع، وكل مكون عليه سعره.",
+            en: "An Adeni recipe every week, every ingredient with its price.",
           },
           "beyond.p2": { ar: "لماذا هذا السعر؟", en: "Why this price?" },
           "beyond.p2s": {
-            ar: "نرد على «رفعتم الأسعار» قبل أن يُكتب.",
-            en: "Answering “you raised prices” before anyone writes it.",
+            ar: "نشرح الأسعار بصراحة، فتقل تعليقات «رفعتم الأسعار».",
+            en: "We explain prices openly, so fewer people comment “you raised prices.”",
           },
-          "beyond.p3": { ar: "تعليمي", en: "Useful" },
-          "beyond.p3s": {
-            ar: "كيف تختار، وكيف توفّر.",
-            en: "How to choose, how to save.",
-          },
-          "beyond.p4": { ar: "كواليس", en: "Behind the scenes" },
+          "beyond.p3": { ar: "نصائح مفيدة", en: "Useful tips" },
+          "beyond.p3s": { ar: "كيف تختار، وكيف توفر.", en: "How to choose, and how to save." },
+          "beyond.p4": { ar: "من داخل جيان", en: "Inside Géant" },
           "beyond.p4s": {
-            ar: "وجوه حقيقية تبني الثقة.",
-            en: "Real faces build trust.",
+            ar: "الناس الذين يعملون في المتجر. الوجوه الحقيقية تبني الثقة.",
+            en: "The people who work in the store. Real faces build trust.",
           },
           "beyond.p5": { ar: "ريلز قصيرة", en: "Short reels" },
           "beyond.p5s": {
-            ar: "١٥ إلى ٣٠ ثانية، من مادتكم الخام.",
-            en: "15 to 30 seconds, cut from your footage.",
+            ar: "من ١٥ إلى ٣٠ ثانية، لأن الناس يشاهدون على الموبايل.",
+            en: "15 to 30 seconds, because people watch on their phones.",
           },
           "beyond.ai": {
-            ar: "<strong>الذكاء الاصطناعي</strong> في الخلفية فقط. المادة الحقيقية أولًا.",
-            en: "<strong>AI</strong> stays behind the scenes. Real material first.",
+            ar: "نستخدم الذكاء الاصطناعي لنعمل أسرع فقط. الصور الحقيقية تأتي أولًا.",
+            en: "We use AI only to work faster. Real pictures come first.",
           },
 
-          "month.kicker": { ar: "شهر واحد بالأرقام", en: "One month, in numbers" },
-          "month.title": { ar: "ما يصلكم كل شهر.", en: "What you get every month." },
+          "do.kicker": { ar: "ماذا سنفعل", en: "What we will do" },
+          "do.title": { ar: "خطة العمل.", en: "The work plan." },
+          "do.s1k": { ar: "أول أسبوعين", en: "First two weeks" },
+          "do.s1": {
+            ar: "نستلم ملفات الهوية والمواد، ونصمم قوالب البطاقات الثلاث، ونجهز خطة الشهر الأول.",
+            en: "We receive the brand files and materials, design the three card templates, and prepare the first month's plan.",
+          },
+          "do.s2k": { ar: "من الشهر ١ إلى ٣", en: "Months 1 to 3" },
+          "do.s2": {
+            ar: "نشر منتظم بشكل واحد، وانطلاق «مطبخ جيان»، وبداية الإعلانات.",
+            en: "Regular posting in one look, Géant Kitchen goes live, and the ads begin.",
+          },
+          "do.s3k": { ar: "من الشهر ٤ إلى ٦", en: "Months 4 to 6" },
+          "do.s3": {
+            ar: "نزيد ما ينجح ونوقف ما لا ينجح، حسب الأرقام.",
+            en: "We do more of what works and stop what doesn't, by the numbers.",
+          },
+          "do.s4k": { ar: "من الشهر ٧ إلى ١٢", en: "Months 7 to 12" },
+          "do.s4": {
+            ar: "نجهز ملفًا للمعلنين، ونبدأ بيع مساحات إعلانية للشركات اليمنية الكبيرة.",
+            en: "We prepare a media kit and start selling ad space to large Yemeni companies.",
+          },
           "month.m1": {
-            ar: "أطقم عروض أسبوعية، ٤٢ بطاقة لكل طقم",
-            en: "weekly offer sets, 42 cards each",
+            ar: "مجموعات عروض أسبوعية في الشهر، ٤٢ بطاقة في كل مجموعة",
+            en: "weekly offer sets a month, 42 cards each",
           },
           "month.m2": {
-            ar: "أطقم للعرض الذهبي، ١٢ بطاقة لكل طقم",
-            en: "Golden Offer sets, 12 cards each",
+            ar: "مجموعات للعرض الذهبي في الشهر، ١٢ بطاقة في كل مجموعة",
+            en: "Golden Offer sets a month, 12 cards each",
           },
           "month.m3": {
-            ar: "مجلة غير غذائية، ٢٢ صفحة لكل عدد",
-            en: "non-food magazines, 22 pages each",
+            ar: "عددان من المجلة في الشهر، ٢٢ صفحة لكل عدد",
+            en: "magazine issues a month, 22 pages each",
           },
           "month.m4": {
-            ar: "تقارير أسبوعية",
-            en: "weekly reports",
+            ar: "تقارير في الشهر، تقرير كل أسبوع",
+            en: "reports a month, one each week",
           },
-          "month.platforms": {
-            ar: "إدارة كاملة وإعلانات يومية على:",
-            en: "Full management and daily ads on:",
-          },
-          "month.snap": { ar: "Snapchat إن رأينا ذلك مفيدًا", en: "Snapchat, if our data says so" },
 
           "samples.kicker": { ar: "قبل وبعد", en: "Before and after" },
           "samples.title": {
-            ar: "نفس المنتج. نفس السعر. صفحة أخرى تمامًا.",
-            en: "Same product. Same price. A different page.",
+            ar: "نفس المنتج ونفس السعر، وشكل مختلف تمامًا.",
+            en: "Same product, same price, a whole new look.",
           },
           "samples.lead": {
-            ar: "أعدنا تصميم صفحتين من كل صيغة من صيغكم الثلاث، دون تغيير أي منتج أو سعر أو تاريخ.",
-            en: "We redesigned two pages from each of your three formats, without changing a single product, price or date.",
+            ar: "أعدنا تصميم صفحتين من كل نوع من عروضكم، دون تغيير أي منتج أو سعر أو تاريخ.",
+            en: "We redesigned two pages of each of your offer types, without changing any product, price or date.",
           },
 
-          "road.kicker": { ar: "الطريق إلى المليون", en: "The road to a million" },
-          "road.title": { ar: "ثلاث مراحل.", en: "Three stages." },
-          "road.s1k": { ar: "الأشهر ١ – ٣", en: "Months 1 to 3" },
-          "road.s1": {
-            ar: "نظام واحد يُعرف من أول نظرة",
-            en: "One system, recognised at a glance",
+          "price.kicker": { ar: "السعر", en: "Pricing" },
+          "price.title": { ar: "مبلغ شهري واحد.", en: "One monthly fee." },
+          "price.lead": {
+            ar: "أقل مما تدفعونه اليوم، وبجودة أعلى بوضوح.",
+            en: "Less than you pay today, at clearly higher quality.",
           },
-          "road.s1s": {
-            ar: "",
-            en: "",
+          "price.main": { ar: "الباقة الشهرية", en: "Monthly package" },
+          "price.mainS": {
+            ar: "كل ما في «ماذا نقدم»: الخطة، العروض الأسبوعية، العرض الذهبي، المجلة، الريلز، الإعلانات، والتقارير.",
+            en: "Everything under What we offer: the plan, weekly offers, Golden Offer, magazine, reels, ads and reports.",
           },
-          "road.s2k": { ar: "الأشهر ٤ – ٦", en: "Months 4 to 6" },
-          "road.s2": { ar: "نمو بالأرقام", en: "Growth you can measure" },
-          "road.s2s": {
-            ar: "",
-            en: "",
+          "price.resp": {
+            ar: "موظف يمني للرد على الرسائل",
+            en: "A Yemeni team member to answer messages",
           },
-          "road.s3k": { ar: "الأشهر ٧ – ١٢", en: "Months 7 to 12" },
-          "road.s3": { ar: "الصفحة تكسب من المعلنين", en: "The page earns from advertisers" },
-          "road.s3s": {
-            ar: "",
-            en: "",
+          "price.respS": {
+            ar: "اختياري. يرد على أسئلة الأسعار والرسائل باللهجة التي يفهمها عملاؤكم.",
+            en: "Optional. Answers price questions and messages in your customers' own dialect.",
+          },
+          "price.ads": { ar: "ميزانية الإعلانات", en: "Ad budget" },
+          "price.adsS": {
+            ar: "تدفعونها مباشرة للمنصات، وتحددون قيمتها بأنفسكم.",
+            en: "Paid by you directly to the platforms, at an amount you set.",
+          },
+          "price.adsV": { ar: "تحددونها أنتم", en: "Set by you" },
+          "price.perMonth": { ar: "في الشهر", en: "per month" },
+          "price.todo": { ar: "يضاف المبلغ", en: "Amount to add" },
+
+          "pay.title": { ar: "الدفع والمدة", en: "Payment and term" },
+          "pay.list": {
+            ar: "<li>الدفع شهريًا مقدمًا، قبل بداية كل شهر.</li><li>مدة التعاقد ٦ أشهر، تبدأ مع العام الجديد بعد الجرد السنوي، أو قبل ذلك إذا أردتم.</li><li>أول أسبوعين للتجهيز، ثم يبدأ النشر.</li><li>بعد ٦ أشهر، يمكن لأي طرف إنهاء التعاقد بإشعار مكتوب قبل ٣٠ يومًا، ويُحسب شهر الإشعار كاملًا.</li>",
+            en: "<li>Paid monthly in advance, before each month begins.</li><li>A 6 month term, starting with the new year after your stock count, or sooner if you prefer.</li><li>The first two weeks are set-up; posting starts after that.</li><li>After 6 months either side may end the contract with 30 days written notice; the notice month is billed in full.</li>",
+          },
+          "terms.title": { ar: "الشروط", en: "Terms" },
+          "terms.list": {
+            ar: "<li>نرسل خطة كل شهر لتعتمدوها قبل التنفيذ، ولكل تصميم جولة تعديل واحدة.</li><li>ترسلون قوائم العروض والأسعار والمواد في موعد نتفق عليه قبل كل دورة.</li><li>الأسعار تُنشر كما ترسلونها وبعد موافقتكم.</li><li>أي عمل إضافي نخبركم بسعره أولًا، ولا ننفذه إلا بموافقة مكتوبة.</li><li>التصاميم وملفاتها ملك لجيان بعد سداد كل شهر، ولنا أن نعرضها ضمن أعمالنا إلا إذا طلبتم غير ذلك كتابيًا.</li>",
+            en: "<li>We send a plan every month for your approval before production; each design gets one round of changes.</li><li>You send the offer lists, prices and materials by a date we agree before each cycle.</li><li>Prices are published exactly as you send and approve them.</li><li>Any extra work is quoted first and done only with written approval.</li><li>Designs and their files belong to Géant once each month is paid; we may show them in our portfolio unless you ask otherwise in writing.</li>",
+          },
+          "ex.title": { ar: "غير داخل في العرض", en: "Not included" },
+          "ex.list": {
+            ar: "<li>التصوير بالصور والفيديو: ترسلون لنا المواد الخام.</li><li>الرد على الرسائل والتعليقات، إلا إذا أضفتم بند الموظف اليمني.</li><li>ميزانية الإعلانات نفسها.</li><li>طباعة المجلات وأي مطبوعات.</li><li>الموقع الإلكتروني وتطبيق الولاء ومشروع Element: نقدم لها عروضًا منفصلة بعد الموافقة على هذا العرض.</li>",
+            en: "<li>Photo and video shooting: you send us the raw material.</li><li>Answering messages and comments, unless you add the Yemeni team member.</li><li>The ad budget itself.</li><li>Printing the magazines or any printed matter.</li><li>A website, the loyalty app and the Element project: separate proposals once this one is approved.</li>",
           },
 
-          "scope.kicker": { ar: "النطاق", en: "Scope" },
-          "scope.title": {
-            ar: "ما نتولاه، وما يبقى لديكم.",
-            en: "What we take on, and what stays with you.",
-          },
-          "scope.in": { ar: "علينا", en: "On us" },
-          "scope.inList": {
-            ar: '<li>الاستراتيجية والخطة الشهرية</li><li>إدارة المنصات: <bdi dir="ltr">Facebook · Instagram · TikTok</bdi></li><li>العروض الأسبوعية، العرض الذهبي، المجلة</li><li>مونتاج الريلز من مادتكم الخام</li><li>الإعلانات يوميًا</li><li>تقرير أسبوعي</li>',
-            en: "<li>Strategy and monthly plan</li><li>Platforms: Facebook · Instagram · TikTok</li><li>Weekly offers, Golden Offer, magazine</li><li>Reels cut from your raw footage</li><li>Daily ad management</li><li>Weekly report</li>",
-          },
-          "scope.out": { ar: "لديكم", en: "With you" },
-          "scope.outList": {
-            ar: "<li>التصوير: ترسلون المادة الخام</li><li>الرد على الرسائل: بند منفصل إن أردتم</li><li>ميزانية الإعلانات</li>",
-            en: "<li>Filming: you send the raw material</li><li>Replying to messages: a separate line, if wanted</li><li>The ad spend itself</li>",
-          },
-          "scope.price": {
-            ar: "<strong>الاستثمار:</strong> أقل من موردكم الحالي، بجودة أعلى. الأرقام في النسخة النهائية.",
-            en: "<strong>Investment:</strong> below your current supplier, at higher quality. Figures come in the final version.",
-          },
-
-          "later.kicker": { ar: "بعد الموافقة", en: "After approval" },
-          "later.title": { ar: "وما بعد جيان.", en: "And beyond Géant." },
-          "later.l1": { ar: "موقع جيان", en: "A Géant website" },
-          "later.l1s": {
-            ar: "هذه الصفحة طعم صغير منه.",
-            en: "This page is a small taste.",
-          },
-          "later.l2": { ar: "تطبيق الولاء", en: "The loyalty app" },
-          "later.l2s": {
-            ar: "نقاط على الموبايل.",
-            en: "Points on the phone.",
-          },
-          "later.l3": { ar: "Element", en: "Element" },
-          "later.l3s": {
-            ar: "حين تكون جاهزة.",
-            en: "When it is ready.",
-          },
-
-          "reveal.kicker": { ar: "ماذا حدث للتو؟", en: "What just happened?" },
-          "reveal.title": {
-            ar: "لم يطلب منك أحد أن تلمس شيئًا.",
-            en: "Nobody asked you to touch anything.",
-          },
-          "reveal.p1": {
-            ar: "صمّمنا هذه الصفحة لتُلمس قبل أن تُقرأ. العملة والمكعب كانا الاختبار.",
-            en: "We built this page to be touched before it is read. The coin and the cube were the test.",
-          },
-          "reveal.p2": {
-            ar: "وهذا بالضبط ما نريده لمنشورات جيان: شخص مشغول في عدن يمرّر بسرعة، ثم يتوقف، ويلمس.",
-            en: "That is exactly what Géant's posts need: a busy person in Aden, scrolling fast, who stops and touches.",
-          },
-          "reveal.punch": {
-            ar: "أوقفناك أنت أولًا. <em>الآن دعنا نوقف مليونًا.</em>",
-            en: "We stopped you first. <em>Now let us stop a million.</em>",
-          },
-          "reveal.wk": { ar: "ملاحظة صغيرة", en: "A small note" },
-          "reveal.wait": {
-            ar: 'العملة في أعلى الصفحة ما زالت تنتظرك. اقلبها مرتين، ثم عد إلى هنا. هناك شيء نريد أن نريك إياه. <a href="#hero">↑ إلى العملة</a>',
-            en: 'The coin at the top is still waiting for you. Flip it twice, then come back here. There is something we want to show you. <a href="#hero">↑ To the coin</a>',
-          },
-
-          "next.kicker": { ar: "الخطوات التالية", en: "Next steps" },
+          "next.kicker": { ar: "الخطوة التالية", en: "Next steps" },
           "next.title": { ar: "من هنا إلى يناير.", en: "From here to January." },
           "next.s1": {
-            ar: "نراجع هذه المسودة معكم، ونضبط ما تريدون.",
-            en: "We review this draft together and adjust what you need.",
+            ar: "نراجع هذا العرض معكم، ونعدل ما تريدون.",
+            en: "We go through this proposal together and change what you need.",
           },
           "next.s2": {
-            ar: "نرسل النسخة النهائية مع الأرقام إلى صاحب القرار.",
-            en: "We send the final version, with figures, to the decision maker.",
+            ar: "نرسل النسخة النهائية إلى الإدارة.",
+            en: "We send the final version to management.",
           },
           "next.s3": {
-            ar: "نبدأ مع العام الجديد، بعد الذكرى السنوية والجرد. أو أبكر إن أردتم.",
-            en: "We start with the new year, after the anniversary and stock-take. Or sooner, if you prefer.",
+            ar: "نوقع العقد، ونبدأ أسبوعي التجهيز.",
+            en: "We sign and start the two set-up weeks.",
           },
-          footer: {
-            ar: "WordReward · د. إبراهيم مرسي · د. مجدي سمير<br>مسودة للمراجعة · نوفمبر ٢٠٢٦",
-            en: "WordReward · Dr. Ibrahim Morsy · Dr. Magdy Samir<br>Draft for review · November 2026",
+
+          "foot.about": {
+            ar: "وكالة تسويق رقمي وبرمجيات في الإسكندرية، نعمل منذ ٢٠٢٢ مع عملاء في مصر والإمارات والعراق والسعودية والولايات المتحدة.",
+            en: "A digital marketing and software agency in Alexandria, working since 2022 with clients in Egypt, the UAE, Iraq, Saudi Arabia and the USA.",
+          },
+          "foot.people": {
+            ar: "د. إبراهيم مرسي، المدير العام · د. مجدي سمير، مدير العمليات",
+            en: "Dr. Ibrahim Morsy, General Manager · Dr. Magdy Samir, COO",
+          },
+          "foot.email": { ar: "البريد", en: "Email" },
+          "foot.phone": { ar: "الهاتف", en: "Phone" },
+          "foot.web": { ar: "الموقع", en: "Website" },
+          "foot.city": { ar: "العنوان", en: "Address" },
+          "foot.cityv": { ar: "الإسكندرية، مصر", en: "Alexandria, Egypt" },
+          "foot.draft": {
+            ar: "مسودة للمراجعة · نوفمبر ٢٠٢٦",
+            en: "Draft for review · November 2026",
           },
         }
 
-        /* before/after pairs: drop files into assets/samples/ with these names and the section appears */
         const SAMPLES = [
-          { id: "1A", ar: "غلاف العروض الأسبوعية", en: "Weekly food cover" },
+          { id: "1A", ar: "غلاف العروض الأسبوعية", en: "Weekly offers cover" },
           { id: "1B", ar: "بطاقة منتج أسبوعية", en: "Weekly item card" },
           { id: "2A", ar: "غلاف مجلة غير الغذائيات", en: "Non-food magazine cover" },
           { id: "2B", ar: "صفحة داخلية: أجهزة المطبخ", en: "Inner page: kitchen appliances" },
@@ -1983,55 +2321,89 @@
         const qs = new URLSearchParams(location.search)
         let lang = qs.get("lang") === "en" ? "en" : "ar"
         try {
-          if (!qs.get("lang") && localStorage.getItem("gy-lang"))
-            lang = localStorage.getItem("gy-lang")
+          if (!qs.get("lang")) {
+            const s = localStorage.getItem("gy-lang")
+            if (s === "en" || s === "ar") lang = s
+          }
         } catch (e) {}
         const $ = (s) => document.querySelector(s)
         const $$ = (s) => Array.from(document.querySelectorAll(s))
         const t = (k) => (T[k] && T[k][lang]) || ""
+        const L = () => lang === "ar"
+        const num = (n) => (L() ? n.toLocaleString("ar-EG") : String(n))
+        function countAr(n, one, two, few, many) {
+          if (n === 1) return one
+          if (n === 2) return two
+          return n <= 10 ? num(n) + " " + few : num(n) + " " + many
+        }
+        const timesTxt = (n) =>
+          L()
+            ? countAr(n, "مرة واحدة", "مرتين", "مرات", "مرة")
+            : n === 1
+              ? "once"
+              : n === 2
+                ? "twice"
+                : n + " times"
+        const secsTxt = (n) =>
+          L()
+            ? countAr(n, "ثانية واحدة", "ثانيتين", "ثوانٍ", "ثانية")
+            : n + (n === 1 ? " second" : " seconds")
 
+        function renderPrice() {
+          const cur = PRICING.currency
+          const amt = (v, sub) =>
+            v == null
+              ? `<div class="amt todo">${t("price.todo")}</div>`
+              : `<div class="amt">${cur} ${Number(v).toLocaleString("en-US")}<small>${sub}</small></div>`
+          $("#priceTable").innerHTML =
+            `<div class="row main"><div><h3>${t("price.main")}</h3><p>${t("price.mainS")}</p></div>${amt(PRICING.monthly, t("price.perMonth"))}</div>` +
+            `<div class="row"><div><h3>${t("price.resp")}</h3><p>${t("price.respS")}</p></div>${amt(PRICING.responder, t("price.perMonth"))}</div>` +
+            `<div class="row"><div><h3>${t("price.ads")}</h3><p>${t("price.adsS")}</p></div><div class="amt txt">${t("price.adsV")}</div></div>`
+        }
         function applyLang() {
           document.documentElement.lang = lang
-          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr"
+          document.documentElement.dir = L() ? "rtl" : "ltr"
           $$("[data-t]").forEach((el) => {
             el.innerHTML = t(el.dataset.t)
           })
           $$("[data-t-aria]").forEach((el) => el.setAttribute("aria-label", t(el.dataset.tAria)))
-          $("#lang").textContent = lang === "ar" ? "English" : "العربية"
+          $("#lang").textContent = L() ? "English" : "العربية"
           $("#days").innerHTML = T.days[lang]
             .map(
               (d, i) =>
-                `<div class="day ${d[1]}" style="transition-delay:${i * 80}ms"><b>${d[0]}</b><p>${d[2]}</p></div>`,
+                `<div class="day ${d[1]}" style="animation-delay:${i * 70}ms"><b>${d[0]}</b><p>${d[2]}</p></div>`,
             )
             .join("")
+          renderPrice()
           renderSamples()
-          coinCueFor(true)
+          coinCue(true)
           cubeCue(cubeState)
-          renderReveal()
+          if (!$("#coinGotcha").hidden) coinGotcha()
+          if (!$("#cubeGotcha").hidden) cubeGotcha()
         }
         $("#lang").addEventListener("click", () => {
-          lang = lang === "ar" ? "en" : "ar"
+          lang = L() ? "en" : "ar"
           try {
             localStorage.setItem("gy-lang", lang)
           } catch (e) {}
           applyLang()
         })
 
-        /* ---------- what the reader did (kept in memory only, never sent anywhere) ---------- */
-        const stats = { flips: 0, turns: 0, touchMs: 0, gold: false }
         const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches
-        const buzz = () => {
+        const buzz = (ms) => {
           try {
-            navigator.vibrate && navigator.vibrate(8)
+            if (navigator.vibrate) navigator.vibrate(ms || 8)
           } catch (e) {}
         }
 
-        /* ---------- the coin ---------- */
+        /* ================= COIN ================= */
         const coin = $("#coin"),
           stage = $("#coinStage"),
+          hop = $("#coinHop"),
           hint = $("#coinHint"),
           shine = $("#shine"),
-          shadow = $("#coinShadow")
+          shadow = $("#coinShadow"),
+          countEl = $("#coinCount")
         ;(function buildRim() {
           const rim = $("#rim"),
             N = 48
@@ -2042,8 +2414,8 @@
               w = (Math.PI * D) / N + 1
             rim.innerHTML = ""
             for (let i = 0; i < N; i++) {
-              const b = document.createElement("b")
-              const a = (i * 360) / N,
+              const b = document.createElement("b"),
+                a = (i * 360) / N,
                 l = Math.round(58 + 26 * Math.abs(Math.cos((a * Math.PI) / 180)))
               b.style.cssText = `width:${w}px;height:${th}px;margin:${-th / 2}px 0 0 ${-w / 2}px;transform:rotateZ(${a}deg) translateY(${r - 0.5}px) rotateX(90deg);background:hsl(38 22% ${l}%)`
               rim.appendChild(b)
@@ -2052,9 +2424,8 @@
           draw()
           addEventListener("resize", draw)
         })()
-
         let th = 0,
-          om = reduced ? 0 : 820,
+          om = reduced ? 0 : 760,
           dragging = false,
           lastX = 0,
           lastT = 0,
@@ -2062,38 +2433,55 @@
           downT = 0,
           touched = false,
           userSpin = false,
-          tilt = -6
-        let side = 0
+          tilt = -6,
+          side = -1,
+          lastFace = 0,
+          flips = 0
         const frozen = qs.has("still")
         if (frozen) {
           th = Number(qs.get("still")) || 0
           om = 0
           touched = true
-        } // frozen frame, used to render the link-preview image
-        function coinCueFor(force) {
+        }
+        function coinCue(force) {
           const s = ((Math.round(th / 180) % 2) + 2) % 2
           if (s !== side || force) {
             side = s
             $("#goalA").classList.toggle("on", s === 0)
             $("#goalB").classList.toggle("on", s === 1)
-            if (touched) $("#coinCue").innerHTML = t(s === 0 ? "hero.cueA" : "hero.cueB")
+            $("#coinCue").textContent =
+              flips > 0 ? t(s === 0 ? "hero.cueA" : "hero.cueB") : t("hero.cue")
           }
         }
-        let lastFace = 0
+        function coinGotcha() {
+          $("#coinGotchaText").innerHTML = L()
+            ? `لم يطلب منك أحد أن تقلب العملة، لكنك قلبتها <b>${timesTxt(flips)}</b>. وهذا بالضبط ما نريده لمنشورات جيان: أن يتوقف الناس عندها ويلمسوها.`
+            : `Nobody asked you to flip the coin, yet you flipped it <b>${timesTxt(flips)}</b>. That is exactly what we want for Géant's posts: people stop, and touch.`
+          $("#coinGotcha").hidden = false
+        }
+        function ripple() {
+          if (reduced) return
+          const r = document.createElement("span")
+          r.className = "ripple"
+          r.style.setProperty("--rs", coin.offsetWidth + "px")
+          stage.appendChild(r)
+          setTimeout(() => r.remove(), 750)
+        }
         function coinStep(dt) {
           if (!dragging && !frozen) {
-            om *= Math.exp(-1.5 * dt)
-            if (!touched && !reduced)
-              om = Math.max(om, 34) // idle: alive, slowly turning
+            om *= Math.exp(-1.4 * dt)
+            if (!touched && !reduced) om = Math.max(om, 30)
             else if (Math.abs(om) < 70) {
-              // settle on a face
               const target = Math.round(th / 180) * 180
               om += (target - th) * 22 * dt
               om *= Math.exp(-5 * dt)
               if (Math.abs(target - th) < 0.05 && Math.abs(om) < 0.5) {
                 th = target
                 om = 0
-                userSpin = false
+                if (userSpin) {
+                  userSpin = false
+                  if (flips >= 2) coinGotcha()
+                }
               }
             }
             th += om * dt
@@ -2101,8 +2489,14 @@
           const face = Math.round(th / 180)
           if (face !== lastFace) {
             if (userSpin) {
-              stats.flips += Math.abs(face - lastFace)
+              flips += Math.abs(face - lastFace)
               buzz()
+              ripple()
+              countEl.textContent = "×" + flips
+              countEl.classList.add("on")
+              countEl.classList.remove("pop")
+              void countEl.offsetWidth
+              countEl.classList.add("pop")
             }
             lastFace = face
           }
@@ -2110,140 +2504,225 @@
           const c = Math.abs(Math.cos((th * Math.PI) / 180))
           shine.style.opacity = (0.3 + 0.7 * c).toFixed(2)
           shadow.style.transform = `translateX(-50%) scaleX(${(0.3 + 0.7 * c).toFixed(3)})`
-          coinCueFor(false)
+          coinCue(false)
         }
         stage.addEventListener("pointerdown", (e) => {
           dragging = true
           touched = true
           userSpin = true
           hint.classList.remove("on")
+          stage.classList.add("pressed")
           lastX = downX = e.clientX
           lastT = downT = performance.now()
           om = 0
-          stage.setPointerCapture && stage.setPointerCapture(e.pointerId)
+          if (stage.setPointerCapture) stage.setPointerCapture(e.pointerId)
         })
         stage.addEventListener("pointermove", (e) => {
           if (!dragging) {
-            if (e.pointerType === "mouse") tilt = -6 + (e.offsetY / stage.clientHeight - 0.5) * -16
+            if (e.pointerType === "mouse") tilt = -6 + (e.offsetY / stage.clientHeight - 0.5) * -18
             return
           }
           const now = performance.now(),
             dx = e.clientX - lastX,
             dt = Math.max(1, now - lastT) / 1000
-          th += dx * 0.75
-          om = om * 0.6 + ((dx * 0.75) / dt) * 0.4
+          th += dx * 0.8
+          om = om * 0.6 + ((dx * 0.8) / dt) * 0.4
           lastX = e.clientX
           lastT = now
         })
         const coinUp = (e) => {
           if (!dragging) return
           dragging = false
+          stage.classList.remove("pressed")
           const held = performance.now() - downT
-          stats.touchMs += held
           if (Math.abs(e.clientX - downX) < 6 && held < 350)
-            om = (Math.random() < 0.5 ? -1 : 1) * 900 // a tap flicks it
-          if (performance.now() - lastT > 90) om *= 0.2 // held still before release
-          om = Math.max(-2600, Math.min(2600, om))
+            om = (Math.random() < 0.5 ? -1 : 1) * 1000
+          if (performance.now() - lastT > 90) om *= 0.2
+          om = Math.max(-2800, Math.min(2800, om))
         }
         stage.addEventListener("pointerup", coinUp)
         stage.addEventListener("pointercancel", coinUp)
-        setTimeout(() => {
-          if (!touched) hint.classList.add("on")
-        }, 2600)
+        stage.addEventListener("pointerleave", () => {
+          if (!dragging) tilt = -6
+        })
+        if (!frozen && !reduced) {
+          setTimeout(() => {
+            if (!touched) hint.classList.add("on")
+          }, 2600)
+          /* an untouched coin hops and half-flips every few seconds, inviting a touch */
+          setInterval(() => {
+            if (touched || document.hidden) return
+            hop.classList.remove("hop")
+            void hop.offsetWidth
+            hop.classList.add("hop")
+            om += 520
+          }, 4200)
+        }
 
-        /* ---------- the cube ---------- */
+        /* ================= CUBE: free rotation on 3 axes, with inertia ================= */
         const cube = $("#cube"),
           cstage = $("#cubeStage"),
+          hit = $("#cubeHit"),
           cfit = $("#cubeFit"),
-          skip = $("#skipBtn")
-        let cy = 20,
-          cx = -14,
-          cvy = 0,
-          cvx = 0,
-          cdrag = false,
+          skip = $("#skipBtn"),
+          chint = $("#cubeHint")
+        const qmul = (a, b) => [
+          a[0] * b[0] - a[1] * b[1] - a[2] * b[2] - a[3] * b[3],
+          a[0] * b[1] + a[1] * b[0] + a[2] * b[3] - a[3] * b[2],
+          a[0] * b[2] - a[1] * b[3] + a[2] * b[0] + a[3] * b[1],
+          a[0] * b[3] + a[1] * b[2] - a[2] * b[1] + a[3] * b[0],
+        ]
+        const qaxis = (x, y, z, a) => {
+          const l = Math.hypot(x, y, z) || 1,
+            s = Math.sin(a / 2)
+          return [Math.cos(a / 2), (x / l) * s, (y / l) * s, (z / l) * s]
+        }
+        const qnorm = (v) => {
+          const l = Math.hypot(v[0], v[1], v[2], v[3]) || 1
+          return v.map((x) => x / l)
+        }
+        const qdot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3]
+        const H = Math.PI / 2
+        /* the orientation that brings each face to the front, upright */
+        const TARGETS = {
+          fr: [1, 0, 0, 0],
+          ri: qaxis(0, 1, 0, -H),
+          bk: qaxis(0, 1, 0, Math.PI),
+          le: qaxis(0, 1, 0, H),
+          tp: qaxis(1, 0, 0, -H),
+          bt: qaxis(1, 0, 0, H),
+        }
+        const START = () => qnorm(qmul(qaxis(1, 0, 0, -0.32), qaxis(0, 1, 0, 0.55)))
+        let q = START()
+        let w = reduced ? [0, 0, 0] : [0.28, 0.55, 0.12]
+        let cdrag = false,
           clx = 0,
           cly = 0,
           clt = 0,
-          cdownT = 0,
           ctouched = false,
           unfolded = false,
-          lastQ = 0,
-          cubeState = "idle"
+          totalAng = 0,
+          firstTouch = 0,
+          lastTouch = 0,
+          cubeState = "idle",
+          gold = false,
+          settledFace = ""
         function cubeCue(state) {
           cubeState = state
           const key =
-            state === "found"
-              ? "week.found"
-              : state === "open"
-                ? "week.open"
-                : state === "turned"
-                  ? "week.cueTurned"
-                  : "week.cue"
-          $("#cubeCue").innerHTML = t(key)
+            { found: "week.found", open: "week.open", turned: "week.cueTurned" }[state] ||
+            "week.cue"
+          $("#cubeCue").textContent = t(key)
+        }
+        const turns = () => Math.max(1, Math.round(totalAng / H))
+        function cubeGotcha() {
+          const secs = Math.max(1, Math.round((lastTouch - firstTouch) / 1000))
+          $("#cubeGotchaText").innerHTML = L()
+            ? `أدرت المكعب <b>${timesTxt(turns())}</b> وبقيت معه <b>${secsTxt(secs)}</b>${gold ? "، ووجدت العرض الذهبي بنفسك" : ""}. هذا هو الاهتمام الذي نريده لكل عرض من عروض جيان.`
+            : `You turned the cube <b>${timesTxt(turns())}</b> and stayed with it for <b>${secsTxt(secs)}</b>${gold ? ", and found the Golden Offer yourself" : ""}. That is the attention we want for every Géant offer.`
+          $("#cubeGotcha").hidden = false
+        }
+        function render() {
+          const a = 2 * Math.acos(Math.max(-1, Math.min(1, q[0]))),
+            s = Math.sqrt(Math.max(0, 1 - q[0] * q[0]))
+          cube.style.transform =
+            s < 1e-5
+              ? "rotate3d(0,1,0,0rad)"
+              : `rotate3d(${q[1] / s},${q[2] / s},${q[3] / s},${a}rad)`
         }
         function cubeStep(dt) {
           if (unfolded) return
+          const speed = Math.hypot(w[0], w[1], w[2])
           if (!cdrag) {
-            cvy *= Math.exp(-2.2 * dt)
-            cvx *= Math.exp(-3 * dt)
-            if (!ctouched && !reduced) cvy = Math.max(cvy, 14)
-            else if (Math.abs(cvy) < 60) {
-              const target = Math.round(cy / 90) * 90
-              cvy += (target - cy) * 18 * dt
-              cvy *= Math.exp(-5 * dt)
-              if (Math.abs(target - cy) < 0.1 && Math.abs(cvy) < 0.5) {
-                cy = target
-                cvy = 0
-                if (ctouched && (((cy / 90) % 4) + 4) % 4 === 2) return foundGold() // back face (gold) is now facing the reader
+            if (speed > 1e-4) {
+              q = qnorm(qmul(qaxis(w[0], w[1], w[2], speed * dt), q))
+              if (ctouched) totalAng += speed * dt
+            }
+            if (ctouched) {
+              const k = Math.exp(-0.75 * dt)
+              w = w.map((v) => v * k)
+              if (speed < 1.4) {
+                /* slow enough: settle onto the nearest face, upright */
+                w = w.map((v) => v * Math.exp(-4 * dt))
+                let best = "fr",
+                  bd = -1
+                for (const key in TARGETS) {
+                  const d = Math.abs(qdot(q, TARGETS[key]))
+                  if (d > bd) {
+                    bd = d
+                    best = key
+                  }
+                }
+                let tq = TARGETS[best]
+                if (qdot(q, tq) < 0) tq = tq.map((v) => -v)
+                const f = 1 - Math.exp(-5 * dt)
+                q = qnorm(q.map((v, i) => v + (tq[i] - v) * f))
+                if (bd > 0.99995 && speed < 0.05 && settledFace !== best) {
+                  settledFace = best
+                  w = [0, 0, 0]
+                  lastTouch = performance.now()
+                  if (best === "bk" && !gold) foundGold()
+                  else if (turns() >= 2) cubeGotcha()
+                }
               }
             }
-            cx += (-14 - cx) * Math.min(1, 3 * dt)
-            cy += cvy * dt
           }
-          const q = Math.round(cy / 90)
-          if (q !== lastQ) {
-            if (ctouched) {
-              stats.turns += Math.abs(q - lastQ)
-              buzz()
-              if (cubeState === "idle") cubeCue("turned")
-            }
-            lastQ = q
-          }
-          cube.style.transform = `rotateX(${cx}deg) rotateY(${cy}deg)`
+          render()
         }
-        cstage.addEventListener("pointerdown", (e) => {
+        let lastQuarter = 0
+        setInterval(() => {
+          const qt = Math.floor(totalAng / H)
+          if (qt !== lastQuarter) {
+            lastQuarter = qt
+            buzz(6)
+            if (cubeState === "idle" && ctouched) cubeCue("turned")
+          }
+        }, 60)
+        hit.addEventListener("pointerdown", (e) => {
           if (unfolded) return
           cdrag = true
+          settledFace = ""
+          if (!ctouched) firstTouch = performance.now()
           ctouched = true
+          lastTouch = performance.now()
+          chint.classList.remove("on")
+          skip.classList.add("on")
           clx = e.clientX
           cly = e.clientY
-          clt = cdownT = performance.now()
-          cvy = 0
-          skip.classList.add("on")
-          cstage.setPointerCapture && cstage.setPointerCapture(e.pointerId)
+          clt = performance.now()
+          w = [0, 0, 0]
+          if (hit.setPointerCapture) hit.setPointerCapture(e.pointerId)
         })
-        cstage.addEventListener("pointermove", (e) => {
+        hit.addEventListener("pointermove", (e) => {
           if (!cdrag) return
           const now = performance.now(),
             dx = e.clientX - clx,
             dy = e.clientY - cly,
-            dt = Math.max(1, now - clt) / 1000
-          cy += dx * 0.55
-          cvy = cvy * 0.6 + ((dx * 0.55) / dt) * 0.4
-          if (e.pointerType === "mouse") cx = Math.max(-45, Math.min(25, cx - dy * 0.3))
+            dt = Math.max(1, now - clt) / 1000,
+            d = Math.hypot(dx, dy)
+          if (d < 0.5) return
+          const ang = d * 0.011,
+            ax = [-dy / d, dx / d, 0]
+          q = qnorm(qmul(qaxis(ax[0], ax[1], ax[2], ang), q))
+          totalAng += ang
+          const sp = ang / dt
+          w = w.map((v, i) => v * 0.5 + ax[i] * sp * 0.5)
           clx = e.clientX
           cly = e.clientY
           clt = now
+          lastTouch = now
+          render()
         })
         const cubeUp = () => {
           if (!cdrag) return
           cdrag = false
-          stats.touchMs += performance.now() - cdownT
-          if (performance.now() - clt > 90) cvy *= 0.2
-          cvy = Math.max(-1600, Math.min(1600, cvy))
+          lastTouch = performance.now()
+          if (performance.now() - clt > 90) w = w.map((v) => v * 0.15)
+          const sp = Math.hypot(w[0], w[1], w[2])
+          if (sp > 22) w = w.map((v) => (v * 22) / sp)
         }
-        cstage.addEventListener("pointerup", cubeUp)
-        cstage.addEventListener("pointercancel", cubeUp)
+        hit.addEventListener("pointerup", cubeUp)
+        hit.addEventListener("pointercancel", cubeUp)
 
         function fitNet() {
           const S = cube.offsetWidth,
@@ -2255,64 +2734,63 @@
           if (unfolded) return
           unfolded = true
           skip.classList.remove("on")
-          let a = ((cy % 360) + 360) % 360
-          if (a > 180) a -= 360
-          cube.style.transform = `rotateX(${cx}deg) rotateY(${a}deg)`
+          hit.style.pointerEvents = "none"
           void cube.offsetWidth
           cube.classList.add("tween")
-          cube.style.transform = "rotateX(0deg) rotateY(0deg)"
+          cube.style.transform = "rotate3d(0,1,0,0rad)"
           cube.classList.add("net")
           fitNet()
-          setTimeout(() => cubeCue("open"), stats.gold ? 900 : 0)
+          setTimeout(() => cubeCue("open"), gold ? 1000 : 0)
           setTimeout(() => {
-            $("#plan").classList.add("open")
-            $("#plan").scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" })
-          }, 1500)
+            $("#plan").hidden = false
+          }, 900)
         }
         function foundGold() {
-          stats.gold = true
+          gold = true
           cubeCue("found")
-          buzz()
-          setTimeout(unfold, 700)
+          buzz(30)
+          cubeGotcha()
+          setTimeout(unfold, 1600)
         }
         skip.addEventListener("click", unfold)
         $("#refold").addEventListener("click", () => {
           cube.classList.remove("net")
           cfit.style.transform = ""
-          $("#plan").classList.remove("open")
+          $("#plan").hidden = true
           setTimeout(() => {
             cube.classList.remove("tween")
             unfolded = false
-            cy = 0
-            cx = -14
-            lastQ = 0
-            cubeCue(stats.gold ? "turned" : "idle")
+            hit.style.pointerEvents = ""
+            q = START()
+            settledFace = ""
+            cubeCue(gold ? "turned" : "idle")
           }, 1150)
           $("#week").scrollIntoView({ behavior: reduced ? "auto" : "smooth" })
         })
         addEventListener("resize", () => {
           if (unfolded) fitNet()
         })
-
-        /* skip button appears after a few seconds of the cube being on screen */
         new IntersectionObserver(
           (es, io) =>
             es.forEach((en) => {
               if (en.isIntersecting) {
                 setTimeout(() => {
+                  if (!ctouched && !reduced) chint.classList.add("on")
+                }, 1800)
+                setTimeout(() => {
                   if (!unfolded) skip.classList.add("on")
-                }, 6000)
+                }, 7000)
                 io.disconnect()
               }
             }),
           { threshold: 0.5 },
         ).observe(cstage)
 
-        /* ---------- animation loop (pauses for whichever object is off screen) ---------- */
+        /* ================= loop ================= */
         const vis = { coin: true, cube: false }
         new IntersectionObserver((es) =>
           es.forEach((en) => {
-            vis[en.target === stage ? "coin" : "cube"] = en.isIntersecting
+            vis.coin = en.isIntersecting
           }),
         ).observe(stage)
         new IntersectionObserver((es) =>
@@ -2328,105 +2806,27 @@
           if (vis.cube) cubeStep(dt)
           requestAnimationFrame(loop)
         }
-        requestAnimationFrame(loop)
 
-        /* ---------- before/after samples ---------- */
+        /* ================= samples ================= */
         function renderSamples() {
           const host = $("#pairs")
           host.innerHTML = ""
-          let shown = 0
           SAMPLES.forEach((s) => {
             const after = new Image()
             after.onload = () => {
-              shown++
               $("#samples").hidden = false
               const fig = document.createElement("div")
               fig.className = "pair"
-              fig.innerHTML = `<figure><img loading="lazy" src="assets/samples/${s.id}-before.png" alt=""><figcaption>${lang === "ar" ? "قبل" : "Before"} · ${s[lang]}</figcaption></figure>
-        <figure><img loading="lazy" src="assets/samples/${s.id}-after.png" alt=""><figcaption>${lang === "ar" ? "بعد" : "After"} · WordReward</figcaption></figure>`
+              fig.innerHTML = `<figure><img loading="lazy" src="assets/samples/${s.id}-before.png" alt=""><figcaption>${L() ? "قبل" : "Before"} · ${s[lang]}</figcaption></figure><figure><img loading="lazy" src="assets/samples/${s.id}-after.png" alt=""><figcaption>${L() ? "بعد" : "After"} · WordReward</figcaption></figure>`
               host.appendChild(fig)
             }
             after.src = `assets/samples/${s.id}-after.png`
           })
         }
 
-        /* ---------- the reveal ---------- */
-        function countAr(n, one, two, few, many) {
-          if (n === 1) return one
-          if (n === 2) return two
-          const d = n.toLocaleString("ar-EG")
-          return n <= 10 ? `${d} ${few}` : `${d} ${many}`
-        }
-        function countEn(n, w) {
-          return `${n} ${w}${n === 1 ? "" : "s"}`
-        }
-        function played() {
-          return stats.flips >= 2 || stats.turns >= 2 || stats.touchMs >= 1500
-        }
-        function renderReveal() {
-          const r = $("#reveal")
-          if (!played()) {
-            r.classList.add("idle")
-            return
-          }
-          r.classList.remove("idle")
-          const secs = Math.max(1, Math.round(stats.touchMs / 1000))
-          let line
-          if (lang === "ar") {
-            const parts = []
-            if (stats.flips)
-              parts.push(`قلبت عملتنا ${countAr(stats.flips, "مرة واحدة", "مرتين", "مرات", "مرة")}`)
-            if (stats.turns)
-              parts.push(`أدرت المكعب ${countAr(stats.turns, "مرة واحدة", "مرتين", "مرات", "مرة")}`)
-            parts.push(
-              `بقي إصبعك على عملنا ${countAr(secs, "ثانية واحدة", "ثانيتين", "ثوانٍ", "ثانية")}`,
-            )
-            line = `ومع ذلك ${parts.join("، و")}${stats.gold ? "، ووجدت العرض الذهبي بنفسك" : ""}.`
-          } else {
-            const parts = []
-            if (stats.flips)
-              parts.push(
-                `flipped our coin ${stats.flips === 1 ? "once" : stats.flips === 2 ? "twice" : stats.flips + " times"}`,
-              )
-            if (stats.turns)
-              parts.push(
-                `turned the cube ${stats.turns === 1 ? "once" : stats.turns === 2 ? "twice" : stats.turns + " times"}`,
-              )
-            parts.push(`kept your finger on our work for ${countEn(secs, "second")}`)
-            line = `Yet you ${parts.slice(0, -1).join(", ")}${parts.length > 1 ? " and " : ""}${parts[parts.length - 1]}${stats.gold ? ", and found the Golden Offer yourself" : ""}.`
-          }
-          $("#revealLine").textContent = line
-          const L = lang === "ar"
-          const num = (n) => (L ? n.toLocaleString("ar-EG") : String(n))
-          const cell = (n, label) => `<div class="stat"><b>${n}</b><span>${label}</span></div>`
-          $("#revealStats").innerHTML =
-            cell(num(stats.flips), L ? "قلبة للعملة" : "coin flips") +
-            cell(num(stats.turns), L ? "دورة للمكعب" : "cube turns") +
-            cell(num(secs), L ? "ثانية من اللمس" : "seconds of touching") +
-            (stats.gold ? cell("✓", L ? "العرض الذهبي" : "Golden Offer") : "")
-        }
-        new IntersectionObserver(
-          (es) =>
-            es.forEach((en) => {
-              if (en.isIntersecting) renderReveal()
-            }),
-          { threshold: 0.1 },
-        ).observe($("#reveal"))
-
-        /* ---------- scroll-in ---------- */
-        const rio = new IntersectionObserver(
-          (es) =>
-            es.forEach((en) => {
-              if (en.isIntersecting) {
-                en.target.classList.add("in")
-                rio.unobserve(en.target)
-              }
-            }),
-          { threshold: 0.15 },
-        )
-        $$(".rise").forEach((el) => rio.observe(el))
-
         applyLang()
+        render()
+        requestAnimationFrame(loop)
       })()
     </script>
   </body>
