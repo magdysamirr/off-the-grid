@@ -120,6 +120,9 @@
       a {
         color: inherit;
       }
+      [hidden] {
+        display: none !important;
+      }
       [data-t]:empty {
         display: none;
       }
@@ -1002,6 +1005,7 @@
         font-size: 2.1em;
       }
       .c-gold .day {
+        white-space: nowrap;
         align-self: flex-start;
         margin-top: 0.4em;
         border: 1px solid rgba(255, 215, 106, 0.6);
@@ -1295,6 +1299,97 @@
         width: 100%;
         aspect-ratio: 1;
         object-fit: contain;
+      }
+
+      /* expanded net: every design opens large */
+      .net .f {
+        cursor: zoom-in;
+      }
+      .net .f:hover {
+        box-shadow: 0 0 0 3px var(--band-accent);
+      }
+      .pill.solid {
+        background: var(--band-accent);
+        color: #434459;
+        border-color: var(--band-accent);
+        font-weight: 600;
+      }
+      .tap-note {
+        margin: 0;
+        font-size: 14px;
+        color: var(--band-muted);
+      }
+      .lb {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: grid;
+        place-items: center;
+        padding: calc(16px + env(safe-area-inset-top, 0px))
+          max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px))
+          max(16px, env(safe-area-inset-left, 0px));
+        background: rgba(12, 12, 16, 0.86);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+      }
+      .lb:not([hidden]) .lb-body {
+        animation: rise 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .lb-body {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        gap: 14px;
+        --L: min(86vw, 60vh, 520px);
+      }
+      .lb-card {
+        position: relative;
+        width: var(--L);
+        height: var(--L);
+        border-radius: 10px;
+        overflow: hidden;
+        font-size: calc(var(--L) * 0.062);
+        line-height: 1.3;
+        color: #1d1d1d;
+        direction: rtl;
+        font-family: var(--g-ar);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        touch-action: pan-y;
+      }
+      .lb-cap {
+        margin: 0;
+        max-width: var(--L);
+        text-align: center;
+        color: #fffcf9;
+        font-size: 16px;
+      }
+      .lb-nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: rgba(255, 252, 249, 0.75);
+        font: 500 14px/1 var(--en);
+        direction: ltr;
+      }
+      .lb-btn,
+      .lb-x {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 252, 249, 0.3);
+        background: rgba(255, 252, 249, 0.08);
+        color: #fffcf9;
+        font-size: 24px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .lb-x {
+        position: absolute;
+        top: -10px;
+        inset-inline-end: -10px;
+        z-index: 2;
+        background: #fffcf9;
+        color: #434459;
       }
 
       /* PRICING */
@@ -1696,6 +1791,8 @@
         <div class="wrap cube-ui">
           <p class="cube-cue" id="cubeCue" aria-live="polite"></p>
           <button class="pill" id="skipBtn" type="button" data-t="week.skip"></button>
+          <button class="pill solid" id="foldBtn" type="button" data-t="week.fold"></button>
+          <p class="tap-note" id="tapNote" hidden data-t="week.tap"></p>
           <div class="gotcha" id="cubeGotcha" hidden aria-live="polite">
             <span class="mark" data-t="gotcha.mark"></span><span id="cubeGotchaText"></span>
           </div>
@@ -1714,7 +1811,6 @@
           <h2 data-t="plan.title"></h2>
           <div class="days" id="days"></div>
           <p class="plan-note" data-t="plan.note"></p>
-          <button class="refold" id="refold" type="button" data-t="plan.refold"></button>
         </div>
       </section>
     </div>
@@ -1910,7 +2006,6 @@
       <div class="wrap">
         <p class="kicker" data-t="price.kicker"></p>
         <h2 data-t="price.title"></h2>
-        <p class="lead" data-t="price.lead"></p>
         <div class="price-table" id="priceTable"></div>
         <div class="lists two">
           <div class="box">
@@ -1993,12 +2088,25 @@
       </div>
     </footer>
 
+    <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lbCap">
+      <div class="lb-body">
+        <button class="lb-x" id="lbClose" type="button" aria-label="Close">×</button>
+        <div class="lb-card" id="lbCard"></div>
+        <p class="lb-cap" id="lbCap"></p>
+        <div class="lb-nav">
+          <button class="lb-btn" id="lbPrev" type="button" aria-label="Previous">‹</button>
+          <span id="lbIdx"></span>
+          <button class="lb-btn" id="lbNext" type="button" aria-label="Next">›</button>
+        </div>
+      </div>
+    </div>
+
     <script>
       ;(() => {
         "use strict"
 
         /* Fill these in before sending. null shows a dashed "amount to add" slot on the page. */
-        const PRICING = { currency: "USD", monthly: null, responder: null }
+        const PRICING = { currency: "USD", monthly: 2000 }
 
         const T = {
           "hero.kicker": {
@@ -2077,6 +2185,12 @@
             en: "Six faces, one full week of work.",
           },
           "week.skip": { ar: "اعرض خطة الأسبوع", en: "Show the weekly plan" },
+          "week.unfold": { ar: "افرد المكعب", en: "Flatten the cube" },
+          "week.fold": { ar: "أعده مكعبًا", en: "Fold it back into a cube" },
+          "week.tap": {
+            ar: "اضغط على أي تصميم لتراه بحجم كامل.",
+            en: "Tap any design to see it full size.",
+          },
           "week.t1": { ar: "بطاقة عروض كل أسبوع", en: "offer cards every week" },
           "week.t2": { ar: "بطاقة للعرض الذهبي", en: "Golden Offer cards" },
           "week.t3": { ar: "صفحة مجلة كل أسبوعين", en: "magazine pages every two weeks" },
@@ -2090,7 +2204,6 @@
             ar: "نتابع الإعلانات كل يوم، ونرسل لكم تقريرًا كل أربعاء. توزيع الأيام اقتراح منا، ونعدله معكم.",
             en: "We watch the ads every day and send you a report every Wednesday. The days are our suggestion; we adjust them with you.",
           },
-          "plan.refold": { ar: "أعد المكعب", en: "Fold the cube back" },
           days: {
             ar: [
               ["الأربعاء", "", "العروض الأسبوعية: غلاف و٤٢ بطاقة. ومجلة كل أسبوعين."],
@@ -2231,23 +2344,14 @@
           },
 
           "price.kicker": { ar: "السعر", en: "Pricing" },
-          "price.title": { ar: "مبلغ شهري واحد.", en: "One monthly fee." },
-          "price.lead": {
-            ar: "أقل مما تدفعونه اليوم، وبجودة أعلى بوضوح.",
-            en: "Less than you pay today, at clearly higher quality.",
+          "price.title": {
+            ar: "مبلغ شهري واحد، شامل كل الخدمات.",
+            en: "One monthly fee, all inclusive.",
           },
-          "price.main": { ar: "الباقة الشهرية", en: "Monthly package" },
+          "price.main": { ar: "الباقة الشهرية الشاملة", en: "All-inclusive monthly package" },
           "price.mainS": {
             ar: "كل ما في «ماذا نقدم»: الخطة، العروض الأسبوعية، العرض الذهبي، المجلة، الريلز، الإعلانات، والتقارير.",
             en: "Everything under What we offer: the plan, weekly offers, Golden Offer, magazine, reels, ads and reports.",
-          },
-          "price.resp": {
-            ar: "موظف يمني للرد على الرسائل",
-            en: "A Yemeni team member to answer messages",
-          },
-          "price.respS": {
-            ar: "اختياري. يرد على أسئلة الأسعار والرسائل باللهجة التي يفهمها عملاؤكم.",
-            en: "Optional. Answers price questions and messages in your customers' own dialect.",
           },
           "price.ads": { ar: "ميزانية الإعلانات", en: "Ad budget" },
           "price.adsS": {
@@ -2255,8 +2359,7 @@
             en: "Paid by you directly to the platforms, at an amount you set.",
           },
           "price.adsV": { ar: "تحددونها أنتم", en: "Set by you" },
-          "price.perMonth": { ar: "في الشهر", en: "per month" },
-          "price.todo": { ar: "يضاف المبلغ", en: "Amount to add" },
+          "price.perMonth": { ar: "في الشهر، شامل كل ما سبق", en: "per month, all inclusive" },
 
           "pay.title": { ar: "الدفع والمدة", en: "Payment and term" },
           "pay.list": {
@@ -2270,8 +2373,8 @@
           },
           "ex.title": { ar: "غير داخل في العرض", en: "Not included" },
           "ex.list": {
-            ar: "<li>التصوير بالصور والفيديو: ترسلون لنا المواد الخام.</li><li>الرد على الرسائل والتعليقات، إلا إذا أضفتم بند الموظف اليمني.</li><li>ميزانية الإعلانات نفسها.</li><li>طباعة المجلات وأي مطبوعات.</li><li>الموقع الإلكتروني وتطبيق الولاء ومشروع Element: نقدم لها عروضًا منفصلة بعد الموافقة على هذا العرض.</li>",
-            en: "<li>Photo and video shooting: you send us the raw material.</li><li>Answering messages and comments, unless you add the Yemeni team member.</li><li>The ad budget itself.</li><li>Printing the magazines or any printed matter.</li><li>A website, the loyalty app and the Element project: separate proposals once this one is approved.</li>",
+            ar: "<li>التصوير بالصور والفيديو: ترسلون لنا المواد الخام.</li><li>الرد على الرسائل والتعليقات. يمكن أن نضيف لكم موظفًا يمنيًا لذلك بعرض منفصل.</li><li>ميزانية الإعلانات نفسها.</li><li>طباعة المجلات وأي مطبوعات.</li><li>الموقع الإلكتروني وتطبيق الولاء ومشروع Element: نقدم لها عروضًا منفصلة بعد الموافقة على هذا العرض.</li>",
+            en: "<li>Photo and video shooting: you send us the raw material.</li><li>Answering messages and comments. We can add a Yemeni team member for this in a separate quote.</li><li>The ad budget itself.</li><li>Printing the magazines or any printed matter.</li><li>A website, the loyalty app and the Element project: separate proposals once this one is approved.</li>",
           },
 
           "next.kicker": { ar: "الخطوة التالية", en: "Next steps" },
@@ -2308,6 +2411,30 @@
           },
         }
 
+        const FACES = ["fr", "ri", "bk", "le", "tp", "bt"]
+        const CAPS = {
+          fr: {
+            ar: "غلاف العروض الأسبوعية. يُنشر كل أربعاء.",
+            en: "Weekly offers cover. Published every Wednesday.",
+          },
+          ri: {
+            ar: "بطاقة منتج من العروض الأسبوعية. ٤٢ بطاقة مثلها كل أسبوع.",
+            en: "A weekly offer card. 42 like it every week.",
+          },
+          bk: {
+            ar: "العرض الذهبي. ١٢ بطاقة ليوم الثلاثاء فقط.",
+            en: "The Golden Offer. 12 cards, Tuesday only.",
+          },
+          le: {
+            ar: "صفحة من مجلة غير الغذائيات. عدد جديد كل أسبوعين.",
+            en: "A page from the non-food magazine. A new issue every two weeks.",
+          },
+          tp: {
+            ar: "فكرة: «مطبخ جيان»، وصفة عدنية كل أسبوع.",
+            en: "Idea: Géant Kitchen, an Adeni recipe every week.",
+          },
+          bt: { ar: "فكرة: نصيحة مفيدة تبني الثقة.", en: "Idea: a useful tip that builds trust." },
+        }
         const SAMPLES = [
           { id: "1A", ar: "غلاف العروض الأسبوعية", en: "Weekly offers cover" },
           { id: "1B", ar: "بطاقة منتج أسبوعية", en: "Weekly item card" },
@@ -2350,14 +2477,9 @@
             : n + (n === 1 ? " second" : " seconds")
 
         function renderPrice() {
-          const cur = PRICING.currency
-          const amt = (v, sub) =>
-            v == null
-              ? `<div class="amt todo">${t("price.todo")}</div>`
-              : `<div class="amt">${cur} ${Number(v).toLocaleString("en-US")}<small>${sub}</small></div>`
+          const sym = PRICING.currency === "USD" ? "$" : PRICING.currency + " "
           $("#priceTable").innerHTML =
-            `<div class="row main"><div><h3>${t("price.main")}</h3><p>${t("price.mainS")}</p></div>${amt(PRICING.monthly, t("price.perMonth"))}</div>` +
-            `<div class="row"><div><h3>${t("price.resp")}</h3><p>${t("price.respS")}</p></div>${amt(PRICING.responder, t("price.perMonth"))}</div>` +
+            `<div class="row main"><div><h3>${t("price.main")}</h3><p>${t("price.mainS")}</p></div><div class="amt">${sym}${Number(PRICING.monthly).toLocaleString("en-US")}<small>${t("price.perMonth")}</small></div></div>` +
             `<div class="row"><div><h3>${t("price.ads")}</h3><p>${t("price.adsS")}</p></div><div class="amt txt">${t("price.adsV")}</div></div>`
         }
         function applyLang() {
@@ -2375,6 +2497,7 @@
             )
             .join("")
           renderPrice()
+          if (!lb.hidden) lbShow(lbIdx)
           renderSamples()
           coinCue(true)
           cubeCue(cubeState)
@@ -2730,10 +2853,13 @@
           const k = Math.min(0.92, W / (S * 4.2))
           cfit.style.transform = `translateX(${-S * 0.52 * k}px) scale(${k})`
         }
+        const foldBtn = $("#foldBtn"),
+          tapNote = $("#tapNote")
         function unfold() {
           if (unfolded) return
           unfolded = true
           skip.classList.remove("on")
+          chint.classList.remove("on")
           hit.style.pointerEvents = "none"
           void cube.offsetWidth
           cube.classList.add("tween")
@@ -2741,10 +2867,95 @@
           cube.classList.add("net")
           fitNet()
           setTimeout(() => cubeCue("open"), gold ? 1000 : 0)
+          FACES.forEach((k) => cube.querySelector(".f." + k).setAttribute("tabindex", "0"))
           setTimeout(() => {
             $("#plan").hidden = false
+            foldBtn.classList.add("on")
+            tapNote.hidden = false
           }, 900)
         }
+        function fold() {
+          if (!unfolded) return
+          foldBtn.classList.remove("on")
+          tapNote.hidden = true
+          FACES.forEach((k) => cube.querySelector(".f." + k).setAttribute("tabindex", "-1"))
+          cube.classList.remove("net")
+          cfit.style.transform = ""
+          setTimeout(() => {
+            cube.classList.remove("tween")
+            q = [1, 0, 0, 0]
+            settledFace = "fr"
+            w = reduced ? [0, 0, 0] : [0.35, 2.2, 0.2]
+            unfolded = false
+            hit.style.pointerEvents = ""
+            skip.dataset.t = "week.unfold"
+            skip.textContent = t("week.unfold")
+            skip.classList.add("on")
+            cubeCue("turned")
+          }, 1150)
+        }
+        foldBtn.addEventListener("click", fold)
+
+        /* lightbox: while flat, every design opens full size */
+        const lb = $("#lb"),
+          lbCard = $("#lbCard")
+        let lbIdx = 0,
+          lbLast = null
+        function lbShow(i) {
+          lbIdx = (i + FACES.length) % FACES.length
+          const key = FACES[lbIdx]
+          lbCard.innerHTML = ""
+          lbCard.appendChild(cube.querySelector(".f." + key + " .card").cloneNode(true))
+          $("#lbCap").textContent = CAPS[key][lang]
+          $("#lbIdx").textContent = num(lbIdx + 1) + " / " + num(FACES.length)
+        }
+        function lbOpen(i) {
+          lbLast = document.activeElement
+          lbShow(i)
+          lb.hidden = false
+          document.body.style.overflow = "hidden"
+          $("#lbClose").focus()
+        }
+        function lbCloseFn() {
+          lb.hidden = true
+          document.body.style.overflow = ""
+          if (lbLast && lbLast.focus) lbLast.focus()
+        }
+        FACES.forEach((key, i) => {
+          const f = cube.querySelector(".f." + key)
+          f.setAttribute("tabindex", "-1")
+          f.addEventListener("click", () => {
+            if (unfolded) lbOpen(i)
+          })
+          f.addEventListener("keydown", (e) => {
+            if (unfolded && (e.key === "Enter" || e.key === " ")) {
+              e.preventDefault()
+              lbOpen(i)
+            }
+          })
+        })
+        $("#lbClose").addEventListener("click", lbCloseFn)
+        $("#lbPrev").addEventListener("click", () => lbShow(lbIdx - 1))
+        $("#lbNext").addEventListener("click", () => lbShow(lbIdx + 1))
+        lb.addEventListener("click", (e) => {
+          if (e.target === lb) lbCloseFn()
+        })
+        addEventListener("keydown", (e) => {
+          if (lb.hidden) return
+          if (e.key === "Escape") lbCloseFn()
+          if (e.key === "ArrowRight") lbShow(lbIdx + (L() ? -1 : 1))
+          if (e.key === "ArrowLeft") lbShow(lbIdx + (L() ? 1 : -1))
+        })
+        let lbX = null
+        lbCard.addEventListener("pointerdown", (e) => {
+          lbX = e.clientX
+        })
+        lbCard.addEventListener("pointerup", (e) => {
+          if (lbX == null) return
+          const dx = e.clientX - lbX
+          lbX = null
+          if (Math.abs(dx) > 40) lbShow(lbIdx + (dx < 0 ? 1 : -1))
+        })
         function foundGold() {
           gold = true
           cubeCue("found")
@@ -2753,20 +2964,6 @@
           setTimeout(unfold, 1600)
         }
         skip.addEventListener("click", unfold)
-        $("#refold").addEventListener("click", () => {
-          cube.classList.remove("net")
-          cfit.style.transform = ""
-          $("#plan").hidden = true
-          setTimeout(() => {
-            cube.classList.remove("tween")
-            unfolded = false
-            hit.style.pointerEvents = ""
-            q = START()
-            settledFace = ""
-            cubeCue(gold ? "turned" : "idle")
-          }, 1150)
-          $("#week").scrollIntoView({ behavior: reduced ? "auto" : "smooth" })
-        })
         addEventListener("resize", () => {
           if (unfolded) fitNet()
         })
