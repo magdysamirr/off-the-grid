@@ -34,8 +34,10 @@
         --paper: #f7f3eb;
         --warm: #fffcf9;
         --line: rgba(67, 68, 89, 0.14);
-        --magenta: #f40d9a;
-        --indigo: #333399;
+        --teal: #39b5a8;
+        --teal-d: #23766d;
+        --amber: #ffdb8e;
+
         /* Géant colours, used only inside the sample cards */
         --g-green: #3daa35;
         --g-green-d: #2a8a24;
@@ -81,7 +83,7 @@
         font: 700 12px/1.4 var(--en);
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: var(--indigo);
+        color: var(--teal-d);
         margin: 0 0 14px;
       }
       html[lang="ar"] .kicker {
@@ -164,8 +166,9 @@
         padding: 7px 14px 7px 10px;
       }
       .brand svg {
-        width: 16px;
+        width: 18px;
         height: auto;
+        color: var(--ink);
       }
       .brand span {
         opacity: 0.75;
@@ -249,21 +252,21 @@
         box-shadow:
           inset 0 0 0 calc(var(--d) * 0.035) #e4d9c5,
           inset 0 0 0 calc(var(--d) * 0.05) #f6efe3,
-          inset 0 0 0 calc(var(--d) * 0.056) rgba(51, 51, 153, 0.25);
+          inset 0 0 0 calc(var(--d) * 0.056) rgba(67, 68, 89, 0.25);
       }
       .coin .front svg {
-        width: 44%;
+        width: 48%;
         height: auto;
-        transform: translateX(3%);
+        color: var(--ink);
       }
       .coin .back {
         transform: rotateY(180deg) translateZ(calc(var(--t) / 2));
-        background: radial-gradient(circle at 34% 28%, #4a4ab8 0, #333399 45%, #23236e 100%);
+        background: radial-gradient(circle at 34% 28%, #5a5b75 0, #434459 45%, #2b2c3a 100%);
         color: #fff;
         box-shadow:
-          inset 0 0 0 calc(var(--d) * 0.035) #2a2a80,
-          inset 0 0 0 calc(var(--d) * 0.05) #3d3da6,
-          inset 0 0 0 calc(var(--d) * 0.056) rgba(244, 13, 154, 0.55);
+          inset 0 0 0 calc(var(--d) * 0.035) #33344a,
+          inset 0 0 0 calc(var(--d) * 0.05) #4d4e66,
+          inset 0 0 0 calc(var(--d) * 0.056) rgba(255, 219, 142, 0.6);
       }
       .back .big {
         font: 700 calc(var(--d) * 0.3)/1 var(--en);
@@ -271,7 +274,7 @@
       }
       .back .big i {
         font-style: normal;
-        color: var(--magenta);
+        color: var(--teal);
       }
       .back .small {
         font: 700 calc(var(--d) * 0.06)/1.2 var(--ar);
@@ -386,8 +389,8 @@
         transform: translateY(-2px);
       }
       .goal.on.b {
-        background: var(--indigo);
-        border-color: var(--indigo);
+        background: var(--teal-d);
+        border-color: var(--teal-d);
       }
       .cue {
         margin-top: 6px;
@@ -442,7 +445,7 @@
         color: #fff;
       }
       #week .kicker {
-        color: #ff7cc4;
+        color: #ffdb8e;
       }
       #week .lead {
         color: rgba(233, 230, 242, 0.85);
@@ -908,7 +911,7 @@
         margin-top: 14px;
         background: none;
         border: 0;
-        color: #ff7cc4;
+        color: #ffdb8e;
         text-decoration: underline;
         cursor: pointer;
         font-size: 14px;
@@ -937,7 +940,7 @@
         background: var(--warm);
         border: 1px solid var(--line);
         text-align: center;
-        color: var(--indigo);
+        color: var(--teal-d);
       }
       .pillar p {
         margin: 0;
@@ -1041,7 +1044,7 @@
         inset-block: 8px;
         inset-inline-start: 7px;
         width: 2px;
-        background: linear-gradient(var(--indigo), var(--magenta));
+        background: linear-gradient(var(--teal-d), var(--teal));
       }
       .stop {
         position: relative;
@@ -1056,16 +1059,16 @@
         height: 14px;
         border-radius: 50%;
         background: var(--paper);
-        border: 3px solid var(--indigo);
+        border: 3px solid var(--teal-d);
       }
       .stop:last-child::before {
-        border-color: var(--magenta);
+        border-color: var(--teal);
       }
       .stop small {
         font: 700 12px/1 var(--en);
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: var(--indigo);
+        color: var(--teal-d);
       }
       html[lang="ar"] .stop small {
         font-family: var(--ar);
@@ -1119,11 +1122,11 @@
         }
       }
       .later div {
-        border-top: 3px solid var(--indigo);
+        border-top: 3px solid var(--teal-d);
         padding-top: 12px;
       }
       .later div:nth-child(2) {
-        border-color: var(--magenta);
+        border-color: var(--teal);
       }
       .later div:nth-child(3) {
         border-color: var(--navy);
@@ -1167,7 +1170,7 @@
       }
       #reveal .punch em {
         font-style: normal;
-        background: linear-gradient(transparent 62%, rgba(244, 13, 154, 0.28) 0);
+        background: linear-gradient(transparent 62%, rgba(57, 181, 168, 0.3) 0);
       }
       .waiting {
         display: none;
@@ -1179,7 +1182,7 @@
         display: block;
       }
       .waiting a {
-        color: var(--indigo);
+        color: var(--teal-d);
       }
 
       /* NEXT + FOOTER */
@@ -1217,6 +1220,7 @@
       }
       footer svg {
         width: 30px;
+        color: var(--ink);
         margin: 0 auto 12px;
       }
 
@@ -1236,17 +1240,15 @@
   <body>
     <div class="bar">
       <a class="brand" href="#hero" aria-label="WordReward">
-        <svg viewBox="96 74 210 276" aria-hidden="true">
+        <svg viewBox="15 16 151 148" aria-hidden="true">
           <path
-            d="M142.9 104.9A20 20 0 0 0 110.0 120.1L110.0 231.9A20 20 0 0 0 142.9 247.1L211.7 189.0A17 17 0 0 0 211.7 163.0Z"
-            fill="#F40D9A"
+            d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
+            fill="currentColor"
           />
           <path
-            d="M261.5 177.0A16 16 0 0 1 288.0 189.1L288.0 302.2A16 16 0 0 1 261.6 314.3L193.4 255.8A13 13 0 0 1 193.4 236.1Z"
-            fill="none"
-            stroke="#333399"
-            stroke-width="12"
-            stroke-linejoin="round"
+            d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
+            fill="currentColor"
+            fill-rule="evenodd"
           />
         </svg>
         WordReward <span>× Géant Yemen</span>
@@ -1265,17 +1267,15 @@
           <div class="coin" id="coin">
             <div class="rim" id="rim"></div>
             <div class="face front">
-              <svg viewBox="96 74 210 276" aria-hidden="true">
+              <svg viewBox="15 16 151 148" aria-hidden="true">
                 <path
-                  d="M142.9 104.9A20 20 0 0 0 110.0 120.1L110.0 231.9A20 20 0 0 0 142.9 247.1L211.7 189.0A17 17 0 0 0 211.7 163.0Z"
-                  fill="#F40D9A"
+                  d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
+                  fill="currentColor"
                 />
                 <path
-                  d="M261.5 177.0A16 16 0 0 1 288.0 189.1L288.0 302.2A16 16 0 0 1 261.6 314.3L193.4 255.8A13 13 0 0 1 193.4 236.1Z"
-                  fill="none"
-                  stroke="#333399"
-                  stroke-width="12"
-                  stroke-linejoin="round"
+                  d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
                 />
               </svg>
             </div>
@@ -1427,7 +1427,7 @@
     <!-- 3b. THE WEEK UNFOLDED -->
     <section id="plan" aria-live="polite">
       <div class="wrap">
-        <p class="kicker" style="color: #ff7cc4" data-t="plan.kicker"></p>
+        <p class="kicker" style="color: #ffdb8e" data-t="plan.kicker"></p>
         <h2 style="color: #fff" data-t="plan.title"></h2>
         <div class="days" id="days"></div>
         <p class="plan-note" data-t="plan.note"></p>
@@ -1612,17 +1612,15 @@
     </section>
 
     <footer>
-      <svg viewBox="96 74 210 276" aria-hidden="true">
+      <svg viewBox="15 16 151 148" aria-hidden="true">
         <path
-          d="M142.9 104.9A20 20 0 0 0 110.0 120.1L110.0 231.9A20 20 0 0 0 142.9 247.1L211.7 189.0A17 17 0 0 0 211.7 163.0Z"
-          fill="#F40D9A"
+          d="M28.5 39.4A13.5 13.5 0 0 1 40.6 20.0L97.6 20.0A13.5 13.5 0 0 1 109.8 39.4L81.3 98.1A13.5 13.5 0 0 1 57.0 98.1Z"
+          fill="currentColor"
         />
         <path
-          d="M261.5 177.0A16 16 0 0 1 288.0 189.1L288.0 302.2A16 16 0 0 1 261.6 314.3L193.4 255.8A13 13 0 0 1 193.4 236.1Z"
-          fill="none"
-          stroke="#333399"
-          stroke-width="12"
-          stroke-linejoin="round"
+          d="M99.5 78.3A12.0 12.0 0 0 1 121.0 78.2L152.9 142.7A12.0 12.0 0 0 1 142.2 160.0L79.4 160.0A12.0 12.0 0 0 1 68.6 142.8ZM106.5 81.4A5.0 5.0 0 0 1 115.5 81.5L146.3 145.4A5.0 5.0 0 0 1 141.8 152.6L79.0 152.6A5.0 5.0 0 0 1 74.5 145.4Z"
+          fill="currentColor"
+          fill-rule="evenodd"
         />
       </svg>
       <div data-t="footer"></div>
