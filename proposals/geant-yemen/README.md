@@ -14,6 +14,12 @@ The page is made to be touched before it is read.
 
 The interaction counts stay in the visitor's browser memory. Nothing is stored or sent anywhere.
 
+## WRD brand (source of truth)
+
+Colours and type follow "WordReward Brand Colors.md" (Drive, locked 2026-04-16): light mode cream `#f7f3eb`, slate `#434459` text, teal `#39b5a8` primary with slate text on it; dark sections navy `#1E1F27` with amber `#ffdb8e`. Arabic: IBM Plex Sans Arabic body, DIN Next LT Arabic / Noto Kufi Arabic display. Latin: Poppins body, Rockwell (Roboto Slab fallback) display. No other accent colours.
+
+The WRD mark is one colour (`#434459`): a solid triangle pointing down above an outlined triangle pointing up. The SVG here is a trace of the WRD Ads dashboard icon; swap in the official vector from `_BRAND_KIT/03_Logo_Vector` when available. The Géant sample cards keep Géant's own fonts (Almarai, Montserrat in place of Gotham).
+
 ## Before sending
 
 - [ ] **Samples.** Save the team's six redesigns and the matching originals as `assets/samples/{1A,1B,2A,2B,3A,3B}-after.png` and `...-before.png` (1A food cover, 1B food card, 2A non-food cover, 2B non-food inner page, 3A Golden Offer basket, 3B Golden Offer card). The "Before and after" section stays hidden until at least one `-after.png` exists.
@@ -25,7 +31,7 @@ The interaction counts stay in the visitor's browser memory. Nothing is stored o
 
 ## Files
 
-- `index.html`: the whole page (CSS and JS inline, fonts from Google Fonts: Almarai and DM Sans).
+- `index.html`: the whole page (CSS and JS inline, fonts from Google Fonts: IBM Plex Sans Arabic, Noto Kufi Arabic, Poppins, Roboto Slab, plus Almarai and Montserrat for the Géant cards).
 - `assets/og.png`: link preview (1200 × 630), the coin caught mid-spin. Regenerate it from `index.html?still=-38`, a frozen frame.
 - `assets/favicon.svg`: the WRD mark.
 - `assets/samples/`: before and after pairs (see above).
