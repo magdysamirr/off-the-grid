@@ -372,6 +372,21 @@
           inset 0 0 0 calc(var(--d) * 0.045) #3b3c4f,
           inset 0 2px 10px rgba(0, 0, 0, 0.2);
       }
+      .back .growth {
+        width: 50%;
+        height: auto;
+        overflow: visible;
+      }
+      .back .growth rect {
+        fill: rgba(255, 219, 142, 0.35);
+      }
+      .back .growth .arrow {
+        fill: none;
+        stroke: #ffdb8e;
+        stroke-width: 6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
       .back .inner {
         display: grid;
         place-items: center;
@@ -456,32 +471,6 @@
         100% {
           transform: translateX(40px);
         }
-      }
-      .goals {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin-top: 16px;
-      }
-      .goal {
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 6px 14px;
-        font-size: 15px;
-        transition:
-          background 0.3s,
-          color 0.3s,
-          border-color 0.3s;
-      }
-      .goal.on {
-        background: var(--fg);
-        color: var(--bg);
-        border-color: var(--fg);
-      }
-      .goal.on.b {
-        background: var(--accent);
-        color: var(--on-accent);
-        border-color: var(--accent);
       }
       .cue {
         margin: 10px 0 0;
@@ -920,6 +909,68 @@
         padding: 0.45em 0.7em;
       }
 
+      .fold-guide {
+        position: absolute;
+        right: 3%;
+        bottom: 7%;
+        z-index: 4;
+        width: min(46%, 230px);
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px dashed var(--band-line);
+        color: var(--band-muted);
+        font-size: 13.5px;
+        line-height: 1.5;
+        text-align: center;
+        pointer-events: none;
+      }
+      .fold-guide:not([hidden]) {
+        animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .pinch {
+        position: relative;
+        width: 64px;
+        height: 26px;
+      }
+      .pinch i {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--band-accent);
+        opacity: 0.85;
+        animation: pinchL 1.6s ease-in-out infinite;
+      }
+      .pinch i + i {
+        left: auto;
+        right: 0;
+        animation-name: pinchR;
+      }
+      @keyframes pinchL {
+        0%,
+        15% {
+          transform: translateX(0);
+        }
+        60%,
+        100% {
+          transform: translateX(18px);
+        }
+      }
+      @keyframes pinchR {
+        0%,
+        15% {
+          transform: translateX(0);
+        }
+        60%,
+        100% {
+          transform: translateX(-18px);
+        }
+      }
       /* lightbox for the flat net */
       .lb {
         position: fixed;
@@ -1409,10 +1460,6 @@
           <p class="kicker" data-t="hero.kicker"></p>
           <h1 data-t="hero.title"></h1>
           <p class="lead" data-t="hero.lead"></p>
-          <div class="goals">
-            <span class="goal on" id="goalA" data-t="hero.goalA"></span
-            ><span class="goal b" id="goalB" data-t="hero.goalB"></span>
-          </div>
           <p class="cue" id="coinCue" aria-live="polite"></p>
           <p class="gotcha" id="coinGotcha" hidden aria-live="polite"></p>
         </div>
@@ -1435,10 +1482,13 @@
                 </svg>
               </div>
               <div class="face back">
-                <div class="inner">
-                  <div class="big">1<i>M</i></div>
-                  <div class="small" data-t="coin.back"></div>
-                </div>
+                <svg class="growth" viewBox="0 0 100 100" aria-hidden="true">
+                  <rect x="18" y="58" width="15" height="24" rx="3" />
+                  <rect x="42" y="44" width="15" height="38" rx="3" />
+                  <rect x="66" y="28" width="15" height="54" rx="3" />
+                  <path class="arrow" d="M14 50 L36 33 L52 40 L80 16" />
+                  <path class="arrow" d="M66 15 L81 15 L81 30" />
+                </svg>
               </div>
               <div class="shine" id="shine"></div>
             </div>
@@ -1545,6 +1595,10 @@
               </div>
               <div class="cube-hit" id="cubeHit"></div>
               <div class="cube-hint" id="cubeHint"></div>
+              <div class="fold-guide" id="foldGuide" hidden>
+                <span class="pinch" aria-hidden="true"><i></i><i></i></span>
+                <span data-t="week.foldHint"></span>
+              </div>
             </div>
             <div class="cube-ui">
               <p class="cube-cue" id="cubeCue" aria-live="polite"></p>
@@ -1922,20 +1976,17 @@
             en: "On this page: what we will provide, how we work, and the price and terms.",
           },
           "hero.aria": {
-            ar: "عملة WordReward. اسحبها لتقلبها.",
-            en: "The WordReward coin. Drag it to flip it.",
+            ar: "عملة عليها شعار WordReward من جهة، وعلامة نمو من الجهة الأخرى. اسحبها لتقلبها.",
+            en: "A coin with the WordReward mark on one side and a growth sign on the other. Drag it to flip it.",
           },
-          "coin.back": { ar: "متابع", en: "followers" },
-          "hero.goalA": { ar: "مبيعات أكثر", en: "More sales" },
-          "hero.goalB": { ar: "متابعون أكثر", en: "More followers" },
           "hero.cue": { ar: "يمكنك سحب العملة لتقلبها.", en: "You can drag the coin to flip it." },
           "hero.cueA": {
-            ar: "الوجه الأول: مبيعات أكثر من كل عرض.",
-            en: "Side one: more sales from each offer.",
+            ar: "الوجه الأول: شعار WordReward.",
+            en: "Side one: the WordReward mark.",
           },
           "hero.cueB": {
-            ar: "الوجه الثاني: صفحة يتابعها عدد أكبر من الناس.",
-            en: "Side two: a page more people follow.",
+            ar: "الوجه الثاني: النمو الذي نعمل من أجله.",
+            en: "Side two: the growth we work for.",
           },
 
           "week.kicker": { ar: "أسبوع من العمل", en: "A week of work" },
@@ -1955,6 +2006,10 @@
             en: "Tap any design to see it larger.",
           },
           "week.flat": { ar: "افرد المكعب", en: "Lay the cube flat" },
+          "week.foldHint": {
+            ar: "لإعادته مكعبًا: اضغط على مساحة فارغة، أو قرّب إصبعيك.",
+            en: "To fold it back: tap an empty spot, or pinch with two fingers.",
+          },
           "week.fold": { ar: "أعده مكعبًا", en: "Fold it back into a cube" },
           "week.t1": { ar: "بطاقة عروض كل أسبوع", en: "offer cards a week" },
           "week.t2": { ar: "بطاقة للعرض الذهبي", en: "Golden Offer cards" },
@@ -2293,8 +2348,6 @@
           const s = ((Math.round(th / 180) % 2) + 2) % 2
           if (s !== side || force) {
             side = s
-            $("#goalA").classList.toggle("on", s === 0)
-            $("#goalB").classList.toggle("on", s === 1)
             $("#coinCue").textContent =
               flips > 0 ? t(s === 0 ? "hero.cueA" : "hero.cueB") : t("hero.cue")
           }
@@ -2593,6 +2646,8 @@
               busy = false
               flat = true
               foldBtn.hidden = false
+              foldGuide.hidden = false
+              cstage.style.touchAction = "pan-y"
               cubeCue("open")
             }, 900)
           })
@@ -2601,6 +2656,9 @@
           if (!flat || busy) return
           busy = true
           foldBtn.hidden = true
+          foldGuide.hidden = true
+          cstage.style.touchAction = ""
+          pts.clear()
           FACES.forEach((k) => cube.querySelector(".f." + k).setAttribute("tabindex", "-1"))
           cube.classList.remove("net")
           cfit.style.transform = ""
@@ -2616,6 +2674,48 @@
             cubeCue("idle")
           }, 950)
         }
+        /* while flat: a tap on an empty spot, or a pinch, folds it back */
+        const foldGuide = $("#foldGuide"),
+          pts = new Map()
+        let pinchStart = 0
+        cstage.addEventListener("click", (e) => {
+          if (flat && !busy && !e.target.closest(".f")) foldBack()
+        })
+        cstage.addEventListener("pointerdown", (e) => {
+          if (!flat) return
+          pts.set(e.pointerId, [e.clientX, e.clientY])
+          if (pts.size === 2) {
+            const [a, b] = [...pts.values()]
+            pinchStart = Math.hypot(a[0] - b[0], a[1] - b[1])
+          }
+        })
+        cstage.addEventListener("pointermove", (e) => {
+          if (!flat || !pts.has(e.pointerId)) return
+          pts.set(e.pointerId, [e.clientX, e.clientY])
+          if (pts.size === 2 && pinchStart > 0) {
+            const [a, b] = [...pts.values()]
+            if (Math.hypot(a[0] - b[0], a[1] - b[1]) < pinchStart * 0.72) {
+              pinchStart = 0
+              foldBack()
+            }
+          }
+        })
+        const ptEnd = (e) => {
+          pts.delete(e.pointerId)
+          if (pts.size < 2) pinchStart = 0
+        }
+        cstage.addEventListener("pointerup", ptEnd)
+        cstage.addEventListener("pointercancel", ptEnd)
+        /* trackpad pinch on a laptop arrives as a ctrl + wheel event */
+        cstage.addEventListener(
+          "wheel",
+          (e) => {
+            if (!flat || !e.ctrlKey) return
+            e.preventDefault()
+            if (e.deltaY > 2) foldBack()
+          },
+          { passive: false },
+        )
         flatBtn.addEventListener("click", layFlat)
         foldBtn.addEventListener("click", foldBack)
         addEventListener("resize", () => {
@@ -2626,7 +2726,7 @@
             es.forEach((en) => {
               if (en.isIntersecting) {
                 setTimeout(() => {
-                  if (!ctouched && !reduced) chint.classList.add("on")
+                  if (!ctouched && !reduced && !flat && !busy) chint.classList.add("on")
                 }, 1600)
                 io.disconnect()
               }
